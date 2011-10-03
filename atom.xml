@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>My Octopress Blog</title>
+  <title>Phx Tag Soup</title>
   <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2011-10-03T07:53:57-07:00</updated>
+  <updated>2011-10-03T08:03:34-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
-    <name>Your Name</name>
+    <name>Phx Tag Soup</name>
     
   </author>
 
