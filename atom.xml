@@ -4,7 +4,7 @@
   <title>Phx Tag Soup</title>
   <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2011-10-03T08:15:17-07:00</updated>
+  <updated>2011-10-05T00:24:34-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name>Phx Tag Soup</name>
@@ -17,7 +17,19 @@
     <link href="http://TagSoup.github.com/blog/2011/10/02/new-post/"/>
     <updated>2011-10-02T21:21:00-07:00</updated>
     <id>http://TagSoup.github.com/blog/2011/10/02/new-post</id>
-    <content type="html">
+    <content type="html">&lt;p&gt;Whoo Hoo! First post! So, we&amp;#8217;ve found a home. Maybe temporary, might be permanent. We still haven&amp;#8217;t decided. But let&amp;#8217;s get into it.&lt;/p&gt;
+
+&lt;p&gt;Who are we? The answer is simple. We&amp;#8217;re a group developers (client side, server side and even UX/UI side) in the Phoenix area. We all love the interactive space. We also want to make the web more fun.&lt;/p&gt;
+
+&lt;p&gt;Why Phx Tag Soup exists&amp;#8230; This one requires a bit of back story, so hang with me. Inspiration is a great side effect of being a developer. It doesn&amp;#8217;t matter which part of the web you&amp;#8217;re working on, there&amp;#8217;s so much great shit out there you can&amp;#8217;t help but be inspired. Most developers have favorite blogs, favorite people to follow on the various social media outlets etc&amp;#8230; While it stops there for a lot of developers, those that look further get rewarded. It&amp;#8217;s weird to think that &amp;#8220;looking further for inspiration&amp;#8221; means looking in non-digital outlets. GASP, real life! Conferences can be life changing. And the answer to &amp;#8220;why Tag Soup exists&amp;#8221; is a conference.&lt;/p&gt;
+
+&lt;p&gt;Three of us went to TXJS, a javascript conference put on by some #bada55 javascript developers. This is considered a &amp;#8220;small&amp;#8221; conference. Roughly 150 tickets are sold. Keeping the ticket sales low, the small crowd makes for BIG atmosphere. Everyone at TXJS was really nice. Like out of their way kind of nice. You could fell comfortable approaching anyone there. Including Douglas Crockford, Brenden Eich, Paul Irish, Yahuda Katz and so on. I remember walking past Papa Crock in the stair well of the theatre and telling him I liked his talk. He seemed genuinely happy to hear that and we went on to talk a bit more about JS in general. Later, I walked up to Brenden Eich and asked what he thought about Coffee Script. He told me his thoughts and I walked away thinking&amp;#8230; holy shit, that&amp;#8217;s the dude that wrote JS in 10 days. 10 days! I can&amp;#8217;t even write a decent blog post in 10 days. I can go on with stories like this, but let&amp;#8217;s get back to the point of this post.&lt;/p&gt;
+
+&lt;p&gt;So after the conference ended, and we fly back to Arizona, we had to do something to simulate the feeling we had in Austin. Ryan, Olu and I decided to form a small meet up group. Our goal was to get some friends together and talk about various technologies, best practices and learn from each other. Ritchie and Eric joined up and now there were 5 of us. We didn&amp;#8217;t care if no one besides us showed. We would still be doing what we loved: talking nerdy. Ryan Gasaparini (@rxgx) came up with the name. Tag Soup is a slang term for shitty code. We try not to take ourselves too seriously, so this name seemed to fit. Plus it has a nice ring to it.&lt;/p&gt;
+
+&lt;p&gt;We didn&amp;#8217;t know when we would officially meet, or where, or any details. We were going to wing it. We had no plan. Then, watching twitter, I saw Jonathan Snook post a tweet about being in my hometown. He had checked into a small Farmhouse Grill down the street. I replied, &amp;#8220;You&amp;#8217;re a mile away from me!&amp;#8221;. Next thing I know, @kitt who he was visiting with, asks me if I know of any local meet ups that are good. I tell her about Phx Tag Soup, and she wants to know when we&amp;#8217;re meeting so her and Snook can drop by. Um, wait, @snookca and @kitt want to come to our meet up group that&amp;#8217;s basically an idea we&amp;#8217;re trying to get off the ground. This was the catalyst that got our shit together, fast. In 4 days, we had a bad ass venue, some great sponsors that shipped out shirts, stickers and other fun swag (thanks Terralever, GitHub, Evil Controllers and Statera). We went from a group of 5 friends, to a group of 38 devs in 4 days. We were really excited.&lt;/p&gt;
+
+&lt;p&gt;Snook made the meeting great. He casually talked about what goes on at Yahoo. Answered our questions and was super cool about the whole thing (will post the video soon). This is right around the same time that his site turned 10, so we got a hawt rainbow cake and celebrated. Fun times. We can&amp;#8217;t thank @kitt and @snookca enough. After the meeting, everyone left, and the 5 of us finished up the beer. Looking back at it now, there&amp;#8217;s no doubt that we had succeeded in our original goal. We had brought the spirit of TXJS to Phoenix, AZ.&lt;/p&gt;
 </content>
   </entry>
   

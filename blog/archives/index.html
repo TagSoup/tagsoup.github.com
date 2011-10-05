@@ -9,7 +9,7 @@
   <meta name="author" content="Phx Tag Soup">
 
   
-  <meta name="description" content="        Blog Archive              2011  Mmmm SoupOct 02 2011          Recent Posts                    Mmmm Soup              ">
+  <meta name="description" content="        Blog Archive              2011  Mmmm SoupOct 02 2011          Recent Posts                    Mmmm Soup              Github Repos      Stat...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -37,7 +37,6 @@
   
     <h2>The soup is warm</h2>
   
-<img class="right" src="http://placekitten.com/300/500" width="150" height="250" title="Place Kitten #3" >
 </hgroup>
 
 </header>
@@ -102,6 +101,51 @@
   </ul>
 </section>
 
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
 
 
 
