@@ -4,13 +4,52 @@
   <title>Phx Tag Soup</title>
   <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2011-10-05T00:24:34-07:00</updated>
+  <updated>2011-10-24T23:32:40-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name>Phx Tag Soup</name>
     
   </author>
 
+  
+  <entry>
+    <title>OMG That&#8217;s So Kewl - Show and Tell</title>
+    <link href="http://TagSoup.github.com/blog/2011/10/24/new-post/"/>
+    <updated>2011-10-24T23:03:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2011/10/24/new-post</id>
+    <content type="html">&lt;p&gt;This Thursday, (October 27, 2011, 6:30 PM) we will be hosting the next Phx Tag Soup event. &lt;a href=&quot;http://maps.google.com/maps?q=425+S.+Mill+Ave+%23201,+Tempe,+AZ&amp;hnear=425+S+Mill+Ave,+Tempe,+Arizona+85281&amp;t=h&amp;z=16&amp;vpsrc=0&quot;&gt;Terralever&lt;/a&gt; has been nice enough to let us use their space again.&lt;/p&gt;
+
+&lt;p&gt;This month a couple of Phx locals will be giving short (10-15min) talks on projects they&amp;#8217;ve been developing. We also have some non-locals giving lightening web talks about their projects.&lt;/p&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;
+&lt;img class=&quot;left&quot; src=&quot;images/speakers/luke.jpeg&quot; width=&quot;128&quot; height=&quot;128&quot; title=&quot;Manveloper&quot; alt=&quot;Luke Karrys, Mustached Manveloper&quot;&gt;
+The Mustached Manveloper, Luke Karrys (&lt;a href=&quot;http://twitter.com/#!/lukekarrys&quot;&gt;@lukekarrys&lt;/a&gt;), will talk about the pain points he ran into with his HTML5 history API capable site he recently worked. Plus, discussing how he can pack so many buzzwords into a single project.&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;clearfix&quot;&gt;
+&lt;img class=&quot;left&quot; src=&quot;images/speakers/alan.jpeg&quot; width=&quot;128&quot; height=&quot;128&quot; title=&quot;Alan Hogan&quot; alt=&quot;Alan Hogan&quot;&gt;
+Alan Hogan (&lt;a href=&quot;http://twitter.com/#!/AlanHogan&quot;&gt;@AlanHogan&lt;/a&gt;) is going talk about when your plan might not go quite as planned&amp;#8230; see what I did there?
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;clearfix&quot;&gt;
+Then, via the internets:
+&lt;img class=&quot;left&quot; src=&quot;images/speakers/ray.jpeg&quot; width=&quot;128&quot; height=&quot;128&quot; title=&quot;Ray Morgan&quot; alt=&quot;Ray Morgan&quot;&gt;
+Our friends in Las Vegas have been busy writing an iOS app called Rumgr. Started by Zappos developers Dylan Bathurst (&lt;a href=&quot;http://twitter.com/#!/dylanbathurst&quot;&gt;@dylanbathurst&lt;/a&gt;) and Ray C. Morgan (&lt;a href=&quot;http://twitter.com/#!/raycmorgan&quot;&gt;@raycmorgan&lt;/a&gt;), Rumgr has gone on to win some serious awards. Since it&amp;#8217;s launch Ray and Dylan have left Zappos to live the startup dream. And that&amp;#8217;s exactly what Ray will be talking about.
+&lt;/div&gt;
+
+
+&lt;p&gt;Finally, we have a very special guest. He will be discussing a library that most frontend developers have heard of, and most likely used on current projects. He also happened to write that library, so this should be hawttt.&lt;/p&gt;
+
+&lt;p&gt;Right after the talks wind down, we&amp;#8217;re heading to Rula Bula to grab a drink and just hang out. So come out, show some support for the Phx Interwebs Community and have a good time.&lt;/p&gt;
+
+&lt;p&gt;If you made it this far, enjoy this &lt;a href=&quot;http://www.unicorn-pictures.com/images/unicorn3.jpg&quot;&gt;free desktop background&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Mmmm Soup</title>
