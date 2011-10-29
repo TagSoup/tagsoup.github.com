@@ -3,7 +3,7 @@ layout: post
 title: "HTML History API with Luke Karrys"
 date: 2011-10-28 2:17
 comments: true
-categories: Presentations
+categories: [Presentations, Past Meet-ups]
 author: Luke Karrys
 ---
 

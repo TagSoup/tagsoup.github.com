@@ -3,7 +3,7 @@ layout: post
 title: "Ryan Dahl's History of Node.js"
 date: 2011-10-05 21:04
 comments: true
-categories: Past Meet-ups
+categories: [Past Meet-ups, JS, Node]
 author: Tony Camp
 ---
 
