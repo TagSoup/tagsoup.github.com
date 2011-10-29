@@ -14,9 +14,19 @@
       </p>
     {% endunless %}
   </header>
+
 {% endunless %}
 {% if index %}
   <div class="entry-content">{{ content | excerpt }}</div>
+  <footer>
+    <p class="meta">
+      {% include post/author.html %}
+      {% include post/categories.html %}
+    </p>
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+  </footer>
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
@@ -26,3 +36,4 @@
 {% else %}
 <div class="entry-content">{{ content }}</div>
 {% endif %}
+
