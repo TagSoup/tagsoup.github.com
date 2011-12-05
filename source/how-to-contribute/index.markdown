@@ -13,10 +13,14 @@ So you want to contribute. We're using Octopress to power our page. Pretty neat 
 
 Let's get the important links listed first. These will help you out tremendously. These links are where I found the info to get everything up and running smoothly.
 
-<a href="http://octopress.org/docs/setup/" target="_new">OctoPress Offical Setup</a>
-<a href="http://beginrescueend.com/" target="_new">RVM (Ruby Version Manager)</a>
-<a href="http://progit.org/book/">Pro Git</a>
-<a href="http://think-like-a-git.net/">Think Like a Git</a>
+<ul>
+	<li><a href="http://octopress.org/docs/setup/" target="_new">OctoPress Offical Setup</a></li>
+	<li><a href="http://beginrescueend.com/" target="_new">RVM (Ruby Version Manager)</a></li>
+	<li><a href="http://progit.org/book/">Pro Git</a></li>
+	<li><a href="http://think-like-a-git.net/">Think Like a Git</a></li>
+</ul>
+
+
 
 If you're a mac user, you want to make sure you have xcode installed. You can grab xcode from the app store. Once that's done, the next prerequisite is GIT. Make sure you have GIT installed, and some basic familiarity with it (read Pro Git and Think Like a Git). Once you have these installed and ready to go, follow the OctoPress Set Up instructions. When you get to the "Setup Octopress" subsection you're going to want to change the url for the repository to clone. You are going to want to run
 ```
