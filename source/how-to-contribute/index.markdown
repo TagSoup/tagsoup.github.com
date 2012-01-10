@@ -38,7 +38,7 @@ This will create the branch and auto change to it. After this, you can continue 
 ```
 gem install bundler
 bundle install
-rake install
+rake generate
 ```
 
 That's it! The install is done.
