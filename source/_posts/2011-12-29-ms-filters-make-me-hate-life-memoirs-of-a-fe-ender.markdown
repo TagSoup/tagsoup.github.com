@@ -10,7 +10,7 @@ author: Tony Camp
 ####Here's a screen shot of my issue. Notice the sub nav being cut off!
 
 <div class="clearfix">
-<a href="images/nav-barf.jpg" target="_new">{% img left images/nav-barf.jpg 300 197 'Why does' 'IE Hate Developers?' %}</a>
+<a href="/images/nav-barf.jpg" target="_new">{% img left /images/nav-barf.jpg 300 197 'Why does' 'IE Hate Developers?' %}</a>
 </div>
 
 <a href="http://jsfiddle.net/tonyjcamp/eNr2M/" target="_new"/>TL;DR - Gimmie Solution</a>
