@@ -35,7 +35,15 @@ $('#coolElement').delegate('.hondaElement', 'click', function() {
 	return false;
 });
 ```
-So, both examples stop the default action of the `a` firing when clicked. The second example takes things a bit further. It not only stops the default action from firing, it also stops event bubbling. Now, the caveat... I believe this only applies to jQuery. Vanilla js still needs to have both `e.preventDefault()` and `e.stopPropagation()`. If anyone has some extra info on that, please, leave a comment and set the record straight.
+So, both examples stop the default action of the `a` firing when clicked. The second example takes things a bit further. It not only stops the default action from firing, it also stops event bubbling. It's the same as doing:
+```
+$('#coolElement').delegate('.hondaElement', 'click', function(e) {
+	// do something silly here
+	e.preventDefault();
+	e.stopPropagation();
+});
+```
+Now, the caveat... I believe this only applies to jQuery. Vanilla js still needs to have both `e.preventDefault()` and `e.stopPropagation()`. If anyone has some extra info on that, please, leave a comment and set the record straight.
 
 [0]: https://www.google.com/calendar/b/0/embed?src=6tbdk1sbit95epi2bb8c8jqqv4@group.calendar.google.com&ctz=America/Phoenix
 [1]: http://stackoverflow.com/questions/903120/should-i-always-give-a-return-value-to-my-function/903126#903126
