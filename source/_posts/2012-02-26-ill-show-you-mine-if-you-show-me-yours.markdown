@@ -13,7 +13,7 @@ Working in the default themed Terminal all day will make any sane (no such thing
 Enough words, how about some hawt pics?
 {% img left /images/zsh.png 800 %}
 
-####First things first: What are you staring at?
+####What are you staring at?
 Well, that's my desktop, with some icons, a nice desktop pic and of course my terminal. I like the way it all looks. How come your Terminal doesn't look like that? Maybe I can help. If you're running OSX Lion and haven't already switched the default bash shell to zsh, you might want to do that now. Why switch? There are a ton of articles out on google explaning why people like it so much. For me, it comes down to a few basic benefits:
 <ol>
 	<li>Powerful tab completetion</li>
@@ -44,7 +44,7 @@ export PROMPT=$'%{\e[1;34m%}%n@\e[1;34m%M%{\e[0m%}
 
 export RPROMPT=$'%{\e[1;31m%}$(project_pwd)%{\e[0;34m%}$(ruby_version)$(git_cwd_info)%{\e[0m%}'
 ```
-So zsh let's have have a "left" and "right" side of the prompt. On the left, I like it nice and plain. So we're outputting the username@system-name. Then we have a line break where our prompt will be. And on the right hand side of the screen, we have even more useful info. We're displaying the current directory, the version of Ruby, the current git branch and SHA. I have added some fun colors to it, cause you know, colors are good mmmkay.
+So zsh let's have have a "left" (PROMPT) and "right" (RPROMPT) side of the prompt. On the left (again PROMPT), I like it nice and plain. So we're outputting the username@system-name. Then we have a line break where our prompt will be. And on the right hand side of the screen (RPROMPT), we have even more useful info. We're displaying the current directory, the version of Ruby, the current git branch and SHA. I have added some fun colors to it, cause you know, colors are good mmmkay.
 
 ###On to plugins
 The plugins in zsh are really useful. They will extend autocompletion for you and set up some aliases for you. Back in your `~/.zshrc` file look for the line that starts with:
@@ -61,7 +61,7 @@ plugins=(git github node npm gem rails ant)
 ```
 Most of these I don't use to their fullest. But you can [take a look at some of the things the git plugin is doing for us.][4] If you're using git a lot, some of the aliases will save you some time. [Check out all of the available plugins for zsh.][5]
 
-I'm by no means a shell, or zsh expert. I'm still learning a ton as I go. The day I spent getting Solarized set up and the prompt on the right caused big head aches for me. I have a whole list of git aliases, and standard aliases to share that will tie in nicely with this post. This post has already gotten much longer than I like. TL:DR. If you have any question, please feel free to ask. I will do my best in answering or finding an answer. Use the comments below or msg me on github.
+I'm by no means a shell, or zsh expert. I'm still learning a ton as I go. The day I spent getting Solarized set up and the prompt on the right caused big head aches for me. I have a whole list of git aliases, and standard aliases to share that will tie in nicely with this post but, this post has already gotten much longer than I like. TL:DR. If you have any questions, please feel free to ask. I will do my best in answering or finding an answer. Use the comments below or msg me on github.
 
 ###Hepful Links
 [Oh My ZSH github repo][0]<br />
