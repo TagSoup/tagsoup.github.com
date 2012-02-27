@@ -64,10 +64,10 @@ Most of these I don't use to their fullest. But you can [take a look at some of 
 I'm by no means a shell, or zsh expert. I'm still learning a ton as I go. The day I spent getting Solarized set up and the prompt on the right caused big head aches for me. I have a whole list of git aliases, and standard aliases to share that will tie in nicely with this post. This post has already gotten much longer than I like. TL:DR. If you have any question, please feel free to ask. I will do my best in answering or finding an answer. Use the comments below or msg me on github.
 
 ###Hepful Links
-[Oh My ZSH github repo][0]
-[ZSH Homepage][7] - A little overwhelming
-[Steve's Extravagant Zsh Prompt][8]
-[Oh My ZSH Twitter][9] - Blue birds
+[Oh My ZSH github repo][0]<br />
+[ZSH Homepage][7] - A little overwhelming<br />
+[Steve's Extravagant Zsh Prompt][8]<br />
+[Oh My ZSH Twitter][9] - Blue birds<br />
 
 <div class="clearfix">
 {% img left /images/whip-it.jpg 60 %}
