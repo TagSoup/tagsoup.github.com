@@ -1,0 +1,90 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+// must learn scss TONY!
+
+#centerer {
+    text-align: center;
+}
+
+.corners {
+    background-color: rgba( 248, 248, 248, 1 );
+    display: inline-block;
+    margin: 10px auto;
+    padding: 0;
+    position: relative;
+    z-index: 999;
+}
+
+.corners:before, .corners:after {
+    border: 17px solid rgba( 248, 248, 248, 1 );
+    border-width: 17px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 999;
+}
+
+.corners:before {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    left: 0;
+    top: 0;
+}
+
+.corners:after {
+    border-left-color: transparent;
+    border-top-color: transparent;
+    bottom: 0;
+    right: 0;
+}
+
+.shadow:before, .shadow:after {
+    border: 18px solid rgba( 0, 0, 0, .1 );
+    border-width: 18px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 998;
+}
+
+.shadow:before {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    left: 0;
+    top: 0;
+}
+
+.shadow:after {
+    border-left-color: transparent;
+    border-top-color: transparent;
+    bottom: 0;
+    right: 0;
+}
+
+img {
+    background: rgba( 248, 248, 248, 1 );
+    border: 1px solid rgba( 0, 0, 0, .1 );
+    box-shadow: 1px 1px 1px rgba( 0, 0, 0, .1 );
+    display: block;
+    margin: 3px;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+dl {
+    margin: 10px 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+    margin-bottom: 15px;
+}
