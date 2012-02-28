@@ -6,7 +6,7 @@ comments: true
 categories: [pushstate, html5, drunk, javascript]
 ---
 
-In the immortal words or Colonel Sanders, I'm too drunk to write this blog post. But eff it (note: I don't know if Colonel Sanders said that part). Don't take this as a knock that I don't care about this blog post because I do. The HTML5 history API is one of my favorite things ever (and Tony Camp is one of my personal heroes). If the HTML5 history API (or Tony Camp) came up to me and said, "Hey baby, I work to spec in all the latest browsers and degrade gracefully in the others. What are you doing later?" I would say, "Writing some code. See you later." I love it so much, I gave a talk about it at a previous [Tag Soup meetup](http://tagsoup.github.com/blog/2011/10/28/html5-history-api-with-luke-karrys/). But here I am going to tell you how to convert your current Octopress blog into an Octopress blog that uses HTML5 pushState (and how to report bugs to me where I messed up, because I definitely did).
+In the immortal words <del>or</del> <em>of</em> Colonel Sanders, I'm too drunk to write this blog post. But eff it (note: I don't know if Colonel Sanders said that part). Don't take this as a knock that I don't care about this blog post because I do. The HTML5 history API is one of my favorite things ever (and Tony Camp is one of my personal heroes). If the HTML5 history API (or Tony Camp) came up to me and said, "Hey baby, I work to spec in all the latest browsers and degrade gracefully in the others. What are you doing later?" I would say, "Writing some code. See you later." I love it so much, I gave a talk about it at a previous [Tag Soup meetup](http://tagsoup.github.com/blog/2011/10/28/html5-history-api-with-luke-karrys/). But here I am going to tell you how to convert your current Octopress blog into an Octopress blog that uses HTML5 pushState (and how to report bugs to me where I messed up, because I definitely did).
 
 <!--more-->
 
@@ -56,7 +56,7 @@ $.expr[':'].internal = function(obj, index, meta, stack) {
 
 Next, we want to to use another method I yanked from Benjamin. This is enables us to run the `ajaxify()` function against jQuery objects. The only trick here, is the bug I talked about earlier. We have to separate the hash from the clicked url and pass it to the pushState event listener through the first parameter, which is a data object that can contain any arbitrary data.
 
-Another note worth mentioning is the second parameter of the pushState method. That accepts a title for the new page, but as far as I know, no browsers support it. Also when using the `ajaxify` function in this way, we don't know the full title of the next page at this junction. This could be rearranged, but since the browsers don't support it, I don't see much reason for doing so know (especially since we will update the title manually later).
+Another note worth mentioning is the second parameter of the pushState method. That accepts a title for the new page, but as far as I know, no browsers support it. Also when using the `ajaxify` function in this way, we don't know the full title of the next page at this junction. This could be rearranged, but since the browsers don't support it, I don't see much reason for doing so <del>know</del> <em>now</em> (especially since we will update the title manually later).
 
 {% codeblock ajaxify.js %}
 $.fn.ajaxify = function() {
