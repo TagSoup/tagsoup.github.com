@@ -15,6 +15,8 @@ How does this work? The search engine sends out something called a “spider” 
 
 Whats a good strategy to follow? The first thing to know about SEO is that “Content is King”. Don’t try to chase algorithm changes in Google or Bing. Your time will be more productive if you concentrate on keeping good and relevant content on your site. Have good content and change it often. Good SEO will get people to your site but good content will keep them there and coming back. 
 
+<!--more-->
+
 Do your keyword research. Find out what people are searching for in your industry and integrate these into your content. The key word here is integrate not shoe-horn. Spammy content will just frustrate and confuse your visitors.
 
 There are many gems that can come out of your keyword research. Imagine you run a ticketing website that does well for the Keyword “Bob Dylan Tickets”. You are doing your keyword research and notice that a lot of people are searching for Bob Dylan tickets in Minnesota. You can optimize your Bob Dylan page for Minnesota but that would change your rankings for your Bob Dylan results. Instead if you create a Bob Dylan Minnesota page with information specifically about the venues and performances by Dylan in Minnesota. This will allow you to keep your good standings in “Bob Dylan Tickets” results as well as getting you another page in the results that targeted that large demographic of visitors. A caveat to this is that you would want to use this sparingly. Too much of this and your content can become unmanageable.

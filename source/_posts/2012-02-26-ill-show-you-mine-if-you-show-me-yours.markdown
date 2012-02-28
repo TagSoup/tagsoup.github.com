@@ -13,6 +13,9 @@ Working in the default themed Terminal all day will make any sane (no such thing
 Enough words, how about some hawt pics?
 {% img left /images/zsh.png 800 %}
 
+<!--more-->
+
+
 ####What are you staring at?
 Well, that's my desktop, with some icons, a nice desktop pic and of course my terminal. I like the way it all looks. How come your Terminal doesn't look like that? Maybe I can help. If you're running OSX Lion and haven't already switched the default bash shell to zsh, you might want to do that now. Why switch? There are a ton of articles out on google explaning why people like it so much. For me, it comes down to a few basic benefits:
 <ol>

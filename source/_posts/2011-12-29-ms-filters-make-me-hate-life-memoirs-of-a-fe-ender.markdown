@@ -17,6 +17,8 @@ author: Tony Camp
 
 Don't you hate it when you find yourself debugging some weird CSS issue knowing full well you've solved the same exact problem in the past? I catch myself doing this all the time. I'm being a bit hard on myself. It's not like I run into the same bug, project after project, failing to learn the solution. It's more like... "Shit I remember this bug, it happened to me 9 months ago, I can't remember how I fixed it back then. KKKKAAAAHHHHNNNNNNNN".
 
+<!--more-->
+
 This just happened to me. Instead of repeating my same old pattern of "solve and forget" (devs love patterns), I decided to take some time to write about the bug and solution. Partly for you guys, but also for myself. Now I can always reference this blog post for the solution.
 
 Spoiler alert, after creating the reduced use case, the issue wasn't what I originally thought it was.

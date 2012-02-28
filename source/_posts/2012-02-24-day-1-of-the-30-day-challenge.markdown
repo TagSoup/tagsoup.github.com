@@ -17,6 +17,8 @@ Now that the boring stuff is out of the way, here's a tiny "ahhhhhh" tip I can s
 
 So I have a basic function inside of Chrome's console. When I press enter, I get the "undefined" msg. I haven't done anything though, so why the "undefined"? Javascript functions ALWAYS return a value. If you don't specify what it is, then it returns "undefined". YAY!
 
+<!--more-->
+
 If you would like a more elegant explanation, check out the ever useful, [Stack Overflow][1].
 
 Since we're on the topic of `return` values... let's go over another small trick. Again, it's nothing mind blowing or revolutionary. I'm sure you've seen this pattern before (assume hondaElement is a class on an "a" tag:

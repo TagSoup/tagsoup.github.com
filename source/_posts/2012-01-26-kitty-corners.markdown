@@ -19,6 +19,8 @@ Here is the end result of this experiment <a href="http://jsfiddle.net/tonyjcamp
 
 As developers, we're constantly trying to "level-up". Becoming a better developer is all about writing code. A goofy, but fun exercise I do from time to time involves browsing <a href="http://www.dribbble.com" target="_new"/>dribbble</a>. I browse some of the great pieces of art on there and try to emulate it with CSS. I came across a piece by <a href="http://dribbble.com/larrychen" target="_new">Larry Chen</a> called <a href="http://dribbble.com/shots/118282-Photo-Border-Style" target="_new">Photo Border Style</a>. I figured I could whip up that border treatment pretty easily.
 
+<!--more-->
+
 I knew <a href="http://css-tricks.com/pseudo-element-roundup/" target="_new">CSS pseudo elements</a> would be necessary. I had seen a couple of blog posts showing how to manipulate css borders to make triangles <a href="http://www.russellheimlich.com/blog/pure-css-shapes-triangles-delicious-logo-and-hearts/" target="_new">(like this one)</a>. I figured I would just toss a :before and :after pseudo element on the image and get a nice start on my border treatment. 
 
 ### <a href="http://jsfiddle.net/tonyjcamp/rATuB/" target="_new">Snag #1</a>
