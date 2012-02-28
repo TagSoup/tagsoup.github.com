@@ -4,6 +4,7 @@ title: "Day 4: Drunk and Pushing State"
 date: 2012-02-27 21:58
 comments: true
 categories: [pushstate, html5, drunk, javascript]
+author: Luke Karrys - LL Cool LK
 ---
 
 In the immortal words <del>or</del> <em>of</em> Colonel Sanders, I'm too drunk to write this blog post. But eff it (note: I don't know if Colonel Sanders said that part). Don't take this as a knock that I don't care about this blog post because I do. The HTML5 history API is one of my favorite things ever (and Tony Camp is one of my personal heroes). If the HTML5 history API (or Tony Camp) came up to me and said, "Hey baby, I work to spec in all the latest browsers and degrade gracefully in the others. What are you doing later?" I would say, "Writing some code. See you later." I love it so much, I gave a talk about it at a previous [Tag Soup meetup](http://tagsoup.github.com/blog/2011/10/28/html5-history-api-with-luke-karrys/). But here I am going to tell you how to convert your current Octopress blog into an Octopress blog that uses HTML5 pushState (and how to report bugs to me where I messed up, because I definitely did).
