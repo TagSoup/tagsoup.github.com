@@ -271,7 +271,7 @@ If you include the first three codeblocks on your pages and replace the other co
 
 _But wait there's more!_
 
-Your mileage may vary (YMMV). I know that sucks to here but there is good news. I definitely did not cover the edge cases on this one. My blog doesn't have any videos or some of the other plugins. I would love to hear if you implement this code and find some JS that doesn't work. Seriously, tell me where I am wrong or where my code falls short!
+Your mileage may vary (YMMV). I know that sucks to hear but there is good news. I definitely did not cover the edge cases on this one. My blog doesn't have any videos or some of the other plugins. I would love to hear if you implement this code and find some JS that doesn't work. Seriously, tell me where I am wrong or where my code falls short!
 
 Peace out, and if you don't chew Big Red, well it's spicy and you'll love it.
 
