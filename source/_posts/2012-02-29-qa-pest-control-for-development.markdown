@@ -21,8 +21,8 @@ One more note before we get further into the code.  Automation is not a replacem
  <!--more-->
 
 ```ruby
-Require ‘rubygems’
-Require ‘selenium-webdriver’
+require ‘rubygems’
+require ‘selenium-webdriver’
 
 Driver = Selenium::Webdriver.for :firefox
 ```
@@ -37,18 +37,18 @@ Driver.get(url)
 Your browser should now be on the meltmedia homepage.  Now let’s make objects for each link.  I’m going to be finding the elements by the link text.  You should truthfully use :id, :class, or xpath where applicable as they’re less likely to change than the copy of a page.
  
 ```ruby
-workLink = Driver.find_element(:link_text, ‘Work’
+workLink = Driver.find_element(:link_text, ‘Work’)
 workLink.click
 ```
 
 You should now be on Melt’s portfolio page.  Now we have to check that the proper page loaded.  You can do this a number of ways.  You can search for specific elements, check the page title, or look for specific copy.   At the same time I’ll have the test output the results to the terminal.  You can output to a text file if you’d like as well.
 
 ```ruby
-If driver.title != ‘Meltmedia – Our portfolio of client work’
-	Puts ‘Work  link failed to function properly’
-Else
-	Puts ‘Work link functioned properly’
-End
+if Driver.title != ‘Meltmedia – Our portfolio of client work’
+  puts ‘Work  link failed to function properly’
+else
+  puts ‘Work link functioned properly’
+end
 ```
 
 We now have a simple test that verifies a link.  We can use this test as a template for other link verification tests.  Either by making one long script that runs through ever links, or scripts for each individual links.  I prefer the later because it gives you granular results and lowers the chance of failure.  Since each test is independent of the previous, one test failing can’t cause another test to fail as well.
