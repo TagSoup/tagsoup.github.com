@@ -24,7 +24,7 @@ One more note before we get further into the code.  Automation is not a replacem
 require ‘rubygems’
 require ‘selenium-webdriver’
 
-Driver = Selenium::Webdriver.for :firefox
+Driver = Selenium::WebDriver.for :firefox
 ```
 
 This will create the object Page, which at this moment is a blank firefox window.  Loading any specific page is done by calling the Get method on that object.
