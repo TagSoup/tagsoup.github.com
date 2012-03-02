@@ -1,19 +1,21 @@
 ---
 layout: post
-title: "Day ?: Making Things Move Easier in a CSS3 World"
-date: 2012-03-03 21:58
+title: "Day 7: Making Things Move Easier in a CSS3 World"
+date: 2012-03-01 21:58
 comments: true
 categories: [css3, javascript, coffeescript, animation]
 author: Jim Jeffers
-published: false
+published: true
 ---
+
+###Day 7 of the 30 Day Writing Challenge
 
 CSS Animations have been around for a few years now but when they were first introduced you could only use them in Safari (well webkit technically, although they ran at like 9 fps in Chrome in the early days). That didn't stop me from making these [sumo wrestlers](http://sumocreations.com) but it did make them a novelty that most people couldn't see. Fast forward to today - Chrome, Firefox, and the IE10pp4 all support hardware accelerated CSS animations. Browser support is already today, especially on mobile, [and it will only get better](http://caniuse.com/#feat=css-animation). So why not start using them now? Declaring animations in CSS requires a lot of code, and supporting multiple browsers means repeating a lot of this lengthy code many times over. Here's how to cope:
 
 ## Dealing w/ Prefix Hell
 
 Using CSS animations can be a nightmare. Browser prefixes on properties is one thing, but with CSS animations we're talking about entire prefixed blocks of code containing prefixed properties. No big deal right? Take a look at how much code it took to setup the 'rocking' animation I applied to some of my sumo wrestlers:
-
+<!--more-->
 <script src="https://gist.github.com/1883460.js?file=sumo_balancing.css"></script>
 
 It takes 15 rules to properly apply and configure the animation on a given element. That's inconvenient enough -- but then it takes a whopping 74 lines of code to define a simple animation with only 3 keyframes. So how do we solve this?
