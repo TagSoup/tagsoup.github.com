@@ -3,7 +3,7 @@ layout: post
 title: "Drunk and Pushing State"
 date: 2012-02-27 21:58
 comments: true
-categories: [pushstate, html5, drunk, javascript]
+categories: [pushstate, html5, drunk, javascript, Writing Challenge]
 author: Luke Karrys - LL Cool LK
 ---
 
