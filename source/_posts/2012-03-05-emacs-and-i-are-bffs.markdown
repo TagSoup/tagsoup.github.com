@@ -4,8 +4,9 @@ title: "Emacs and I are BFF's"
 date: 2012-03-05 08:45
 comments: true
 categories: [Writing Challenge, Text Editors, Tools, IDE, Emacs]
+author: Nick Crohn
 ---
-# Emacs and I are BFF's
+
 ### Day 11 of the 30 Day Writing Challenge: A look at why I use 35 year old software
 
 ## Why Emacs?
@@ -20,6 +21,8 @@ _Note_ If you are on linux or Mac you should know these commands:
            Quit [CTRL]-x c
 
 I will fully admit there is a learning curve to Emacs, it's the biggest draw back of any of the terminal editors. When I first started using Emacs it took me around 2 months to be able to use it exclusively. Up until that point I was augmenting my development with the GUI editor I was using prior. My point though is, stick with it, make a cheat sheet, keep a page open of common commands, so on and so on. Your hard work will be rewarded with efficient, clean and simple development.
+
+<!--more-->
 
 ## Keep Your Hands on those Keys!
 Over the years I've come to know how critical it is to get an idea out when it's flowing. While working at a data entry job I picked up a skill that has helped me emmensly, even if you don't use Emacs. To flow faster, try and keep your hand off the mouse. Every transition slows you down and impedes your train of thought into the code. The best part about this is you can pracitce this with whatever editor you're already doing. Emacs, though allows you to maximize on keyboard use.
