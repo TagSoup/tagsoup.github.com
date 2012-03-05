@@ -51,7 +51,7 @@ _(M is reference for the Meta key, on OSX the meta key is Esc)_
 It's that simple and flows directy inline with your working environment.
 
 ## Can I get that Code Snippet in Perwinkle Blue?
-Emacs is a LISP editor, it runs and interprets LISP to make it the powerhouse that it is today. What does that mean? Well, LISP is a functional language that was designed originally for processing lists. (LISt Processing). [Wikipedia](http://en.wikipedia.org/wiki/Lisp_(programming_language))
+Emacs is a LISP editor, it runs and interprets LISP to make it the powerhouse that it is today. What does that mean? Well, LISP is a functional language that was designed originally for processing lists. (LISt Processing). [Wikipedia](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29)
 
 Lisp provides Emacs it's power because it allows you to specify any new functionality you'd like your editor to have. Emacs has a concept of Major and Minor modes which are all just small Lisp programs. I'll give you an example of the features that can be provided.
 
