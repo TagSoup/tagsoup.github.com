@@ -16,7 +16,7 @@ To solve this problem I have developed a simple Ruby application that parses a p
 sudo gem install mechanize
 ```
  
-Mechanize is actually completely capable of performing the functionality of the Selenium script, but it has one major disadvantage.  The Selenium script can be run against Saucelab's OnDemandService (url: www.saucelabs.com) which gives you access to most every major OS/Browser combination.  That might not matter to you as a developer, but Compatibility Testing is the bread and butter of QA.  Now onto the code:
+Mechanize is actually completely capable of performing the functionality of the Selenium script, but it has one major disadvantage.  The Selenium script can be run against Saucelab's [OnDemandService][0] which gives you access to most every major OS/Browser combination.  That might not matter to you as a developer, but Compatibility Testing is the bread and butter of QA.  Now onto the code:
 
 <!--more-->
 
@@ -75,6 +75,8 @@ end
 
 page.quit
 page.get('http://www.google.com')
-\\\
+```
 
 The angry caps locked, "PUT PAGE TITLE HERE," is our target.  As I mentioned in the previous article: Selenium is capable of checking for things on the page other than the title.  If the link goes to content that is hidden, you can check for specific text.  Whichever you use replace that text with what you are looking for, and you are done.  Now go fourth and fix broken links.
+
+[0]:http://www.saucelabs.com
