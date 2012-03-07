@@ -6,7 +6,7 @@ comments: true
 categories: [Writing Challenge, QA, ruby, Shut Up Truett]
 author: Truett Kueck
 ---
-
+###Day 12 of the 30 Day Writing Challenge:
 Hello, I'm Truett Kueck and you're not.  Today I am going to expand on what I wrote about last week.  It is amazingly common to forget to add urls to links.  This is completely understandable.  You are developing the page in sprints, and sometimes the page you need to link to does not exist yet.  Multiple sprints later when that page exists it slips your mind and then BAM! a site is live with scores of non-functioning.  It is also possible, and very common, that the actual requirements for links are unclear or completely non-existent.  
 
 To solve this problem I have developed a simple Ruby application that parses a page for any links and then generates a Selenium script that clicks through the links on the page.  You will still need to make a few modifications, but you are 95% of the way there.  It uses the mechanize gem, another of many web automation gems, so we will need to install that first.
