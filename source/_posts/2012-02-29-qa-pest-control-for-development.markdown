@@ -4,7 +4,7 @@ title: "QA - Pest control for development"
 date: 2012-02-29 21:26
 comments: true
 categories: [Writing Challenge, QA, ruby, Shut Up Truett]
-author: Truett 
+author: Truett Kueck
 ---
 
 ###Day 6 of the 30 Day Writing Challenge
