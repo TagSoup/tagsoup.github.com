@@ -47,8 +47,8 @@ Before we get back to Connor's script, let's break down the Double Not. Here's a
 ```
 
 ###There is one more thing the Double Not does for us.
-Damn you James Padolsey for being so smart. He [blogged about the Double Not][2] over a year ago and added this little nugget:
-"~~‘s flooring capabilities make it a better alternative to Math.floor if you know you’re dealing with positives — it’s faster and takes up less characters."
+Damn you James Padolsey for being so smart. He [blogged about the Double Not][2] over a year ago and added this little nugget:<br />
+&nbsp;" ~~‘s flooring capabilities make it a better alternative to Math.floor if you know you’re dealing with positives — it’s faster and takes up less characters. "
 
 So, it's a micro perf for Math.floor (in some browsers)! Nice nugs dude!
 
