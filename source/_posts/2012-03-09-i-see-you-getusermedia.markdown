@@ -11,17 +11,17 @@ author: Tony Camp
 
 I'm busting my ass to get this post in. I hate just throwing "anything" up, so I took some time to research something I've never messed with: getUserMedia.
 
-Let me preface this by giving you some browser requirements. Your computer needs a camera on it. You also need [Chrome Canary][1], or [Opera Next][0]. If you chose to use Opera Live, you don't have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to [chrome://flags/][2] and look for "Enable MediaStream". Make sure this is enabled. Now time for the fun.
+Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need [Chrome Canary][1], or [Opera Next][0]. If you chose to use Opera Next, you don't have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to [chrome://flags/][2] and look for "Enable MediaStream". Make sure this is enabled. Now time for the fun.
 
 {% include getUserMedia.html %}
 
 <!-- more -->
 
-If you have everything in place, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there's a "Take Picture" button. Click it! Pretty fun right? Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. Now, let's check out some code.
+If you have met all the requirements, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there's a "Take Picture" button. Click it! Makes sexy happen! Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. I saw some shit Rick was posting on [Bocoup's site][6] and it blew me away. Also, [Mike Taylor's photo booth][3] is ridic. There's no way I could have gotten any of this done if I didn't take a peek at what they were doing. Now, let's check out some code.
 
 {% gist 2010552 %}
 
-Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn't available on the user's browser.
+Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn't available on the user's browser. In Mike Taylor's photobooth, if you don't have the getMediaUser method available, you can still "photobooth" a clip from a tasty Cary Grant video.
 
 On to the guts, the JS, the fun part. I do have to let you in on a secet... I was rushed to get this out before midnight so it might be a tad sloppy. Deal with it!
 
@@ -43,7 +43,7 @@ computeSize = function(supportsObjectFit){
 			}
 		}
 ```
-I know I'm calling this a bit wrong later in the code, but that's ok. This isn't production ready, for a client, or well groomed yet. But, let's break down the function. We passing one argument, supportObjectFit. This comes from an Opera Specific CSS property called `object-fit`. It has to do with setting proper ratios etc... [read more about it here][5].
+I know I'm calling this a bit wrong later in the code, but that's ok. This isn't production ready, for a client, or well groomed yet. It's a rough demo. But, let's break down the function. We are passing one argument, supportObjectFit. This comes from an Opera Specific CSS property called `object-fit`. It has to do with setting proper ratios of placed elements (video, canvas etc). [Read more about it here][5].
 
 Next we have out success and fail callbacks for later:
 
@@ -58,7 +58,7 @@ errorCallback =function (error) {
 	computeSize(true);
 }
 ```
-These come into play a bit later when we're doing our feature detection on the getUserMedia method. On success, we're setting the src of our video element to be the "feed" from our device's video camera. We're also determining the size of the video player if the user is browsing with Opera Live.
+These come into play a bit later when we're doing our feature detection on the getUserMedia method. On success, we're setting the src of our video element to be the "feed" from our device's video camera. We're also determining the size of the video element if the user is browsing with the Opera Next browser.
 
 ```javascript
 doc.getElementById('take').onclick = function() {
@@ -67,9 +67,9 @@ doc.getElementById('take').onclick = function() {
 };
 ```
 
-Easy Peasy, set up an click event on the Take Picture button. It will run the conputeSize() function, and then draw our screen shot from the video aka our camer feed.
+Easy Peasy. Set up an click event on the "Take Picture" button. It will run the conputeSize() function, and then draw our screen shot from the video (aka our camera feed) onto our canvas element.
 
-Now here comes the important part, everything else was basically set up for this:
+Now here comes the important part, everything else was basically for setting this up:
 
 ```javascript
 window.addEventListener('DOMContentLoaded', function() {
@@ -92,11 +92,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 }, false);
 ```
-Here's where our feature detection comes in. When the document is loaded and when it is, let's check to see if the browser supports our getUserMedia hawtness (currently, meaning the browser is Opera). If that is truthy, then let's use it. For our example, we're just grabbing video, but you could also pass it audio as well. We also pass in 2 callbacks. The success and fail functions we covered earlier. DONE!
+Here's where feature detection comes in to play. When the document is loaded, let's check to see if the browser supports our getUserMedia hawtness (currently, meaning the browser is Opera). If that is truthy, let's use it. In our example, we're just grabbing video by passing in the `{'video': true}` arguement, but you could also pass it audio as well. We also pass in 2 callbacks as arguements. The success and error functions we covered earlier. DONE!
 
-Next we check to see if the user is browsing with the Chrome Canary build. The syntax changes a tiny bit but the idea is the same. Set the video element's source to be our camer feed, start the camera and all the computeSize() function. Since we're not in Opera here, we give it the argument "false".
+Now we check to see if the user is browsing with the Chrome Canary build. The syntax changes a tiny bit but the idea is the same. Set the video element's source to be our camer feed, start the camera and all the computeSize() function. Since we know the user isn't in Opera Live here, we pass the argument "false".
 
-If all else fails, console log a msg showing this shit ain't gonna work.
+If all else fails, log a msg showing this shit ain't gonna work.
 
 I look forward to messing with this some more. I want to save the images users take and give them the ability to upload them to the TagSoup page. I will be working on that next. Please check out the links from Mike Taylor, Rick Waldron, Opera, and Google Devs.
 
@@ -108,3 +108,4 @@ I look forward to messing with this some more. I want to save the images users t
 [3]: http://miketaylr.com/photobooth/
 [4]: https://developer.mozilla.org/en/Canvas_tutorial/Using_images
 [5]: http://dev.opera.com/articles/view/css3-object-fit-object-position/
+[6]: http://bocoup.com/
