@@ -3,7 +3,7 @@ layout: post
 title: "Hacking on the NCAA Tournament for Fun (Not For Profit)"
 date: 2012-03-12 23:59
 comments: true
-categories: [node, postgres, twitter, hacks, flatiron, handlebars, javascript]
+categories: [node, postgres, twitter, hacks, flatiron, handlebars, javascript, Writing Challenge]
 author: Luke Karrys
 ---
 
