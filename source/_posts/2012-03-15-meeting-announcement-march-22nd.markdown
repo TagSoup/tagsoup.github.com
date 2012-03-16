@@ -11,7 +11,7 @@ categories: [Meeting Announcement]
 <p>Oh hai.</p>
 <p>It's been a while since we've had out last meetup but we're back in full gear. The holiday break was nice and allowed us to plan some big things.</p>
 <p>First you'll notice a new venue. Unicon has been nice enough to allow us to use their space for the evening. We want to start rotating where the meeting is held each month. So if you have a spot for us, let us know. We would love to have TagSoup at your place.</p>
-<p>Unicon, located in Gilbert, might be a bit of a drive for you. It will be worth it. Here's why:</p>
+<p>If you plan on coming, please head over to out <a href="http://www.meetup.com/PHX-Tag-Soup/events/56346612/">MeetUp page and RSVP</a> (it helps us order the right amount of food). Unicon, located in Gilbert, might be a bit of a drive for you. It will be worth it. Here's why:</p>
 
 <div class="clearfix">
 {% img left /images/speakers/rick-waldron.jpg 128 128 'Rick Waldron' '<3's TurboNegro! %}

@@ -4,7 +4,6 @@ title: "Papa Crock"
 date: 2012-03-14 09:20
 comments: true
 categories: [presentation, JS, video]
-published: false
 ---
 
 ###Day 20 of the 30 Day Writing Challenge
