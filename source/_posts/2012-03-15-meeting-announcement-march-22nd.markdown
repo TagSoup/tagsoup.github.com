@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Meeting Announcement March 22nd"
+title: "Meeting Announcement March 22nd, 2012"
 date: 2012-03-15 08:45
 comments: true
 categories: [Meeting Announcement]
+author: Tony Camp
 ---
 
 ### CSS JS DOM in BFE
