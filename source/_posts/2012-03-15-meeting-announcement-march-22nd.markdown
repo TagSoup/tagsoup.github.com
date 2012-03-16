@@ -21,7 +21,7 @@ Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going t
 
 <div class="clearfix">
 {% img left /images/speakers/divya-manian.jpg 128 128 'Divya Manian' '<3's HTML5 & CSS %}
-Divya Manian (<a href="http://twitter.com/#!/nimbupani">@nimbupani</a>). Divya points and laughs. She gossips about CSS & HTML. Divya currently works at <a href="http://www.opera.com/">Opera</a> as a Web Opener. She will be crafting words, from her mouth that shall intrigue and captive the youth. (again, when she asked what she should talk about, I just said, have fun and do whatever you want.)
+Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points and laughs. She gossips about CSS & HTML. Divya currently works at <a href="http://www.opera.com/">Opera</a> as a Web Opener. She will be crafting words, from her mouth that shall intrigue and captive the youth. (again, when she asked what she should talk about, I just said, have fun and do whatever you want.)
 </div>
 
 <div class="clearfix">
