@@ -11,7 +11,11 @@ rsync_delete   = true
 deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
+<<<<<<< HEAD
 deploy_branch  = "master"
+=======
+deploy_branch  = "source"
+>>>>>>> 67225b2d1c5ba89ac6c2c480b73392858995452b
 
 ## -- Misc Configs -- ##
 
