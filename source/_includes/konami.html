@@ -1,0 +1,35 @@
+{% if site.konami %}
+<script type='text/javascript' src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
+<script type="text/javascript">
+$.domReady(function(){
+  
+  var deviateMin = 5,
+      deviateMax = 12;
+
+  function random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function deviate(num) {
+      return (((random(1, 2) === 1) ? 1 : -1) * random(deviateMin, deviateMax)) + num;
+  }
+  
+  konami = new Konami();
+  konami.code = function() {
+    var content = document.getElementById('main'),
+        header = document.getElementById('header'),
+        footer = document.getElementById('footer');
+
+    window.onscroll = function() {
+      content.style.margin = deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(0) + 'px';
+      content.style.padding = deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(0) + 'px';
+      footer.style.margin = deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(44) + 'px ' + deviate(0) + 'px';
+      footer.style.padding = deviate(14) + 'px ' + deviate(55) + 'px ' + deviate(14) + 'px ' + deviate(55) + 'px';
+      header.style.margin = deviate(0) + 'px ' + deviate(0) + 'px ' + deviate(44) + 'px ' + deviate(0) + 'px';
+      header.style.padding = deviate(35) + 'px ' + deviate(55) + 'px ' + deviate(35) + 'px ' + deviate(55) + 'px';
+    };
+  };
+  konami.load();
+});
+</script>
+{% endif %}

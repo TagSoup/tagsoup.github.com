@@ -1,0 +1,60 @@
+<video id="video" width="640" height="480" autoplay></video>
+<button id="take">Take Picture</button>
+
+<!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT -->
+<canvas id="snapshot" width="640" height="480"></canvas>
+
+
+<script type="text/javascript">
+
+	var doc = document,
+		snapshot = doc.getElementById('snapshot'),
+		photo = snapshot.getContext('2d'),
+		video = doc.querySelector('video'),
+		VIDEO_WIDTH, VIDEO_HEIGHT,
+		computeSize = function(supportsObjectFit){
+		// user agents that don't support object-fit 
+		// will display the video with a different 
+		// aspect ratio. 
+			if (supportsObjectFit === true){
+				VIDEO_WIDTH = 640;
+				VIDEO_HEIGHT = 480;
+			} else {
+				VIDEO_WIDTH = video.videoWidth;
+				VIDEO_HEIGHT = video.videoHeight;
+			}
+		},
+		successCallback = function (stream) {
+			video.src = stream;
+			video.play();
+			computeSize(true);
+		},
+		errorCallback =function (error) {
+			console.error('An error occurred: [CODE ' + error.code + ']');
+		};
+
+	doc.getElementById('take').onclick = function() {
+		computeSize(true);
+		photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+	};
+
+	window.addEventListener('DOMContentLoaded', function() {
+
+		if (navigator.getUserMedia) {
+
+			navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+		} else if (navigator.webkitGetUserMedia) {
+			
+			navigator.webkitGetUserMedia("video", function(stream){
+				video.src = window.webkitURL.createObjectURL(stream);
+				video.play();
+				computeSize(false);
+			});
+
+		} else {
+			console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+		}
+
+	}, false);
+</script>
