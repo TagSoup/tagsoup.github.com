@@ -70,6 +70,10 @@ It started with this [tweet][0]. I quickly replied with one of my favorite BBQ p
 		<p>It's far, it's in Gilbert Wahhhhh. You can stay at my house for the night if you end up crashing into a food coma. Just get there. I don't care how, just do it. Plus some other great places close by.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Joe's+Real+BBQ,+North+Gilbert+Road,+Gilbert,+AZ&hl=en&ll=33.432301,-111.8573&spn=0.199128,0.346069&sll=33.505904,-112.003899&sspn=0.198959,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFST1_AEdJTpW-SHAEttyAloZACkTMtnhFqkrhzE3b_S_NPfgQg&oq=Joes+Real&t=h&gl=us&mra=ls&z=12" target="_new">Directions from the Hotel</a></p>
 	</li>
 	<li>
+		<a href="http://libertymarket.com/" target="_new">Liberty Market</a>
+		<p>Another "Joe" creation. Simply fantastic. Located across the street from Joe's BBQ and a Postinos. Make an afternoon of it.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Liberty+Market&hl=en&sll=33.432301,-111.8573&sspn=0.140966,0.285301&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFcLz_AEdAzhW-SHSyKexkWgmjCkHir7eFqkrhzHGtWat5vAIcw&t=h&gl=us&mra=ls&z=11" target="_new">Directions from the Hotel</a></p>
+	</li>
+	<li>
 		<a href="http://joesfarmgrill.com/" target="_new">Joe's Farm Grill</a>
 		<p>A personal favorite... from the same Joe at Joe's Real BBQ. This man can do no wrong. If you're out in my neck of the woods (Gilbert) make it happen.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Joe's+Farm+Grill&hl=en&sll=33.50587,-111.96066&sspn=0.04974,0.086517&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFaxy_AEdiDRX-SFxKhq2yeEjzyltMp0FOqwrhzHtFQ3Ir6Kuew&t=h&gl=us&mra=ls&z=11" target="_new">Directions from the Hotel</a></p>
 	</li>
