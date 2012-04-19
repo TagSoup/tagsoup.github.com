@@ -33,4 +33,4 @@ TTFN - "Did you take a bath in rainbows and cupcakes?"
 	{% img left /images/olu-jsconf.jpg 50 %}
 </div>
 
-[0]: http://g.co/maps/f9esp
+[0]: http://g.co/maps/r2hxg
