@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: handlebars | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/handlebars/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/handlebars/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hacking on the NCAA Tournament for Fun (Not For Profit)]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
     <updated>2012-03-12T23:59:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
+    <id>http://TagSoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
     <content type="html"><![CDATA[<h3>Day 18 of the 30 Day Writing Challenge!</h3>
 
 <p>Hey everyone, it's me again. I'm sober this time, don't worry. Well actually I'm drunk on a crazy idea that I had last weekend. I've always been <em>really</em> into the NCAA Tournament. I once took up an entire wall in my kitchen with a giant bracket just so I could fill it in after every game. So rolling around in my head last weekend was an idea of combining the NCAA Tournament with my other love, code. I started to play around with a format to see how small (in terms of character length) I could make all my picks. This is what I came up with.</p>
@@ -73,72 +73,135 @@
 
 <p><em>Note: all the code here is pulled from <a href="https://github.com/lukekarrys/tweetyourbracket.com">the TweetYourBracket GitHub repo</a> and slightly modified for example purposes. I also made the <a href="https://gist.github.com/2028007">gist</a> I referenced above as an easier way to play with the majority of the code.</em></p>
 
-<p>{% codeblock picksToArray.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23 %}
-// Takes a string of the picks for a region and validates them
-// Return an array of picks if valid or false if invalid
-var picksToArray = function(picks, regionName) {</p>
-
-<p>  var regexp,</p>
-
-<pre><code>  replacement = '',
-  regExpStr = '',
-  seeds = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15],
-  seedLength = seeds.length,
-  regExpJoiner = function(arr) {
-    return '(' + arr.join('|') + '|X)';
-  },
-  backref = function(i) {
-    return regExpJoiner.call(this, _.map(_.range(i, i+2), function(n) { return "\\"+n; }));
-  };
-</code></pre>
-
-<p>  // Create capture groups for the first round matchups of the region
-  // Since we know what order the games should be selected in we can build a regex
-  // by splitting the seeds array into groups of two
-  // The regex will look like this:
-  // (1|16|X)(8|9|X)(5|12|X)(4|13|X)(6|11|X)(3|14|X)(7|10|X)(2|15|X)
-  // The X is the character used for a game that hasnt been picked yet
-  for (var i = 0; i &lt; seedLength; i += 2) {</p>
-
-<pre><code>regExpStr += regExpJoiner.call(this, seeds.slice(i, i+2));
-</code></pre>
-
-<p>  }</p>
-
-<p>  // Create capture groups using back references for the capture groups above
-  // Since we just created 8 capture groups above and we know that during each subsequent round
-  // the number of teams will be cut in half, we can use another loop to add to the regex.
-  // We will use glorious back references to ensure that each later match only contains
-  // teams that would have had the possibility of advancing to that game.
-  // We will add this to our regex above:
-  // (\1|\2|X)(\3|\4|X)(\5|\6|X)(\7|\8|X)(\9|\10|X)(\11|\12|X)(\13|\14|X)
-  for (i = 1; i &lt; seedLength - 2; i += 2) {</p>
-
-<pre><code>regExpStr += backref.call(this, i);
-</code></pre>
-
-<p>  }</p>
-
-<p>  regexp = new RegExp(regExpStr);
-  replacement = <em>.map(</em>.range(1, seedLength), function(num) { return '$'+num; }).join();</p>
-
-<p>  // Here we will test if our picks match the regex and if they do
-  // we will use the 15 capture groups we created above to split
-  // the picks into an array
-  if (regexp.test(picks)) {</p>
-
-<pre><code>return picks.replace(regexp, replacement).split(',');
-</code></pre>
-
-<p>  } else {</p>
-
-<pre><code>this.logError(regionName, 'was unable to parse the picks');
-return false;
-</code></pre>
-
-<p>  }
-};
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>picksToArray.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Takes a string of the picks for a region and validates them</span>
+</span><span class='line'><span class="c1">// Return an array of picks if valid or false if invalid</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">picksToArray</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">picks</span><span class="p">,</span> <span class="nx">regionName</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="kd">var</span> <span class="nx">regexp</span><span class="p">,</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span>  <span class="nx">replacement</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">regExpStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">seeds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">seedLength</span> <span class="o">=</span> <span class="nx">seeds</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">regExpJoiner</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|X)&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">backref</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">regExpJoiner</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;\\&quot;</span><span class="o">+</span><span class="nx">n</span><span class="p">;</span> <span class="p">}));</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Create capture groups for the first round matchups of the region</span>
+</span><span class='line'>  <span class="c1">// Since we know what order the games should be selected in we can build a regex</span>
+</span><span class='line'>  <span class="c1">// by splitting the seeds array into groups of two</span>
+</span><span class='line'>  <span class="c1">// The regex will look like this:</span>
+</span><span class='line'>  <span class="c1">// (1|16|X)(8|9|X)(5|12|X)(4|13|X)(6|11|X)(3|14|X)(7|10|X)(2|15|X)</span>
+</span><span class='line'>  <span class="c1">// The X is the character used for a game that hasnt been picked yet</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">seedLength</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">regExpStr</span> <span class="o">+=</span> <span class="nx">regExpJoiner</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">seeds</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Create capture groups using back references for the capture groups above</span>
+</span><span class='line'>  <span class="c1">// Since we just created 8 capture groups above and we know that during each subsequent round</span>
+</span><span class='line'>  <span class="c1">// the number of teams will be cut in half, we can use another loop to add to the regex.</span>
+</span><span class='line'>  <span class="c1">// We will use glorious back references to ensure that each later match only contains</span>
+</span><span class='line'>  <span class="c1">// teams that would have had the possibility of advancing to that game.</span>
+</span><span class='line'>  <span class="c1">// We will add this to our regex above:</span>
+</span><span class='line'>  <span class="c1">// (\1|\2|X)(\3|\4|X)(\5|\6|X)(\7|\8|X)(\9|\10|X)(\11|\12|X)(\13|\14|X)</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">seedLength</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">regExpStr</span> <span class="o">+=</span> <span class="nx">backref</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nx">regexp</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">regExpStr</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">replacement</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="o">&lt;</span><span class="err">/em&gt;.range(1, seedLength), function(num) { return &#39;$&#39;+num; }).join();&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Here we will test if our picks match the regex and if they do</span>
+</span><span class='line'>  <span class="c1">// we will use the 15 capture groups we created above to split</span>
+</span><span class='line'>  <span class="c1">// the picks into an array</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">regexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">picks</span><span class="p">))</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">return</span> <span class="nx">picks</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">regexp</span><span class="p">,</span> <span class="nx">replacement</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">this</span><span class="p">.</span><span class="nx">logError</span><span class="p">(</span><span class="nx">regionName</span><span class="p">,</span> <span class="s1">&#39;was unable to parse the picks&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I had fun writing to the code above. The purpose of is to take a string of picks and validate them with a regex to ensure that they meet the necessary requirements. It gets a little inception-y as you are looping through and created capture groups in the regex that are using back references to capture groups you just created in the iteration before.</p>
 
@@ -146,120 +209,223 @@ return false;
 
 <p>The code above is all used on the server-side in my application. I tried to leave as much up to server as I could, because I already had the code there and didn't want to deal with bugs bringing it to the browser. So what I did on my <a href="http://tweetyourbracket.com">client-side bracket</a> was to save the status of each pick into the URL hash. That way, the entire state of the bracket is in the URL at all times. It's not perfect, because I didn't add a watcher for the hash that will change picks if you change the URL. But what it does, is if you load the page with a bracket in the url hash, it will send that hash to the server and return the HTML if the bracket was valid.</p>
 
-<p>{% codeblock bracket.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/public/js/bracket.js#L103 %}
-function stringBuilder() {
-  var str = "";</p>
-
-<p>  // I'm going through each region's pickable games
-  // and taking either the team's region (for the Final Four)
-  // or the team's seed (if it's a regular region)
-  // and in the end saving the string to window.location.hash
-  $('.region').each(function() {</p>
-
-<pre><code>var $reg = $(this),
-    regId = $reg.attr('id').replace('_region', '');
-
-str += regId; 
-
-$(this).find('.winners '+pickable).each(function() {
-  var $this = $(this),
-      text = $.trim($this.text());
-
-  if (text) {
-    text = (regId === 'FF') ? $this.data('fromRegion') : text.match(/[0-9]+/)[0];
-  } else {
-    text = 'X';
-  }
-
-  str += text;
-});
-</code></pre>
-
-<p>  });
-  window.location.hash = str;
-}</p>
-
-<p>// This is called on dom ready
-if (window.location.hash) {
-  $.ajax({</p>
-
-<pre><code>// I have server side routes set up with flatiron to render this with handlebars
-url: '/validate/' + window.location.hash.replace('#', ''),
-success: function(data) {
-  $content.find('#bracket_holder').html($(data).html());
-}
-</code></pre>
-
-<p>  });
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bracket.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/public/js/bracket.js#L103'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stringBuilder</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// I&#39;m going through each region&#39;s pickable games</span>
+</span><span class='line'>  <span class="c1">// and taking either the team&#39;s region (for the Final Four)</span>
+</span><span class='line'>  <span class="c1">// or the team&#39;s seed (if it&#39;s a regular region)</span>
+</span><span class='line'>  <span class="c1">// and in the end saving the string to window.location.hash</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.region&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">$reg</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">regId</span> <span class="o">=</span> <span class="nx">$reg</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;_region&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">str</span> <span class="o">+=</span> <span class="nx">regId</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.winners &#39;</span><span class="o">+</span><span class="nx">pickable</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">text</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">text</span> <span class="o">=</span> <span class="p">(</span><span class="nx">regId</span> <span class="o">===</span> <span class="s1">&#39;FF&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;fromRegion&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">text</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[0-9]+/</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">text</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">str</span> <span class="o">+=</span> <span class="nx">text</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">str</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// This is called on dom ready</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// I have server side routes set up with flatiron to render this with handlebars</span>
+</span><span class='line'><span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/validate/&#39;</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'><span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$content</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;#bracket_holder&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Rendering It All</h3>
 
 <p>The last thing I'm going to show you is the server-side JavaScript function that adds the necessary content to our tournament object and the Handlebars template that renders it.</p>
 
-<p>{% codeblock addTeamContent.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23 %}
-// Take validated tournament and add necessary content so it is ready for Handlebars
-var addTeamContent = function(validatedPicks, editable) {</p>
-
-<p>  // These are the master regions
-  var ncaaRegions = NCAA.regions;</p>
-
-<p>  _.each(validatedPicks.regions, function(region, regionIndex) {</p>
-
-<pre><code>// These are the teams that played in this region
-var regionTeams = (typeof ncaaRegions[region.id] !== 'undefined') ? ncaaRegions[region.id].teams : [];
-
-_.each(region.rounds, function(round, roundIndex) {
-
-  // Triple nested loops FTW! ;)
-  _.each(round.games, function(game, gameIndex) {
-
-    if (typeof round.teams === 'undefined') round.teams = [];
-
-    var team = {
-          seed: '',
-          name: ''
-        },
-        isTop = (gameIndex % 2 === 0),
-        lastRound = (roundIndex === region.rounds.length-1),
-        classes = ['top', 'bottom'];
-
-    if (region.id !== this.finalFourRegionName) {
-
-      team.seed = parseInt(game, 10);
-      team.name = regionTeams[team.seed - 1];
-      team.fromRegion = region.id;
-
-    } else {
-
-      // These are selected winners in the final four
-      var fromRegion = _.find(validatedPicks.regions, function(reg) { return reg.id === game; });
-
-      if (fromRegion) {
-        var finalFourTeam = _.first(_.last(fromRegion.rounds).teams);
-        team.seed = finalFourTeam.seed;
-        team.name = finalFourTeam.name;
-        team.fromRegion = game;
-      }
-    }
-
-    round.teams[gameIndex] = _.extend(team, {
-      editable: editable,
-      startMatchup: isTop,
-      endMatchup: !isTop,
-      classes: (lastRound) ? '' : classes[~~!isTop]
-    });
-
-  }, this);
-}, this);
-</code></pre>
-
-<p>  }, this);</p>
-
-<p>  return validatedPicks;
-};
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>addTeamContent.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Take validated tournament and add necessary content so it is ready for Handlebars</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">addTeamContent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">,</span> <span class="nx">editable</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// These are the master regions</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">ncaaRegions</span> <span class="o">=</span> <span class="nx">NCAA</span><span class="p">.</span><span class="nx">regions</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">.</span><span class="nx">regions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">region</span><span class="p">,</span> <span class="nx">regionIndex</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// These are the teams that played in this region</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">regionTeams</span> <span class="o">=</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ncaaRegions</span><span class="p">[</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="nx">ncaaRegions</span><span class="p">[</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">teams</span> <span class="o">:</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">region</span><span class="p">.</span><span class="nx">rounds</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">round</span><span class="p">,</span> <span class="nx">roundIndex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Triple nested loops FTW! ;)</span>
+</span><span class='line'>  <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">round</span><span class="p">.</span><span class="nx">games</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">game</span><span class="p">,</span> <span class="nx">gameIndex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">team</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">seed</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="nx">isTop</span> <span class="o">=</span> <span class="p">(</span><span class="nx">gameIndex</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">lastRound</span> <span class="o">=</span> <span class="p">(</span><span class="nx">roundIndex</span> <span class="o">===</span> <span class="nx">region</span><span class="p">.</span><span class="nx">rounds</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">finalFourRegionName</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">game</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">team</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">regionTeams</span><span class="p">[</span><span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>      <span class="nx">team</span><span class="p">.</span><span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// These are selected winners in the final four</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">.</span><span class="nx">regions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">reg</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">reg</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">game</span><span class="p">;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">fromRegion</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">finalFourTeam</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">first</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">last</span><span class="p">(</span><span class="nx">fromRegion</span><span class="p">.</span><span class="nx">rounds</span><span class="p">).</span><span class="nx">teams</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="nx">finalFourTeam</span><span class="p">.</span><span class="nx">seed</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">team</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">finalFourTeam</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">team</span><span class="p">.</span><span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">game</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span><span class="p">[</span><span class="nx">gameIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">team</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">editable</span><span class="o">:</span> <span class="nx">editable</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">startMatchup</span><span class="o">:</span> <span class="nx">isTop</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">endMatchup</span><span class="o">:</span> <span class="o">!</span><span class="nx">isTop</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">classes</span><span class="o">:</span> <span class="p">(</span><span class="nx">lastRound</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;&#39;</span> <span class="o">:</span> <span class="nx">classes</span><span class="p">[</span><span class="o">~~!</span><span class="nx">isTop</span><span class="p">]</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">},</span> <span class="k">this</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="k">return</span> <span class="nx">validatedPicks</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Check out the <a href="https://github.com/lukekarrys/tweetyourbracket.com/blob/master/templates/bracket.hbs">Handlebars template</a> on GitHub to see how this was all rendered. Unfortunately I couldn't figure out how to embed Handlebars code with Octopress.</p>
 

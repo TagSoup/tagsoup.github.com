@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Dev Crush | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/dev-crush/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/dev-crush/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[More Notes From: OMG That’s So Kewl - Show and Tell]]></title>
-    <link href="http://tagsoup.github.com/blog/2011/12/03/more-notes-from-omg-thats-so-kewl-show-and-tell/"/>
+    <link href="http://TagSoup.github.com/blog/2011/12/03/more-notes-from-omg-thats-so-kewl-show-and-tell/"/>
     <updated>2011-12-03T23:27:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2011/12/03/more-notes-from-omg-thats-so-kewl-show-and-tell</id>
+    <id>http://TagSoup.github.com/blog/2011/12/03/more-notes-from-omg-thats-so-kewl-show-and-tell</id>
     <content type="html"><![CDATA[<p>Here is the video from our final, special guest, Paul Irish. Paul is an amazing developer. Some how, while releasing libraries like HTML5 BP and Modernizr, he is still able to find the time to talk to Phx Tag Soup. This screencast is about the Modernizr Test Suite. I will be blogging more about this specific meet-up and what it meat to me personally soon. For now, enjoy!</p>
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/5bdVgy1dROk" frameborder="0" allowfullscreen></iframe>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Announcement | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/announcement/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/announcement/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weekly Meeting]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/07/18/weekly-meeting/"/>
+    <link href="http://TagSoup.github.com/blog/2012/07/18/weekly-meeting/"/>
     <updated>2012-07-18T16:13:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/07/18/weekly-meeting</id>
+    <id>http://TagSoup.github.com/blog/2012/07/18/weekly-meeting</id>
     <content type="html"><![CDATA[<p>Oh hai!</p>
 
 <p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there Thursday night (7/19) from 7pm until close.</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[July 12th Meet Up]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
+    <link href="http://TagSoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
     <updated>2012-07-12T08:52:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
+    <id>http://TagSoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
     <content type="html"><![CDATA[<p>Oh hai!</p>
 
 <p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there tonight from 7pm until close.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weekly Meeting Details]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
+    <link href="http://TagSoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
     <updated>2012-06-20T08:23:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
+    <id>http://TagSoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
     <content type="html"><![CDATA[<p>Hey there!</p>
 
 <p>I'm sorry I didn't get to see all your lovely faces last week. I was getting my javascript learn on, in Austin, TX. Tomorrow's meeting (June 21) marks the 4th weekly TagSoup gathering... in a row. OMG . That's a full month. We should TOTALLY celebrate, am I right? So come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe and we can drink some delish coffee and write some code, build X and talk about Y.</p>
@@ -66,9 +66,9 @@
   
   <entry>
     <title type="html"><![CDATA[PhxTagSoup Goes Weekly]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
+    <link href="http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
     <updated>2012-05-23T12:43:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
+    <id>http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
     <content type="html"><![CDATA[<p>After a lot of feedback from friends, we decided to start holding a TagSoup meeting each week. So, starting May 31st, we will be meeting at <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> each week. Every Thursday night, from 7pm - close, we will be at Cartel. If you want to continue to hang out after hours, Casey Moore's is next door. Take advantage.</p>
 
 <p>May 31st's meeting will be a great time to meet with your teams (from April's meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
@@ -79,9 +79,9 @@
   
   <entry>
     <title type="html"><![CDATA[Next Meeting 4/26/12 - Codeventure Time]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
+    <link href="http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
     <updated>2012-04-18T21:39:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
+    <id>http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
     <content type="html"><![CDATA[<p>April 26th, 2012 will be our next meeting. Who's speaking this time? GASP! No one. Then what the cabbage will be going on? That's where it gets interesting. This meeting will have a few "firsts" in it.</p>
 
 <!-- more -->
@@ -102,14 +102,14 @@
 <p>TTFN - "Did you take a bath in rainbows and cupcakes?"</p>
 
 <div class="clearfix">
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
-    {% img left /images/olu-jsconf.jpg 50 %}
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="/images/olu-jsconf.jpg" width="50">
 </div>
 
 

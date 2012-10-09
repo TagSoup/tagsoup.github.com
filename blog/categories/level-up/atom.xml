@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: level up | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/level-up/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/level-up/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wear More Hats]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/11/wear-more-hats/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/11/wear-more-hats/"/>
     <updated>2012-03-11T21:34:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/11/wear-more-hats</id>
+    <id>http://TagSoup.github.com/blog/2012/03/11/wear-more-hats</id>
     <content type="html"><![CDATA[<h3>Day 17 of the 30 Day Writing Challenge</h3>
 
 <p>Developers of all types know that they have responsibilities: to clients, to employers, to code standards, and so on. We'd be doing ourselves a disservice, however, if we didn't acknowledge our responsibility to grow into not-typically-dev roles. It goes without saying that if you fall too far in love with a particular language and don't learn alternatives/future-friendly sibling languages, you'll become as certainly obsolete as your beloved language one day will.</p>

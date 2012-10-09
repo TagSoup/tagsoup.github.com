@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: agency <3 | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/agency-3/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/agency-3/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wear More Hats]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/11/wear-more-hats/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/11/wear-more-hats/"/>
     <updated>2012-03-11T21:34:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/11/wear-more-hats</id>
+    <id>http://TagSoup.github.com/blog/2012/03/11/wear-more-hats</id>
     <content type="html"><![CDATA[<h3>Day 17 of the 30 Day Writing Challenge</h3>
 
 <p>Developers of all types know that they have responsibilities: to clients, to employers, to code standards, and so on. We'd be doing ourselves a disservice, however, if we didn't acknowledge our responsibility to grow into not-typically-dev roles. It goes without saying that if you fall too far in love with a particular language and don't learn alternatives/future-friendly sibling languages, you'll become as certainly obsolete as your beloved language one day will.</p>
@@ -59,12 +59,12 @@
   
   <entry>
     <title type="html"><![CDATA[Day 8 of 30: Tales from the Agency]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/02/day-8-of-30-tales-from-the-agency/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/02/day-8-of-30-tales-from-the-agency/"/>
     <updated>2012-03-02T15:54:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/02/day-8-of-30-tales-from-the-agency</id>
+    <id>http://TagSoup.github.com/blog/2012/03/02/day-8-of-30-tales-from-the-agency</id>
     <content type="html"><![CDATA[<h4>Day 8 of the 30 Day Writing Challenge</h4>
 
-<p>{% img center /images/pitfall.jpg 700 %}</p>
+<p><img class="center" src="/images/pitfall.jpg" width="700"></p>
 
 <h3>How to Avoid Pitfalls When Creating Custom Illustrations for Clients.</h3>
 
@@ -81,8 +81,8 @@
 
 <p>The first thing I did was scour the internet for inspiration.  I went through all of my normal design resources, along with some new ones, since this was the first time I was doing illustrations for a client.  I found several concepts that I really liked and that I thought would fit well with the tag lines he had provided.  I showed the concepts to my creative director and to our senior designer.  Both of them were super excited and thought they would be great for this project.  The next thing I did was figure out what type of illustration style I would use.  Since I can really only illustrate in a couple of different styles, this wasn't that hard.  Once I had those two things figured out, then I developed a color palette that I could use for both the illustrations and the client's site.  Then it was off to the races.   I spent the next three days fleshing out my three illustrations.   Once I had put the finishing touches on them I submitted them to the project lead who then showed them to client.  As far as I was concerned this was a mere formality.  Of course the client was going to love them.  Just look at these illustrations, who wouldn't want these on their brand new site.</p>
 
-<p>{% img center /images/watering.jpg 700 %}
-{% img center /images/fishing.jpg 700 %}</p>
+<p><img class="center" src="/images/watering.jpg" width="700">
+<img class="center" src="/images/fishing.jpg" width="700"></p>
 
 <p>Well as it goes, it turns out the client did not want these on his site.  What I found out, which I should have found out right from the beginning, is the client didn't like my concepts.  He loved the illustration quality and the style, but he wasn't thrilled about the themes.  He felt they were too playful and did not convey the professionalism he wanted his site to have.  He especially was not thrilled that their were people in the illustrations, something he had not previously mentioned, but would have come up had I submitted my concepts before actually completing the illustrations.  Well, needless to say, I was pretty upset.  I had spent a ton of time on these illustrations, and I didn't agree with his assessment.  I didn't understand how anyone could not like my illustrations, and that's when I realized that I had broken my rule.  I had become emotionally attached to this project and made it about me instead of about my client.  I didn't submit my concepts to him, because it wasn't about him, it was about me.  Once I realized this I immediately calmed down, and set up an appointment to meet with the client.</p>
 
@@ -90,7 +90,7 @@
 
 <p>The client and I met, we discussed in more detail the type of theme he wanted for the illustrations.  I pitched ideas and gave him rough sketches right there in the meeting.  In talking it out, we decided that he would be best served to have only one banner rather than three.  Had we done that in the beginning I would have saved myself at least three full days of illustrating.  I had him approve sign off on the concept he liked best and then I did a more detailed drawing that was still a little rough around the edges, but was good enough to give him an idea of what the final piece would look like.  Once he signed off on that, I fleshed out the rest of the illustration and sent it off to him for approval.  Once he saw the finalized illustration, he approved it and I was able to then design the mockup for his site and the print based mailer that would accompany it.  Both the site and the mailer were approved with minimal changes.  Here is the illustration the client ended up approving.  Of the four illustrations I did, it was my least favorite, but I guess that is the point of this whole story.</p>
 
-<p>{% img center /images/final.jpg 700 %}</p>
+<p><img class="center" src="/images/final.jpg" width="700"></p>
 
 <h3>What did I learn?</h3>
 

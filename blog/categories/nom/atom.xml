@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Nom | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/nom/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/nom/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JSConf Food II - Drinking in AZ]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az/"/>
     <updated>2012-03-28T08:17:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az</id>
+    <id>http://TagSoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az</id>
     <content type="html"><![CDATA[<h3>Now you know where to eat, but now you're thirsty.</h3>
 
 <p>Another <a href="https://twitter.com/#!/areinet/status/184834438985818112">tweet</a> came in asking about drinking in AZ, specifically beer. Then a couple more came over. So here's another list. Again, if anyone has suggestions, leave a comment, submit a pull request, or msg me. I will get it added. Let's get started with the drinkys.</p>
@@ -112,9 +112,9 @@
   
   <entry>
     <title type="html"><![CDATA[NOM NOM - JSConf Food Ideas in AZ]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az/"/>
     <updated>2012-03-27T08:10:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az</id>
+    <id>http://TagSoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az</id>
     <content type="html"><![CDATA[<p>It started with this <a href="https://twitter.com/#!/wesbos/status/184646073485242368">tweet</a>. I quickly replied with one of my favorite BBQ places in the Phx Area, Joe's BBQ. I realized, after I posted, that Joe's is going to be SUPER far from the conference. So I rattled off a couple other great spots closer to where <a href="https://twitter.com/#!/wesbos/status/184646073485242368">@wesbos</a> was going to be staying that day. And with that, this list is born. These are places that friends and I have been to and think are tasty. If you want to add a place, feel free to send a pull request on GitHub, or just send <a href="https://twitter.com/#!/tonyjcamp">@tonyjcamp</a> a msg on twitter.</p>
 
 <!-- more -->

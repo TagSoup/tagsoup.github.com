@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: MS Filters | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/ms-filters/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/ms-filters/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,13 +15,13 @@
   
   <entry>
     <title type="html"><![CDATA[MS Filters Make Me Hate Life - Memoirs of a FE-ender]]></title>
-    <link href="http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/"/>
+    <link href="http://TagSoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/"/>
     <updated>2011-12-29T14:29:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender</id>
+    <id>http://TagSoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender</id>
     <content type="html"><![CDATA[<h4>Here's a screen shot of my issue. Notice the sub nav being cut off!</h4>
 
 <div class="clearfix">
-<a href="http://tagsoup.github.com/images/nav-barf.jpg" target="_new">{% img left /images/nav-barf.jpg 300 197 'Why does' 'IE Hate Developers?' %}</a>
+<a href="http://TagSoup.github.com/images/nav-barf.jpg" target="_new"><img class="left" src="/images/nav-barf.jpg" width="300" height="197" title="Why does" alt="IE Hate Developers?"></a>
 </div>
 
 
@@ -48,61 +48,94 @@
 
 <p>Chris Coyer has a great artice on <a href="http://css-tricks.com/reduced-test-cases/">creating a reduced test case</a>. Remembering the gist of it, I opened up js-fiddle and started hacking away. I was pretty sure the filter: property was being the hooker in my code. I knew it was depricated these days, but whatevs. It ended up coming down to 3 CSS properties living on the same element. Those being:</p>
 
-<p>{% codeblock Silly filter lang:css %}
-position: fixed;
-z-index: 9999;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Silly filter  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>The filter BS jumped out at me right away. So I removed filter, and the content outside of the container was showing properly. The style became:</p>
 
-<p>{% codeblock Put me in my place lang:css %}
-position: fixed;
-z-index: 9999;
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Put me in my place  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>For fun, I then pulled out the position: fixed. The style became:</p>
 
-<p>{% codeblock Silly filter 2 lang:css %}
-z-index: 9999;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Silly filter 2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I had my gradient, and the z-indexing working! Nice! So I started blaming position: fixed and filter being together. I told all my friends about it and they were all "bro, so cool, let's shoot red bull into our vains and snort some vodka". Just for funsies, I removed the z-index but kept the position and filter on the element.</p>
 
-<p>{% codeblock Brotastic lang:css %}
-position: fixed;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Brotastic  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>IT WORKED! No z-index, but WTF! I told all my BFF's about it and they cheered. More RB, vodka and badges to be had.</p>
 
 <p>So wanting the best of all 3 worlds, the simpliest solution I came up with was to wrap the nav bar in container element (don't care which you use), and put position: rel and z-index on the container. I kept the position: fixed and filter on the nav. Everything worked great. WIN!</p>
 
-<p>{% codeblock MUSCLES lang:css %}</p>
-
-<h1>brotainer {</h1>
-
-<pre><code>position: relative;
-z-index: 9999;
-</code></pre>
-
-<p>}</p>
-
-<h1>ie-hates-us {</h1>
-
-<pre><code>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-position: fixed; 
-</code></pre>
-
-<p>/* This seems to break everything if you use z-index here, so use it on a container</p>
-
-<pre><code>z-index: 9999;
-</code></pre>
-
-<p>*/
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>MUSCLES  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">brotainer</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'><span class="k">z-index</span><span class="o">:</span> <span class="m">9999</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">ie-hates-us</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">filter</span><span class="o">:</span> <span class="n">progid</span><span class="o">:</span><span class="n">DXImageTransform</span><span class="o">.</span><span class="n">Microsoft</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="n">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/*</span> <span class="n">This</span> <span class="n">seems</span> <span class="n">to</span> <span class="n">break</span> <span class="n">everything</span> <span class="n">if</span> <span class="n">you</span> <span class="n">use</span> <span class="k">z-index</span> <span class="n">here</span><span class="o">,</span> <span class="n">so</span> <span class="n">use</span> <span class="n">it</span> <span class="n">on</span> <span class="n">a</span> <span class="n">container</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">z-index</span><span class="o">:</span> <span class="m">9999</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;*/</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Here's the final fiddle:
 <a href="http://jsfiddle.net/tonyjcamp/eNr2M/">My final answer</a></p>
@@ -110,7 +143,7 @@ position: fixed;
 <p>And dudes, I learned a ton by coming up with this silly use case and writing an even sillier blog post about it. If you ever find yourself solving and issue you want to remember later, write a post! Hell, just fork this blog and write a post. I'll add it.</p>
 
 <div class="clearfix">
-{% img left http://26.media.tumblr.com/tumblr_lvsjfjCEMw1qza249o1_400.jpg 256 381 'Smart Dudes' 'Say Smart Things' %}
+<img class="left" src="http://26.media.tumblr.com/tumblr_lvsjfjCEMw1qza249o1_400.jpg" width="256" height="381" title="Smart Dudes" alt="Say Smart Things">
 </div>
 
 

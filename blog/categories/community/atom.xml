@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: community | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/community/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/community/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vegas Tech Road Trip]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
+    <link href="http://TagSoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
     <updated>2012-04-04T15:52:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
+    <id>http://TagSoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
     <content type="html"><![CDATA[<p>The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We're making a trek to our sister city to visit a <a href="http://twitter.com/#!/vegasjelly">Vegas Jelly</a> meetup. If you're interested in going, let us know. Step 1 will be getting a proper date in place. We're thinking late April or early May. Jellys are on Thursday nights, so we will be most likely leaving on a Thursday morning. A van rental is a strong candidate for transportation. A bunch developers in a van together for 5 hours... mmmmmm I can smell it already.</p>
 
 <p>Tenative dates, if you're interested, let us know what works for you:<br />
@@ -31,9 +31,9 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[HTML5 Boilerplate History w/ Paul Irish]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish/"/>
     <updated>2012-03-03T21:52:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish</id>
+    <id>http://TagSoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish</id>
     <content type="html"><![CDATA[<h3>Day 9 of the 30 Day Writing Challenge</h3>
 
 <p>The <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project was one of the first github projects that I REALLY started to use when it first came out. Sure, there were some libraries, plugins, or whatever that I had used before the HTML5 BP, but this is the first I used on a regular basis. After watching the repo and using the code base for a while, I would try and help out the project here and there. Most time, nothing major, but hey... better than nothing:</p>
@@ -74,16 +74,16 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Day 1 of the 30 Day Challenge]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/"/>
+    <link href="http://TagSoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/"/>
     <updated>2012-02-24T20:24:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge</id>
+    <id>http://TagSoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge</id>
     <content type="html"><![CDATA[<p>The idea is to have 30 days (in a row) of blog posts. The authors may vary. Subjects might not be serious; they don't need to be. The goal is to get out of our comfort zone and put something out there in hopes of helping / inspiring someone else. Most important, to have fun.</p>
 
 <p>We need more people to join and post. You can see we have lots of space available. Here's <a href="https://www.google.com/calendar/b/0/embed?src=6tbdk1sbit95epi2bb8c8jqqv4@group.calendar.google.com&amp;ctz=America/Phoenix">our calendar</a> showing who's posting and when. If you're interested shoot a msg to <a href="https://twitter.com/#!/phxtagsoup">@phxtagsoup</a> on twitter.</p>
 
 <p>Now that the boring stuff is out of the way, here's a tiny "ahhhhhh" tip I can share. It's super basic, but I hear people ask this question all the time.</p>
 
-<p><a href="http://tagsoup.github.com/images/undef-jams.png" target="_new">{% img left /images/undef-jams.png 800 'Undef' 'Jams' %}</a></p>
+<p><a href="http://TagSoup.github.com/images/undef-jams.png" target="_new"><img class="left" src="/images/undef-jams.png" width="800" title="Undef" alt="Jams"></a></p>
 
 <p>So I have a basic function inside of Chrome's console. When I press enter, I get the "undefined" msg. I haven't done anything though, so why the "undefined"? Javascript functions ALWAYS return a value. If you don't specify what it is, then it returns "undefined". YAY!</p>
 
@@ -93,40 +93,62 @@ May 8th<br /></p>
 <p>If you would like a more elegant explanation, check out the ever useful, <a href="http://stackoverflow.com/questions/903120/should-i-always-give-a-return-value-to-my-function/903126#903126">Stack Overflow</a>.</p>
 
 <p>Since we're on the topic of <code>return</code> values... let's go over another small trick. Again, it's nothing mind blowing or revolutionary. I'm sure you've seen this pattern before (assume hondaElement is a class on an "a" tag:
-{% codeblock Honda Elements lang:javascript %}
-$('#coolElement').delegate('.hondaElement', 'click', function(e) {</p>
-
-<pre><code>// do something silly here
-e.preventDefault();
-</code></pre>
-
-<p>});
-{% endcodeblock %}
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Honda Elements  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// do something silly here</span>
+</span><span class='line'><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 preventDefault... well, read that out loud and I bet you can guess what it's doing.</p>
 
 <p>And here's another common pattern that is used:
-{% codeblock Return Fasly lang:javascript %}
-$('#coolElement').delegate('.hondaElement', 'click', function() {</p>
-
-<pre><code>// do something silly here
-return false;
-</code></pre>
-
-<p>});
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Return Fasly  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// do something silly here</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>So, both examples stop the default action of the <code>a</code> firing when clicked. The second example takes things a bit further. It not only stops the default action from firing, it also stops event bubbling. It's the same as doing:</p>
 
-<p>{% codeblock Same as doing this lang:javascript %}
-$('#coolElement').delegate('.hondaElement', 'click', function(e) {</p>
-
-<pre><code>// do something silly here
-e.preventDefault();
-e.stopPropagation();
-</code></pre>
-
-<p>});
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Same as doing this  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// do something silly here</span>
+</span><span class='line'><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'><span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Now, the caveat... I believe this only applies to jQuery. Vanilla js still needs to have both <code>e.preventDefault()</code> and <code>e.stopPropagation()</code>. If anyone has some extra info on that, please, leave a comment and set the record straight.</p>
 ]]></content>

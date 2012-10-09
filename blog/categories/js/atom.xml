@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: JS | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/js/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/js/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[March Meeting Recap]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
     <updated>2012-03-23T14:44:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap</id>
+    <id>http://TagSoup.github.com/blog/2012/03/23/march-meeting-recap</id>
     <content type="html"><![CDATA[<p>Here's a short recap from last nights (3/22/12) meeting:</p>
 
 <!-- more -->
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Papa Crock]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/14/papa-crock/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/14/papa-crock/"/>
     <updated>2012-03-14T09:20:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/14/papa-crock</id>
+    <id>http://TagSoup.github.com/blog/2012/03/14/papa-crock</id>
     <content type="html"><![CDATA[<h3>Day 20 of the 30 Day Writing Challenge</h3>
 
 <iframe src="http://player.vimeo.com/video/25606006?byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -64,9 +64,9 @@
   
   <entry>
     <title type="html"><![CDATA[JS Conf Reminder]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/01/18/js-conf-reminder/"/>
+    <link href="http://TagSoup.github.com/blog/2012/01/18/js-conf-reminder/"/>
     <updated>2012-01-18T10:03:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/01/18/js-conf-reminder</id>
+    <id>http://TagSoup.github.com/blog/2012/01/18/js-conf-reminder</id>
     <content type="html"><![CDATA[<h2>Reminder</h2>
 
 <p>Arizona developers. Tickets for <a href="http://2012.jsconf.us" target="_new">JS Conf 2012</a> go on sale today, Jan. 18th 2012, at 1pm AZ Time. If you have any interest in going, tickets sell out very quickly. Load up that browser and get <a href="http://jsconfus2012.eventbrite.com/" target="_new">ready to buy your ticket</a>.</p>
@@ -76,7 +76,7 @@
 <p>Some of the TagSoup members are setting up a shuttle service from the airport to the hotel on Sunday. We haven't set up the times we will be offering the service, so details will be planned out as soon as we have our drivers ready. We currently have about 5 drivers that have volunteered so far. We need more people. If you are interested, please let me know. There will be something special in it for you!</p>
 
 <div class="clearfix">
-{% img left http://a6.sphotos.ak.fbcdn.net/hphotos-ak-snc4/64654_1661315297731_1382668088_1668565_3582645_n.jpg 180 %}  
+<img class="left" src="http://a6.sphotos.ak.fbcdn.net/hphotos-ak-snc4/64654_1661315297731_1382668088_1668565_3582645_n.jpg" width="180">  
 </div>
 
 
@@ -87,9 +87,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ryan Dahl's History of Node.js]]></title>
-    <link href="http://tagsoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js/"/>
+    <link href="http://TagSoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js/"/>
     <updated>2011-10-05T21:04:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js</id>
+    <id>http://TagSoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js</id>
     <content type="html"><![CDATA[<p>Being a late on anything sucks right? But being late is always better than not finishing what you set out to do. So I just want to do a small recap of September's meet-up. Bottom line, Ryan fucking Dahl (<a href="http://twitter.com/#!/ryah">@ryah</a>)!! Ryan was nice enough to take some time to talk to us about the history of <a href="http://nodejs.org/">Node.js</a>. He's never really told this story until now. Thanks so much Ryan</p>
 
 <p>Check out the video here:</p>

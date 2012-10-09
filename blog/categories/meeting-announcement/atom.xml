@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Meeting Announcement | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/meeting-announcement/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/meeting-announcement/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Meeting Announcement March 22nd, 2012]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd/"/>
     <updated>2012-03-15T08:45:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd</id>
+    <id>http://TagSoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd</id>
     <content type="html"><![CDATA[<h3>CSS JS DOM in BFE</h3>
 
 <p>Oh hai.</p>
@@ -35,7 +35,7 @@
 
 
 <div class="clearfix">
-{% img left /images/speakers/rick-waldron.jpg 128 128 'Rick Waldron' '<3's TurboNegro! %}
+<img class="left" src="/images/speakers/rick-waldron.jpg" width="128" height="128" title="Rick Waldron" alt="<3">
 Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going talk about surprises. And how to present a surprise to a group of developers. (all this means is I asked Rick to have fun and talk about whatever he wants). Rick currently works at <a href="http://bocoup.com/">Bocoup</a> as a JavaScript Punk Rocker.
 </div>
 
@@ -43,7 +43,7 @@ Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going t
 
 
 <div class="clearfix">
-{% img left /images/speakers/divya-manian.jpg 128 128 'Divya Manian' '<3's HTML5 & CSS %}
+<img class="left" src="/images/speakers/divya-manian.jpg" width="128" height="128" title="Divya Manian" alt="<3">
 Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points and laughs. She gossips about CSS & HTML. Divya currently works at <a href="http://www.opera.com/">Opera</a> as a Web Opener. She will be crafting words, from her mouth that shall intrigue and captive the youth. (again, when she asked what she should talk about, I just said, have fun and do whatever you want.)
 </div>
 
@@ -51,7 +51,7 @@ Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points an
 
 
 <div class="clearfix">
-{% img left /images/speakers/ryan-tony.jpg 128 128 'Ryan G. + Tony C.' '=== <3' %}
+<img class="left" src="/images/speakers/ryan-tony.jpg" width="128" height="128" title="Ryan G. + Tony C." alt="=== <3">
 Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<a href="http://twitter.com/#!/tonyjcamp">@tonyjcamp</a>) are going talk about pseudo friends, pseudo elements, pseudo fun? (Depending on time)
 </div>
 

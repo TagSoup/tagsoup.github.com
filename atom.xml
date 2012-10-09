@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:22:31-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weekly Meeting]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/07/18/weekly-meeting/"/>
+    <link href="http://TagSoup.github.com/blog/2012/07/18/weekly-meeting/"/>
     <updated>2012-07-18T16:13:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/07/18/weekly-meeting</id>
+    <id>http://TagSoup.github.com/blog/2012/07/18/weekly-meeting</id>
     <content type="html"><![CDATA[<p>Oh hai!</p>
 
 <p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there Thursday night (7/19) from 7pm until close.</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[July 12th Meet Up]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
+    <link href="http://TagSoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
     <updated>2012-07-12T08:52:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
+    <id>http://TagSoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
     <content type="html"><![CDATA[<p>Oh hai!</p>
 
 <p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there tonight from 7pm until close.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Looking for a job?]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job/"/>
+    <link href="http://TagSoup.github.com/blog/2012/06/27/looking-for-a-job/"/>
     <updated>2012-06-27T20:56:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job</id>
+    <id>http://TagSoup.github.com/blog/2012/06/27/looking-for-a-job</id>
     <content type="html"><![CDATA[<p>Joe messaged me the other day, wanting to post some info about companies he&#8217;d been interviewing with. Turns out, it&#8217;s a great time to be a developer looking for work. Here&#8217;s some of the info Joe messaged me with:</p>
 
 <h3>Callisto.fm - Media analytics<br /></h3>
@@ -102,9 +102,9 @@ Salary: unknown<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Weekly Meeting Details]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
+    <link href="http://TagSoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
     <updated>2012-06-20T08:23:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
+    <id>http://TagSoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
     <content type="html"><![CDATA[<p>Hey there!</p>
 
 <p>I&#8217;m sorry I didn&#8217;t get to see all your lovely faces last week. I was getting my javascript learn on, in Austin, TX. Tomorrow&#8217;s meeting (June 21) marks the 4th weekly TagSoup gathering&#8230; in a row. OMG . That&#8217;s a full month. We should TOTALLY celebrate, am I right? So come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe and we can drink some delish coffee and write some code, build X and talk about Y.</p>
@@ -119,9 +119,9 @@ Salary: unknown<br /></p>
   
   <entry>
     <title type="html"><![CDATA[PhxTagSoup Goes Weekly]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
+    <link href="http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
     <updated>2012-05-23T12:43:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
+    <id>http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
     <content type="html"><![CDATA[<p>After a lot of feedback from friends, we decided to start holding a TagSoup meeting each week. So, starting May 31st, we will be meeting at <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> each week. Every Thursday night, from 7pm - close, we will be at Cartel. If you want to continue to hang out after hours, Casey Moore&#8217;s is next door. Take advantage.</p>
 
 <p>May 31st&#8217;s meeting will be a great time to meet with your teams (from April&#8217;s meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
@@ -132,9 +132,9 @@ Salary: unknown<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Next Meeting 4/26/12 - Codeventure Time]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
+    <link href="http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
     <updated>2012-04-18T21:39:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
+    <id>http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
     <content type="html"><![CDATA[<p>April 26th, 2012 will be our next meeting. Who&#8217;s speaking this time? GASP! No one. Then what the cabbage will be going on? That&#8217;s where it gets interesting. This meeting will have a few &#8220;firsts&#8221; in it.</p>
 
 <!-- more -->
@@ -155,14 +155,14 @@ Salary: unknown<br /></p>
 <p>TTFN - &#8220;Did you take a bath in rainbows and cupcakes?&#8221;</p>
 
 <div class="clearfix">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/olu-jsconf.jpg" width="50">
 </div>
 
 
@@ -172,9 +172,9 @@ Salary: unknown<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Vegas Tech Road Trip]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
+    <link href="http://TagSoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
     <updated>2012-04-04T15:52:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
+    <id>http://TagSoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
     <content type="html"><![CDATA[<p>The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We&#8217;re making a trek to our sister city to visit a <a href="http://twitter.com/#!/vegasjelly">Vegas Jelly</a> meetup. If you&#8217;re interested in going, let us know. Step 1 will be getting a proper date in place. We&#8217;re thinking late April or early May. Jellys are on Thursday nights, so we will be most likely leaving on a Thursday morning. A van rental is a strong candidate for transportation. A bunch developers in a van together for 5 hours&#8230; mmmmmm I can smell it already.</p>
 
 <p>Tenative dates, if you&#8217;re interested, let us know what works for you:<br />
@@ -188,9 +188,9 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[JSConf Food II - Drinking in AZ]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az/"/>
     <updated>2012-03-28T08:17:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az</id>
+    <id>http://TagSoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az</id>
     <content type="html"><![CDATA[<h3>Now you know where to eat, but now you&#8217;re thirsty.</h3>
 
 <p>Another <a href="https://twitter.com/#!/areinet/status/184834438985818112">tweet</a> came in asking about drinking in AZ, specifically beer. Then a couple more came over. So here&#8217;s another list. Again, if anyone has suggestions, leave a comment, submit a pull request, or msg me. I will get it added. Let&#8217;s get started with the drinkys.</p>
@@ -285,9 +285,9 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[NOM NOM - JSConf Food Ideas in AZ]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az/"/>
     <updated>2012-03-27T08:10:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az</id>
+    <id>http://TagSoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az</id>
     <content type="html"><![CDATA[<p>It started with this <a href="https://twitter.com/#!/wesbos/status/184646073485242368">tweet</a>. I quickly replied with one of my favorite BBQ places in the Phx Area, Joe&#8217;s BBQ. I realized, after I posted, that Joe&#8217;s is going to be SUPER far from the conference. So I rattled off a couple other great spots closer to where <a href="https://twitter.com/#!/wesbos/status/184646073485242368">@wesbos</a> was going to be staying that day. And with that, this list is born. These are places that friends and I have been to and think are tasty. If you want to add a place, feel free to send a pull request on GitHub, or just send <a href="https://twitter.com/#!/tonyjcamp">@tonyjcamp</a> a msg on twitter.</p>
 
 <!-- more -->
@@ -390,9 +390,9 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[March Meeting Recap]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
     <updated>2012-03-23T14:44:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap</id>
+    <id>http://TagSoup.github.com/blog/2012/03/23/march-meeting-recap</id>
     <content type="html"><![CDATA[<p>Here&#8217;s a short recap from last nights (3/22/12) meeting:</p>
 
 <!-- more -->
@@ -424,9 +424,9 @@ May 8th<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Meeting Announcement March 22nd, 2012]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd/"/>
     <updated>2012-03-15T08:45:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd</id>
+    <id>http://TagSoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd</id>
     <content type="html"><![CDATA[<h3>CSS JS DOM in BFE</h3>
 
 <p>Oh hai.</p>
@@ -444,7 +444,7 @@ May 8th<br /></p>
 
 
 <div class="clearfix">
-<img class="left" src="http://tagsoup.github.com/images/speakers/rick-waldron.jpg" width="128" height="128" title="Rick Waldron" alt="<3">
+<img class="left" src="http://TagSoup.github.com/images/speakers/rick-waldron.jpg" width="128" height="128" title="Rick Waldron" alt="<3">
 Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going talk about surprises. And how to present a surprise to a group of developers. (all this means is I asked Rick to have fun and talk about whatever he wants). Rick currently works at <a href="http://bocoup.com/">Bocoup</a> as a JavaScript Punk Rocker.
 </div>
 
@@ -452,7 +452,7 @@ Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going t
 
 
 <div class="clearfix">
-<img class="left" src="http://tagsoup.github.com/images/speakers/divya-manian.jpg" width="128" height="128" title="Divya Manian" alt="<3">
+<img class="left" src="http://TagSoup.github.com/images/speakers/divya-manian.jpg" width="128" height="128" title="Divya Manian" alt="<3">
 Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points and laughs. She gossips about CSS & HTML. Divya currently works at <a href="http://www.opera.com/">Opera</a> as a Web Opener. She will be crafting words, from her mouth that shall intrigue and captive the youth. (again, when she asked what she should talk about, I just said, have fun and do whatever you want.)
 </div>
 
@@ -460,7 +460,7 @@ Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points an
 
 
 <div class="clearfix">
-<img class="left" src="http://tagsoup.github.com/images/speakers/ryan-tony.jpg" width="128" height="128" title="Ryan G. + Tony C." alt="=== <3">
+<img class="left" src="http://TagSoup.github.com/images/speakers/ryan-tony.jpg" width="128" height="128" title="Ryan G. + Tony C." alt="=== <3">
 Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<a href="http://twitter.com/#!/tonyjcamp">@tonyjcamp</a>) are going talk about pseudo friends, pseudo elements, pseudo fun? (Depending on time)
 </div>
 
@@ -495,9 +495,9 @@ Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<
   
   <entry>
     <title type="html"><![CDATA[Papa Crock]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/14/papa-crock/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/14/papa-crock/"/>
     <updated>2012-03-14T09:20:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/14/papa-crock</id>
+    <id>http://TagSoup.github.com/blog/2012/03/14/papa-crock</id>
     <content type="html"><![CDATA[<h3>Day 20 of the 30 Day Writing Challenge</h3>
 
 <iframe src="http://player.vimeo.com/video/25606006?byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -510,9 +510,9 @@ Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<
   
   <entry>
     <title type="html"><![CDATA[A Bit on Process]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/13/a-bit-on-process/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/13/a-bit-on-process/"/>
     <updated>2012-03-13T08:31:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/13/a-bit-on-process</id>
+    <id>http://TagSoup.github.com/blog/2012/03/13/a-bit-on-process</id>
     <content type="html"><![CDATA[<h3>Day 19 of the 30 Day Writing Challenge</h3>
 
 <p>I can&#8217;t think of anything more uniformly despised by everyone in my career than process.  Just mentioning the word generally causes a visible reaction.  That isn&#8217;t a good thing.  A good process should be your best friend that makes everything else in your life easier.  I know why everyone reacts that way.  We&#8217;ve all worked somewhere with a rigid process whose endless meetings and documents detract more than they add.  That doesn’t mean process itself is bad, just that those processes are.</p>
@@ -527,9 +527,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Hacking on the NCAA Tournament for Fun (Not For Profit)]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
     <updated>2012-03-12T23:59:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
+    <id>http://TagSoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
     <content type="html"><![CDATA[<h3>Day 18 of the 30 Day Writing Challenge!</h3>
 
 <p>Hey everyone, it&#8217;s me again. I&#8217;m sober this time, don&#8217;t worry. Well actually I&#8217;m drunk on a crazy idea that I had last weekend. I&#8217;ve always been <em>really</em> into the NCAA Tournament. I once took up an entire wall in my kitchen with a giant bracket just so I could fill it in after every game. So rolling around in my head last weekend was an idea of combining the NCAA Tournament with my other love, code. I started to play around with a format to see how small (in terms of character length) I could make all my picks. This is what I came up with.</p>
@@ -922,9 +922,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Wear More Hats]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/11/wear-more-hats/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/11/wear-more-hats/"/>
     <updated>2012-03-11T21:34:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/11/wear-more-hats</id>
+    <id>http://TagSoup.github.com/blog/2012/03/11/wear-more-hats</id>
     <content type="html"><![CDATA[<h3>Day 17 of the 30 Day Writing Challenge</h3>
 
 <p>Developers of all types know that they have responsibilities: to clients, to employers, to code standards, and so on. We&#8217;d be doing ourselves a disservice, however, if we didn&#8217;t acknowledge our responsibility to grow into not-typically-dev roles. It goes without saying that if you fall too far in love with a particular language and don&#8217;t learn alternatives/future-friendly sibling languages, you&#8217;ll become as certainly obsolete as your beloved language one day will.</p>
@@ -966,9 +966,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Words to Live By]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/10/words-to-live-by/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/10/words-to-live-by/"/>
     <updated>2012-03-10T22:05:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/10/words-to-live-by</id>
+    <id>http://TagSoup.github.com/blog/2012/03/10/words-to-live-by</id>
     <content type="html"><![CDATA[<h3>Day 16 of the 30 Day Writing Challenge</h3>
 
 <p>This is one of my favorite presentations. GitHub just &#8220;gets it&#8221;. I wish this was a prerequisite for anyone wanting to start their own business.</p>
@@ -979,11 +979,11 @@ The assumption that adopting a predefined process will work is a common mistake.
 
 
 <div class="clearfix">
-    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
-    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
 </div>
 
 ]]></content>
@@ -991,9 +991,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[I see you getUserMedia]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
     <updated>2012-03-09T22:43:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
+    <id>http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
     <content type="html"><![CDATA[<h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
 
 <p>I&#8217;m busting my ass to get this post in. I hate just throwing &#8220;anything&#8221; up, so I took some time to research something I&#8217;ve never messed with: getUserMedia.</p>
@@ -1277,36 +1277,36 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Non Destructive Editing]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/08/non-destructive-editing/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/08/non-destructive-editing/"/>
     <updated>2012-03-08T21:24:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/08/non-destructive-editing</id>
+    <id>http://TagSoup.github.com/blog/2012/03/08/non-destructive-editing</id>
     <content type="html"><![CDATA[<h3>Day 14 of the 30 Day Writing Challenge</h3>
 
 <p>As a designer, there is nothing more frustrating then opening up another designers working files and discovering that in the process of creating an effect they destroyed the original image.  And now you, the person charged with making an edit to that image, has to recreate the entire thing from scratch.  There are a lot of different ways to do non destructive editing, so today I thought I would show example of one of the easiest and most useful ones that I have found, the clipping mask.  Clipping masks are a super easy way that you as a designer can crop photos in Photoshop without actually deleting any portion of the photo.  Here is how it works:</p>
 
 <p>Step 1:  Open Photoshop and create a new document.  For this example I&#8217;ve opened up an 1140 grid template.</p>
 
-<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-1.jpg" width="800"></p>
+<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-1.jpg" width="800"></p>
 
 <!--more-->
 
 
 <p>Step 2:  Select the Shape Tool, and draw the shape that you would like your image to encompass.  For this example I&#8217;m going to draw a long thin rectangle.  I use this shape quite a bit when creating image banners or carousels, which I think we all know clients love no matter what we tell them.</p>
 
-<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-2-1.jpg" width="800">
-<img class="center" src="http://tagsoup.github.com/images/nd-editing/step-2-2.jpg" width="800"></p>
+<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-2-1.jpg" width="800">
+<img class="center" src="http://TagSoup.github.com/images/nd-editing/step-2-2.jpg" width="800"></p>
 
 <p>Step 3:  Go ahead and bring in your image.  The way that I like to place an image in Photoshop is to open the file menu and then select place.  I then use the browser to find the image I want to place and then select place.  The reason I like to do it this way rather than opening the image and just dragging it over to my new Photoshop document is, when you place it not only does it automatically name the layer whatever the file name is (which is nice for organizing your document) it also brings it in as a smart object.  I&#8217;m not going to go into all of the benefits of smart objects on this post, but know that smart objects give you a lot of editing flexibility that can really make your life easier once you know how to properly use them.</p>
 
-<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-3.jpg" width="800"></p>
+<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-3.jpg" width="800"></p>
 
 <p>Step 4:  Okay, now that we have our custom shape drawn and our image the next thing we need to do is check our layer palette and make sure that the image is stacked above the shape layer.  This should have happened automatically if you followed the steps I outlined, but it never hurts to double check.  Once you have confirmed that the image layer is above the shape layer go ahead and right click (control-click) on your image layer in the layer palette.  This will bring up a menu of options.</p>
 
-<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-4.jpg" width="800"></p>
+<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-4.jpg" width="800"></p>
 
 <p>Step 5: Once the menu is up, select Create Clipping Mask from the list of options.  Here&#8217;s what your image should look like.</p>
 
-<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-5.jpg" width="800"></p>
+<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-5.jpg" width="800"></p>
 
 <p>Now you are free to scale and crop the image however you see fit without having to destroy the original image layer.  If you find that the image box is not the correct size, just adjust your clipping mask layer.</p>
 
@@ -1316,9 +1316,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Bitwise Guy Are Ya?]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
     <updated>2012-03-07T21:04:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
+    <id>http://TagSoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
     <content type="html"><![CDATA[<h3>Day 13 of the 30 Day Writing Challenge</h3>
 
 <p>The idea for this post all started with a friend of mine, <a href="https://twitter.com/#!/mcsheffrey">Connor McSheffrey</a> (@mcsheffrey). I don&#8217;t normally see a whole lot of activity from Connor on github. This morning, he posted a short gist:</p>
@@ -1421,9 +1421,9 @@ The assumption that adopting a predefined process will work is a common mistake.
   
   <entry>
     <title type="html"><![CDATA[Pest Control 2: Electric Boogaloo]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo/"/>
     <updated>2012-03-06T22:36:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo</id>
+    <id>http://TagSoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo</id>
     <content type="html"><![CDATA[<h3>Day 12 of the 30 Day Writing Challenge:</h3>
 
 <p>Hello, I&#8217;m Truett Kueck and you&#8217;re not.  Today I am going to expand on what I wrote about last week.  It is amazingly common to forget to add urls to links.  This is completely understandable.  You are developing the page in sprints, and sometimes the page you need to link to does not exist yet.  Multiple sprints later when that page exists it slips your mind and then BAM! a site is live with scores of non-functioning.  It is also possible, and very common, that the actual requirements for links are unclear or completely non-existent.</p>

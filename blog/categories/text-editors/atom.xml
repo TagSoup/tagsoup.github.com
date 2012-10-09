@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Text Editors | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/text-editors/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/text-editors/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Emacs and I are BFF's]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/"/>
     <updated>2012-03-05T08:45:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs</id>
+    <id>http://TagSoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs</id>
     <content type="html"><![CDATA[<h3>Day 11 of the 30 Day Writing Challenge: A look at why I use 35 year old software</h3>
 
 <h2>Why Emacs?</h2>
@@ -121,9 +121,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
   
   <entry>
     <title type="html"><![CDATA[Textmate vs Sublime 2]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/04/textmate-vs-sublime-2/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/04/textmate-vs-sublime-2/"/>
     <updated>2012-03-04T21:03:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/04/textmate-vs-sublime-2</id>
+    <id>http://TagSoup.github.com/blog/2012/03/04/textmate-vs-sublime-2</id>
     <content type="html"><![CDATA[<h3>Day 10 of the 30 Day Writing Challenge</h3>
 
 <p>I love, and I mean LOVE TextMate. It was my baby up until this year. TextMate did some amazing things, but their lack of updates started to wear on me. I had seen a few friends starting to use Sublime Text 2 and, at first, totally ignored their praise of the product. I thought, there's NOTHING Sublime is doing that TextMate (TM) isn't. So, it took about a month from the time I saw Sublime, to the time I gave it a try. I wish I would have done it earlier. I've seen the screen shots of TM2 and can't form a REAL opinion of it without using it. So the cries of "TextMate 2 is going to be better" mean nothing to me right now. I have gone through, and compared the tool based on what I am doing day to day. I'm purely a front-ender. And my day to day, may be completely different than yours. Just roll with it.</p>
@@ -220,9 +220,12 @@ Sublime: <code>cmd-left click</code><br /></p>
 <h4>Switching File Types</h4>
 
 <p>TextMate: <code>ctrl-opt-cmd-"modyifier"</code><br />
-Sublime2: Can no finz<br /></p>
+Sublime2: Thanks filosofunk! (see below)<br /></p>
 
-<p>TextMate: When you create a new file, by default, the new file type is a plain text document. You can use <code>ctrl-opt-cmd-h</code> to change it to html, giving  you html syntax highlighing. Or <code>ctrl-opt-cmd-j</code> which will prompt you with a choice, Java or JavaScript. That one's easy, JS! A handy short cut for sure. Wish Sublime had this.</p>
+<p>TextMate: When you create a new file, by default, the new file type is a plain text document. You can use <code>ctrl-opt-cmd-h</code> to change it to html, giving  you html syntax highlighing. Or <code>ctrl-opt-cmd-j</code> which will prompt you with a choice, Java or JavaScript. That one's easy, JS! A handy short cut for sure. Wish Sublime had this.<br />
+Sublime: Ctrl-Shift-P: Opens Command Palette<br />
+S: the first letter of 'Set Syntax'<br />
+Click on what you want or just keep typing until you get to the file type you want and hit enter.<br /></p>
 
 <h4>Bundles</h4>
 
@@ -330,9 +333,9 @@ Sublime: Winsies<br /></p>
   
   <entry>
     <title type="html"><![CDATA[Editor, Y U Do That - Sublime 2, Whitespace and Git conflicts]]></title>
-    <link href="http://tagsoup.github.com/blog/2011/12/08/Sublime-2/"/>
+    <link href="http://TagSoup.github.com/blog/2011/12/08/Sublime-2/"/>
     <updated>2011-12-08T23:58:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2011/12/08/Sublime-2</id>
+    <id>http://TagSoup.github.com/blog/2011/12/08/Sublime-2</id>
     <content type="html"><![CDATA[<p>I recently changed text editors. For any dev, this is a big deal. We're talking changing religions big. I had been using TextMate for about 4 years. I love TextMate. Then, I started hearing more and more about Sublime 2. So I decided to give it a whirl. And, after 10 days, I'm hooked. Thanks Ryan Mathis!</p>
 
 <p>I wanted to point out a small feature/issue I ran into today. Sublime 2 has a config that will trim white space at the end of lines. It's really useful and in most cases a great feature.</p>

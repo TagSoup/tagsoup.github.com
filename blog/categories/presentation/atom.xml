@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: presentation | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/presentation/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/presentation/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Papa Crock]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/14/papa-crock/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/14/papa-crock/"/>
     <updated>2012-03-14T09:20:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/14/papa-crock</id>
+    <id>http://TagSoup.github.com/blog/2012/03/14/papa-crock</id>
     <content type="html"><![CDATA[<h3>Day 20 of the 30 Day Writing Challenge</h3>
 
 <iframe src="http://player.vimeo.com/video/25606006?byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Random BS | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/random-bs/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/random-bs/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mmmm Soup]]></title>
-    <link href="http://tagsoup.github.com/blog/2011/10/02/mmmm-soup/"/>
+    <link href="http://TagSoup.github.com/blog/2011/10/02/mmmm-soup/"/>
     <updated>2011-10-02T21:21:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2011/10/02/mmmm-soup</id>
+    <id>http://TagSoup.github.com/blog/2011/10/02/mmmm-soup</id>
     <content type="html"><![CDATA[<p>Whoo Hoo! First post! So, we've found a home. Maybe temporary, might be permanent. We still haven't decided. But let's get into it.</p>
 
 <p>Who are we? The answer is simple. We're a group developers (client side, server side and even UX/UI side) in the Phoenix area. We all love the interactive space. We also want to make the web more fun.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: pushstate | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/pushstate/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/pushstate/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Drunk and Pushing State]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state/"/>
+    <link href="http://TagSoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state/"/>
     <updated>2012-02-27T21:58:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state</id>
+    <id>http://TagSoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state</id>
     <content type="html"><![CDATA[<h3>Day 4 of the 30 Day Challenge</h3>
 
 <p>In the immortal words <del>or</del> <em>of</em> Colonel Sanders, I'm too drunk to write this blog post. But eff it (note: I don't know if Colonel Sanders said that part). Don't take this as a knock that I don't care about this blog post because I do. The HTML5 history API is one of my favorite things ever (and Tony Camp is one of my personal heroes). If the HTML5 history API (or Tony Camp) came up to me and said, "Hey baby, I work to spec in all the latest browsers and degrade gracefully in the others. What are you doing later?" I would say, "Writing some code. See you later." I love it so much, I gave a talk about it at a previous <a href="http://tagsoup.github.com/blog/2011/10/28/html5-history-api-with-luke-karrys/">Tag Soup meetup</a>. But here I am going to tell you how to convert your current Octopress blog into an Octopress blog that uses HTML5 pushState (and how to report bugs to me where I messed up, because I definitely did).</p>
@@ -57,20 +57,32 @@
 
 <p>Yes. I promise I will show you some code. Let's start with step 1. This is some code I yanked from <a href="https://gist.github.com/854622">Benjamin Lupton</a> and tweaked a little to work a bit better with Octopress. This code is a jQuery helper to grab any internal links. The idea is that we are only going to want to attach our click handlers to internal links. The meat of this code is where we assign a boolean value to <code>isInternalLink</code>. We are checking whether the href of the link is equal to the root url or if it doesn't contain a colon. We also want to make sure that the href doesn't start with a hash (therefore it being a named anchor) and also isn't a link to the RSS feed.</p>
 
-<p>{% codeblock internal-link-helper.js %}
-$.expr[':'].internal = function(obj, index, meta, stack) {
-  var $link = $(obj),</p>
-
-<pre><code>  url = $link.attr('href') || '',
-  isInternalLink;
-</code></pre>
-
-<p>  // Check link
-  isInternalLink = ((url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) &amp;&amp; url.charAt(0) !== "#" &amp;&amp; url.indexOf('atom.xml') === -1);</p>
-
-<p>  return isInternalLink;
-};
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>internal-link-helper.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span><span class="p">.</span><span class="nx">expr</span><span class="p">[</span><span class="s1">&#39;:&#39;</span><span class="p">].</span><span class="nx">internal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">meta</span><span class="p">,</span> <span class="nx">stack</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$link</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">obj</span><span class="p">),</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span>  <span class="nx">url</span> <span class="o">=</span> <span class="nx">$link</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">isInternalLink</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Check link</span>
+</span><span class='line'>  <span class="nx">isInternalLink</span> <span class="o">=</span> <span class="p">((</span><span class="nx">url</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">rootUrl</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="o">===</span> <span class="nx">rootUrl</span> <span class="o">||</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">!==</span> <span class="s2">&quot;#&quot;</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;atom.xml&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="k">return</span> <span class="nx">isInternalLink</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>Ajaxify?!</h2>
 
@@ -78,115 +90,215 @@ $.expr[':'].internal = function(obj, index, meta, stack) {
 
 <p>Another note worth mentioning is the second parameter of the pushState method. That accepts a title for the new page, but as far as I know, no browsers support it. Also when using the <code>ajaxify</code> function in this way, we don't know the full title of the next page at this junction. This could be rearranged, but since the browsers don't support it, I don't see much reason for doing so <del>know</del> <em>now</em> (especially since we will update the title manually later).</p>
 
-<p>{% codeblock ajaxify.js %}
-$.fn.ajaxify = function() {
-  var $this = $(this);</p>
-
-<p>  $this.find('a:internal').click(function(event) {</p>
-
-<pre><code>var $link = $(this),
-    url = $link.attr('href'),
-    hash = url.split('#')[1],
-    data = {};
-
-// Continue as normal for cmd clicks etc
-if (event.which == 2 || event.metaKey) {
-  return true;
-}
-
-if (hash) {
-  url = url.replace('#'+hash, '');
-  data.hash = hash;
-}
-
-// Ajaxify this link
-History.pushState(data, null, url);
-event.preventDefault();
-return false;
-</code></pre>
-
-<p>  });</p>
-
-<p>  // Chain
-  return $this;
-};
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ajaxify.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">ajaxify</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;a:internal&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">$link</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">url</span> <span class="o">=</span> <span class="nx">$link</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">hash</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">data</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Continue as normal for cmd clicks etc</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">url</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nx">hash</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">data</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Ajaxify this link</span>
+</span><span class='line'><span class="nx">History</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+</span><span class='line'><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Chain</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">$this</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>Shhhhhhh! Listen.</h2>
 
 <p>The history.js plugin exposes a <code>statechange</code> event to the <code>window</code>. If we listen for that event, we can capture any state changes and bend them to our will. Here is the code I am using on my blog.</p>
 
-<p>{% codeblock statechange.js %}
-$(window).bind('statechange', function() {</p>
-
-<p>  var State = History.getState(),</p>
-
-<pre><code>  url = State.url,
-  stateData = State.data,
-  hash = stateData.hash,
-  relativeUrl = url.replace(rootUrl, ''),
-  isHome = (relativeUrl === '/' || relativeUrl === '/index.html' || relativeUrl === "") ? true : false,
-  classMethod = (isHome) ? 'addClass' : 'removeClass',
-  dsScript = (isHome || relativeUrl.indexOf("blog/archives") &gt; -1) ? 'count.js' : 'embed.js',
-  homeClass = 'blog-index';
-</code></pre>
-
-<p>  $.ajax({</p>
-
-<pre><code>url: url,
-dataType: 'html',
-success: function(data) {
-  var $data = $(data),
-      $content = $data.find('#content &gt; div'),
-      title = $data.filter('title').text(),
-      $gists = $content.find('.gist-holder'),
-      gistEmbeds = [];
-
-  $gists.each(function() {
-    var $gistHolder = $(this),
-        url = $gistHolder.data('gist-url'),
-        id = url.replace(/.*\.com\/([0-9]+)\.js.*/, '$1'),
-        file = url.split('?file=')[1];
-
-    gistEmbeds.push($.get('/embed-gist.php?id=' + id + ((file) ? '&amp;file=' + file : ''), function(data) {
-      $gistHolder.html(data);
-    }));
-  });
-
-  $.when.apply($, gistEmbeds).done(function() {
-    $contentArea.html($content.html())[classMethod](homeClass).ajaxify();
-    addCodeLineNumbers();
-    disqus_identifier = url;
-    disqus_url = url;
-    disqus_function(dsScript);
-    twitter_sharing();
-    $('title').text(title);
-    _gaq.push(['_trackPageview', ((relativeUrl.charAt(0) === '/')?'':'/')+relativeUrl]);
-
-    var currentPos = $body.scrollTop(),
-        $nav = $('nav[role="navigation"]'),
-        $scrollTo = (hash) ? $('#' + hash) : $nav,
-        scrollTo = $scrollTo.offset().top,
-        distance = (currentPos &gt; $nav.position().top || hash) ? Math.abs(currentPos - scrollTo) : 0;
-
-    if (distance &gt; 0) {
-      $('html, body').animate({
-        scrollTop: scrollTo
-      }, distance, function() {
-        if (hash) window.location.hash = hash;
-      });
-    }
-
-  });
-
-}
-</code></pre>
-
-<p>  });</p>
-
-<p>  return false;
-});
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>statechange.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;statechange&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="kd">var</span> <span class="nx">State</span> <span class="o">=</span> <span class="nx">History</span><span class="p">.</span><span class="nx">getState</span><span class="p">(),</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span>  <span class="nx">url</span> <span class="o">=</span> <span class="nx">State</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">stateData</span> <span class="o">=</span> <span class="nx">State</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">hash</span> <span class="o">=</span> <span class="nx">stateData</span><span class="p">.</span><span class="nx">hash</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">relativeUrl</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">rootUrl</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">isHome</span> <span class="o">=</span> <span class="p">(</span><span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span> <span class="o">||</span> <span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s1">&#39;/index.html&#39;</span> <span class="o">||</span> <span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">classMethod</span> <span class="o">=</span> <span class="p">(</span><span class="nx">isHome</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;addClass&#39;</span> <span class="o">:</span> <span class="s1">&#39;removeClass&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">dsScript</span> <span class="o">=</span> <span class="p">(</span><span class="nx">isHome</span> <span class="o">||</span> <span class="nx">relativeUrl</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;blog/archives&quot;</span><span class="p">)</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;count.js&#39;</span> <span class="o">:</span> <span class="s1">&#39;embed.js&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">homeClass</span> <span class="o">=</span> <span class="s1">&#39;blog-index&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">url</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span>
+</span><span class='line'><span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">$content</span> <span class="o">=</span> <span class="nx">$data</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;#content &amp;gt; div&#39;</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">title</span> <span class="o">=</span> <span class="nx">$data</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+</span><span class='line'>      <span class="nx">$gists</span> <span class="o">=</span> <span class="nx">$content</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.gist-holder&#39;</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">gistEmbeds</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$gists</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">$gistHolder</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">url</span> <span class="o">=</span> <span class="nx">$gistHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;gist-url&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">id</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/.*\.com\/([0-9]+)\.js.*/</span><span class="p">,</span> <span class="s1">&#39;$1&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">file</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;?file=&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">gistEmbeds</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/embed-gist.php?id=&#39;</span> <span class="o">+</span> <span class="nx">id</span> <span class="o">+</span> <span class="p">((</span><span class="nx">file</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;&amp;amp;file=&#39;</span> <span class="o">+</span> <span class="nx">file</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$gistHolder</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}));</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">when</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">gistEmbeds</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$contentArea</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">$content</span><span class="p">.</span><span class="nx">html</span><span class="p">())[</span><span class="nx">classMethod</span><span class="p">](</span><span class="nx">homeClass</span><span class="p">).</span><span class="nx">ajaxify</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">addCodeLineNumbers</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">disqus_identifier</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">disqus_url</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">disqus_function</span><span class="p">(</span><span class="nx">dsScript</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">twitter_sharing</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="p">((</span><span class="nx">relativeUrl</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">?</span><span class="s1">&#39;&#39;</span><span class="o">:</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">+</span><span class="nx">relativeUrl</span><span class="p">]);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">currentPos</span> <span class="o">=</span> <span class="nx">$body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">(),</span>
+</span><span class='line'>        <span class="nx">$nav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;nav[role=&quot;navigation&quot;]&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">$scrollTo</span> <span class="o">=</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">hash</span><span class="p">)</span> <span class="o">:</span> <span class="nx">$nav</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">scrollTo</span> <span class="o">=</span> <span class="nx">$scrollTo</span><span class="p">.</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">distance</span> <span class="o">=</span> <span class="p">(</span><span class="nx">currentPos</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">$nav</span><span class="p">.</span><span class="nx">position</span><span class="p">().</span><span class="nx">top</span> <span class="o">||</span> <span class="nx">hash</span><span class="p">)</span> <span class="o">?</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">currentPos</span> <span class="o">-</span> <span class="nx">scrollTo</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">distance</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;html, body&#39;</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+</span><span class='line'>        <span class="nx">scrollTop</span><span class="o">:</span> <span class="nx">scrollTo</span>
+</span><span class='line'>      <span class="p">},</span> <span class="nx">distance</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><code>History.getState()</code> provides us with an object that contains the URL, title and data object from the link that was just clicked. Here is where it can get a bit hairy. HTML is HTML right? We should just be able to AJAX in the URL we want, parse out the specific content areas that interest us, and replace the old content areas with the new ones. Well, almost.</p>
 
@@ -204,37 +316,66 @@ success: function(data) {
 
 <p>There actually is! In our mobile media query, we use a select to change pages. This won't work for us, since our code only captures the interaction of internal links <code>a</code> elements. We need to change the <code>getNav</code> function so the select will call pushState for us. My code is below.</p>
 
-<p>{% codeblock octopress.js %}
-function getNav() {
-  var mobileNav = $('nav[role=navigation] fieldset[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
-  mobileNav.children('select').append('<option value="">Navigate&hellip;</option>');
-  $('ul[role=main-navigation]').addClass('main-navigation');
-  $('ul.main-navigation a').each(function(link) {</p>
-
-<pre><code>mobileNav.children('select').append('&lt;option value="'+link.href+'"&gt;&amp;raquo; '+link.text+'&lt;/option&gt;');
-</code></pre>
-
-<p>  });
-  $('ul.subscription a').each(function(link) {</p>
-
-<pre><code>mobileNav.children('select').append('&lt;option value="'+link.href+'"&gt;&amp;raquo; '+link.text+'&lt;/option&gt;');
-</code></pre>
-
-<p>  });
-  mobileNav.children('select').bind('change', function(event) {</p>
-
-<pre><code>if (event.target.value) { 
-  if (!!(window.history &amp;&amp; history.pushState)) {
-    History.pushState(null, null, event.target.value);
-  } else {
-    window.location.href = event.target.value;
-  }
-}
-</code></pre>
-
-<p>  });
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>octopress.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">getNav</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">mobileNav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;nav[role=navigation] fieldset[role=search]&#39;</span><span class="p">).</span><span class="nx">after</span><span class="p">(</span><span class="s1">&#39;&lt;fieldset class=&quot;mobile-nav&quot;&gt;&lt;/fieldset&gt;&#39;</span><span class="p">).</span><span class="nx">next</span><span class="p">().</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;select&gt;&lt;/select&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">mobileNav</span><span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;option value=&quot;&quot;&gt;Navigate&amp;hellip;&lt;/option&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul[role=main-navigation]&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;main-navigation&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.main-navigation a&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">link</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">mobileNav</span><span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&amp;lt;option value=&quot;&#39;</span><span class="o">+</span><span class="nx">link</span><span class="p">.</span><span class="nx">href</span><span class="o">+</span><span class="s1">&#39;&quot;&amp;gt;&amp;amp;raquo; &#39;</span><span class="o">+</span><span class="nx">link</span><span class="p">.</span><span class="nx">text</span><span class="o">+</span><span class="s1">&#39;&amp;lt;/option&amp;gt;&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.subscription a&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">link</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">mobileNav</span><span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&amp;lt;option value=&quot;&#39;</span><span class="o">+</span><span class="nx">link</span><span class="p">.</span><span class="nx">href</span><span class="o">+</span><span class="s1">&#39;&quot;&amp;gt;&amp;amp;raquo; &#39;</span><span class="o">+</span><span class="nx">link</span><span class="p">.</span><span class="nx">text</span><span class="o">+</span><span class="s1">&#39;&amp;lt;/option&amp;gt;&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">mobileNav</span><span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!!</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">history</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">History</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>THe new part is where we are binding the change of the select. If we have the history API at our disposal then we will call pushState, leaving <code>window.location.href</code> as a fallback.</p>
 
@@ -257,56 +398,83 @@ function getNav() {
 
 <p>The second function pertains to the Disqus comments.</p>
 
-<p>{% codeblock disqus.html %}
-{% comment %} Load script if disquss comments are enabled and <code>page.comments</code> is either empty (index) or set to true {% endcomment %}
-{% if site.disqus_short_name and page.comments != false %}</p>
-
-<script type="text/javascript">
-      var disqus_shortname = '{{ site.disqus_short_name }}';
-      var disqus_identifier = '{{ site.url }}{{ page.url }}';
-      var disqus_url = '{{ site.url }}{{ page.url }}';
-      {% if page.comments == true %}
-        {% comment %} `page.comments` can be only be set to true on pages/posts, so we embed the comments here. {% endcomment %}
-        // var disqus_developer = 1;       
-        var disqus_script = 'embed.js';
-      {% else %}
-        {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}
-        var disqus_script = 'count.js';
-      {% endif %}
-    var disqus_function = function (_disqus_script) {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + _disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    };
-    
-    disqus_function(disqus_script);
-</script>
-
-
-<p>{% endif %}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>disqus.html </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;phxtagsoup&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">disqus_identifier</span> <span class="o">=</span> <span class="s1">&#39;http://TagSoup.github.comblog/categories/pushstate/atom.xml&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">disqus_url</span> <span class="o">=</span> <span class="s1">&#39;http://TagSoup.github.comblog/categories/pushstate/atom.xml&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">disqus_script</span> <span class="o">=</span> <span class="s1">&#39;count.js&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">disqus_function</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">_disqus_script</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">dsq</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">dsq</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">&#39;.disqus.com/&#39;</span> <span class="o">+</span> <span class="nx">_disqus_script</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dsq</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">disqus_function</span><span class="p">(</span><span class="nx">disqus_script</span><span class="p">);</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Here, the main point I changed, was to assign the IIFE that ran the Disqus code to a function expression so I could call it with the appropriate script when it needed to be. I call it with <code>count.js</code> if we are on the homepage and <code>embed.js</code> if we are on a post page (and therefore embedding comment thread).</p>
 
 <p>I also do the same thing with the tweet button.</p>
 
-<p>{% codeblock twitter_sharing.html %}
-{% if site.twitter_follow_button or site.twitter_tweet_button %}
-  <script type="text/javascript"></p>
-
-<pre><code>var twitter_sharing = function(){
-  var twitterWidgets = document.createElement('script');
-  twitterWidgets.type = 'text/javascript';
-  twitterWidgets.async = true;
-  twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-  document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-};
-twitter_sharing();
-</code></pre>
-
-<p>  </script>
-{% endif %}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>twitter_sharing.html </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">twitter_sharing</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">twitterWidgets</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">twitterWidgets</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">twitterWidgets</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">twitterWidgets</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://platform.twitter.com/widgets.js&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">twitterWidgets</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">twitter_sharing</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I assign the code to a function expression, which I can then run at my convenience. Normally this type of code is meant to only be called on the initial loading of a page, but since we are accepting the role of Dr. Frankenstein and taking code and making it into our own monster, we have to make it callable from other places.</p>
 
@@ -316,146 +484,284 @@ twitter_sharing();
 
 <h2>Wake up! I'm about to do a recap.</h2>
 
-<p>{% codeblock history-app-final.js %}
-(function($) {</p>
-
-<p>  var hasHistory = function() {</p>
-
-<pre><code>return !!(window.history &amp;&amp; history.pushState);
-</code></pre>
-
-<p>  };</p>
-
-<p>  if (!hasHistory()) {</p>
-
-<pre><code>return;
-</code></pre>
-
-<p>  }</p>
-
-<p>  $(function() {</p>
-
-<pre><code>var $contentArea = $('#content &gt; div'),
-  rootUrl = History.getRootUrl(),
-  $body = $('body');
-
-$.expr[':'].internal = function(obj, index, meta, stack) {
-  // Prepare
-  var $link = $(obj),
-      url = $link.attr('href') || '',
-      isInternalLink;
-
-  // Check link
-  isInternalLink = ((url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) &amp;&amp; url.charAt(0) !== "#" &amp;&amp; url.indexOf('atom.xml') === -1);
-
-  // Ignore or Keep
-  return isInternalLink;
-};
-
-// Ajaxify Helper
-$.fn.ajaxify = function() {
-  // Prepare
-  var $this = $(this);
-
-  // Ajaxify
-  $this.find('a:internal').click(function(event) {
-    // Prepare
-    var $link = $(this),
-        url = $link.attr('href'),
-        hash = url.split('#')[1],
-        data = {};
-
-    // Continue as normal for cmd clicks etc
-    if (event.which == 2 || event.metaKey) {
-      return true;
-    }
-
-    if (hash) {
-      url = url.replace('#'+hash, '');
-      data.hash = hash;
-    }
-
-    // Ajaxify this link
-    History.pushState(data, null, url);
-    event.preventDefault();
-    return false;
-  });
-
-  // Chain
-  return $this;
-};
-
-$body.ajaxify();
-
-$(window).bind('statechange', function() {
-
-  var State = History.getState(),
-      url = State.url,
-      stateData = State.data,
-      hash = stateData.hash,
-      relativeUrl = url.replace(rootUrl, ''),
-      isHome = (relativeUrl === '/' || relativeUrl === '/index.html' || relativeUrl === "") ? true : false,
-      classMethod = (isHome) ? 'addClass' : 'removeClass',
-      dsScript = (isHome || relativeUrl.indexOf("blog/archives") &gt; -1) ? 'count.js' : 'embed.js',
-      homeClass = 'blog-index';
-
-  $.ajax({
-    url: url,
-    dataType: 'html',
-    success: function(data) {
-      var $data = $(data),
-          $content = $data.find('#content &gt; div'),
-          title = $data.filter('title').text(),
-          $gists = $content.find('.gist-holder'),
-          gistEmbeds = [];
-
-      $gists.each(function() {
-        var $gistHolder = $(this),
-            url = $gistHolder.data('gist-url'),
-            id = url.replace(/.*\.com\/([0-9]+)\.js.*/, '$1'),
-            file = url.split('?file=')[1];
-
-        gistEmbeds.push($.get('/embed-gist.php?id=' + id + ((file) ? '&amp;file=' + file : ''), function(data) {
-          $gistHolder.html(data);
-        }));
-      });
-
-      $.when.apply($, gistEmbeds).done(function() {
-        $contentArea.html($content.html())[classMethod](homeClass).ajaxify();
-        addCodeLineNumbers();
-        disqus_identifier = url;
-        disqus_url = url;
-        disqus_function(dsScript);
-        twitter_sharing();
-        $('title').text(title);
-        _gaq.push(['_trackPageview', ((relativeUrl.charAt(0) === '/')?'':'/')+relativeUrl]);
-
-        var currentPos = $body.scrollTop(),
-            $nav = $('nav[role="navigation"]'),
-            $scrollTo = (hash) ? $('#' + hash) : $nav,
-            scrollTo = $scrollTo.offset().top,
-            distance = (currentPos &gt; $nav.position().top || hash) ? Math.abs(currentPos - scrollTo) : 0;
-
-        if (distance &gt; 0) {
-          $('html, body').animate({
-            scrollTop: scrollTo
-          }, distance, function() {
-            if (hash) window.location.hash = hash;
-          });
-        }
-
-      });
-
-    }
-  });
-
-  return false;
-});
-</code></pre>
-
-<p>  });
-})(jQuery);
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>history-app-final.js </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="kd">var</span> <span class="nx">hasHistory</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">return</span> <span class="o">!!</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">history</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">};</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasHistory</span><span class="p">())</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">return</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">$contentArea</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content &amp;gt; div&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">rootUrl</span> <span class="o">=</span> <span class="nx">History</span><span class="p">.</span><span class="nx">getRootUrl</span><span class="p">(),</span>
+</span><span class='line'>  <span class="nx">$body</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">.</span><span class="nx">expr</span><span class="p">[</span><span class="s1">&#39;:&#39;</span><span class="p">].</span><span class="nx">internal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">meta</span><span class="p">,</span> <span class="nx">stack</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// Prepare</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$link</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">obj</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">url</span> <span class="o">=</span> <span class="nx">$link</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">isInternalLink</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Check link</span>
+</span><span class='line'>  <span class="nx">isInternalLink</span> <span class="o">=</span> <span class="p">((</span><span class="nx">url</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">rootUrl</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="o">===</span> <span class="nx">rootUrl</span> <span class="o">||</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">!==</span> <span class="s2">&quot;#&quot;</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;atom.xml&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Ignore or Keep</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">isInternalLink</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Ajaxify Helper</span>
+</span><span class='line'><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">ajaxify</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// Prepare</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Ajaxify</span>
+</span><span class='line'>  <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;a:internal&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Prepare</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">$link</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">url</span> <span class="o">=</span> <span class="nx">$link</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">hash</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
+</span><span class='line'>        <span class="nx">data</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Continue as normal for cmd clicks etc</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">which</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="nx">event</span><span class="p">.</span><span class="nx">metaKey</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">url</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nx">hash</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">data</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Ajaxify this link</span>
+</span><span class='line'>    <span class="nx">History</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Chain</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">$this</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$body</span><span class="p">.</span><span class="nx">ajaxify</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;statechange&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">State</span> <span class="o">=</span> <span class="nx">History</span><span class="p">.</span><span class="nx">getState</span><span class="p">(),</span>
+</span><span class='line'>      <span class="nx">url</span> <span class="o">=</span> <span class="nx">State</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">stateData</span> <span class="o">=</span> <span class="nx">State</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">hash</span> <span class="o">=</span> <span class="nx">stateData</span><span class="p">.</span><span class="nx">hash</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">relativeUrl</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">rootUrl</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'>      <span class="nx">isHome</span> <span class="o">=</span> <span class="p">(</span><span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span> <span class="o">||</span> <span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s1">&#39;/index.html&#39;</span> <span class="o">||</span> <span class="nx">relativeUrl</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">classMethod</span> <span class="o">=</span> <span class="p">(</span><span class="nx">isHome</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;addClass&#39;</span> <span class="o">:</span> <span class="s1">&#39;removeClass&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">dsScript</span> <span class="o">=</span> <span class="p">(</span><span class="nx">isHome</span> <span class="o">||</span> <span class="nx">relativeUrl</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;blog/archives&quot;</span><span class="p">)</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;count.js&#39;</span> <span class="o">:</span> <span class="s1">&#39;embed.js&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">homeClass</span> <span class="o">=</span> <span class="s1">&#39;blog-index&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">url</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">$data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span>
+</span><span class='line'>          <span class="nx">$content</span> <span class="o">=</span> <span class="nx">$data</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;#content &amp;gt; div&#39;</span><span class="p">),</span>
+</span><span class='line'>          <span class="nx">title</span> <span class="o">=</span> <span class="nx">$data</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+</span><span class='line'>          <span class="nx">$gists</span> <span class="o">=</span> <span class="nx">$content</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.gist-holder&#39;</span><span class="p">),</span>
+</span><span class='line'>          <span class="nx">gistEmbeds</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">$gists</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">$gistHolder</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">url</span> <span class="o">=</span> <span class="nx">$gistHolder</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;gist-url&#39;</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">id</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/.*\.com\/([0-9]+)\.js.*/</span><span class="p">,</span> <span class="s1">&#39;$1&#39;</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">file</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;?file=&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nx">gistEmbeds</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/embed-gist.php?id=&#39;</span> <span class="o">+</span> <span class="nx">id</span> <span class="o">+</span> <span class="p">((</span><span class="nx">file</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;&amp;amp;file=&#39;</span> <span class="o">+</span> <span class="nx">file</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">$gistHolder</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}));</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">$</span><span class="p">.</span><span class="nx">when</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">gistEmbeds</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$contentArea</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">$content</span><span class="p">.</span><span class="nx">html</span><span class="p">())[</span><span class="nx">classMethod</span><span class="p">](</span><span class="nx">homeClass</span><span class="p">).</span><span class="nx">ajaxify</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">addCodeLineNumbers</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">disqus_identifier</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">disqus_url</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">disqus_function</span><span class="p">(</span><span class="nx">dsScript</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">twitter_sharing</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="p">((</span><span class="nx">relativeUrl</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">?</span><span class="s1">&#39;&#39;</span><span class="o">:</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">+</span><span class="nx">relativeUrl</span><span class="p">]);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">currentPos</span> <span class="o">=</span> <span class="nx">$body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">(),</span>
+</span><span class='line'>            <span class="nx">$nav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;nav[role=&quot;navigation&quot;]&#39;</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">$scrollTo</span> <span class="o">=</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">hash</span><span class="p">)</span> <span class="o">:</span> <span class="nx">$nav</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">scrollTo</span> <span class="o">=</span> <span class="nx">$scrollTo</span><span class="p">.</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">distance</span> <span class="o">=</span> <span class="p">(</span><span class="nx">currentPos</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">$nav</span><span class="p">.</span><span class="nx">position</span><span class="p">().</span><span class="nx">top</span> <span class="o">||</span> <span class="nx">hash</span><span class="p">)</span> <span class="o">?</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">currentPos</span> <span class="o">-</span> <span class="nx">scrollTo</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">distance</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;html, body&#39;</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+</span><span class='line'>            <span class="nx">scrollTop</span><span class="o">:</span> <span class="nx">scrollTo</span>
+</span><span class='line'>          <span class="p">},</span> <span class="nx">distance</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">});</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span>
+</span><span class='line'><span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>The only new stuff here is at the very top, where I am exiting the function and not running any of the goodness described above in the browser doesn't support the HTML5 history API. The test is <code>!!(window.history &amp;&amp; history.pushState)</code>. Once support is confirmed I am then calling everything inside a DOM ready callback.</p>
 

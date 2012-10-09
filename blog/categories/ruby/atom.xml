@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ruby | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Pest Control 2: Electric Boogaloo]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo/"/>
     <updated>2012-03-06T22:36:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo</id>
+    <id>http://TagSoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo</id>
     <content type="html"><![CDATA[<h3>Day 12 of the 30 Day Writing Challenge:</h3>
 
 <p>Hello, I'm Truett Kueck and you're not.  Today I am going to expand on what I wrote about last week.  It is amazingly common to forget to add urls to links.  This is completely understandable.  You are developing the page in sprints, and sometimes the page you need to link to does not exist yet.  Multiple sprints later when that page exists it slips your mind and then BAM! a site is live with scores of non-functioning.  It is also possible, and very common, that the actual requirements for links are unclear or completely non-existent.</p>
@@ -108,9 +108,9 @@ page.get('http://www.google.com')
   
   <entry>
     <title type="html"><![CDATA[QA - Pest control for development]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/"/>
+    <link href="http://TagSoup.github.com/blog/2012/02/29/qa-pest-control-for-development/"/>
     <updated>2012-02-29T21:26:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development</id>
+    <id>http://TagSoup.github.com/blog/2012/02/29/qa-pest-control-for-development</id>
     <content type="html"><![CDATA[<h3>Day 6 of the 30 Day Writing Challenge</h3>
 
 <p>I, unlike most of the Tag Soup group, am not a developer.  I’m currently a Web Tester at <a href="http://meltmedia.com/">melt media</a> and have held other QA titles at other organizations. QA is here to help you make better and higher quality products.  This is usually accomplished through two methods: manual testing and automated testing.  This post will concentrate on providing an introduction to automated testing using Selenium and Ruby.  Foreword before we get to any code: I’m still new to writing Ruby code.</p>
@@ -160,11 +160,11 @@ end
 <p>If you’d like to look up additonal information on Selenium please see <a href="http://seleniumhq.org/projects/webdriver/">selenium hq</a> and the <a href="http://code.google.com/p/selenium/">googs code</a></p>
 
 <div class="clearfix">
-{% img left http://s2.hubimg.com/u/4746909_f520.jpg 60 %}
-{% img left http://s2.hubimg.com/u/4746909_f520.jpg 60 %}
-{% img left http://s2.hubimg.com/u/4746909_f520.jpg 60 %}
-{% img left http://s2.hubimg.com/u/4746909_f520.jpg 60 %}
-{% img left http://s2.hubimg.com/u/4746909_f520.jpg 60 %}
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
 </div>
 
 

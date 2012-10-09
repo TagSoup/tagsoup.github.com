@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: zsh | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/zsh/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/zsh/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,15 +15,15 @@
   
   <entry>
     <title type="html"><![CDATA[I'll Show You Mine if You Show Me Yours]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours/"/>
+    <link href="http://TagSoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours/"/>
     <updated>2012-02-26T22:06:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours</id>
+    <id>http://TagSoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours</id>
     <content type="html"><![CDATA[<h3>Day 3 of the 30 Day Challenge</h3>
 
 <p>Working in the default themed Terminal all day will make any sane (no such thing) developer cry. I'm sure we each have our own favorite customizations. Me? I'm a zsh sort of guy. Using it for a while (thanks <a href="https://twitter.com/#!/slashclee">@slashclee</a>) I find myself switching up the themes each time I configure or reconfigure a computer. First thing's first though, I'm using a mac. I'm not a "fan boy", I'm just comfortable with it at this point. So if you're wanting to get this going on your Linux system, there are links that can help you... I'm sorry, but I can't help.</p>
 
 <p>Enough words, how about some hawt pics?
-{% img left /images/zsh.png 800 %}</p>
+<img class="left" src="/images/zsh.png" width="800"></p>
 
 <!--more-->
 
@@ -52,12 +52,70 @@
 
 <p>I'm using <a href="https://github.com/tomislav/osx-lion-terminal.app-colors-solarized">Tomislav Filipčić's Solarized theme</a> for my Terminal. Grab that, unzip it and run the Solarized Dark.terminal file. This will create a new theme based on the ever popular <a href="http://ethanschoonover.com/solarized">Solarized by Ethan Schoonover</a>. Select Solarized Dark under Terminal > Preferences > Settings.</p>
 
-<p>{% img center /images/solarized.dark.png 500 'term bo' %}</p>
+<p><img class="center" src="/images/solarized.dark.png" width="500" title="'term bo'" ></p>
 
 <h3>Customizing Oh-My-Zsh</h3>
 
 <p>Most of the customizations will be set in your .zshrc file. I'm assuming your Terminal is already open and hopefully you already your shell set to zsh. Type <code>~/.</code> and press <code>Tab</code>. Autocomplete, yah, no HUGE difference yet. Press <code>Tab</code> again. Yay, our first noticeable change. You can Tab-cycle through the files/dirs. Look for <code>.zshrc</code>.  This is your zsh profile. Look for the line that starts with <code>ZSH_THEME=</code>. This is where we are going to set our theme. <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">Check out some of the zsh themes.</a> I have mine set to blinks. But it's not the default blinks. I have done some tweaking on it. Since this section is about customizing, let's get to it.
-{% gist 1921784 zsh %}</p>
+<div><script src='https://gist.github.com/1921784.js?file=zsh'></script>
+<noscript><pre><code># https://github.com/blinks zsh theme
+
+function _prompt_char() {
+  if $(git rev-parse --is-inside-work-tree &gt;/dev/null 2&gt;&amp;1); then
+    echo &quot;%{%F{blue}%}±%{%f%k%b%}&quot;
+  else
+    echo ' '
+  fi
+}
+
+#ZSH_THEME_GIT_PROMPT_PREFIX=&quot; [%{%B%F{blue}%}&quot;
+#ZSH_THEME_GIT_PROMPT_SUFFIX=&quot;%{%f%k%b%K{black}%B%F{green}%}]&quot;
+#ZSH_THEME_GIT_PROMPT_DIRTY=&quot; %{%F{red}%}*%{%f%k%b%}&quot;
+#ZSH_THEME_GIT_PROMPT_CLEAN=&quot;&quot;
+
+project_pwd() {
+  echo $PWD | sed -e &quot;s/\/Users\/$USER/~/&quot; -e &quot;s/~\/projects\/\([^\/]*\)\/current/\\1/&quot; -e &quot;s/~\/Sites\/\([^\/]*\)\/current/http:\/\/\\1/&quot;
+}
+
+ruby_version() {
+  echo &quot; $(ruby -v | awk '{print $2}')&quot;
+}
+
+in_git_repo() {
+ [ $PWD != &quot;/Users/$HOME&quot; ] &amp;&amp; [ -d '.git' ]
+}
+
+git_parse_branch() {
+  sed -e 's/^.*refs\/heads\///' '.git/HEAD'
+}
+
+git_head_commit_id() {
+  cut -c 1-7 &quot;.git/refs/heads/`git_parse_branch`&quot;
+}
+
+git_cwd_dirty() {
+  [[ `git ls-files -m` == '' ]] || echo ' +'
+}
+
+
+git_cwd_info() {
+  if in_git_repo; then
+    echo -n &quot; %{\e[1;35m%}`git_parse_branch`%{\e[0;35m%}@%{\e[1;35m%}`git_head_commit_id``git_cwd_dirty`%{\e[1;35m%}&quot;
+  fi
+}
+
+export PROMPT=$'%{\e[1;34m%}%n@\e[1;34m%M%{\e[0m%}
+%{\e[0;%(?.32.31)m%}&gt;%{\e[0m%} '
+
+export RPROMPT=$'%{\e[1;31m%}$(project_pwd)%{\e[0;34m%}$(ruby_version)$(git_cwd_info)%{\e[0m%}'
+
+#Original blinks prompt
+#PROMPT='
+#%{%K{black}%}$(_prompt_char)%{%K{black}%} %#%{%f%k%b%} '
+
+#RPROMPT='%{%b%F{yellow}%K{black}%}%~%{%B%F{green}%}$(git_prompt_info)'
+</code></pre></noscript></div>
+</p>
 
 <p>There's a lot going on here. A lot. Without going too crazy, let's look at one small chunk to see what it's doing.
 ```
@@ -100,12 +158,12 @@ Most of these I don't use to their fullest. But you can <a href="https://github.
 <a href="https://twitter.com/#!/ohmyzsh">Oh My ZSH Twitter</a> - Blue birds<br /></p>
 
 <div class="clearfix">
-{% img left /images/whip-it.jpg 60 %}
-{% img left /images/whip-it.jpg 60 %}
-{% img left /images/whip-it.jpg 60 %}
-{% img left /images/whip-it.jpg 60 %}
-{% img left /images/whip-it.jpg 60 %}
-{% img left /images/whip-it.jpg 60 %}
+<img class="left" src="/images/whip-it.jpg" width="60">
+<img class="left" src="/images/whip-it.jpg" width="60">
+<img class="left" src="/images/whip-it.jpg" width="60">
+<img class="left" src="/images/whip-it.jpg" width="60">
+<img class="left" src="/images/whip-it.jpg" width="60">
+<img class="left" src="/images/whip-it.jpg" width="60">
 </div>
 
 

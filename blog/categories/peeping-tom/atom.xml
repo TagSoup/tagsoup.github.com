@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: peeping tom | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/peeping-tom/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/peeping-tom/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,29 +15,161 @@
   
   <entry>
     <title type="html"><![CDATA[I see you getUserMedia]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
     <updated>2012-03-09T22:43:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
+    <id>http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
     <content type="html"><![CDATA[<h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
 
 <p>I'm busting my ass to get this post in. I hate just throwing "anything" up, so I took some time to research something I've never messed with: getUserMedia.</p>
 
 <p>Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a>, or <a href="http://www.opera.com/browser/next/">Opera Next</a>. If you chose to use Opera Next, you don't have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to <a href="chrome://flags/">chrome://flags/</a> and look for "Enable MediaStream". Make sure this is enabled. Now time for the fun.</p>
 
-<p>{% include getUserMedia.html %}</p>
+<p><video id="video" width="640" height="480" autoplay></video>
+<button id="take">Take Picture</button>
+
+<!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT -->
+<canvas id="snapshot" width="640" height="480"></canvas>
+
+
+<script type="text/javascript">
+
+	var doc = document,
+		snapshot = doc.getElementById('snapshot'),
+		photo = snapshot.getContext('2d'),
+		video = doc.querySelector('video'),
+		VIDEO_WIDTH, VIDEO_HEIGHT,
+		computeSize = function(supportsObjectFit){
+		// user agents that don't support object-fit 
+		// will display the video with a different 
+		// aspect ratio. 
+			if (supportsObjectFit === true){
+				VIDEO_WIDTH = 640;
+				VIDEO_HEIGHT = 480;
+			} else {
+				VIDEO_WIDTH = video.videoWidth;
+				VIDEO_HEIGHT = video.videoHeight;
+			}
+		},
+		successCallback = function (stream) {
+			video.src = stream;
+			video.play();
+			computeSize(true);
+		},
+		errorCallback =function (error) {
+			console.error('An error occurred: [CODE ' + error.code + ']');
+		};
+
+	doc.getElementById('take').onclick = function() {
+		computeSize(true);
+		photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+	};
+
+	window.addEventListener('DOMContentLoaded', function() {
+
+		if (navigator.getUserMedia) {
+
+			navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+		} else if (navigator.webkitGetUserMedia) {
+			
+			navigator.webkitGetUserMedia("video", function(stream){
+				video.src = window.webkitURL.createObjectURL(stream);
+				video.play();
+				computeSize(false);
+			});
+
+		} else {
+			console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+		}
+
+	}, false);
+</script></p>
 
 <!-- more -->
 
 
 <p>If you have met all the requirements, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there's a "Take Picture" button. Click it! Makes sexy happen! Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. I saw some shit Rick was posting on <a href="http://bocoup.com/">Bocoup's site</a> and it blew me away. Also, <a href="http://miketaylr.com/photobooth/">Mike Taylor's photo booth</a> is ridic. There's no way I could have gotten any of this done if I didn't take a peek at what they were doing. Now, let's check out some code.</p>
 
-<p>{% gist 2010552 %}</p>
+<p><div><script src='https://gist.github.com/2010552.js?file='></script>
+<noscript><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=0.5&quot;&gt;
+	&lt;title&gt;Oh hai.&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; autoplay&gt;
+	  &lt;!-- Here you can set some default video up if the camera API no worky --&gt;
+      &lt;source src=&quot;default.webm&quot; type=&quot;video/webm;&quot; codecs=&quot;vp8, vorbis&quot;&gt;
+      &lt;source src=&quot;default.mp4&quot; type=&quot;video/mp4;&quot; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&gt;
+&lt;/video&gt;
+&lt;button id=&quot;take&quot;&gt;Take Picture&lt;/button&gt;
+
+&lt;!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT IF YOU NO HAS, PICTURE LUK FUNY--&gt;
+&lt;!-- SCALES IMPROPERLY WITHOUT WIDTH AND HEIGHT ON ELEMENT. CSS NO HELPY --&gt;
+&lt;canvas id=&quot;snapshot&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/canvas&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></noscript></div>
+</p>
 
 <p>Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn't available on the user's browser. In Mike Taylor's photobooth, if you don't have the getMediaUser method available, you can still "photobooth" a clip from a tasty Cary Grant video.</p>
 
 <p>On to the guts, the JS, the fun part. I do have to let you in on a secet... I was rushed to get this out before midnight so it might be a tad sloppy. Deal with it!</p>
 
-<p>{% gist 2010556 %}</p>
+<p><div><script src='https://gist.github.com/2010556.js?file='></script>
+<noscript><pre><code>	var doc = document,
+		snapshot = doc.getElementById('snapshot'),
+		photo = snapshot.getContext('2d'),
+		video = doc.querySelector('video'),
+		VIDEO_WIDTH, VIDEO_HEIGHT,
+		computeSize = function(supportsObjectFit){
+		// user agents that don't support object-fit 
+		// will display the video with a different 
+		// aspect ratio. 
+			if (supportsObjectFit === true){
+				VIDEO_WIDTH = 640;
+				VIDEO_HEIGHT = 480;
+			} else {
+				VIDEO_WIDTH = video.videoWidth;
+				VIDEO_HEIGHT = video.videoHeight;
+			}
+		},
+		successCallback = function (stream) {
+			video.src = stream;
+			video.play();
+			computeSize(true);
+		},
+		errorCallback =function (error) {
+			console.error('An error occurred: [CODE ' + error.code + ']');
+			computeSize(true);
+		};
+
+	doc.getElementById('take').onclick = function() {
+		computeSize(true);
+		photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+	};
+
+	window.addEventListener('DOMContentLoaded', function() {
+
+		if (navigator.getUserMedia) {
+
+			navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+		} else if (navigator.webkitGetUserMedia) {
+			
+			navigator.webkitGetUserMedia(&quot;video&quot;, function(stream){
+				video.src = window.webkitURL.createObjectURL(stream);
+				video.play();
+				computeSize(false);
+			});
+
+		} else {
+			console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+		}
+
+	}, false);</code></pre></noscript></div>
+</p>
 
 <p>I set up a lazy reference to document, fat finger, no make typey good. I give myself a shortcut. Next I just set up some variables. <code>snapshot</code> is my canvas element. This is where the photo we take will be placed. Now let's give the canvas some methods to use <code>.getContext()</code>. This comes in handy when we need to use the <code>.drawImage()</code> method. Next I set up a variable for the video element. And finally some functions. I will touch briefly on these.</p>
 

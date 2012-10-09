@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: jobs | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/jobs/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/jobs/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Looking for a job?]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job/"/>
+    <link href="http://TagSoup.github.com/blog/2012/06/27/looking-for-a-job/"/>
     <updated>2012-06-27T20:56:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job</id>
+    <id>http://TagSoup.github.com/blog/2012/06/27/looking-for-a-job</id>
     <content type="html"><![CDATA[<p>Joe messaged me the other day, wanting to post some info about companies he'd been interviewing with. Turns out, it's a great time to be a developer looking for work. Here's some of the info Joe messaged me with:</p>
 
 <h3>Callisto.fm - Media analytics<br /></h3>

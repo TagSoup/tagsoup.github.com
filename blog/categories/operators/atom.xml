@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Operators | Phx Tag Soup]]></title>
-  <link href="http://tagsoup.github.com/blog/categories/operators/atom.xml" rel="self"/>
-  <link href="http://tagsoup.github.com/"/>
-  <updated>2012-10-09T16:23:52-07:00</updated>
-  <id>http://tagsoup.github.com/</id>
+  <link href="http://TagSoup.github.com/blog/categories/operators/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-09T16:30:25-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
     
@@ -15,14 +15,16 @@
   
   <entry>
     <title type="html"><![CDATA[Bitwise Guy Are Ya?]]></title>
-    <link href="http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
+    <link href="http://TagSoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
     <updated>2012-03-07T21:04:00-07:00</updated>
-    <id>http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
+    <id>http://TagSoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
     <content type="html"><![CDATA[<h3>Day 13 of the 30 Day Writing Challenge</h3>
 
 <p>The idea for this post all started with a friend of mine, <a href="https://twitter.com/#!/mcsheffrey">Connor McSheffrey</a> (@mcsheffrey). I don't normally see a whole lot of activity from Connor on github. This morning, he posted a short gist:</p>
 
-<p>{% gist 1991635 %}</p>
+<p><div><script src='https://gist.github.com/1991635.js?file='></script>
+<noscript><pre><code>this.current += ~~( dir === 'next') || -1;</code></pre></noscript></div>
+</p>
 
 <p>I took a look at noticed something I didn't understand. The &#126;&#126; operator. So, I had to start researching. For whatever reason, Google doesn't recognize &#126;&#126; in the search engine. I tried surrounding it with quotes etc and nothing relavent came up (please let me know why)! I knew this was an operator, so I started searching for operators. Sure enough, I found the ~ operator. I didn't even know this one existed. Do you know what this does? Let's break it down:</p>
 
@@ -77,7 +79,9 @@ typeof ~~(true) // returns "number"
 
 <p>Back to Connor's gist:</p>
 
-<p>{% gist 1991635 %}</p>
+<p><div><script src='https://gist.github.com/1991635.js?file='></script>
+<noscript><pre><code>this.current += ~~( dir === 'next') || -1;</code></pre></noscript></div>
+</p>
 
 <p>Depending on the string match of "next" we get a boolean value <em>cough</em> carousel nav <em>cough</em> AND we will +1 to <code>this.current</code> or -1 from <code>this.current</code>. It works perfectly with going to the next picture, or the previous picture in a photo carousel.</p>
 
@@ -92,11 +96,11 @@ typeof ~~(true) // returns "number"
 <p>Special thanks to Connor for posting a single, simple gist that got me going on this whole subj. Kisses!!!</p>
 
 <div class="clearfix">
-    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
-    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
-    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
-    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
-    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
 </div>
 
 
