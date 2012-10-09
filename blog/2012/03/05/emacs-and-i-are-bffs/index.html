@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Emacs and I are BFF's - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="Day 11 of the 30 Day Writing Challenge: A look at why I use 35 year old software Why Emacs? Let me just start off by saying that this is by no means &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Emacs and I Are BFF's</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-05T08:45:00-07:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Day 11 of the 30 Day Writing Challenge: A look at why I use 35 year old software</h3>
+
+<h2>Why Emacs?</h2>
+
+<p>Let me just start off by saying that this is by no means an intent to disuade you from using your editor of choice. That being said, stop using your bloated GUI IDEs. Okay, maybe that was a bit harsh, but do you remember when your teachers in school would say, &#8220;keep it simple?&#8221; It&#8217;s true and I&#8217;m sure if you are slightly familiar with Emacs you are saying to yourself, &#8220;but emacs isn&#8217;t simple, I couldn&#8217;t even figure out how to get out of the program!&#8221;</p>
+
+<p><em>Note</em> If you are on linux or Mac you should know these commands:</p>
+
+<pre><code>vi: Save [ESC] w [Enter]
+    Quit [Esc] q [Enter]
+
+emacs: Save [CTRL]-x s
+       Quit [CTRL]-x c
+</code></pre>
+
+<p>I will fully admit there is a learning curve to Emacs, it&#8217;s the biggest draw back of any of the terminal editors. When I first started using Emacs it took me around 2 months to be able to use it exclusively. Up until that point I was augmenting my development with the GUI editor I was using prior. My point though is, stick with it, make a cheat sheet, keep a page open of common commands, so on and so on. Your hard work will be rewarded with efficient, clean and simple development.</p>
+
+<!--more-->
+
+
+<h2>Keep Your Hands on those Keys!</h2>
+
+<p>Over the years I&#8217;ve come to know how critical it is to get an idea out when it&#8217;s flowing. While working at a data entry job I picked up a skill that has helped me emmensly, even if you don&#8217;t use Emacs. To flow faster, try and keep your hand off the mouse. Every transition slows you down and impedes your train of thought into the code. The best part about this is you can pracitce this with whatever editor you&#8217;re already doing. Emacs, though allows you to maximize on keyboard use.</p>
+
+<p>One of the biggest culprets of mouse use is text selection, Emacs has a way to do all of that with just the keyboard.</p>
+
+<pre><code>Key Commands:
+Yank a line                        [CTRL]-k
+Place a yanked line                [CTRL]-y
+Select the entire document         [CTRL]-x h
+Drop a Mark                        [CTRL]-[SPACE]
+</code></pre>
+
+<p>Yanking is the equivalent of copy, it just doesn&#8217;t end up in your clipboard. You can integrated droping a mark anywhere in the document and moving the cursor to where you&#8217;d like to yank and it will grab everything between the dropped mark and your cursor.</p>
+
+<p>Emacs has a concept of yanked lines so you actually have a log of what has been yanked, but I won&#8217;t get in to that here. Moving right along&#8230;</p>
+
+<h2>Switching Windows Often?</h2>
+
+<p>I know when I&#8217;m doing setup for a new project I&#8217;ll use the command line to create folders and structures on the file system. There are times though after setup and I&#8217;m working on a JavaScript file and realize I&#8217;m missing a folder I need. Emacs has a plethora of built in commands (over 2000 in fact) to do any number of things. For this instance it can make directories for you.</p>
+
+<pre><code>How to Create a Directory
+M-x "make-directory" RET
+Type the path in the input and hit return
+</code></pre>
+
+<p><em>(M is reference for the Meta key, on OSX the meta key is Esc)</em></p>
+
+<p>It&#8217;s that simple and flows directy inline with your working environment.</p>
+
+<h2>Can I get that Code Snippet in Perwinkle Blue?</h2>
+
+<p>Emacs is a LISP editor, it runs and interprets LISP to make it the powerhouse that it is today. What does that mean? Well, LISP is a functional language that was designed originally for processing lists. (LISt Processing). <a href="http://en.wikipedia.org/wiki/Lisp_%28programming_language%29">Wikipedia</a></p>
+
+<p>Lisp provides Emacs it&#8217;s power because it allows you to specify any new functionality you&#8217;d like your editor to have. Emacs has a concept of Major and Minor modes which are all just small Lisp programs. I&#8217;ll give you an example of the features that can be provided.</p>
+
+<ul>
+<li>Colored syntax highlighting</li>
+<li>Smart code indentation</li>
+<li>Tag dictionaries</li>
+<li>Syntax error highlighting</li>
+<li>Etc.</li>
+</ul>
+
+
+<p>One of my favorite major modes is <a href="http://code.google.com/p/js2-mode/">JS2 Mode</a> by Steve Yegge. JS2 Mode makes editing JavaScript a dream. I won&#8217;t go into specifics here, just take a look at the Google Code site and read for yourself on it&#8217;s capabilities. One of the biggest things it has going for it is the error highlighting, which I will be talking about next.</p>
+
+<h2>Error! You have Code Syntax Problems!</h2>
+
+<p>One of the banes of most JavaScript developers is the leniency of browsers fixing broken syntax in files. When you have lagging commas or missing semi-colons you have ticking time-bombs in your code. If you were looking for these areas by hand it would take a life time. Yegge&#8217;s JS2 Mode has built in error finding and will show you live, while you are coding.</p>
+
+<pre><code>Usage
+Skip to next error [CTRL]-x `
+</code></pre>
+
+<p>That command will jump you to the next error in the document and  show you a short message of what is wrong. For me, this single bit of functionality has saved me a number of hours of hunting down that elussive missing comma.</p>
+
+<h2>I Don&#8217;t Know Where to Start.</h2>
+
+<p>Now, I don&#8217;t want to leave you hanging, so I&#8217;ll point you to <a href="https://github.com/ncrohn/emacs">my emacs github repo</a> where you can get my setup. This will give you a jump start on coding with Emacs. If you do start using Emacs, start making your own profiles and customize Emacs to just how you want it. Customization is the single most reason I&#8217;d recommend Emacs.</p>
+
+<pre><code>Installation
+cd to the github clone
+cp .emacs ~/.
+cp -r vendor ~/.emacs.d/.
+</code></pre>
+
+<p>Once you are done there, go to terminal and try editing a JavaScript file.</p>
+
+<p>One other note, to take advantage of colored syntax you&#8217;ll need to make sure your terminal has colors enabled. To do that simply add the lines below to your bash profile.</p>
+
+<pre><code>export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+</code></pre>
+
+<h2>An Honest Assessment</h2>
+
+<p>This post was not intended to convert, but more aptly stated as a viewport in to how I develop and why I love it. Many of the GUI editors on the market today have a lot of functionality and are very beautifuly done. I have only shown you a small glimpse of what Emacs can do, so I encourage you to go out and see for yourself the power that lies in Emacs and lisp. I leave you with a very apropos XKCD comic on the subject. <a href="http://xkcd.com/378/">Real Programmers</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Nick Crohn</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-05T08:45:00-07:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>Emacs</a>, <a class='category' href='/blog/categories/ide/'>IDE</a>, <a class='category' href='/blog/categories/text-editors/'>Text Editors</a>, <a class='category' href='/blog/categories/tools/'>Tools</a>, <a class='category' href='/blog/categories/writing-challenge/'>Writing Challenge</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/04/textmate-vs-sublime-2/" title="Previous Post: Textmate vs Sublime 2">&laquo; Textmate vs Sublime 2</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/06/pest-control-2-electric-boogaloo/" title="Next Post: Pest Control 2: Electric Boogaloo">Pest Control 2: Electric Boogaloo &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/';
+        var disqus_url = 'http://tagsoup.github.com/blog/2012/03/05/emacs-and-i-are-bffs/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:22:31-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Meeting]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/07/18/weekly-meeting/"/>
+    <updated>2012-07-18T16:13:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/07/18/weekly-meeting</id>
+    <content type="html"><![CDATA[<p>Oh hai!</p>
+
+<p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there Thursday night (7/19) from 7pm until close.</p>
+
+<p>Some of our friends from <a href="http://www.8byte8.com/">8byte8</a> will be in town and hanging out. Come say hi and show them some AZ love.</p>
+
+<p>See you then!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[July 12th Meet Up]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
+    <updated>2012-07-12T08:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
+    <content type="html"><![CDATA[<p>Oh hai!</p>
+
+<p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there tonight from 7pm until close.</p>
+
+<p>If you&#8217;re interested in BackBone.js, we&#8217;re looking for more people to join the training class put on by Derek Bailey from <a href="http://www.watchmecode.net/">WatchMeCode</a>. Come ask me for the deets.</p>
+
+<p>See you tonight!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Looking for a job?]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job/"/>
+    <updated>2012-06-27T20:56:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/06/27/looking-for-a-job</id>
+    <content type="html"><![CDATA[<p>Joe messaged me the other day, wanting to post some info about companies he&#8217;d been interviewing with. Turns out, it&#8217;s a great time to be a developer looking for work. Here&#8217;s some of the info Joe messaged me with:</p>
+
+<h3>Callisto.fm - Media analytics<br /></h3>
+
+<p>Location: Boulder, CO<br />
+Need: Node.js developer<br />
+Salary: Unknown<br />
+Who to contact: Kristi Mark - kmark@symbolonpartners.com - 303-736-9839<br /></p>
+
+<p>Notes: They just finished Techstars Cloud, and 2.5m angel funding and are working on series A. They&#8217;re doing some pretty cool stuff with media analytics (Youtube, Vimeo, podcasts, basically anything you stream online) and are working on contracts with media providers. @msitarzewski seemed pretty cool too</p>
+
+
+<h3>360 Cloud Solutions - NetSuite consulting</h3>
+
+<p>Location: Scottsdale, AZ<br />
+Need: Javascript developer, frontend and backend (using some Tomcat stuff)<br />
+Salary: About 70k<br />
+Who to contact: Rob Jones - rob.jones@pagestaff.com - 602-273-7100<br /></p>
+
+<p>Notes: They customize NetSuite installs for clients, using Javascript end to end. They develop in Eclipse and it sounded like that&#8217;s the only option for what they do. I&#8217;m told it&#8217;s a really cool place to work, but didn&#8217;t get a chance to meet most of the developers or see what it&#8217;s like. It&#8217;s ultra casual though, shorts and sandals.</p>
+
+
+<h3>Village Voice</h3>
+
+<p>A print media company that owns a handful of publications, including Arizona New Times. They&#8217;re looking for a PHP developer to help maintain and upgrade their custom CMS (based on CakePHP) as well as some front-end work. I met the lead developer and CIO, both were really cool guys, and their office was pretty nice. They also have a Mobile department and they&#8217;ve acquired some Ruby properties that they&#8217;re maintaining and bringing in house, so knowledge there is a bonus.</p>
+
+
+<p>Location: Phoenix, AZ (12th and Jefferson)<br />
+Salary: ~65k<br /></p>
+
+<p>Contact: Chris Swinton - 480-342-9900 (recruiter for AZ Tech Finders, really legit guy though, trust me)</p>
+
+
+<h3>Liquid Web</h3>
+
+<p>A hosting company based out of Michigan but with an office up in Scottsdale, has an opening for a front-end javascript developer. The position involves supporting and updating tools used for internal use. Their backend is all Perl, I&#8217;ve met the whole team over there, and they&#8217;re pretty cool guys.<p>
+
+<p>Location: Scottsdale, AZ<br />
+Salary: unknown<br /></p>
+
+
+<p>Follow up on Callisto.fm, they are no longer hiring right now. I still thought it was worth listing.</p>
+
+<p>-Joe</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Meeting Details]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
+    <updated>2012-06-20T08:23:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
+    <content type="html"><![CDATA[<p>Hey there!</p>
+
+<p>I&#8217;m sorry I didn&#8217;t get to see all your lovely faces last week. I was getting my javascript learn on, in Austin, TX. Tomorrow&#8217;s meeting (June 21) marks the 4th weekly TagSoup gathering&#8230; in a row. OMG . That&#8217;s a full month. We should TOTALLY celebrate, am I right? So come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe and we can drink some delish coffee and write some code, build X and talk about Y.</p>
+
+<p>Also, some friends are putting together a BackBone.js training class. They have been in contact with Derek Bailey, from watchmecode.net, and have scheduled him to fly out in mid August for a 2 day class. There are a few slots left, and if you&#8217;re interested, please get a hold of me and I can give you all the details.</p>
+
+<p>See you tomorrow!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PhxTagSoup Goes Weekly]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
+    <updated>2012-05-23T12:43:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
+    <content type="html"><![CDATA[<p>After a lot of feedback from friends, we decided to start holding a TagSoup meeting each week. So, starting May 31st, we will be meeting at <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> each week. Every Thursday night, from 7pm - close, we will be at Cartel. If you want to continue to hang out after hours, Casey Moore&#8217;s is next door. Take advantage.</p>
+
+<p>May 31st&#8217;s meeting will be a great time to meet with your teams (from April&#8217;s meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
+
+<p>There will be some more announcements made later this week. Hope you all enjoy this news.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Next Meeting 4/26/12 - Codeventure Time]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
+    <updated>2012-04-18T21:39:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
+    <content type="html"><![CDATA[<p>April 26th, 2012 will be our next meeting. Who&#8217;s speaking this time? GASP! No one. Then what the cabbage will be going on? That&#8217;s where it gets interesting. This meeting will have a few &#8220;firsts&#8221; in it.</p>
+
+<!-- more -->
+
+
+<h3>First, first&#8230;</h3>
+
+<p>New venue. We&#8217;re trying to hop around all over town and the dudes at Melt Media were swell enough to offer up their place for this weeks meeting. <a href="http://g.co/maps/r2hxg">Where&#8217;s Melt Media located?</a> Right in the middle of downtown Tempe.</p>
+
+<h3>Second, first&#8230;</h3>
+
+<p>Coding fun! We wanted to try something different this time. Less words, more code. This next meeting, we will be breaking up into teams and work on a project together. What project? That&#8217;s for you and your team to decide. What technology? You guys decide. There&#8217;s no set rules, really. Just have fun. Team sizes wlll be between 3-5 people. We all know that you learn the most from acutally getting your hands dir-tay. Everyone can continue to collaborate until the next meeting (in a bout a month) and then show off what they&#8217;ve created. For this meeting, we will need all disciplines of web development involved. Designers, UX engineers, developers, unicorns etc.</p>
+
+<h3>Third, first&#8230;</h3>
+
+<p>TagSoup is going to Vegas. #VegasTech is growing huge. Since they&#8217;re so close, we figured we go check out their Vegas Jelly meetup and hang with some of our friends there. Are you interested in going? Let us know. We will be renting a 12 person van and driving out. We will be discussing the trek in more detail at the meeting.</p>
+
+<p>TTFN - &#8220;Did you take a bath in rainbows and cupcakes?&#8221;</p>
+
+<div class="clearfix">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/olu-jsconf.jpg" width="50">
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vegas Tech Road Trip]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
+    <updated>2012-04-04T15:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
+    <content type="html"><![CDATA[<p>The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We&#8217;re making a trek to our sister city to visit a <a href="http://twitter.com/#!/vegasjelly">Vegas Jelly</a> meetup. If you&#8217;re interested in going, let us know. Step 1 will be getting a proper date in place. We&#8217;re thinking late April or early May. Jellys are on Thursday nights, so we will be most likely leaving on a Thursday morning. A van rental is a strong candidate for transportation. A bunch developers in a van together for 5 hours&#8230; mmmmmm I can smell it already.</p>
+
+<p>Tenative dates, if you&#8217;re interested, let us know what works for you:<br />
+April 26th<br />
+May 1st<br />
+May 8th<br /></p>
+
+<p>The length of the stay depends on personal budgets and alloted time. We&#8217;re really excited about the trip. Let&#8217;s make it happen.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JSConf Food II - Drinking in AZ]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az/"/>
+    <updated>2012-03-28T08:17:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/28/jsconf-food-ii-drinking-in-az</id>
+    <content type="html"><![CDATA[<h3>Now you know where to eat, but now you&#8217;re thirsty.</h3>
+
+<p>Another <a href="https://twitter.com/#!/areinet/status/184834438985818112">tweet</a> came in asking about drinking in AZ, specifically beer. Then a couple more came over. So here&#8217;s another list. Again, if anyone has suggestions, leave a comment, submit a pull request, or msg me. I will get it added. Let&#8217;s get started with the drinkys.</p>
+
+<!-- more -->
+
+
+<h3>Local Breweries</h3>
+
+<ul>
+    <li>
+        <a href="http://www.fourpeaks.com/" target="_new">Four Peaks</a>
+        <p>A short ride from the hotel, but this is one of the state&#8217;s most popular micro breweries. Not only do they have great beer, they also have great food. It&#8217;s in Tempe, near ASU, so it can get pretty busy with college kids some night. Parking always sucks. If you park in the back, don&#8217;t park by neighboring shops. They get pissy.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Four+Peaks+Brewing+Company,+East+8th+Street,+Tempe,+AZ&hl=en&sll=33.502326,-111.926394&sspn=0.017249,0.035491&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFa7w_QEdOExU-SHQ_6-5AHAwzA&oq=four+pea&mra=ls&t=m&z=12" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.santanbrewing.com/#" target="_new">San Tan Brewery</a>
+        <p>Was here for the first time yesterday, talking ideas for !conf. Great place, I had the Sex Panther beer (current special). Double stout deliciousness. To accompany the brew? Porck nachos. It&#8217;s a bit far from the hotel, but if you have the means, I highly recommend it.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=San+Tan+Brewery&hl=en&sll=33.461521,-111.901932&sspn=0.141777,0.32341&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFcEq_AEdHGtV-SF8JyK78_8FfikPx35QEKorhzHyZGgO57NMZA&mra=ls&t=m&z=11" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.papagobrewing.com/" target="_new">Papago Brewing</a>
+        <p>Closest to the hotel. I&#8217;ve never been, but after reading up and asking friends, I hear good things.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Papago+brewing&hl=en&sll=33.406415,-111.884015&sspn=0.283735,0.64682&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFeyi_gEdaSBU-SE1_1OV5gE1kymRnzIJXgkrhzGvPdsi1RLu3w&mra=ls&t=m&z=13" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://sunupbrewing.com/" target="_new">SunUp Brewing</a>
+        <p>Never been, thought I would include it. It&#8217;s in a cool part of Phoenix though. Sorry, that&#8217;s all I got.<br /><a href="http://www.sunupbrewing.com/beers.html http://www.google.com/maps?saddr=firesky+resort&daddr=Sun+up+brewing&hl=en&ll=33.505904,-111.996861&spn=0.070852,0.161705&sll=33.48669,-111.927775&sspn=0.070868,0.161705&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFUBQ_wEdw_dR-SEDeNZISMk8YSlFUonNvxIrhzG-vaR5hfgNYQ&mra=ls&t=m&z=13" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.pppatio.com/" target="_new">Pinnacle Peak Patio</a>
+        <p>Farthest from the hotel. Never been, thought I would include it. Again, sorry, that&#8217;s all I got.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=pinnacle+peak+patio&hl=en&sll=33.505904,-111.999607&sspn=0.070852,0.161705&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFWahAgIdzUFV-SEGjQonwIyLrinxZiMNWZ0rhzETZcUVYAMh_w&mra=ls&t=m&z=11" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://sleepydogbrewing.com/" target="_new">Sleepy Dog Brewery</a>
+        <p>Recommended by friends, I&#8217;ve never been. We&#8217;ve all heard good things though. It&#8217;s a short ride to the Tempe location.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=sleepy+dog+brewery+tempe&hl=en&sll=33.617295,-111.888705&sspn=0.283043,0.64682&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFc38_QEdTnpU-SHO7_RHzkoClw&mra=ls&t=m&z=12" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.rockbottom.com/" target="_new">Rock Bottom</a>
+        <p>More of a corporate franchise spot. I haven&#8217;t been in a while, but I remember good food. I don&#8217;t remember much of the beer. That doesn&#8217;t mean a whole lot though, if I drink enough, I don&#8217;t remember anything.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Rock+Bottom+Rstrnt+%26+Brewery,+East+Shea+Boulevard,+Scottsdale,+AZ&hl=en&ll=33.545115,-111.902618&spn=0.14164,0.32341&sll=33.465805,-111.90696&sspn=0.14177,0.32341&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFbZuAAIdqqNU-SHPeQc1uHKqeymfQLKIInUrhzGHLgF0VsjEPg&oq=rock+bottom&mra=ls&t=m&z=12" target="_new">Directions from the Hotel</a></p>
+    </li>
+</ul>
+
+
+<h3>Bars</h3>
+
+<ul>
+    <li>
+        <a href="http://www.yardhouse.com/files/beer_menu_20.pdf" target="_new">The Yardhouse</a>
+        <p>Very close to the hotel, so if you&#8217;re thirsty, here&#8217;s a nice spot. SOOOO many beers. Check out their <a href="http://www.yardhouse.com/files/beer_menu_20.pdf" target="_new">menu</a><br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=the+yardhouse&hl=en&ll=33.504473,-111.926866&spn=0.008624,0.017745&sll=33.509858,-111.925449&sspn=0.008624,0.017745&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFR0v_wEdoRhU-SEcj0iR7GEPwSm7NCfflwsrhzGm-o4iN_sYaA&mra=ls&t=m&z=16" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.dosgringosaz.com/" target="_new">Dos Gringos</a>
+        <p>A big party spot for Scottsdale. A fun, Mexico-ish, themed bar. Two stories, lots of bars, and it&#8217;s located right in the middle of downtown Scottsdale. There&#8217;s a ton within walking distance from here. Slices Pizza down the street is pretty popular for after drinking food.<br /><a href="http://www.google.com/maps?q=from:+firesky+resort+to:+Dos+Gringos&saddr=firesky+resort&daddr=Dos+Gringos&hl=en&ll=33.502326,-111.926394&spn=0.017249,0.035491&sll=33.50501,-111.922488&sspn=0.017248,0.035491&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFZUe_wEdlR5U-SGdkvVuqs4Z0ykrRKcRvgsrhzEwjOHRAnxkZQ&t=m&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>   
+    <li>
+        <a href="http://saltysenorita.com/" target="_new">Salty Senorita</a>
+        <p>Good mexican food. Not really a treu bar though. More of a restaurant with a good bar in it.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Salty+Senorita,+North+Scottsdale+Road,+Scottsdale,+AZ&hl=en&ll=33.499248,-111.92575&spn=0.017714,0.040426&sll=33.50045,-111.9256&sspn=0.017714,0.040426&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFYYF_wEdvCNU-SGMHd8Aet3IESmBtPpIwAsrhzHFPmRDFIkGcg&oq=Salty+Senorita&mra=ls&t=m&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>   
+    <li>
+        <a href="http://www.srrestaurants.com/" target="_new">Saddle Ranch</a>
+        <p>Reminds me a lot of Dos Gringos, but more restauranty. Steaks, Bulls and Rock and Roll is their motto.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Saddle+Ranch+Scottsdale+LLC,+North+Scottsdale+Road,+Scottsdale,+AZ&hl=en&ll=33.503077,-111.925535&spn=0.017714,0.040426&sll=33.499248,-111.92575&sspn=0.017714,0.040426&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFTEo_wEdXCVU-SHaesv8SLxA-SkzCSrKvQsrhzHVoQruMTVHbw&oq=Saddle+&mra=ls&t=m&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>   
+    <li>
+        <a href="http://www.konagrill.com/" target="_new">Kona Grill</a>
+        <p>Sushi restaurant with a good bar. It&#8217;s in the &#8220;hoity-toity&#8221; mall in Scottsdale. Usually on the weekends you can sit on the patio and watch the Ferraris or other exotics roll in. Bottom line, Sushi and booze. Works for me.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Kona+Grill,+Scottsdale,+AZ&hl=en&sll=33.503077,-111.925535&sspn=0.017714,0.040426&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFYw4_wEdRhhU-SGAu3QrCphOfw&oq=Kona+Grill&mra=ls&t=m&z=16" target="_new">Directions from the Hotel</a></p>
+    </li>   
+    <li>
+        <a href="http://www.coachhousescottsdale.com/coach_house/Home.html">The Coach House</a>
+        <p>I haven&#8217;t been. A friend said to check it out.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Coach+House&hl=en&sll=33.50128,-111.92789&sspn=0.017249,0.035491&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFTQW_wEdnxVU-SHtZpZ9MyfzHSlprwmglQsrhzGWWoYi3qqCnA&mra=ls&t=m&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.myspace.com/ttroadhouse">TT Roadhouse</a>
+        <p>Divey, but fun. For a while, it was THE punk rock bar. They had a pretty epic juke box. This is the spot if you want some PBR. And yes, their webpage is a MySpace page.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=tt+roudhouse&hl=en&sll=33.504795,-111.926866&sspn=0.008857,0.020213&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFWPg_gEdYANU-SEJJa6Vt0CjdCnD-3RT7wsrhzG4AGpeAWBAkA&mra=ls&t=m&z=14" target="_new">Directions from the Hotel</a></p>
+    </li>   
+    <li>
+        <a href="http://rustyspursaloon.com/">Rusty Spur Saloon</a>
+        <p>Haven&#8217;t been, need to go. Looks pretty rad.<br /><a href="http://www.google.com/maps?saddr=firesky+resort&daddr=Rusty+Spur+Saloon,+East+Main+Street,+Scottsdale,+AZ&hl=en&sll=33.594055,-111.92812&sspn=0.28312,0.64682&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFfMP_wEdSClU-SGjzjSvfEK-JQ&oq=Rusty+Spur&mra=ls&t=m&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>
+
+    <li>
+        <a href="http://caseymoores.com/Caseys/Home.html" target="_new">Casey Moore&#8217;s</a>
+        <p>One of my favorite bars. For those who have been to the Gingerman in Austin, I swear they&#8217;re like sister bars. Outside in AZ during April is fanatastic. Have a bowl of Clam Chowda and a beer. Nom Nom. Located in Tempe<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Casey+Moore's+Oyster+House,+South+Ash+Avenue,+Tempe,+AZ&hl=en&sll=33.45032,-111.93424&sspn=0.199087,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFSL1_QEdlORT-SH1IjKdKe1oHykDnSQy1wgrhzHaKyj4VkN9FQ&oq=Casey+Moore&t=h&gl=us&mra=ls&z=13" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://yuccatap.com/" title="" target="_new">Yucca Tap Room</a>
+        <p>Dive bar-ish. Local music, lots of beer, wood paneling&#8230; just a fun bar to hang out. Located in Tempe <br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Yucca+Tap+Room&hl=en&sll=33.50496,-111.92686&sspn=0.006218,0.010815&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFRaI_QEdxuxT-SEgUOX7P32DzilV5NSKrwgrhzEzJ-R2mSfJBA&t=h&gl=us&mra=ls&z=12">Directions from the Hotel</a></p>
+    </li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NOM NOM - JSConf Food Ideas in AZ]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az/"/>
+    <updated>2012-03-27T08:10:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/27/nom-nom-jsconf-food-ideas-in-az</id>
+    <content type="html"><![CDATA[<p>It started with this <a href="https://twitter.com/#!/wesbos/status/184646073485242368">tweet</a>. I quickly replied with one of my favorite BBQ places in the Phx Area, Joe&#8217;s BBQ. I realized, after I posted, that Joe&#8217;s is going to be SUPER far from the conference. So I rattled off a couple other great spots closer to where <a href="https://twitter.com/#!/wesbos/status/184646073485242368">@wesbos</a> was going to be staying that day. And with that, this list is born. These are places that friends and I have been to and think are tasty. If you want to add a place, feel free to send a pull request on GitHub, or just send <a href="https://twitter.com/#!/tonyjcamp">@tonyjcamp</a> a msg on twitter.</p>
+
+<!-- more -->
+
+
+<h3>Scottsdale - near the FireSky resort</h3>
+
+<ul>
+    <li>
+        <a href="http://www.sugarbowlscottsdale.com/" target="_new">Sugar Bowl</a>
+        <p>Been around for 50+ years. Fun, soda shop type place. Totally kitschy. Good shakes and banana splits for sure.<br /><a href="http://maps.google.com/maps?q=4005+N+Scottsdale+Rd++to+firesky+resort&saddr=4005+N+Scottsdale+Rd&daddr=firesky+resort&hl=en&ll=33.500787,-111.924977&spn=0.024871,0.043259&sll=33.518695,-111.92327&sspn=0.024866,0.043259&geocode=FT4T_wEdFCVU-SlfPlSYvwsrhzG_5a19t6m3GQ%3BFYRM_wEd2yhU-SEkvaJnRLhcpw&t=h&gl=us&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.eatatovereasy.com/" title="" target="_new">Over Easy</a>
+        <p>About 10 minutes in a car, from the hotel. Awesome breakfast. Waffle Dogs? Srsly!!! Gotta have them.<br /><a href="http://maps.google.com/maps?q=4730+E.+Indian+School,+Phoenix,+AZ+to+firesky+resort&saddr=4730+E.+Indian+School,+Phoenix,+AZ&daddr=firesky+resort&hl=en&ll=33.502469,-111.952057&spn=0.049742,0.086517&sll=33.494693,-111.980287&sspn=0.013081,0.021629&geocode=FaUW_wEdAVFT-SkBmjvqXAwrhzGiUOcaLidsxQ%3BFYRM_wEd2yhU-SEkvaJnRLhcpw&t=h&gl=us&z=14"  target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.yelp.com/biz/julios-too-scottsdale" title="Julio Toos">Julio Toos</a>
+        <p>Just want some decent, cheap tacos? Here you go.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Julios+Too+scottsdale&hl=en&sll=33.57115,-111.956348&sspn=0.099405,0.173035&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFT8z_wEdZDBU-SGAN1zrlluxZilH9mCavAsrhzE-OSutoKfMag&t=h&gl=us&mra=ls&z=17">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.mastrosrestaurants.com/Locations/AZ/11-City-Hall-Scottsdale-Main/Default.aspx" title="City Hall" target="_new">City Hall</a>
+        <p>Super high end dinner resturant. Has a high price tag, but hey you only live once right? A fun side note, they will place your napkins in your lap for you. High-Falootin&#8217;! Pretzel rolls with my steak please, yum.<br /><a href="http://maps.google.com/maps?saddr=6991+E.+Camelback+Rd&daddr=firesky+resort&hl=en&ll=33.504938,-111.927617&spn=0.006218,0.010815&sll=33.504938,-111.928196&sspn=0.006218,0.010815&geocode=FSEz_wEdIhBU-Sn5K_mBlwsrhzEHEHJ8NSsCwA%3BFYRM_wEd2yhU-SEkvaJnRLhcpw&t=h&gl=us&mra=ltm&z=17" target="_new">Directions for the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.cowboyciao.com/" title="Cowyboy Caio" target="_new">Cowyboy Caio</a>
+        <p>Should be a must visit for <a href="https://twitter.com/#!/cowboy" target="_new">@cowboy</a>. Good food, a bit on the pricier side for a dinner, but it&#8217;s worth it.<br /><a href="http://maps.google.com/maps?q=cowboy+caio+to+firesky+resort&saddr=cowboy+caio&daddr=firesky+resort&hl=en&sll=33.508251,-111.925026&sspn=0.002198,0.002704&geocode=FWsp_wEdlh9U-SGeixFmR3K8DylDqRCRvQsrhzF1DaPHF26QEA%3BFYRM_wEd2yhU-SEkvaJnRLhcpw&t=h&gl=us&z=16" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://fnbrestaurant.com/" target="_new">FnB</a>
+        <p>Right near Cowboy Caio! Great wine list. A bit pricey, but again, worth it.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=7133+east+stetson+dr.&hl=en&sll=33.501055,-111.926447&sspn=0.006218,0.010815&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFWsp_wEdlh9U-SlDqRCRvQsrhzF1DaPHF26QEA&t=h&gl=us&mra=ls&z=16">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://citizenpublichouse.com/home/">Citizen Public House</a>
+        <p>One of the favs reccomended by @rxgx. mmmm GRITS + GUMBO for me.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Citizen+Public+House&hl=en&ll=33.503024,-111.926479&spn=0.012435,0.021629&sll=33.50364,-111.926215&sspn=0.012435,0.021629&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFawj_wEdcR1U-SFfJwvXKjbZRil3xsH7vQsrhzFovxR8Ims8fA&t=h&gl=us&mra=ls&z=16" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li><a href="http://www.fogodechao.com/menu/dining-experience/" title="" target="_new">Fogo de Chao</a>
+        <p>I haven&#8217;t been here personally, but friends have. Basic premise, you sit down and people bring you as much food as your stomach can handle. When it was described to me, I instantly thought of Eric Cartman raising his flag at Casa Bonita asking for <a href="http://www.southparkstudios.com/clips/154195/more-sopapillas-please" target="_new">more Sopapillas please</a>.<br /><a href="http://maps.google.com/maps?q=6300+N.+Scottsdale+Rd.,+Scottsdale,+AZ+85253++to+firesky+resort&saddr=6300+N.+Scottsdale+Rd.,+Scottsdale,+AZ+85253&daddr=firesky+resort&hl=en&sll=33.50303,-111.926075&sspn=0.012435,0.021629&geocode=FTGg_wEdWyNU-SmPfENiEwsrhzEKnUaVg-3n3g%3BFYRM_wEd2yhU-SEkvaJnRLhcpw&t=h&gl=us&z=15"  target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://foxrc.com/olive_ivy.html" title="Olie and Ivy" target="_new">Olive and Ivy</a>
+        <p><br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Olive+and+Ivy&hl=en&sll=33.50042,-111.92856&sspn=0.024871,0.043259&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFSAw_wEdPRtU-SHAVTk4YG5aAindUmk_vQsrhzG3eWS42SAAyA&t=h&gl=us&mra=ls&z=17" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://oldtowntortillafactory.com/" title="Old Town Tortilla Factory" target="_new">Old Town Tortilla Factory</a>
+        <p>Never been, was told to list it. Maybe Nick can give us a small run down. FORK, EDIT, COMMIT, PULL REQUEST!!!<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Old+Town+Tortilla+Factory,+East+Main+Street,+Scottsdale,+AZ&hl=en&sll=33.50499,-111.92468&sspn=0.006218,0.010815&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFZUQ_wEdRA1U-SHYAJBC-Lp54Cn7nf3llAsrhzFmM07blyZSww&oq=old+town+tor&t=h&gl=us&mra=ls&z=15">Directions from the Hotel</a></p> 
+    </li>
+    <li>
+        <a href="http://www.jdvhotels.com/dining/arizona/old_town_whiskey" target="_new">Old Town Whiskey</a>
+        <p>I&#8217;m a whiskey fan, and this is one of the best Whiskey bars in PHX. I swear I&#8217;ve seen Tuco here, or maybe that was a dream. <br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Old+Town+Whiskey&hl=en&ll=33.500894,-111.924033&spn=0.024871,0.043259&sll=33.500894,-111.923947&sspn=0.024871,0.043259&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFQ8U_wEdWjVU-SG3XU4zgxXVcSk33JO5uAsrhzHPFNalqrlGgQ&t=h&gl=us&mra=ltm&z=15" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.donandcharlies.com/" title="" target="_new">Don and Charlie&#8217;s</a>
+        <p>Old school. Fun. Some of the best ribs in town. Great burgers. Not too pricey. Also, my family was kicked out after causing a ruckus about their &#8220;Everyone has to be present in order to be seated&#8221; rule. Thanks mom, now I&#8217;m forever embarrased about going back. Make sure you&#8217;re party is there when you want to be seated! There can be long waits.<br /><a href="http://maps.google.com/maps?q=Don+and+Charlie's+from+firesky+resort&saddr=firesky+resort&daddr=Don+and+Charlie's&hl=en&sll=33.508483,-111.925029&sspn=0.024869,0.043259&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFX0y_wEdvjxU-SGNaEBa3u5FhilP0WsHuwsrhzFedCWbITZ0mw&t=h&gl=us&z=17" target="_new">Directions from the Hotel</a></p>
+    </li>
+</ul>
+
+
+<h3>A bit out of the way, but SURELY worth it.</h3>
+
+<ul>
+    <li>
+        <a href="http://joesrealbbq.com/" target="_new">Joe&#8217;s Real BBQ</a>
+        <p>It&#8217;s far, it&#8217;s in Gilbert Wahhhhh. You can stay at my house for the night if you end up crashing into a food coma. Just get there. I don&#8217;t care how, just do it. Plus some other great places close by.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Joe's+Real+BBQ,+North+Gilbert+Road,+Gilbert,+AZ&hl=en&ll=33.432301,-111.8573&spn=0.199128,0.346069&sll=33.505904,-112.003899&sspn=0.198959,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFST1_AEdJTpW-SHAEttyAloZACkTMtnhFqkrhzE3b_S_NPfgQg&oq=Joes+Real&t=h&gl=us&mra=ls&z=12" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://libertymarket.com/" target="_new">Liberty Market</a>
+        <p>Another &#8220;Joe&#8221; creation. Simply fantastic. Located across the street from Joe&#8217;s BBQ and a Postinos. Make an afternoon of it.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Liberty+Market&hl=en&sll=33.432301,-111.8573&sspn=0.140966,0.285301&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFcLz_AEdAzhW-SHSyKexkWgmjCkHir7eFqkrhzHGtWat5vAIcw&t=h&gl=us&mra=ls&z=11" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://joesfarmgrill.com/" target="_new">Joe&#8217;s Farm Grill</a>
+        <p>A personal favorite&#8230; from the same Joe at Joe&#8217;s Real BBQ. This man can do no wrong. If you&#8217;re out in my neck of the woods (Gilbert) make it happen.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Joe's+Farm+Grill&hl=en&sll=33.50587,-111.96066&sspn=0.04974,0.086517&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFaxy_AEdiDRX-SFxKhq2yeEjzyltMp0FOqwrhzHtFQ3Ir6Kuew&t=h&gl=us&mra=ls&z=11" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://yuccatap.com/" title="" target="_new">Yucca Tap Room</a>
+        <p>Dive bar-ish. Local music, lots of beer, wood paneling&#8230; just a fun bar to hang out. <br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Yucca+Tap+Room&hl=en&sll=33.50496,-111.92686&sspn=0.006218,0.010815&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFRaI_QEdxuxT-SEgUOX7P32DzilV5NSKrwgrhzEzJ-R2mSfJBA&t=h&gl=us&mra=ls&z=12">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://caseymoores.com/Caseys/Home.html" target="_new">Casey Moore&#8217;s</a>
+        <p>One of my favorite bars. For those who have been to the Gingerman in Austin, I swear they&#8217;re like sister bars. Outside in AZ during April is fanatastic. Have a bowl of Clam Chowda and a beer. Nom Nom<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Casey+Moore's+Oyster+House,+South+Ash+Avenue,+Tempe,+AZ&hl=en&sll=33.45032,-111.93424&sspn=0.199087,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFSL1_QEdlORT-SH1IjKdKe1oHykDnSQy1wgrhzHaKyj4VkN9FQ&oq=Casey+Moore&t=h&gl=us&mra=ls&z=13" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.mrswhitesgoldenrulecafe.com/wp/" title="Mrs White's Soul Food">Mrs White&#8217;s Soul Food</a>
+        <p>Please, take the time to get here, and take the time to eat here (usually a long process). Insanely great soul food.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Mrs+White's+Golden+Rule+Cafe,+East+Jefferson+Street,+Phoenix,+AZ&hl=en&ll=33.477559,-111.994286&spn=0.099512,0.173035&sll=33.464175,-111.93371&sspn=0.099527,0.173035&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFZVd_gEduQxS-SHaawzyGR3n4CmDEOy8HRIrhzG_B1R5W6JJkA&oq=Mrs+White&t=h&gl=us&mra=ls&z=13" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.americastacoshop.net/" title="America's Taco Shop" target="_new">America&#8217;s Taco Shop</a>
+        <p>Great Carne Asada style Tacos. I always get the Vampiros or Burrito Bombs. Word.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=America's+Taco+Shop+phoenix&hl=en&ll=33.505904,-112.003899&spn=0.198959,0.346069&sll=33.487388,-111.904418&sspn=0.199002,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFQkz_wEdg8JR-SE1Y2UrGPkP7ykZ2yO86BIrhzHcIpiyyWa0kw&t=h&gl=us&mra=ls&z=12" target="_new">Directions from the Hotel</a></p>
+    </li>
+    <li>
+        <a href="http://www.postinowinecafe.com/" target="_new">Postinos</a>
+        <p>Wine Bar. Not too far from the resort either.<br /><a href="http://maps.google.com/maps?saddr=firesky+resort&daddr=Postino+Arcadia+Winecafe,+Phoenix,+AZ&hl=en&sll=33.432301,-111.8573&sspn=0.199128,0.346069&geocode=FYRM_wEd2yhU-SEkvaJnRLhcpw%3BFd4z_wEdURJT-SGMgrN6Tovo0ylHdLly_wwrhzHMBPB7f2aT_Q&oq=Postino'&t=h&gl=us&mra=ls&z=14" target="_new">Directions from the Hotel</a></p>
+    </li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[March Meeting Recap]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
+    <updated>2012-03-23T14:44:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap</id>
+    <content type="html"><![CDATA[<p>Here&#8217;s a short recap from last nights (3/22/12) meeting:</p>
+
+<!-- more -->
+
+
+<p><a href="https://twitter.com/#!/rwaldron">@rwaldron</a> showed off his node/arduino goodies. He&#8217;s starting building on top of a previously existing library, and extending the hell out of it. I can&#8217;t wait to start messing with this one:<a href="https://github.com/rwldrn/duino">duino</a>. We also have the video recording from our Skype call. The video capture is a bit choppy, but the audio is yummy. So if you don&#8217;t like the choppy, just listen. It&#8217;s well worth it.</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/nHeV8E7K1m8" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Special shout outs to Taco, Alli, BumbleBee and &#8220;them apples&#8221;.</p>
+
+<p><a href="https://twitter.com/#!/divya">@divya</a> was next up and she covered a bunch of topics. From <a href="http://html5boilerplate.com/">HTML5 boilerplate</a>, <a href="http://nimbu.in/fronteers/#slide1">the new developer workflow</a>, build scripts, <a href="http://hacks.mozilla.org/2010/11/firefox-4-font-feature-support/">webfonts</a>, css preprocessors, hawt pink and more. The fun new toy I will be playing with after hearing @divya talk about&#8230; css <a href="http://asset2.cbsistatic.com/cnwk.1d/i/tim/2011/05/09/Adobe-CSS-Arches-wrap.jpg">Exclusions</a>. mmmmhmmmmm</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/ky644CD6Gvk" frameborder="0" allowfullscreen></iframe>
+
+
+<p>After the video chats, the group got into a discussion this <a href="http://piratepad.net/VxKrMKu39A">piratepad list</a>. Looks like we have found some spots for the rumgr folks! I will be writing a blog post explaining why the 30 Day Challenge never finished.</p>
+
+<p>!conf has the last JS ticket to give away. How do you win? Well, come to the conference dressed in your best cowboy/cowgirl outfit. The best dressed gets it. Why did we decide to go this route? Well, everyone can easily participate, it adds a ton of fun to the conference, and who doesn&#8217;t love sharply dressed cowfolk? <a href="http://jsconfus2012.eventbrite.com/">JSConf party tickets</a> have gone on sale now. I hear the parties are amazing. Come hang with us.</p>
+
+<p>!conf still needs some volunteers. If you&#8217;re interested, send @PhxTagSoup or @notconf a msg. Please consider it if you have spare time. It&#8217;s going to be a fun one.</p>
+
+<p>TagSoup needs help too. Whether it&#8217;s design, writing, code, hairstyling etc&#8230; we can use your help. I will leave it at that.</p>
+
+<p>Thanks so much to everyone that came. NACHOS!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meeting Announcement March 22nd, 2012]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd/"/>
+    <updated>2012-03-15T08:45:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/15/meeting-announcement-march-22nd</id>
+    <content type="html"><![CDATA[<h3>CSS JS DOM in BFE</h3>
+
+<p>Oh hai.</p>
+
+
+<p>It&#8217;s been a while since we&#8217;ve had out last meetup but we&#8217;re back in full gear. The holiday break was nice and allowed us to plan some big things.</p>
+
+
+<p>First you&#8217;ll notice a new venue. Unicon has been nice enough to allow us to use their space for the evening. We want to start rotating where the meeting is held each month. So if you have a spot for us, let us know. We would love to have TagSoup at your place.</p>
+
+
+<p>If you plan on coming, please head over to out <a href="http://www.meetup.com/PHX-Tag-Soup/events/56346612/">MeetUp page and RSVP</a> (it helps us order the right amount of food). Unicon, located in Gilbert, might be a bit of a drive for you. It will be worth it. Here&#8217;s why:</p>
+
+
+
+
+<div class="clearfix">
+<img class="left" src="http://tagsoup.github.com/images/speakers/rick-waldron.jpg" width="128" height="128" title="Rick Waldron" alt="<3">
+Rick Waldron (<a href="http://twitter.com/#!/rwaldron">@rwaldron</a>) is going talk about surprises. And how to present a surprise to a group of developers. (all this means is I asked Rick to have fun and talk about whatever he wants). Rick currently works at <a href="http://bocoup.com/">Bocoup</a> as a JavaScript Punk Rocker.
+</div>
+
+
+
+
+<div class="clearfix">
+<img class="left" src="http://tagsoup.github.com/images/speakers/divya-manian.jpg" width="128" height="128" title="Divya Manian" alt="<3">
+Divya Manian (<a href="http://twitter.com/#!/divya">@divya</a>). Divya points and laughs. She gossips about CSS & HTML. Divya currently works at <a href="http://www.opera.com/">Opera</a> as a Web Opener. She will be crafting words, from her mouth that shall intrigue and captive the youth. (again, when she asked what she should talk about, I just said, have fun and do whatever you want.)
+</div>
+
+
+
+
+<div class="clearfix">
+<img class="left" src="http://tagsoup.github.com/images/speakers/ryan-tony.jpg" width="128" height="128" title="Ryan G. + Tony C." alt="=== <3">
+Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<a href="http://twitter.com/#!/tonyjcamp">@tonyjcamp</a>) are going talk about pseudo friends, pseudo elements, pseudo fun? (Depending on time)
+</div>
+
+
+<!-- more -->
+
+
+<ul>
+    <li>Like always, free nom noms</li>
+    <li>Free drinkies</li>
+    <li>NotConf announcements</li>
+    <li>Crew Cuts</li>
+</ul>
+
+
+<p>Hope to see you all there:</p>
+
+
+<p><a href="http://www.google.com/maps?q=1760+E+Pecos+Rd,+Gilbert,+AZ+85295&amp;hl=en&amp;ll=33.337412,-111.800995&amp;spn=0.14112,0.242386&amp;sll=37.0625,-95.677068&amp;sspn=34.259599,62.050781&amp;oq=1760&amp;hnear=1760+E+Pecos+Rd,+Gilbert,+Arizona+85295&amp;t=h&amp;z=12">http://www.google.com/maps?q=1760+E+Pecos+R&#8230;</a></p>
+
+
+<div style="margin: 0 0 600px;"></div>
+
+
+<p>Very elegant men will be there, including:</p>
+
+
+<p><img src="http://photos4.meetupstatic.com/photos/event/2/3/3/4/event_101409012.jpeg" border="0" style="max-height: 700px; max-width: 700px; margin: 5px; float: none;" /></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Papa Crock]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/14/papa-crock/"/>
+    <updated>2012-03-14T09:20:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/14/papa-crock</id>
+    <content type="html"><![CDATA[<h3>Day 20 of the 30 Day Writing Challenge</h3>
+
+<iframe src="http://player.vimeo.com/video/25606006?byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p><a href="http://vimeo.com/25606006">TXJS 2011 A1 - Douglas Crockford - JavaScript Programming Style and Your Brain</a> from <a href="http://vimeo.com/pixi">pixilated ideas</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Bit on Process]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/13/a-bit-on-process/"/>
+    <updated>2012-03-13T08:31:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/13/a-bit-on-process</id>
+    <content type="html"><![CDATA[<h3>Day 19 of the 30 Day Writing Challenge</h3>
+
+<p>I can&#8217;t think of anything more uniformly despised by everyone in my career than process.  Just mentioning the word generally causes a visible reaction.  That isn&#8217;t a good thing.  A good process should be your best friend that makes everything else in your life easier.  I know why everyone reacts that way.  We&#8217;ve all worked somewhere with a rigid process whose endless meetings and documents detract more than they add.  That doesn’t mean process itself is bad, just that those processes are.</p>
+
+<p>A process doesn’t have to be rigid.  It doesn’t even have to cover development lifecycle if you don’t want it to. If you notice a recurring problem, implement a rule to solve it.  Say, for example, you are regularly deploying sites and the links don’t function properly.   This is clearly a problem, and bad for you.  Now we identify what caused that problem.  In this example it was the page was never tested in IE7, and some of the fancy modern code doesn’t work there.  How was that missed?  We never identified what browsers the client expected the site to function properly in.  So we now have the rule,  “Identify all required support configurations from client prior to the start of development.” Congratulations, you have a process.  It’s that simple.  There is no one process that will solve every organization’s problems.   Every company is going to have to tailor their own process.
+ <!-- more -->
+The assumption that adopting a predefined process will work is a common mistake.  It’s an understandable one to make too.  The entire idea of process is that it should make your life easier.  What is easier than following a define set of steps?  However, just like you can’t copy and paste the same code from one project to the next, you can’t just copy someone’s process.  Their needs aren’t your needs.  So identify those needs.  Does management want greater visibility?  Are project managers asking you to add, “just one small thing,” to the sprint?  Our job as developers is to solve problems.  There is no reason we can’t solve our own.</p>
+
+<p>Before I end this, I will admit I’m biased towards process.  I’m a QA, without process my life is very hectic.  QA thrives in controlled environments.  If I’m given reliable inputs (Requirements Docs, Support Configurations, User Stories, etc.), I can’t guarantee the outputs of my testing.  I can assure you, without process requirements that those things exist, they won’t.  This leads incomplete testing, and thus quality problems.  No one likes those.   So help us help you better, create a process</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hacking on the NCAA Tournament for Fun (Not For Profit)]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
+    <updated>2012-03-12T23:59:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
+    <content type="html"><![CDATA[<h3>Day 18 of the 30 Day Writing Challenge!</h3>
+
+<p>Hey everyone, it&#8217;s me again. I&#8217;m sober this time, don&#8217;t worry. Well actually I&#8217;m drunk on a crazy idea that I had last weekend. I&#8217;ve always been <em>really</em> into the NCAA Tournament. I once took up an entire wall in my kitchen with a giant bracket just so I could fill it in after every game. So rolling around in my head last weekend was an idea of combining the NCAA Tournament with my other love, code. I started to play around with a format to see how small (in terms of character length) I could make all my picks. This is what I came up with.</p>
+
+<!--more-->
+
+
+<h3>How To Get This Up and Running</h3>
+
+<ol>
+<li>Install <a href="http://nodejs.org/"><code>node</code></a></li>
+<li>Install <a href="http://npmjs.org/"><code>npm</code></a></li>
+<li><code>git clone git@gist.github.com:2028007.git gist-2028007</code></li>
+<li><code>cd gist-2028007</code></li>
+<li><code>npm install</code></li>
+<li><code>node app.js S18541137214112424W185463721532533E191213113102112111011111MW1854113728432828FFWMWW</code></li>
+</ol>
+
+
+<h3>Explanation</h3>
+
+<p>The argument passed to <code>app.js</code> is a string containing picks for the 63 games in the NCAA Tournament (after the play-in games). The example above can be looked at as divided into five parts:</p>
+
+<p><code>S18541137214112424</code> <code>W185463721532533</code> <code>E191213113102112111011111</code> <code>MW1854113728432828</code> <code>FFWMWW</code></p>
+
+<h3>Identifiers</h3>
+
+<p>Each of the first four parts are a region and the picks for that region. The last part is the picks for the Final Four. The Final Four identifier (<code>FF</code>) and picks must come at the end of the string. The alpha characters that start each part are the identifier for that region. The region identifier must be a key in a valid region key (by valid I mean it must exist in the data file).</p>
+
+<h3>Picks</h3>
+
+<p>The numbers for the first four regions correspond to the picks being made for that region. Each number refers to a seed that you think will win their game. The picks must be made in a top-down, left-right order when viewing the games on a bracket. This means for the first round, the games must be picked in the order: <code>1 v 16, 8 v 9, 5 v 12, 4 v 13, 6 v 11, 3 v 14, 7 v 10, 2 v 15</code>. So if you wanted to pick all the higher seeded teams for the first round, your numbers would be <code>18546372</code>. To complete a region, keep picking winning seeds in this order. To finish our previous example of all the higher seeded teams winning, our numbers would be <code>185463721432121</code>. This might be easier to visualize if we look at the picks divided into rounds: <code>18546372</code> (first round winners) <code>2143</code> (second round winners) <code>12</code> (Sweet Sixteen winners) <code>1</code> (Elite Eight winner). Pair that with the identifier for the region and you have <code>E185463721432121</code> which is a valid region.</p>
+
+<h3>Final Four</h3>
+
+<p>Once we have put our four regions together we can add the Final Four. For the Final Four &#8216;region&#8217;, you will pick the winners not be their seed but by the identifier of the region that they originally came out of. Make sure you know which regions are playing each other as well. In the example of the 2012 NCAA tournament, the Final Four was <code>S v W and E v SW</code>. So appropriate Final Four picks would be <code>WMWW</code> since we are first picking the winners of the two Final Four matchups and the picking the winner of the final game. Pair that with the Final Four identifier to get <code>FFWSEW</code>.</p>
+
+<h3>Output</h3>
+
+<p>If your picks are valid, the output should display in an object contain all the regions, rounds and games.</p>
+
+<p>If there are any errors, those will be displayed instead.</p>
+
+<h3>Why?</h3>
+
+<p>I wanted a codified format to fit all my picks for the NCAA Tournament into as little characters as possible. I believe that even if all region identifiers were two characters and you picked the higher seed in every game, you could fit your picks in 132 characters (enough to fit in a tweet!). Obviously this could be shortened further by adding additional conventions (such as region order, etc.) but I believe this to be a good mix of brevity and flexibility.</p>
+
+<p>This logic is the basis of <a href="http://tweetyourbracket.com">TweetYourBracket.com</a> (<a href="https://github.com/lukekarrys/tweetyourbracket.com">GitHub repo</a>). The idea is that there will be a Twitter watcher which will watch for a specific hashtag and then the bracket will be parsed from the tweet and saved.</p>
+
+<h3>Not But Seriously, Why?</h3>
+
+<p>Because it was fun. Not let&#8217;s show off a few code samples to prove my point.</p>
+
+<p><em>Note: all the code here is pulled from <a href="https://github.com/lukekarrys/tweetyourbracket.com">the TweetYourBracket GitHub repo</a> and slightly modified for example purposes. I also made the <a href="https://gist.github.com/2028007">gist</a> I referenced above as an easier way to play with the majority of the code.</em></p>
+
+<figure class='code'><figcaption><span>picksToArray.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Takes a string of the picks for a region and validates them</span>
+</span><span class='line'><span class="c1">// Return an array of picks if valid or false if invalid</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">picksToArray</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">picks</span><span class="p">,</span> <span class="nx">regionName</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">regexp</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">replacement</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">regExpStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">seeds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+</span><span class='line'>      <span class="nx">seedLength</span> <span class="o">=</span> <span class="nx">seeds</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">regExpJoiner</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|X)&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">backref</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">regExpJoiner</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;\\&quot;</span><span class="o">+</span><span class="nx">n</span><span class="p">;</span> <span class="p">}));</span>
+</span><span class='line'>      <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Create capture groups for the first round matchups of the region</span>
+</span><span class='line'>  <span class="c1">// Since we know what order the games should be selected in we can build a regex</span>
+</span><span class='line'>  <span class="c1">// by splitting the seeds array into groups of two</span>
+</span><span class='line'>  <span class="c1">// The regex will look like this:</span>
+</span><span class='line'>  <span class="c1">// (1|16|X)(8|9|X)(5|12|X)(4|13|X)(6|11|X)(3|14|X)(7|10|X)(2|15|X)</span>
+</span><span class='line'>  <span class="c1">// The X is the character used for a game that hasnt been picked yet</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">seedLength</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">regExpStr</span> <span class="o">+=</span> <span class="nx">regExpJoiner</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">seeds</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Create capture groups using back references for the capture groups above</span>
+</span><span class='line'>  <span class="c1">// Since we just created 8 capture groups above and we know that during each subsequent round</span>
+</span><span class='line'>  <span class="c1">// the number of teams will be cut in half, we can use another loop to add to the regex.</span>
+</span><span class='line'>  <span class="c1">// We will use glorious back references to ensure that each later match only contains</span>
+</span><span class='line'>  <span class="c1">// teams that would have had the possibility of advancing to that game.</span>
+</span><span class='line'>  <span class="c1">// We will add this to our regex above:</span>
+</span><span class='line'>  <span class="c1">// (\1|\2|X)(\3|\4|X)(\5|\6|X)(\7|\8|X)(\9|\10|X)(\11|\12|X)(\13|\14|X)</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">seedLength</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">regExpStr</span> <span class="o">+=</span> <span class="nx">backref</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">regexp</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">regExpStr</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">replacement</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">seedLength</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;$&#39;</span><span class="o">+</span><span class="nx">num</span><span class="p">;</span> <span class="p">}).</span><span class="nx">join</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Here we will test if our picks match the regex and if they do</span>
+</span><span class='line'>  <span class="c1">// we will use the 15 capture groups we created above to split</span>
+</span><span class='line'>  <span class="c1">// the picks into an array</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">regexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">picks</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">picks</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">regexp</span><span class="p">,</span> <span class="nx">replacement</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">logError</span><span class="p">(</span><span class="nx">regionName</span><span class="p">,</span> <span class="s1">&#39;was unable to parse the picks&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I had fun writing to the code above. The purpose of is to take a string of picks and validate them with a regex to ensure that they meet the necessary requirements. It gets a little inception-y as you are looping through and created capture groups in the regex that are using back references to capture groups you just created in the iteration before.</p>
+
+<h3>Now For the Client Side</h3>
+
+<p>The code above is all used on the server-side in my application. I tried to leave as much up to server as I could, because I already had the code there and didn&#8217;t want to deal with bugs bringing it to the browser. So what I did on my <a href="http://tweetyourbracket.com">client-side bracket</a> was to save the status of each pick into the URL hash. That way, the entire state of the bracket is in the URL at all times. It&#8217;s not perfect, because I didn&#8217;t add a watcher for the hash that will change picks if you change the URL. But what it does, is if you load the page with a bracket in the url hash, it will send that hash to the server and return the HTML if the bracket was valid.</p>
+
+<figure class='code'><figcaption><span>bracket.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/public/js/bracket.js#L103'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stringBuilder</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// I&#39;m going through each region&#39;s pickable games</span>
+</span><span class='line'>  <span class="c1">// and taking either the team&#39;s region (for the Final Four)</span>
+</span><span class='line'>  <span class="c1">// or the team&#39;s seed (if it&#39;s a regular region)</span>
+</span><span class='line'>  <span class="c1">// and in the end saving the string to window.location.hash</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.region&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">$reg</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">regId</span> <span class="o">=</span> <span class="nx">$reg</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;_region&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">regId</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.winners &#39;</span><span class="o">+</span><span class="nx">pickable</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>          <span class="nx">text</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">text</span> <span class="o">=</span> <span class="p">(</span><span class="nx">regId</span> <span class="o">===</span> <span class="s1">&#39;FF&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;fromRegion&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">text</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[0-9]+/</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">text</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">str</span> <span class="o">+=</span> <span class="nx">text</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">=</span> <span class="nx">str</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// This is called on dom ready</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class='line'>    <span class="c1">// I have server side routes set up with flatiron to render this with handlebars</span>
+</span><span class='line'>    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/validate/&#39;</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$content</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;#bracket_holder&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Rendering It All</h3>
+
+<p>The last thing I&#8217;m going to show you is the server-side JavaScript function that adds the necessary content to our tournament object and the Handlebars template that renders it.</p>
+
+<figure class='code'><figcaption><span>addTeamContent.js</span><a href='https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23'>link</a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Take validated tournament and add necessary content so it is ready for Handlebars</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">addTeamContent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">,</span> <span class="nx">editable</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// These are the master regions</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">ncaaRegions</span> <span class="o">=</span> <span class="nx">NCAA</span><span class="p">.</span><span class="nx">regions</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">.</span><span class="nx">regions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">region</span><span class="p">,</span> <span class="nx">regionIndex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// These are the teams that played in this region</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">regionTeams</span> <span class="o">=</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ncaaRegions</span><span class="p">[</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="nx">ncaaRegions</span><span class="p">[</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">teams</span> <span class="o">:</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">region</span><span class="p">.</span><span class="nx">rounds</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">round</span><span class="p">,</span> <span class="nx">roundIndex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Triple nested loops FTW! ;)</span>
+</span><span class='line'>      <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">round</span><span class="p">.</span><span class="nx">games</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">game</span><span class="p">,</span> <span class="nx">gameIndex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">team</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">seed</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>              <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="nx">isTop</span> <span class="o">=</span> <span class="p">(</span><span class="nx">gameIndex</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">lastRound</span> <span class="o">=</span> <span class="p">(</span><span class="nx">roundIndex</span> <span class="o">===</span> <span class="nx">region</span><span class="p">.</span><span class="nx">rounds</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+</span><span class='line'>            <span class="nx">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">region</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">finalFourRegionName</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">game</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">team</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">regionTeams</span><span class="p">[</span><span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>          <span class="nx">team</span><span class="p">.</span><span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">region</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1">// These are selected winners in the final four</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">validatedPicks</span><span class="p">.</span><span class="nx">regions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">reg</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">reg</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">game</span><span class="p">;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">fromRegion</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">finalFourTeam</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">first</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">last</span><span class="p">(</span><span class="nx">fromRegion</span><span class="p">.</span><span class="nx">rounds</span><span class="p">).</span><span class="nx">teams</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">team</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="nx">finalFourTeam</span><span class="p">.</span><span class="nx">seed</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">team</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">finalFourTeam</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">team</span><span class="p">.</span><span class="nx">fromRegion</span> <span class="o">=</span> <span class="nx">game</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nx">round</span><span class="p">.</span><span class="nx">teams</span><span class="p">[</span><span class="nx">gameIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">team</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">editable</span><span class="o">:</span> <span class="nx">editable</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">startMatchup</span><span class="o">:</span> <span class="nx">isTop</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">endMatchup</span><span class="o">:</span> <span class="o">!</span><span class="nx">isTop</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">classes</span><span class="o">:</span> <span class="p">(</span><span class="nx">lastRound</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;&#39;</span> <span class="o">:</span> <span class="nx">classes</span><span class="p">[</span><span class="o">~~!</span><span class="nx">isTop</span><span class="p">]</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">validatedPicks</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check out the <a href="https://github.com/lukekarrys/tweetyourbracket.com/blob/master/templates/bracket.hbs">Handlebars template</a> on GitHub to see how this was all rendered. Unfortunately I couldn&#8217;t figure out how to embed Handlebars code with Octopress.</p>
+
+<h2>In The End</h2>
+
+<p>I had a small dream of making this a production ready app in time for Selection Sunday (which was last Sunday). Obviously that didn&#8217;t work out but  <a href="http://tweetyourbracket.com">TweetYourBracket.com</a> was an extremely fun exercise even if it didn&#8217;t get anywhere close to ready for prime time use. Some things I wanted to do with it:</p>
+
+<ul>
+<li>Make it not look like crap (using Bootstrap)</li>
+<li>Add some cooler interactions during the bracket (drag &#8216;n&#8217; drop, keyboard shortcuts, auto scrolling)</li>
+<li>Mobile ready with some media queries</li>
+<li>Make the Postgres DB not break when a row doesn&#8217;t exist (sounds easy, so no idea why I couldn&#8217;t get it to work)</li>
+<li>Better hosting (for now it&#8217;s on a free Heroku instance)</li>
+<li>Make it actually do what was advertised and setup the Twitter Streaming API watcher</li>
+</ul>
+
+
+<p>I encourage anyone who is interested in this to take a look at the <a href="https://github.com/lukekarrys/tweetyourbracket.com">GitHub repo</a>. I just opened it up today and would never refuse a cool pull request or issue. Hopefully it will be ready by next year :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wear More Hats]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/11/wear-more-hats/"/>
+    <updated>2012-03-11T21:34:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/11/wear-more-hats</id>
+    <content type="html"><![CDATA[<h3>Day 17 of the 30 Day Writing Challenge</h3>
+
+<p>Developers of all types know that they have responsibilities: to clients, to employers, to code standards, and so on. We&#8217;d be doing ourselves a disservice, however, if we didn&#8217;t acknowledge our responsibility to grow into not-typically-dev roles. It goes without saying that if you fall too far in love with a particular language and don&#8217;t learn alternatives/future-friendly sibling languages, you&#8217;ll become as certainly obsolete as your beloved language one day will.</p>
+
+<p>This isn&#8217;t about learning new languages - this is about learning new disciplines. And wearing more hats.</p>
+
+<h3>Lots of hats. Party hats.</h3>
+
+<p>There is probably a spectrum that runs from Designer to to Database Engineer with developers front-end and back in between. Throw in copywriters, project managers, and account executives, and you have a whole world of hats to wear. You might think some of these roles are boring, and they might say the same of you, but that&#8217;s not the point - branching into other roles makes one immune to ignorance about them. And, if you&#8217;re lucky, you&#8217;ll learn a little about what you really love to do with your career.</p>
+
+<!--more-->
+
+
+<h3>Front End, Back End.</h3>
+
+<p>If you&#8217;re used to writing Ruby, PHP, Python, or whatever backend language you&#8217;re comfortable with, then JavaScript, CSS, and HTML might seem like tricycle languages to you. On the surface, back-end languages deal more closely with data and hardware, and are open to huge levels of nuance and particular histories which developers take with them with every new project. JS isn&#8217;t all namby-pamby and CSS has its own nuances - and both have communities that are huge and accessible. Getting used to browser compatibility issues will help solve your fellow devs hours of headaches in the future, and getting accustomed to html5 will help relieve your own frustration with web objects.</p>
+
+<p>If you&#8217;re a front-end guy or gal, learn what you can about the server-side - talk to back-end developers and start going to hack nights. If you have a high familiarity with JavaScript, use Node.js to catapult you into the world of server-side scripting. It&#8217;s probably a matter of time before these two disciplines are looked at in the same way, after all.</p>
+
+<h3>This doesn&#8217;t mean you have to wear a Beret.</h3>
+
+<p>Maybe you&#8217;re already designing in code. That&#8217;s great! Keep up the good work. If not, you should know that coding starts at the design level. Most web designs, in Photoshop or otherwise, have a structure inherently established, and proper use of layering and folder-structures within a document only help add to this structure.</p>
+
+<p>Talk to your designers and see how they setup their grids, their layer/folder structure, and their element hierarchy. It could give you a great head-start when building out your web templates or reveal the designer&#8217;s intentions before you get too far down your path in coding the site.</p>
+
+<h3>Lose the Lorem Ipsum</h3>
+
+<p>Ditch it. If you&#8217;re building out a website with greeked text, take the time to write some sample content for the page you&#8217;re building. It will help give you an idea of what the user will experience when he/she hits your page after you launch. At this level, you&#8217;ll often realize that a page is unnecessary because the content is redundant - just because the site map specifies it should exist doesn&#8217;t give it validity. Tap into your inner Copywriter and give it a go!</p>
+
+<h3>Your Sunday Best</h3>
+
+<p>Some of the best devs I know are serious introverts. There&#8217;s no fault in this: they put on their headphones and crank out better code than I could muster. But there&#8217;s a reason for the extroversion that project managers and account executives extoll in their peers - clients love being spoken to in their own language, and they love being able to feel like they can speak to you in yours. If you comment your code (and you do. I know you do.), just expand your comments into notes that a layman could understand. Why you&#8217;re minimizing a file, the reasons behind g-zipping or calling jQuery rather than writing in core JavaScript, etc. all matter when the client is expected to ever maintain a project, or even to help explain just what they&#8217;re getting out of the deal. More than anything, working on speaking with clients will help you connect with them on what their needs really are, and quit playing telephone with their IT team or middle managers.</p>
+
+<hr />
+
+<p>There are lots of hats you can wear, either in an ad agency or web firm world. Just because you&#8217;re comfortable as a developer doesn&#8217;t mean you shouldn&#8217;t get uncomfortable from time to time. Take chances and do new things!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Words to Live By]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/10/words-to-live-by/"/>
+    <updated>2012-03-10T22:05:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/10/words-to-live-by</id>
+    <content type="html"><![CDATA[<h3>Day 16 of the 30 Day Writing Challenge</h3>
+
+<p>This is one of my favorite presentations. GitHub just &#8220;gets it&#8221;. I wish this was a prerequisite for anyone wanting to start their own business.</p>
+
+<script src="http://speakerdeck.com/embed/4ebaea7763912f032300cbe8.js"></script>
+
+
+
+
+<div class="clearfix">
+    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+    <img class="left" src="http://tagsoup.github.com/images/itsatrap.jpg" width="50">
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I see you getUserMedia]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
+    <updated>2012-03-09T22:43:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
+    <content type="html"><![CDATA[<h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
+
+<p>I&#8217;m busting my ass to get this post in. I hate just throwing &#8220;anything&#8221; up, so I took some time to research something I&#8217;ve never messed with: getUserMedia.</p>
+
+<p>Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a>, or <a href="http://www.opera.com/browser/next/">Opera Next</a>. If you chose to use Opera Next, you don&#8217;t have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to <a href="chrome://flags/">chrome://flags/</a> and look for &#8220;Enable MediaStream&#8221;. Make sure this is enabled. Now time for the fun.</p>
+
+<p><video id="video" width="640" height="480" autoplay></video>
+<button id="take">Take Picture</button></p>
+
+<!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT -->
+
+
+<p><canvas id="snapshot" width="640" height="480"></canvas></p>
+
+<script type="text/javascript">
+
+    var doc = document,
+        snapshot = doc.getElementById('snapshot'),
+        photo = snapshot.getContext('2d'),
+        video = doc.querySelector('video'),
+        VIDEO_WIDTH, VIDEO_HEIGHT,
+        computeSize = function(supportsObjectFit){
+        // user agents that don't support object-fit 
+        // will display the video with a different 
+        // aspect ratio. 
+            if (supportsObjectFit === true){
+                VIDEO_WIDTH = 640;
+                VIDEO_HEIGHT = 480;
+            } else {
+                VIDEO_WIDTH = video.videoWidth;
+                VIDEO_HEIGHT = video.videoHeight;
+            }
+        },
+        successCallback = function (stream) {
+            video.src = stream;
+            video.play();
+            computeSize(true);
+        },
+        errorCallback =function (error) {
+            console.error('An error occurred: [CODE ' + error.code + ']');
+        };
+
+    doc.getElementById('take').onclick = function() {
+        computeSize(true);
+        photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+    };
+
+    window.addEventListener('DOMContentLoaded', function() {
+
+        if (navigator.getUserMedia) {
+
+            navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+        } else if (navigator.webkitGetUserMedia) {
+            
+            navigator.webkitGetUserMedia("video", function(stream){
+                video.src = window.webkitURL.createObjectURL(stream);
+                video.play();
+                computeSize(false);
+            });
+
+        } else {
+            console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+        }
+
+    }, false);
+</script>
+
+
+
+
+<!-- more -->
+
+
+<p>If you have met all the requirements, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there&#8217;s a &#8220;Take Picture&#8221; button. Click it! Makes sexy happen! Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. I saw some shit Rick was posting on <a href="http://bocoup.com/">Bocoup&#8217;s site</a> and it blew me away. Also, <a href="http://miketaylr.com/photobooth/">Mike Taylor&#8217;s photo booth</a> is ridic. There&#8217;s no way I could have gotten any of this done if I didn&#8217;t take a peek at what they were doing. Now, let&#8217;s check out some code.</p>
+
+<div><script src='https://gist.github.com/2010552.js?file='></script>
+<noscript><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=0.5&quot;&gt;
+    &lt;title&gt;Oh hai.&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; autoplay&gt;
+      &lt;!-- Here you can set some default video up if the camera API no worky --&gt;
+      &lt;source src=&quot;default.webm&quot; type=&quot;video/webm;&quot; codecs=&quot;vp8, vorbis&quot;&gt;
+      &lt;source src=&quot;default.mp4&quot; type=&quot;video/mp4;&quot; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&gt;
+&lt;/video&gt;
+&lt;button id=&quot;take&quot;&gt;Take Picture&lt;/button&gt;
+
+&lt;!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT IF YOU NO HAS, PICTURE LUK FUNY--&gt;
+&lt;!-- SCALES IMPROPERLY WITHOUT WIDTH AND HEIGHT ON ELEMENT. CSS NO HELPY --&gt;
+&lt;canvas id=&quot;snapshot&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/canvas&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></noscript></div>
+
+
+<p>Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn&#8217;t available on the user&#8217;s browser. In Mike Taylor&#8217;s photobooth, if you don&#8217;t have the getMediaUser method available, you can still &#8220;photobooth&#8221; a clip from a tasty Cary Grant video.</p>
+
+<p>On to the guts, the JS, the fun part. I do have to let you in on a secet&#8230; I was rushed to get this out before midnight so it might be a tad sloppy. Deal with it!</p>
+
+<div><script src='https://gist.github.com/2010556.js?file='></script>
+<noscript><pre><code>   var doc = document,
+        snapshot = doc.getElementById('snapshot'),
+        photo = snapshot.getContext('2d'),
+        video = doc.querySelector('video'),
+        VIDEO_WIDTH, VIDEO_HEIGHT,
+        computeSize = function(supportsObjectFit){
+        // user agents that don't support object-fit 
+        // will display the video with a different 
+        // aspect ratio. 
+            if (supportsObjectFit === true){
+                VIDEO_WIDTH = 640;
+                VIDEO_HEIGHT = 480;
+            } else {
+                VIDEO_WIDTH = video.videoWidth;
+                VIDEO_HEIGHT = video.videoHeight;
+            }
+        },
+        successCallback = function (stream) {
+            video.src = stream;
+            video.play();
+            computeSize(true);
+        },
+        errorCallback =function (error) {
+            console.error('An error occurred: [CODE ' + error.code + ']');
+            computeSize(true);
+        };
+
+    doc.getElementById('take').onclick = function() {
+        computeSize(true);
+        photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+    };
+
+    window.addEventListener('DOMContentLoaded', function() {
+
+        if (navigator.getUserMedia) {
+
+            navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+        } else if (navigator.webkitGetUserMedia) {
+            
+            navigator.webkitGetUserMedia(&quot;video&quot;, function(stream){
+                video.src = window.webkitURL.createObjectURL(stream);
+                video.play();
+                computeSize(false);
+            });
+
+        } else {
+            console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+        }
+
+    }, false);</code></pre></noscript></div>
+
+
+<p>I set up a lazy reference to document, fat finger, no make typey good. I give myself a shortcut. Next I just set up some variables. <code>snapshot</code> is my canvas element. This is where the photo we take will be placed. Now let&#8217;s give the canvas some methods to use <code>.getContext()</code>. This comes in handy when we need to use the <code>.drawImage()</code> method. Next I set up a variable for the video element. And finally some functions. I will touch briefly on these.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">computeSize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">supportsObjectFit</span><span class="p">){</span>
+</span><span class='line'>      <span class="c1">// user agents that don&#39;t support object-fit </span>
+</span><span class='line'>      <span class="c1">// will display the video with a different </span>
+</span><span class='line'>      <span class="c1">// aspect ratio. </span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">supportsObjectFit</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
+</span><span class='line'>              <span class="nx">VIDEO_WIDTH</span> <span class="o">=</span> <span class="mi">640</span><span class="p">;</span>
+</span><span class='line'>              <span class="nx">VIDEO_HEIGHT</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">VIDEO_WIDTH</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
+</span><span class='line'>              <span class="nx">VIDEO_HEIGHT</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I know I&#8217;m calling this a bit wrong later in the code, but that&#8217;s ok. This isn&#8217;t production ready, for a client, or well groomed yet. It&#8217;s a rough demo. But, let&#8217;s break down the function. We are passing one argument, supportObjectFit. This comes from an Opera Specific CSS property called <code>object-fit</code>. It has to do with setting proper ratios of placed elements (video, canvas etc). <a href="http://dev.opera.com/articles/view/css3-object-fit-object-position/">Read more about it here</a>.</p>
+
+<p>Next we have out success and fail callbacks for later:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">successCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">video</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span>
+</span><span class='line'><span class="nx">errorCallback</span> <span class="o">=</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;An error occurred: [CODE &#39;</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>These come into play a bit later when we&#8217;re doing our feature detection on the getUserMedia method. On success, we&#8217;re setting the src of our video element to be the &#8220;feed&#8221; from our device&#8217;s video camera. We&#8217;re also determining the size of the video element if the user is browsing with the Opera Next browser.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;take&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">photo</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">VIDEO_WIDTH</span><span class="p">,</span> <span class="nx">VIDEO_HEIGHT</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Easy Peasy. Set up an click event on the &#8220;Take Picture&#8221; button. It will run the conputeSize() function, and then draw our screen shot from the video (aka our camera feed) onto our canvas element.</p>
+
+<p>Now here comes the important part, everything else was basically for setting this up:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">navigator</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">({</span><span class="s1">&#39;video&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">webkitGetUserMedia</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      
+</span><span class='line'>      <span class="nx">navigator</span><span class="p">.</span><span class="nx">webkitGetUserMedia</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">stream</span><span class="p">){</span>
+</span><span class='line'>          <span class="nx">video</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">computeSize</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Native web camera streaming (getUserMedia) is not supported in this browser.&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&#8217;s where feature detection comes in to play. When the document is loaded, let&#8217;s check to see if the browser supports our getUserMedia hawtness (currently, meaning the browser is Opera). If that is truthy, let&#8217;s use it. In our example, we&#8217;re just grabbing video by passing in the <code>{'video': true}</code> arguement, but you could also pass it audio as well. We also pass in 2 callbacks as arguements. The success and error functions we covered earlier. DONE!</p>
+
+<p>Now we check to see if the user is browsing with the Chrome Canary build. The syntax changes a tiny bit but the idea is the same. Set the video element&#8217;s source to be our camer feed, start the camera and all the computeSize() function. Since we know the user isn&#8217;t in Opera Live here, we pass the argument &#8220;false&#8221;.</p>
+
+<p>If all else fails, log a msg showing this shit ain&#8217;t gonna work.</p>
+
+<p>I look forward to messing with this some more. I want to save the images users take and give them the ability to upload them to the TagSoup page. I will be working on that next. Please check out the links from Mike Taylor, Rick Waldron, Opera, and Google Devs.</p>
+
+<p>11:56&#8230; Just made it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Non Destructive Editing]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/08/non-destructive-editing/"/>
+    <updated>2012-03-08T21:24:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/08/non-destructive-editing</id>
+    <content type="html"><![CDATA[<h3>Day 14 of the 30 Day Writing Challenge</h3>
+
+<p>As a designer, there is nothing more frustrating then opening up another designers working files and discovering that in the process of creating an effect they destroyed the original image.  And now you, the person charged with making an edit to that image, has to recreate the entire thing from scratch.  There are a lot of different ways to do non destructive editing, so today I thought I would show example of one of the easiest and most useful ones that I have found, the clipping mask.  Clipping masks are a super easy way that you as a designer can crop photos in Photoshop without actually deleting any portion of the photo.  Here is how it works:</p>
+
+<p>Step 1:  Open Photoshop and create a new document.  For this example I&#8217;ve opened up an 1140 grid template.</p>
+
+<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-1.jpg" width="800"></p>
+
+<!--more-->
+
+
+<p>Step 2:  Select the Shape Tool, and draw the shape that you would like your image to encompass.  For this example I&#8217;m going to draw a long thin rectangle.  I use this shape quite a bit when creating image banners or carousels, which I think we all know clients love no matter what we tell them.</p>
+
+<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-2-1.jpg" width="800">
+<img class="center" src="http://tagsoup.github.com/images/nd-editing/step-2-2.jpg" width="800"></p>
+
+<p>Step 3:  Go ahead and bring in your image.  The way that I like to place an image in Photoshop is to open the file menu and then select place.  I then use the browser to find the image I want to place and then select place.  The reason I like to do it this way rather than opening the image and just dragging it over to my new Photoshop document is, when you place it not only does it automatically name the layer whatever the file name is (which is nice for organizing your document) it also brings it in as a smart object.  I&#8217;m not going to go into all of the benefits of smart objects on this post, but know that smart objects give you a lot of editing flexibility that can really make your life easier once you know how to properly use them.</p>
+
+<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-3.jpg" width="800"></p>
+
+<p>Step 4:  Okay, now that we have our custom shape drawn and our image the next thing we need to do is check our layer palette and make sure that the image is stacked above the shape layer.  This should have happened automatically if you followed the steps I outlined, but it never hurts to double check.  Once you have confirmed that the image layer is above the shape layer go ahead and right click (control-click) on your image layer in the layer palette.  This will bring up a menu of options.</p>
+
+<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-4.jpg" width="800"></p>
+
+<p>Step 5: Once the menu is up, select Create Clipping Mask from the list of options.  Here&#8217;s what your image should look like.</p>
+
+<p><img class="center" src="http://tagsoup.github.com/images/nd-editing/step-5.jpg" width="800"></p>
+
+<p>Now you are free to scale and crop the image however you see fit without having to destroy the original image layer.  If you find that the image box is not the correct size, just adjust your clipping mask layer.</p>
+
+<p>I hope this helps you out.  Feel free to share any other tips or tricks you might know in the comments section.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bitwise Guy Are Ya?]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
+    <updated>2012-03-07T21:04:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
+    <content type="html"><![CDATA[<h3>Day 13 of the 30 Day Writing Challenge</h3>
+
+<p>The idea for this post all started with a friend of mine, <a href="https://twitter.com/#!/mcsheffrey">Connor McSheffrey</a> (@mcsheffrey). I don&#8217;t normally see a whole lot of activity from Connor on github. This morning, he posted a short gist:</p>
+
+<div><script src='https://gist.github.com/1991635.js?file='></script>
+<noscript><pre><code>this.current += ~~( dir === 'next') || -1;</code></pre></noscript></div>
+
+
+<p>I took a look at noticed something I didn&#8217;t understand. The &#126;&#126; operator. So, I had to start researching. For whatever reason, Google doesn&#8217;t recognize &#126;&#126; in the search engine. I tried surrounding it with quotes etc and nothing relavent came up (please let me know why)! I knew this was an operator, so I started searching for operators. Sure enough, I found the ~ operator. I didn&#8217;t even know this one existed. Do you know what this does? Let&#8217;s break it down:</p>
+
+<!--more-->
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">~</span><span class="mi">8</span> <span class="c1">//-9</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The ~ operator takes an integer, inverts the value, and subtracts 1 from it. In our case, 8 becomes -8, and -8 + -1 === -9. A &#8220;nice to know&#8221; but this didn&#8217;t answer my question. I continued my search, this time for &#8220;bitwise operators&#8221;. After buttload of searching, I found this awesome <a href="http://www.slideshare.net/madrobby/extreme-javascript-performance?from=fblanding">JS Perf presentation by Thomas Fuchs</a>.</p>
+
+<p>A golden rule, that Thomas emphasizes is &#8220;DO NOT, EVER, OPTIMIZE PREMATURELY&#8221;. Sage advice. In our case, we&#8217;re not researching this bitwise operator because we need to micro perf our scripts. It&#8217;s more like a &#8220;WTF is Connor doing here, I need to know so he doesn&#8217;t call my dumb ass out next time I see him&#8221;, sort of a thing. So next time you run into Brenden Eich and ask him, &#8220;You invented JavaScript&#8221; and he replies &#8220;~~(true)&#8221;, you know what it means.</p>
+
+<p>Back to the Thomas Fuchs slide share. He brings up this operation:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">parseInt</span><span class="p">(</span><span class="mf">12.5</span><span class="p">)</span> <span class="c1">//returns 12</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and the faster:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">~~</span><span class="p">(</span> <span class="mi">1</span> <span class="o">*</span> <span class="s2">&quot;12.5&quot;</span> <span class="p">)</span> <span class="c1">// also returns 12</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Side note: Thomas doesn&#8217;t need the whole 1 * &#8220;12.5&#8221;, it can just be &#8220;12.5&#8221;</p>
+
+<h3>Now we have a name for our operator: the bitwise Double Not (~~).</h3>
+
+<p>Before we get back to Connor&#8217;s script, let&#8217;s break down the Double Not. Here&#8217;s a couple of examples:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">~</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// inverts the value, and adds (-1), so (-1) + (-1) === -2</span>
+</span><span class='line'><span class="o">~</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// inverts the value, and adds (-1), returning (2) + (-1) === 1</span>
+</span><span class='line'><span class="o">~~</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// returns 1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>There is one more thing the Double Not does for us.</h3>
+
+<p>Damn you James Padolsey for being so smart. He <a href="http://james.padolsey.com/javascript/double-bitwise-not/">blogged about the Double Not</a> over a year ago and added this little nugget:<br />
+&nbsp;&#8221; ~~‘s flooring capabilities make it a better alternative to Math.floor if you know you’re dealing with positives — it’s faster and takes up less characters. &#8221;</p>
+
+<p>So, it&#8217;s a micro perf for Math.floor (in some browsers)! Nice nugs dude!</p>
+
+<h3>I&#8217;m hoping this is looking a little familiar. 0&#8217;s and 1&#8217;s, falsy and truthy&#8230; ahhh!!!</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">~~</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">// returns 1</span>
+</span><span class='line'><span class="o">~~</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="c1">// returns 0</span>
+</span><span class='line'><span class="k">typeof</span> <span class="o">~~</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">// returns &quot;number&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Back to Connor&#8217;s gist:</p>
+
+<div><script src='https://gist.github.com/1991635.js?file='></script>
+<noscript><pre><code>this.current += ~~( dir === 'next') || -1;</code></pre></noscript></div>
+
+
+<p>Depending on the string match of &#8220;next&#8221; we get a boolean value <em>cough</em> carousel nav <em>cough</em> AND we will +1 to <code>this.current</code> or -1 from <code>this.current</code>. It works perfectly with going to the next picture, or the previous picture in a photo carousel.</p>
+
+<p>These sites were exremely valuable when researching Connor&#8217;s jizzst!<br />
+<a href="http://www.slideshare.net/madrobby/extreme-javascript-performance?from=fblanding">Thomas Fuchs&#8217;s Extreme Javascript Performance</a><br />
+<a href="http://james.padolsey.com/javascript/double-bitwise-not/">James Padolsey&#8217;s Double bitwise NOT (~~)</a><br />
+<a href="http://webcache.googleusercontent.com/search?q=cache:eps2pgQRbloJ:tr.im/bitwise+&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">MDN&#8217;s Old BitWise Operators Page</a> - cached version, original is a dead link<br />
+<a href="http://tutsplus.com/lesson/prototypal-inheritance-and-refactoring-the-slider/">tuts+ - Where Connor originally saw this</a><br /></p>
+
+<p>&#8230;another fun thing this research has taught me, typing &#126;&#126; and another &#126;&#126; in octopress is the same as using <code>&lt;del&gt;&lt;/del&gt;</code> tags. Yay.</p>
+
+<p>Special thanks to Connor for posting a single, simple gist that got me going on this whole subj. Kisses!!!</p>
+
+<div class="clearfix">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+    <img class="left" src="http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif" width="50">
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pest Control 2: Electric Boogaloo]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo/"/>
+    <updated>2012-03-06T22:36:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/06/pest-control-2-electric-boogaloo</id>
+    <content type="html"><![CDATA[<h3>Day 12 of the 30 Day Writing Challenge:</h3>
+
+<p>Hello, I&#8217;m Truett Kueck and you&#8217;re not.  Today I am going to expand on what I wrote about last week.  It is amazingly common to forget to add urls to links.  This is completely understandable.  You are developing the page in sprints, and sometimes the page you need to link to does not exist yet.  Multiple sprints later when that page exists it slips your mind and then BAM! a site is live with scores of non-functioning.  It is also possible, and very common, that the actual requirements for links are unclear or completely non-existent.</p>
+
+<p>To solve this problem I have developed a simple Ruby application that parses a page for any links and then generates a Selenium script that clicks through the links on the page.  You will still need to make a few modifications, but you are 95% of the way there.  It uses the mechanize gem, another of many web automation gems, so we will need to install that first.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">mechanize</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mechanize is actually completely capable of performing the functionality of the Selenium script, but it has one major disadvantage.  The Selenium script can be run against Saucelab&#8217;s <a href="http://www.saucelabs.com">OnDemandService</a> which gives you access to most every major OS/Browser combination.  That might not matter to you as a developer, but Compatibility Testing is the bread and butter of QA.  Now onto the code:</p>
+
+<!--more-->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;mechanize&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Please enter the url you\&#39;d like to create a Selenium script for.&#39;</span>
+</span><span class='line'><span class="n">url</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+</span><span class='line'><span class="nb">puts</span> <span class="s1">&#39;What would you like to name the script?&#39;</span>
+</span><span class='line'><span class="n">filename</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">agent</span> <span class="o">=</span> <span class="no">Mechanize</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="n">page</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span class='line'><span class="n">script</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="s1">&#39;.rb&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pageLinks</span> <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'><span class="n">page</span><span class="o">.</span><span class="n">links</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">link</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">pageLinks</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;require \&#39;rubygems\&#39;&#39;</span>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;require \&#39;selenium-webdriver\&#39;&#39;</span>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;page = Selenium::WebDriver.for :firefox&#39;</span>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;page.get(\&#39;&#39;</span> <span class="o">+</span> <span class="n">url</span> <span class="o">+</span> <span class="s1">&#39;\&#39;)&#39;</span>
+</span><span class='line'><span class="n">script</span><span class="o">.</span><span class="n">puts</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'><span class="n">pageLinks</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">link</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;link&#39;</span> <span class="o">+</span> <span class="n">i</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s1">&#39; = page.find_element(:link_text, \&#39;&#39;</span> <span class="o">+</span> <span class="n">link</span> <span class="o">+</span> <span class="s1">&#39;\&#39;)&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;link&#39;</span> <span class="o">+</span> <span class="n">i</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s1">&#39;.click&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;if page.title != PUT PAGE TITLE HERE&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39; puts \&#39;Test failed\&#39;&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;else&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39; puts \&#39;Test Passed\&#39;&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;end&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;page.quit&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s1">&#39;page.get(\&#39;&#39;</span> <span class="o">+</span><span class="n">url</span> <span class="o">+</span><span class="s1">&#39;\&#39;)&#39;</span>
+</span><span class='line'>  <span class="n">script</span><span class="o">.</span><span class="n">puts</span>
+</span><span class='line'>  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The user is initially prompted to enter the url they would like to run against.  This does require the url to be entered in http://www.url.com format, but you can add in error checking fairly easily.  They are then asked what they would like to name the script.  Then magic happens and we end up with a nearly ready-made Selenium script.  Now we need to update the script to actually check that the links are working.  The outputted code for a given link should look like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">link0</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="ss">:link_text</span><span class="p">,</span> <span class="s1">&#39;Images&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">link0</span><span class="o">.</span><span class="n">click</span>
+</span><span class='line'><span class="k">if</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="o">!=</span> <span class="no">PUT</span> <span class="no">PAGE</span> <span class="no">TITLE</span> <span class="no">HERE</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;Test failed&#39;</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;Test Passed&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">page</span><span class="o">.</span><span class="n">quit</span>
+</span><span class='line'><span class="n">page</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.google.com&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The angry caps locked, &#8220;PUT PAGE TITLE HERE,&#8221; is our target.  As I mentioned in the previous article: Selenium is capable of checking for things on the page other than the title.  If the link goes to content that is hidden, you can check for specific text.  Whichever you use replace that text with what you are looking for, and you are done.  Now go fourth and fix broken links.</p>
+]]></content>
+  </entry>
+  
+</feed>

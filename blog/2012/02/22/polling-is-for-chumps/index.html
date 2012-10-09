@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Polling is for chumps - node.js with EventSource - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="You know what sucks? Making hundreds of round trips to a server to see if there&#8217;s any new data you can grab. But modern browsers (well, Firefox &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Polling Is for Chumps - node.js With EventSource</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-22T00:23:00-07:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>You know what sucks? Making hundreds of round trips to a server to see if there&#8217;s any new data you can grab.</p>
+
+<p>But modern browsers (well, Firefox and Chrome and Safari) support a much neater option. With the right <code>Content-Type</code> header, some special sauce in the client, and a modern browser platform, you can use the HTML5 <a href="http://dev.w3.org/html5/eventsource/">EventSource API</a> to establish a single long-term connection for each client, and the server pushes new data whenever necessary.</p>
+
+<p>Let&#8217;s start with a look at the server-side implementation.</p>
+
+<div><script src='https://gist.github.com/1883462.js?file=app-server.js'></script>
+<noscript><pre><code>var express = require('express');
+var fs = require('fs');
+
+// change this to some other log file that doesn't require root permissions to read :)
+var logfile = '/var/log/messages';
+
+var app = module.exports = express.createServer();
+
+app.configure(function(){
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(express.static(__dirname + '/public'));
+});
+
+app.configure('development', function(){
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));␣
+});
+
+app.configure('production', function(){
+  app.use(express.errorHandler());␣
+});
+
+app.get('/', function(req, res) { res.redirect('/index.html') });
+
+app.error(function(err, req, res, next) {
+    console.log('error: ' + err );
+});
+
+app.get('/events', function(req, res) {
+    var id = (new Date()).toLocaleTimeString();
+    res.header('Content-Type', 'text/event-stream');
+    res.header('Cache-Control', 'no-cache');
+    res.header('Connection', 'keep-alive');
+
+    fs.open(logfile, 'r', function(err, fd) {
+        // Whenever new data is available to read, send it to the client
+        fs.watchFile(logfile, function(curr, prev) {
+            if (curr.size &gt; prev.size) {
+                var size = curr.size - prev.size;
+                var data = new Buffer(size);
+                fs.read(fd, data, 0, size, prev.size, function(err, bytesRead, buffer) {
+                    res.write('id: ' + id + '\n');
+                    res.write('event: data\n');
+                    res.write('data: ' + data.toString('utf8') + '\n\n');
+                });
+            }
+        });
+
+        // If the client disconnects, let's not leak any resources
+        res.on('close', function() {
+            fs.unwatchFile(logfile);
+            fs.close(fd);
+        });
+    });
+});
+
+app.listen(process.env.PORT || 3000);
+console.log(&quot;tailpipe listening on port %d in %s mode&quot;, app.address().port, app.settings.env);</code></pre></noscript></div>
+
+
+<p>Things to note: The secret sauce here is all in the <code>/events</code> handler. It&#8217;s pretty simple - we watch a log file to see when its size changes, and when that happens, we read the new data from the end of the file and send it to the client tagged with the event name <code>data</code> (so if you have multiple kinds of events, you can interleave different messages by tagging them with different <code>event</code> names and the client will be able to properly distinguish them). And of course, if the client closes the connection, we want to free up the open file descriptor and the watch on the logfile.</p>
+
+<p>Now, how do we consume this data from the client?</p>
+
+<div><script src='https://gist.github.com/1883462.js?file=app-client.js'></script>
+<noscript><pre><code>$.ready(function() {
+  var source = new EventSource(&quot;/events&quot;);
+  source.addEventListener('data', function(e) {
+    $(&quot;#content&quot;).append(e.data + &quot;\n&quot;);
+  }, false);
+});</code></pre></noscript></div>
+
+
+<p>It&#8217;s so simple it almost doesn&#8217;t need an explanation. The important things to note are: of course the URL has to point at the same endpoint that the server is exporting the stream on, and we add a listener for the <code>data</code> event which we know the messages from the server will be tagged with. If you want to support multiple message types, you just add another listener on the client for each different <code>event</code> name and you&#8217;re good to go.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chris Lee</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-22T00:23:00-07:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eventsource/'>eventsource</a>, <a class='category' href='/blog/categories/level-up/'>level-up</a>, <a class='category' href='/blog/categories/nodejs/'>nodejs</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/26/kitty-corners/" title="Previous Post: Kitty Corners">&laquo; Kitty Corners</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/24/day-1-of-the-30-day-challenge/" title="Next Post: Day 1 of the 30 Day Challenge">Day 1 of the 30 Day Challenge &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/';
+        var disqus_url = 'http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JS | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/js/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[March Meeting Recap]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap/"/>
+    <updated>2012-03-23T14:44:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/23/march-meeting-recap</id>
+    <content type="html"><![CDATA[<p>Here's a short recap from last nights (3/22/12) meeting:</p>
+
+<!-- more -->
+
+
+<p><a href="https://twitter.com/#!/rwaldron">@rwaldron</a> showed off his node/arduino goodies. He's starting building on top of a previously existing library, and extending the hell out of it. I can't wait to start messing with this one:<a href="https://github.com/rwldrn/duino">duino</a>. We also have the video recording from our Skype call. The video capture is a bit choppy, but the audio is yummy. So if you don't like the choppy, just listen. It's well worth it.</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/nHeV8E7K1m8" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Special shout outs to Taco, Alli, BumbleBee and "them apples".</p>
+
+<p><a href="https://twitter.com/#!/divya">@divya</a> was next up and she covered a bunch of topics. From <a href="http://html5boilerplate.com/">HTML5 boilerplate</a>, <a href="http://nimbu.in/fronteers/#slide1">the new developer workflow</a>, build scripts, <a href="http://hacks.mozilla.org/2010/11/firefox-4-font-feature-support/">webfonts</a>, css preprocessors, hawt pink and more. The fun new toy I will be playing with after hearing @divya talk about... css <a href="http://asset2.cbsistatic.com/cnwk.1d/i/tim/2011/05/09/Adobe-CSS-Arches-wrap.jpg">Exclusions</a>. mmmmhmmmmm</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/ky644CD6Gvk" frameborder="0" allowfullscreen></iframe>
+
+
+<p>After the video chats, the group got into a discussion this <a href="http://piratepad.net/VxKrMKu39A">piratepad list</a>. Looks like we have found some spots for the rumgr folks! I will be writing a blog post explaining why the 30 Day Challenge never finished.</p>
+
+<p>!conf has the last JS ticket to give away. How do you win? Well, come to the conference dressed in your best cowboy/cowgirl outfit. The best dressed gets it. Why did we decide to go this route? Well, everyone can easily participate, it adds a ton of fun to the conference, and who doesn't love sharply dressed cowfolk? <a href="http://jsconfus2012.eventbrite.com/">JSConf party tickets</a> have gone on sale now. I hear the parties are amazing. Come hang with us.</p>
+
+<p>!conf still needs some volunteers. If you're interested, send @PhxTagSoup or @notconf a msg. Please consider it if you have spare time. It's going to be a fun one.</p>
+
+<p>TagSoup needs help too. Whether it's design, writing, code, hairstyling etc... we can use your help. I will leave it at that.</p>
+
+<p>Thanks so much to everyone that came. NACHOS!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Papa Crock]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/14/papa-crock/"/>
+    <updated>2012-03-14T09:20:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/14/papa-crock</id>
+    <content type="html"><![CDATA[<h3>Day 20 of the 30 Day Writing Challenge</h3>
+
+<iframe src="http://player.vimeo.com/video/25606006?byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p><a href="http://vimeo.com/25606006">TXJS 2011 A1 - Douglas Crockford - JavaScript Programming Style and Your Brain</a> from <a href="http://vimeo.com/pixi">pixilated ideas</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JS Conf Reminder]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/01/18/js-conf-reminder/"/>
+    <updated>2012-01-18T10:03:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/01/18/js-conf-reminder</id>
+    <content type="html"><![CDATA[<h2>Reminder</h2>
+
+<p>Arizona developers. Tickets for <a href="http://2012.jsconf.us" target="_new">JS Conf 2012</a> go on sale today, Jan. 18th 2012, at 1pm AZ Time. If you have any interest in going, tickets sell out very quickly. Load up that browser and get <a href="http://jsconfus2012.eventbrite.com/" target="_new">ready to buy your ticket</a>.</p>
+
+<h2>Call for help</h2>
+
+<p>Some of the TagSoup members are setting up a shuttle service from the airport to the hotel on Sunday. We haven't set up the times we will be offering the service, so details will be planned out as soon as we have our drivers ready. We currently have about 5 drivers that have volunteered so far. We need more people. If you are interested, please let me know. There will be something special in it for you!</p>
+
+<div class="clearfix">
+{% img left http://a6.sphotos.ak.fbcdn.net/hphotos-ak-snc4/64654_1661315297731_1382668088_1668565_3582645_n.jpg 180 %}  
+</div>
+
+
+<!-- / -->
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ryan Dahl's History of Node.js]]></title>
+    <link href="http://tagsoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js/"/>
+    <updated>2011-10-05T21:04:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2011/10/05/ryan-dahls-history-of-node-dot-js</id>
+    <content type="html"><![CDATA[<p>Being a late on anything sucks right? But being late is always better than not finishing what you set out to do. So I just want to do a small recap of September's meet-up. Bottom line, Ryan fucking Dahl (<a href="http://twitter.com/#!/ryah">@ryah</a>)!! Ryan was nice enough to take some time to talk to us about the history of <a href="http://nodejs.org/">Node.js</a>. He's never really told this story until now. Thanks so much Ryan</p>
+
+<p>Check out the video here:</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/SAc0vQCC6UQ" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Getting this video up on the web was hooker-ish. After the meet-up was over, I excitedly opened my laptop to watch the video. The computer was acting strange and eventually locked up before I could play the video. So half drunk, I reboot the laptop. I start up SilverBack App to check out the video and it looks great. BUT there is no audio. So after 3-4 days doing anything I could to save the file I gave up. I mean, FFMPEG even failed me :(  I wipe up my tears and I eventually had to send the file off the be "professionally" repaired. Oh well, that shit happens. I'm just glad the video was saved.</p>
+
+<p>No more talky, just go watch the video again, then hack on something.</p>
+]]></content>
+  </entry>
+  
+</feed>

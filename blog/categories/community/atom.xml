@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: community | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/community/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vegas Tech Road Trip]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip/"/>
+    <updated>2012-04-04T15:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/04/04/vegas-tech-road-trip</id>
+    <content type="html"><![CDATA[<p>The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We're making a trek to our sister city to visit a <a href="http://twitter.com/#!/vegasjelly">Vegas Jelly</a> meetup. If you're interested in going, let us know. Step 1 will be getting a proper date in place. We're thinking late April or early May. Jellys are on Thursday nights, so we will be most likely leaving on a Thursday morning. A van rental is a strong candidate for transportation. A bunch developers in a van together for 5 hours... mmmmmm I can smell it already.</p>
+
+<p>Tenative dates, if you're interested, let us know what works for you:<br />
+April 26th<br />
+May 1st<br />
+May 8th<br /></p>
+
+<p>The length of the stay depends on personal budgets and alloted time. We're really excited about the trip. Let's make it happen.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Boilerplate History w/ Paul Irish]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish/"/>
+    <updated>2012-03-03T21:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish</id>
+    <content type="html"><![CDATA[<h3>Day 9 of the 30 Day Writing Challenge</h3>
+
+<p>The <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project was one of the first github projects that I REALLY started to use when it first came out. Sure, there were some libraries, plugins, or whatever that I had used before the HTML5 BP, but this is the first I used on a regular basis. After watching the repo and using the code base for a while, I would try and help out the project here and there. Most time, nothing major, but hey... better than nothing:</p>
+
+<!--more-->
+
+
+<h4>First</h4>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate/issues/136">My first attempt</a></p>
+
+<h4>Second</h4>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate/issues/276">Attempt #2, more people interested this time</a></p>
+
+<h3><a href="https://github.com/h5bp/html5-boilerplate/issues/844">Ticket 844, History of the HTML5 BP</a></h3>
+
+<p>Back in October, I went to the jQuery Conference with <a href="http://twitter.com/#!/rxgx">@rxgx</a>, <a href="https://twitter.com/#!/phil_renaud">@phil_renaud</a>, <a href="https://twitter.com/#!/lukekarrys">@lukekarrys</a>, and <a href="https://twitter.com/#!/richardiii">@richardiii</a>. There were a ton of really great talks. One of the most entertaining, was given by <a href="http://twitter.com/#!/rwaldron">@rwaldron</a> and <a href="http://twitter.com/#!/ajpiano">@ajpiano</a> about <a href="http://static.bocoup.com/code/jquery-you-and-i/">helping with the jQuery project</a>. They made a point to ask for help with writing documentation. During that talk, I told myself I would help write "some" documentation for "something" "soon". So one day, while looking at the open issues on the HTML5BP project, I came across <a href="https://github.com/h5bp/html5-boilerplate/issues/844">ticket #844</a>. I thought I would give it a shot. <a href="http://piratepad.net/qS4UQzl2zD">Here's the PiratePad where it all started</a>.</p>
+
+<p>After some discussion on pirate pad, I came up with a some questions about the project's history. Paul was nice enough to make these videos and send them to me. These vidoes are what I based the document on. Mostly put his words down in writing, and sprinkled in a little fun. I don't think anyone has ever seen these before today. Enjoy!</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/z_uiklVi7DM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/ehWDmpvB9EI?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/suYrHcmOBDo?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Day 1 of the 30 Day Challenge]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/"/>
+    <updated>2012-02-24T20:24:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge</id>
+    <content type="html"><![CDATA[<p>The idea is to have 30 days (in a row) of blog posts. The authors may vary. Subjects might not be serious; they don't need to be. The goal is to get out of our comfort zone and put something out there in hopes of helping / inspiring someone else. Most important, to have fun.</p>
+
+<p>We need more people to join and post. You can see we have lots of space available. Here's <a href="https://www.google.com/calendar/b/0/embed?src=6tbdk1sbit95epi2bb8c8jqqv4@group.calendar.google.com&amp;ctz=America/Phoenix">our calendar</a> showing who's posting and when. If you're interested shoot a msg to <a href="https://twitter.com/#!/phxtagsoup">@phxtagsoup</a> on twitter.</p>
+
+<p>Now that the boring stuff is out of the way, here's a tiny "ahhhhhh" tip I can share. It's super basic, but I hear people ask this question all the time.</p>
+
+<p><a href="http://tagsoup.github.com/images/undef-jams.png" target="_new">{% img left /images/undef-jams.png 800 'Undef' 'Jams' %}</a></p>
+
+<p>So I have a basic function inside of Chrome's console. When I press enter, I get the "undefined" msg. I haven't done anything though, so why the "undefined"? Javascript functions ALWAYS return a value. If you don't specify what it is, then it returns "undefined". YAY!</p>
+
+<!--more-->
+
+
+<p>If you would like a more elegant explanation, check out the ever useful, <a href="http://stackoverflow.com/questions/903120/should-i-always-give-a-return-value-to-my-function/903126#903126">Stack Overflow</a>.</p>
+
+<p>Since we're on the topic of <code>return</code> values... let's go over another small trick. Again, it's nothing mind blowing or revolutionary. I'm sure you've seen this pattern before (assume hondaElement is a class on an "a" tag:
+{% codeblock Honda Elements lang:javascript %}
+$('#coolElement').delegate('.hondaElement', 'click', function(e) {</p>
+
+<pre><code>// do something silly here
+e.preventDefault();
+</code></pre>
+
+<p>});
+{% endcodeblock %}
+preventDefault... well, read that out loud and I bet you can guess what it's doing.</p>
+
+<p>And here's another common pattern that is used:
+{% codeblock Return Fasly lang:javascript %}
+$('#coolElement').delegate('.hondaElement', 'click', function() {</p>
+
+<pre><code>// do something silly here
+return false;
+</code></pre>
+
+<p>});
+{% endcodeblock %}</p>
+
+<p>So, both examples stop the default action of the <code>a</code> firing when clicked. The second example takes things a bit further. It not only stops the default action from firing, it also stops event bubbling. It's the same as doing:</p>
+
+<p>{% codeblock Same as doing this lang:javascript %}
+$('#coolElement').delegate('.hondaElement', 'click', function(e) {</p>
+
+<pre><code>// do something silly here
+e.preventDefault();
+e.stopPropagation();
+</code></pre>
+
+<p>});
+{% endcodeblock %}</p>
+
+<p>Now, the caveat... I believe this only applies to jQuery. Vanilla js still needs to have both <code>e.preventDefault()</code> and <code>e.stopPropagation()</code>. If anyone has some extra info on that, please, leave a comment and set the record straight.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Announcement | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/announcement/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Meeting]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/07/18/weekly-meeting/"/>
+    <updated>2012-07-18T16:13:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/07/18/weekly-meeting</id>
+    <content type="html"><![CDATA[<p>Oh hai!</p>
+
+<p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there Thursday night (7/19) from 7pm until close.</p>
+
+<p>Some of our friends from <a href="http://www.8byte8.com/">8byte8</a> will be in town and hanging out. Come say hi and show them some AZ love.</p>
+
+<p>See you then!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[July 12th Meet Up]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up/"/>
+    <updated>2012-07-12T08:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/07/12/july-12th-meet-up</id>
+    <content type="html"><![CDATA[<p>Oh hai!</p>
+
+<p>Come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe, drink some coffee and write some code. We will be there tonight from 7pm until close.</p>
+
+<p>If you're interested in BackBone.js, we're looking for more people to join the training class put on by Derek Bailey from <a href="http://www.watchmecode.net/">WatchMeCode</a>. Come ask me for the deets.</p>
+
+<p>See you tonight!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Weekly Meeting Details]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details/"/>
+    <updated>2012-06-20T08:23:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/06/20/weekly-meeting-details</id>
+    <content type="html"><![CDATA[<p>Hey there!</p>
+
+<p>I'm sorry I didn't get to see all your lovely faces last week. I was getting my javascript learn on, in Austin, TX. Tomorrow's meeting (June 21) marks the 4th weekly TagSoup gathering... in a row. OMG . That's a full month. We should TOTALLY celebrate, am I right? So come on down to <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> in Tempe and we can drink some delish coffee and write some code, build X and talk about Y.</p>
+
+<p>Also, some friends are putting together a BackBone.js training class. They have been in contact with Derek Bailey, from watchmecode.net, and have scheduled him to fly out in mid August for a 2 day class. There are a few slots left, and if you're interested, please get a hold of me and I can give you all the details.</p>
+
+<p>See you tomorrow!</p>
+
+<p>Tony</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PhxTagSoup Goes Weekly]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
+    <updated>2012-05-23T12:43:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
+    <content type="html"><![CDATA[<p>After a lot of feedback from friends, we decided to start holding a TagSoup meeting each week. So, starting May 31st, we will be meeting at <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> each week. Every Thursday night, from 7pm - close, we will be at Cartel. If you want to continue to hang out after hours, Casey Moore's is next door. Take advantage.</p>
+
+<p>May 31st's meeting will be a great time to meet with your teams (from April's meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
+
+<p>There will be some more announcements made later this week. Hope you all enjoy this news.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Next Meeting 4/26/12 - Codeventure Time]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
+    <updated>2012-04-18T21:39:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
+    <content type="html"><![CDATA[<p>April 26th, 2012 will be our next meeting. Who's speaking this time? GASP! No one. Then what the cabbage will be going on? That's where it gets interesting. This meeting will have a few "firsts" in it.</p>
+
+<!-- more -->
+
+
+<h3>First, first...</h3>
+
+<p>New venue. We're trying to hop around all over town and the dudes at Melt Media were swell enough to offer up their place for this weeks meeting. <a href="http://g.co/maps/r2hxg">Where's Melt Media located?</a> Right in the middle of downtown Tempe.</p>
+
+<h3>Second, first...</h3>
+
+<p>Coding fun! We wanted to try something different this time. Less words, more code. This next meeting, we will be breaking up into teams and work on a project together. What project? That's for you and your team to decide. What technology? You guys decide. There's no set rules, really. Just have fun. Team sizes wlll be between 3-5 people. We all know that you learn the most from acutally getting your hands dir-tay. Everyone can continue to collaborate until the next meeting (in a bout a month) and then show off what they've created. For this meeting, we will need all disciplines of web development involved. Designers, UX engineers, developers, unicorns etc.</p>
+
+<h3>Third, first...</h3>
+
+<p>TagSoup is going to Vegas. #VegasTech is growing huge. Since they're so close, we figured we go check out their Vegas Jelly meetup and hang with some of our friends there. Are you interested in going? Let us know. We will be renting a 12 person van and driving out. We will be discussing the trek in more detail at the meeting.</p>
+
+<p>TTFN - "Did you take a bath in rainbows and cupcakes?"</p>
+
+<div class="clearfix">
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+    {% img left /images/olu-jsconf.jpg 50 %}
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

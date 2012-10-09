@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Day 1 of the 30 Day Challenge - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="The idea is to have 30 days (in a row) of blog posts. The authors may vary. Subjects might not be serious; they don&#8217;t need to be. The goal is &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Day 1 of the 30 Day Challenge</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-24T20:24:00-07:00" pubdate data-updated="true">Feb 24<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The idea is to have 30 days (in a row) of blog posts. The authors may vary. Subjects might not be serious; they don&#8217;t need to be. The goal is to get out of our comfort zone and put something out there in hopes of helping / inspiring someone else. Most important, to have fun.</p>
+
+<p>We need more people to join and post. You can see we have lots of space available. Here&#8217;s <a href="https://www.google.com/calendar/b/0/embed?src=6tbdk1sbit95epi2bb8c8jqqv4@group.calendar.google.com&amp;ctz=America/Phoenix">our calendar</a> showing who&#8217;s posting and when. If you&#8217;re interested shoot a msg to <a href="https://twitter.com/#!/phxtagsoup">@phxtagsoup</a> on twitter.</p>
+
+<p>Now that the boring stuff is out of the way, here&#8217;s a tiny &#8220;ahhhhhh&#8221; tip I can share. It&#8217;s super basic, but I hear people ask this question all the time.</p>
+
+<p><a href="/images/undef-jams.png" target="_new"><img class="left" src="/images/undef-jams.png" width="800" title="Undef" alt="Jams"></a></p>
+
+<p>So I have a basic function inside of Chrome&#8217;s console. When I press enter, I get the &#8220;undefined&#8221; msg. I haven&#8217;t done anything though, so why the &#8220;undefined&#8221;? Javascript functions ALWAYS return a value. If you don&#8217;t specify what it is, then it returns &#8220;undefined&#8221;. YAY!</p>
+
+<!--more-->
+
+
+<p>If you would like a more elegant explanation, check out the ever useful, <a href="http://stackoverflow.com/questions/903120/should-i-always-give-a-return-value-to-my-function/903126#903126">Stack Overflow</a>.</p>
+
+<p>Since we&#8217;re on the topic of <code>return</code> values&#8230; let&#8217;s go over another small trick. Again, it&#8217;s nothing mind blowing or revolutionary. I&#8217;m sure you&#8217;ve seen this pattern before (assume hondaElement is a class on an &#8220;a&#8221; tag:</p>
+
+<figure class='code'><figcaption><span>Honda Elements  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// do something silly here</span>
+</span><span class='line'>  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>preventDefault&#8230; well, read that out loud and I bet you can guess what it&#8217;s doing.</p>
+
+<p>And here&#8217;s another common pattern that is used:</p>
+
+<figure class='code'><figcaption><span>Return Fasly  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// do something silly here</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So, both examples stop the default action of the <code>a</code> firing when clicked. The second example takes things a bit further. It not only stops the default action from firing, it also stops event bubbling. It&#8217;s the same as doing:</p>
+
+<figure class='code'><figcaption><span>Same as doing this  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#coolElement&#39;</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">&#39;.hondaElement&#39;</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// do something silly here</span>
+</span><span class='line'>  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, the caveat&#8230; I believe this only applies to jQuery. Vanilla js still needs to have both <code>e.preventDefault()</code> and <code>e.stopPropagation()</code>. If anyone has some extra info on that, please, leave a comment and set the record straight.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tony Camp</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-24T20:24:00-07:00" pubdate data-updated="true">Feb 24<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/writing-challenge/'>Writing Challenge</a>, <a class='category' href='/blog/categories/community/'>community</a>, <a class='category' href='/blog/categories/level-up/'>level-up</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/22/polling-is-for-chumps/" title="Previous Post: Polling is for chumps - node.js with EventSource">&laquo; Polling is for chumps - node.js with EventSource</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/25/optimize-my-stuff-and-junk/" title="Next Post: Optimize My Stuff and Junk">Optimize My Stuff and Junk &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/';
+        var disqus_url = 'http://tagsoup.github.com/blog/2012/02/24/day-1-of-the-30-day-challenge/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: eventsource | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/eventsource/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Polling is for chumps - node.js with EventSource]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps/"/>
+    <updated>2012-02-22T00:23:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/02/22/polling-is-for-chumps</id>
+    <content type="html"><![CDATA[<p>You know what sucks? Making hundreds of round trips to a server to see if there's any new data you can grab.</p>
+
+<p>But modern browsers (well, Firefox and Chrome and Safari) support a much neater option. With the right <code>Content-Type</code> header, some special sauce in the client, and a modern browser platform, you can use the HTML5 <a href="http://dev.w3.org/html5/eventsource/">EventSource API</a> to establish a single long-term connection for each client, and the server pushes new data whenever necessary.</p>
+
+<p>Let's start with a look at the server-side implementation.</p>
+
+<p>{% gist 1883462 app-server.js %}</p>
+
+<p>Things to note: The secret sauce here is all in the <code>/events</code> handler. It's pretty simple - we watch a log file to see when its size changes, and when that happens, we read the new data from the end of the file and send it to the client tagged with the event name <code>data</code> (so if you have multiple kinds of events, you can interleave different messages by tagging them with different <code>event</code> names and the client will be able to properly distinguish them). And of course, if the client closes the connection, we want to free up the open file descriptor and the watch on the logfile.</p>
+
+<p>Now, how do we consume this data from the client?</p>
+
+<p>{% gist 1883462 app-client.js %}</p>
+
+<p>It's so simple it almost doesn't need an explanation. The important things to note are: of course the URL has to point at the same endpoint that the server is exporting the stream on, and we add a listener for the <code>data</code> event which we know the messages from the server will be tagged with. If you want to support multiple message types, you just add another listener on the client for each different <code>event</code> name and you're good to go.</p>
+]]></content>
+  </entry>
+  
+</feed>

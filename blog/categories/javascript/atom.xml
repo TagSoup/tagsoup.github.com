@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hacking on the NCAA Tournament for Fun (Not For Profit)]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit/"/>
+    <updated>2012-03-12T23:59:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/12/hacking-on-the-ncaa-tournament-for-fun-not-for-profit</id>
+    <content type="html"><![CDATA[<h3>Day 18 of the 30 Day Writing Challenge!</h3>
+
+<p>Hey everyone, it's me again. I'm sober this time, don't worry. Well actually I'm drunk on a crazy idea that I had last weekend. I've always been <em>really</em> into the NCAA Tournament. I once took up an entire wall in my kitchen with a giant bracket just so I could fill it in after every game. So rolling around in my head last weekend was an idea of combining the NCAA Tournament with my other love, code. I started to play around with a format to see how small (in terms of character length) I could make all my picks. This is what I came up with.</p>
+
+<!--more-->
+
+
+<h3>How To Get This Up and Running</h3>
+
+<ol>
+<li>Install <a href="http://nodejs.org/"><code>node</code></a></li>
+<li>Install <a href="http://npmjs.org/"><code>npm</code></a></li>
+<li><code>git clone git@gist.github.com:2028007.git gist-2028007</code></li>
+<li><code>cd gist-2028007</code></li>
+<li><code>npm install</code></li>
+<li><code>node app.js S18541137214112424W185463721532533E191213113102112111011111MW1854113728432828FFWMWW</code></li>
+</ol>
+
+
+<h3>Explanation</h3>
+
+<p>The argument passed to <code>app.js</code> is a string containing picks for the 63 games in the NCAA Tournament (after the play-in games). The example above can be looked at as divided into five parts:</p>
+
+<p><code>S18541137214112424</code> <code>W185463721532533</code> <code>E191213113102112111011111</code> <code>MW1854113728432828</code> <code>FFWMWW</code></p>
+
+<h3>Identifiers</h3>
+
+<p>Each of the first four parts are a region and the picks for that region. The last part is the picks for the Final Four. The Final Four identifier (<code>FF</code>) and picks must come at the end of the string. The alpha characters that start each part are the identifier for that region. The region identifier must be a key in a valid region key (by valid I mean it must exist in the data file).</p>
+
+<h3>Picks</h3>
+
+<p>The numbers for the first four regions correspond to the picks being made for that region. Each number refers to a seed that you think will win their game. The picks must be made in a top-down, left-right order when viewing the games on a bracket. This means for the first round, the games must be picked in the order: <code>1 v 16, 8 v 9, 5 v 12, 4 v 13, 6 v 11, 3 v 14, 7 v 10, 2 v 15</code>. So if you wanted to pick all the higher seeded teams for the first round, your numbers would be <code>18546372</code>. To complete a region, keep picking winning seeds in this order. To finish our previous example of all the higher seeded teams winning, our numbers would be <code>185463721432121</code>. This might be easier to visualize if we look at the picks divided into rounds: <code>18546372</code> (first round winners) <code>2143</code> (second round winners) <code>12</code> (Sweet Sixteen winners) <code>1</code> (Elite Eight winner). Pair that with the identifier for the region and you have <code>E185463721432121</code> which is a valid region.</p>
+
+<h3>Final Four</h3>
+
+<p>Once we have put our four regions together we can add the Final Four. For the Final Four 'region', you will pick the winners not be their seed but by the identifier of the region that they originally came out of. Make sure you know which regions are playing each other as well. In the example of the 2012 NCAA tournament, the Final Four was <code>S v W and E v SW</code>. So appropriate Final Four picks would be <code>WMWW</code> since we are first picking the winners of the two Final Four matchups and the picking the winner of the final game. Pair that with the Final Four identifier to get <code>FFWSEW</code>.</p>
+
+<h3>Output</h3>
+
+<p>If your picks are valid, the output should display in an object contain all the regions, rounds and games.</p>
+
+<p>If there are any errors, those will be displayed instead.</p>
+
+<h3>Why?</h3>
+
+<p>I wanted a codified format to fit all my picks for the NCAA Tournament into as little characters as possible. I believe that even if all region identifiers were two characters and you picked the higher seed in every game, you could fit your picks in 132 characters (enough to fit in a tweet!). Obviously this could be shortened further by adding additional conventions (such as region order, etc.) but I believe this to be a good mix of brevity and flexibility.</p>
+
+<p>This logic is the basis of <a href="http://tweetyourbracket.com">TweetYourBracket.com</a> (<a href="https://github.com/lukekarrys/tweetyourbracket.com">GitHub repo</a>). The idea is that there will be a Twitter watcher which will watch for a specific hashtag and then the bracket will be parsed from the tweet and saved.</p>
+
+<h3>Not But Seriously, Why?</h3>
+
+<p>Because it was fun. Not let's show off a few code samples to prove my point.</p>
+
+<p><em>Note: all the code here is pulled from <a href="https://github.com/lukekarrys/tweetyourbracket.com">the TweetYourBracket GitHub repo</a> and slightly modified for example purposes. I also made the <a href="https://gist.github.com/2028007">gist</a> I referenced above as an easier way to play with the majority of the code.</em></p>
+
+<p>{% codeblock picksToArray.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23 %}
+// Takes a string of the picks for a region and validates them
+// Return an array of picks if valid or false if invalid
+var picksToArray = function(picks, regionName) {</p>
+
+<p>  var regexp,</p>
+
+<pre><code>  replacement = '',
+  regExpStr = '',
+  seeds = [1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15],
+  seedLength = seeds.length,
+  regExpJoiner = function(arr) {
+    return '(' + arr.join('|') + '|X)';
+  },
+  backref = function(i) {
+    return regExpJoiner.call(this, _.map(_.range(i, i+2), function(n) { return "\\"+n; }));
+  };
+</code></pre>
+
+<p>  // Create capture groups for the first round matchups of the region
+  // Since we know what order the games should be selected in we can build a regex
+  // by splitting the seeds array into groups of two
+  // The regex will look like this:
+  // (1|16|X)(8|9|X)(5|12|X)(4|13|X)(6|11|X)(3|14|X)(7|10|X)(2|15|X)
+  // The X is the character used for a game that hasnt been picked yet
+  for (var i = 0; i &lt; seedLength; i += 2) {</p>
+
+<pre><code>regExpStr += regExpJoiner.call(this, seeds.slice(i, i+2));
+</code></pre>
+
+<p>  }</p>
+
+<p>  // Create capture groups using back references for the capture groups above
+  // Since we just created 8 capture groups above and we know that during each subsequent round
+  // the number of teams will be cut in half, we can use another loop to add to the regex.
+  // We will use glorious back references to ensure that each later match only contains
+  // teams that would have had the possibility of advancing to that game.
+  // We will add this to our regex above:
+  // (\1|\2|X)(\3|\4|X)(\5|\6|X)(\7|\8|X)(\9|\10|X)(\11|\12|X)(\13|\14|X)
+  for (i = 1; i &lt; seedLength - 2; i += 2) {</p>
+
+<pre><code>regExpStr += backref.call(this, i);
+</code></pre>
+
+<p>  }</p>
+
+<p>  regexp = new RegExp(regExpStr);
+  replacement = <em>.map(</em>.range(1, seedLength), function(num) { return '$'+num; }).join();</p>
+
+<p>  // Here we will test if our picks match the regex and if they do
+  // we will use the 15 capture groups we created above to split
+  // the picks into an array
+  if (regexp.test(picks)) {</p>
+
+<pre><code>return picks.replace(regexp, replacement).split(',');
+</code></pre>
+
+<p>  } else {</p>
+
+<pre><code>this.logError(regionName, 'was unable to parse the picks');
+return false;
+</code></pre>
+
+<p>  }
+};
+{% endcodeblock %}</p>
+
+<p>I had fun writing to the code above. The purpose of is to take a string of picks and validate them with a regex to ensure that they meet the necessary requirements. It gets a little inception-y as you are looping through and created capture groups in the regex that are using back references to capture groups you just created in the iteration before.</p>
+
+<h3>Now For the Client Side</h3>
+
+<p>The code above is all used on the server-side in my application. I tried to leave as much up to server as I could, because I already had the code there and didn't want to deal with bugs bringing it to the browser. So what I did on my <a href="http://tweetyourbracket.com">client-side bracket</a> was to save the status of each pick into the URL hash. That way, the entire state of the bracket is in the URL at all times. It's not perfect, because I didn't add a watcher for the hash that will change picks if you change the URL. But what it does, is if you load the page with a bracket in the url hash, it will send that hash to the server and return the HTML if the bracket was valid.</p>
+
+<p>{% codeblock bracket.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/public/js/bracket.js#L103 %}
+function stringBuilder() {
+  var str = "";</p>
+
+<p>  // I'm going through each region's pickable games
+  // and taking either the team's region (for the Final Four)
+  // or the team's seed (if it's a regular region)
+  // and in the end saving the string to window.location.hash
+  $('.region').each(function() {</p>
+
+<pre><code>var $reg = $(this),
+    regId = $reg.attr('id').replace('_region', '');
+
+str += regId; 
+
+$(this).find('.winners '+pickable).each(function() {
+  var $this = $(this),
+      text = $.trim($this.text());
+
+  if (text) {
+    text = (regId === 'FF') ? $this.data('fromRegion') : text.match(/[0-9]+/)[0];
+  } else {
+    text = 'X';
+  }
+
+  str += text;
+});
+</code></pre>
+
+<p>  });
+  window.location.hash = str;
+}</p>
+
+<p>// This is called on dom ready
+if (window.location.hash) {
+  $.ajax({</p>
+
+<pre><code>// I have server side routes set up with flatiron to render this with handlebars
+url: '/validate/' + window.location.hash.replace('#', ''),
+success: function(data) {
+  $content.find('#bracket_holder').html($(data).html());
+}
+</code></pre>
+
+<p>  });
+}
+{% endcodeblock %}</p>
+
+<h3>Rendering It All</h3>
+
+<p>The last thing I'm going to show you is the server-side JavaScript function that adds the necessary content to our tournament object and the Handlebars template that renders it.</p>
+
+<p>{% codeblock addTeamContent.js https://github.com/lukekarrys/tweetyourbracket.com/blob/master/lib/plugins/validator.js#L23 %}
+// Take validated tournament and add necessary content so it is ready for Handlebars
+var addTeamContent = function(validatedPicks, editable) {</p>
+
+<p>  // These are the master regions
+  var ncaaRegions = NCAA.regions;</p>
+
+<p>  _.each(validatedPicks.regions, function(region, regionIndex) {</p>
+
+<pre><code>// These are the teams that played in this region
+var regionTeams = (typeof ncaaRegions[region.id] !== 'undefined') ? ncaaRegions[region.id].teams : [];
+
+_.each(region.rounds, function(round, roundIndex) {
+
+  // Triple nested loops FTW! ;)
+  _.each(round.games, function(game, gameIndex) {
+
+    if (typeof round.teams === 'undefined') round.teams = [];
+
+    var team = {
+          seed: '',
+          name: ''
+        },
+        isTop = (gameIndex % 2 === 0),
+        lastRound = (roundIndex === region.rounds.length-1),
+        classes = ['top', 'bottom'];
+
+    if (region.id !== this.finalFourRegionName) {
+
+      team.seed = parseInt(game, 10);
+      team.name = regionTeams[team.seed - 1];
+      team.fromRegion = region.id;
+
+    } else {
+
+      // These are selected winners in the final four
+      var fromRegion = _.find(validatedPicks.regions, function(reg) { return reg.id === game; });
+
+      if (fromRegion) {
+        var finalFourTeam = _.first(_.last(fromRegion.rounds).teams);
+        team.seed = finalFourTeam.seed;
+        team.name = finalFourTeam.name;
+        team.fromRegion = game;
+      }
+    }
+
+    round.teams[gameIndex] = _.extend(team, {
+      editable: editable,
+      startMatchup: isTop,
+      endMatchup: !isTop,
+      classes: (lastRound) ? '' : classes[~~!isTop]
+    });
+
+  }, this);
+}, this);
+</code></pre>
+
+<p>  }, this);</p>
+
+<p>  return validatedPicks;
+};
+{% endcodeblock %}</p>
+
+<p>Check out the <a href="https://github.com/lukekarrys/tweetyourbracket.com/blob/master/templates/bracket.hbs">Handlebars template</a> on GitHub to see how this was all rendered. Unfortunately I couldn't figure out how to embed Handlebars code with Octopress.</p>
+
+<h2>In The End</h2>
+
+<p>I had a small dream of making this a production ready app in time for Selection Sunday (which was last Sunday). Obviously that didn't work out but  <a href="http://tweetyourbracket.com">TweetYourBracket.com</a> was an extremely fun exercise even if it didn't get anywhere close to ready for prime time use. Some things I wanted to do with it:</p>
+
+<ul>
+<li>Make it not look like crap (using Bootstrap)</li>
+<li>Add some cooler interactions during the bracket (drag 'n' drop, keyboard shortcuts, auto scrolling)</li>
+<li>Mobile ready with some media queries</li>
+<li>Make the Postgres DB not break when a row doesn't exist (sounds easy, so no idea why I couldn't get it to work)</li>
+<li>Better hosting (for now it's on a free Heroku instance)</li>
+<li>Make it actually do what was advertised and setup the Twitter Streaming API watcher</li>
+</ul>
+
+
+<p>I encourage anyone who is interested in this to take a look at the <a href="https://github.com/lukekarrys/tweetyourbracket.com">GitHub repo</a>. I just opened it up today and would never refuse a cool pull request or issue. Hopefully it will be ready by next year :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I see you getUserMedia]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
+    <updated>2012-03-09T22:43:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
+    <content type="html"><![CDATA[<h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
+
+<p>I'm busting my ass to get this post in. I hate just throwing "anything" up, so I took some time to research something I've never messed with: getUserMedia.</p>
+
+<p>Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a>, or <a href="http://www.opera.com/browser/next/">Opera Next</a>. If you chose to use Opera Next, you don't have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to <a href="chrome://flags/">chrome://flags/</a> and look for "Enable MediaStream". Make sure this is enabled. Now time for the fun.</p>
+
+<p>{% include getUserMedia.html %}</p>
+
+<!-- more -->
+
+
+<p>If you have met all the requirements, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there's a "Take Picture" button. Click it! Makes sexy happen! Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. I saw some shit Rick was posting on <a href="http://bocoup.com/">Bocoup's site</a> and it blew me away. Also, <a href="http://miketaylr.com/photobooth/">Mike Taylor's photo booth</a> is ridic. There's no way I could have gotten any of this done if I didn't take a peek at what they were doing. Now, let's check out some code.</p>
+
+<p>{% gist 2010552 %}</p>
+
+<p>Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn't available on the user's browser. In Mike Taylor's photobooth, if you don't have the getMediaUser method available, you can still "photobooth" a clip from a tasty Cary Grant video.</p>
+
+<p>On to the guts, the JS, the fun part. I do have to let you in on a secet... I was rushed to get this out before midnight so it might be a tad sloppy. Deal with it!</p>
+
+<p>{% gist 2010556 %}</p>
+
+<p>I set up a lazy reference to document, fat finger, no make typey good. I give myself a shortcut. Next I just set up some variables. <code>snapshot</code> is my canvas element. This is where the photo we take will be placed. Now let's give the canvas some methods to use <code>.getContext()</code>. This comes in handy when we need to use the <code>.drawImage()</code> method. Next I set up a variable for the video element. And finally some functions. I will touch briefly on these.</p>
+
+<p>```javascript
+computeSize = function(supportsObjectFit){</p>
+
+<pre><code>    // user agents that don't support object-fit 
+    // will display the video with a different 
+    // aspect ratio. 
+        if (supportsObjectFit == true){
+            VIDEO_WIDTH = 640;
+            VIDEO_HEIGHT = 480;
+        } else {
+            VIDEO_WIDTH = video.videoWidth;
+            VIDEO_HEIGHT = video.videoHeight;
+        }
+    }
+</code></pre>
+
+<p><code>``
+I know I'm calling this a bit wrong later in the code, but that's ok. This isn't production ready, for a client, or well groomed yet. It's a rough demo. But, let's break down the function. We are passing one argument, supportObjectFit. This comes from an Opera Specific CSS property called</code>object-fit`. It has to do with setting proper ratios of placed elements (video, canvas etc). <a href="http://dev.opera.com/articles/view/css3-object-fit-object-position/">Read more about it here</a>.</p>
+
+<p>Next we have out success and fail callbacks for later:</p>
+
+<p>```javascript
+successCallback = function (stream) {</p>
+
+<pre><code>video.src = stream;
+video.play();
+computeSize(true);
+</code></pre>
+
+<p>},
+errorCallback =function (error) {</p>
+
+<pre><code>console.error('An error occurred: [CODE ' + error.code + ']');
+computeSize(true);
+</code></pre>
+
+<p>}
+```
+These come into play a bit later when we're doing our feature detection on the getUserMedia method. On success, we're setting the src of our video element to be the "feed" from our device's video camera. We're also determining the size of the video element if the user is browsing with the Opera Next browser.</p>
+
+<p>```javascript
+doc.getElementById('take').onclick = function() {</p>
+
+<pre><code>computeSize(true);
+photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+</code></pre>
+
+<p>};
+```</p>
+
+<p>Easy Peasy. Set up an click event on the "Take Picture" button. It will run the conputeSize() function, and then draw our screen shot from the video (aka our camera feed) onto our canvas element.</p>
+
+<p>Now here comes the important part, everything else was basically for setting this up:</p>
+
+<p>```javascript
+window.addEventListener('DOMContentLoaded', function() {</p>
+
+<pre><code>if (navigator.getUserMedia) {
+
+    navigator.getUserMedia({'video': true}, successCallback, errorCallback);
+
+} else if (navigator.webkitGetUserMedia) {
+
+    navigator.webkitGetUserMedia("video", function(stream){
+        video.src = window.webkitURL.createObjectURL(stream);
+        video.play();
+        computeSize(false);
+    });
+
+} else {
+    console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
+}
+</code></pre>
+
+<p>}, false);
+<code>``
+Here's where feature detection comes in to play. When the document is loaded, let's check to see if the browser supports our getUserMedia hawtness (currently, meaning the browser is Opera). If that is truthy, let's use it. In our example, we're just grabbing video by passing in the</code>{'video': true}` arguement, but you could also pass it audio as well. We also pass in 2 callbacks as arguements. The success and error functions we covered earlier. DONE!</p>
+
+<p>Now we check to see if the user is browsing with the Chrome Canary build. The syntax changes a tiny bit but the idea is the same. Set the video element's source to be our camer feed, start the camera and all the computeSize() function. Since we know the user isn't in Opera Live here, we pass the argument "false".</p>
+
+<p>If all else fails, log a msg showing this shit ain't gonna work.</p>
+
+<p>I look forward to messing with this some more. I want to save the images users take and give them the ability to upload them to the TagSoup page. I will be working on that next. Please check out the links from Mike Taylor, Rick Waldron, Opera, and Google Devs.</p>
+
+<p>11:56... Just made it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bitwise Guy Are Ya?]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya/"/>
+    <updated>2012-03-07T21:04:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/07/bitwise-guy-are-ya</id>
+    <content type="html"><![CDATA[<h3>Day 13 of the 30 Day Writing Challenge</h3>
+
+<p>The idea for this post all started with a friend of mine, <a href="https://twitter.com/#!/mcsheffrey">Connor McSheffrey</a> (@mcsheffrey). I don't normally see a whole lot of activity from Connor on github. This morning, he posted a short gist:</p>
+
+<p>{% gist 1991635 %}</p>
+
+<p>I took a look at noticed something I didn't understand. The &#126;&#126; operator. So, I had to start researching. For whatever reason, Google doesn't recognize &#126;&#126; in the search engine. I tried surrounding it with quotes etc and nothing relavent came up (please let me know why)! I knew this was an operator, so I started searching for operators. Sure enough, I found the ~ operator. I didn't even know this one existed. Do you know what this does? Let's break it down:</p>
+
+<!--more-->
+
+
+<p><code>javascript
+~8 //-9
+</code>
+The ~ operator takes an integer, inverts the value, and subtracts 1 from it. In our case, 8 becomes -8, and -8 + -1 === -9. A "nice to know" but this didn't answer my question. I continued my search, this time for "bitwise operators". After buttload of searching, I found this awesome <a href="http://www.slideshare.net/madrobby/extreme-javascript-performance?from=fblanding">JS Perf presentation by Thomas Fuchs</a>.</p>
+
+<p>A golden rule, that Thomas emphasizes is "DO NOT, EVER, OPTIMIZE PREMATURELY". Sage advice. In our case, we're not researching this bitwise operator because we need to micro perf our scripts. It's more like a "WTF is Connor doing here, I need to know so he doesn't call my dumb ass out next time I see him", sort of a thing. So next time you run into Brenden Eich and ask him, "You invented JavaScript" and he replies "~~(true)", you know what it means.</p>
+
+<p>Back to the Thomas Fuchs slide share. He brings up this operation:</p>
+
+<p><code>javascript
+parseInt(12.5) //returns 12
+</code></p>
+
+<p>and the faster:
+<code>javascript
+~~( 1 * "12.5" ) // also returns 12
+</code></p>
+
+<p>Side note: Thomas doesn't need the whole 1 * "12.5", it can just be "12.5"</p>
+
+<h3>Now we have a name for our operator: the bitwise Double Not (~~).</h3>
+
+<p>Before we get back to Connor's script, let's break down the Double Not. Here's a couple of examples:</p>
+
+<p>``` javascript</p>
+
+<p>~(1) // inverts the value, and adds (-1), so (-1) + (-1) === -2
+~(-2) // inverts the value, and adds (-1), returning (2) + (-1) === 1
+~~(1) // returns 1
+```</p>
+
+<h3>There is one more thing the Double Not does for us.</h3>
+
+<p>Damn you James Padolsey for being so smart. He <a href="http://james.padolsey.com/javascript/double-bitwise-not/">blogged about the Double Not</a> over a year ago and added this little nugget:<br />
+&nbsp;" ~~‘s flooring capabilities make it a better alternative to Math.floor if you know you’re dealing with positives — it’s faster and takes up less characters. "</p>
+
+<p>So, it's a micro perf for Math.floor (in some browsers)! Nice nugs dude!</p>
+
+<h3>I'm hoping this is looking a little familiar. 0's and 1's, falsy and truthy... ahhh!!!</h3>
+
+<p><code>javascript
+~~(true) // returns 1
+~~(false) // returns 0
+typeof ~~(true) // returns "number"
+</code></p>
+
+<p>Back to Connor's gist:</p>
+
+<p>{% gist 1991635 %}</p>
+
+<p>Depending on the string match of "next" we get a boolean value <em>cough</em> carousel nav <em>cough</em> AND we will +1 to <code>this.current</code> or -1 from <code>this.current</code>. It works perfectly with going to the next picture, or the previous picture in a photo carousel.</p>
+
+<p>These sites were exremely valuable when researching Connor's jizzst!<br />
+<a href="http://www.slideshare.net/madrobby/extreme-javascript-performance?from=fblanding">Thomas Fuchs's Extreme Javascript Performance</a><br />
+<a href="http://james.padolsey.com/javascript/double-bitwise-not/">James Padolsey's Double bitwise NOT (~~)</a><br />
+<a href="http://webcache.googleusercontent.com/search?q=cache:eps2pgQRbloJ:tr.im/bitwise+&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">MDN's Old BitWise Operators Page</a> - cached version, original is a dead link<br />
+<a href="http://tutsplus.com/lesson/prototypal-inheritance-and-refactoring-the-slider/">tuts+ - Where Connor originally saw this</a><br /></p>
+
+<p>...another fun thing this research has taught me, typing &#126;&#126; and another &#126;&#126; in octopress is the same as using <code>&lt;del&gt;&lt;/del&gt;</code> tags. Yay.</p>
+
+<p>Special thanks to Connor for posting a single, simple gist that got me going on this whole subj. Kisses!!!</p>
+
+<div class="clearfix">
+    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+    {% img left http://25.media.tumblr.com/tumblr_lyc00d4cdV1qzfebyo1_400.gif 50 %}
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Day 7: Making Things Move Easier in a CSS3 World]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/01/making-things-move-easier-in-a-css3-world/"/>
+    <updated>2012-03-01T21:58:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/01/making-things-move-easier-in-a-css3-world</id>
+    <content type="html"><![CDATA[<h3>Day 7 of the 30 Day Writing Challenge</h3>
+
+<p>CSS Animations have been around for a few years now but when they were first introduced you could only use them in Safari (well webkit technically, although they ran at like 9 fps in Chrome in the early days). That didn't stop me from making these <a href="http://sumocreations.com">sumo wrestlers</a> but it did make them a novelty that most people couldn't see. Fast forward to today - Chrome, Firefox, and the IE10pp4 all support hardware accelerated CSS animations. Browser support is already today, especially on mobile, <a href="http://caniuse.com/#feat=css-animation">and it will only get better</a>. So why not start using them now? Declaring animations in CSS requires a lot of code, and supporting multiple browsers means repeating a lot of this lengthy code many times over. Here's how to cope:</p>
+
+<h2>Dealing w/ Prefix Hell</h2>
+
+<p>Using CSS animations can be a nightmare. Browser prefixes on properties is one thing, but with CSS animations we're talking about entire prefixed blocks of code containing prefixed properties. No big deal right? Take a look at how much code it took to setup the 'rocking' animation I applied to some of my sumo wrestlers:</p>
+
+<!--more-->
+
+
+<script src="https://gist.github.com/1883460.js?file=sumo_balancing.css"></script>
+
+
+<p>It takes 15 rules to properly apply and configure the animation on a given element. That's inconvenient enough -- but then it takes a whopping 74 lines of code to define a simple animation with only 3 keyframes. So how do we solve this?</p>
+
+<p>Pre-parsers to the rescue? Not the case - at least not yet. I haven't seen or found a way to write a SCSS mixin that could handle blocks. I'm fairly sure mixins are not designed to generate entire blocks of CSS nor were they ever intended to do so. Pre-parsers need another solution on top of functions and mix-ins to handle the problem presented by keyframe declarations.</p>
+
+<h2>Generating CSS with Javascript</h2>
+
+<p>There are some interesting tools out there for this. <a href="http://leaverou.github.com/prefixfree/">Prefix free</a> is one of the most ambitious ideas I've seen yet. But most of us probably don't want to load our CSS twice. Becuase web browsers ignore CSS rules they don't support, you can't access them via the DOM. To get around this, scripts like prefix free load the CSS file via an XHR request and parse the entire CSS file in javascript. It's a cool idea and definitely worth checking out, but not necessarily for everyone.</p>
+
+<p>Another option is to simply use javascript to generate CSS when you need it. The downside is some presentation code normally reserved for CSS is now stored in javascript. This too is not for everyone, but I find it to be a justified trade off in the case of CSS animations where the alternative is writing hundreds of lines of throw-away pre-fixed code.</p>
+
+<p>To demonstrate how you can do this, I created a small class in CoffeeScript called Animator:</p>
+
+<script src="https://gist.github.com/1883460.js?file=animator.coffee"></script>
+
+
+<p>Now, to define that 'rocking' animation that took 74 lines of CSS, we can just define our keyframes in JSON:</p>
+
+<script src="https://gist.github.com/1883460.js?file=ready.coffee"></script>
+
+
+<p>The generate method will append the following CSS to the document's last stylesheet:</p>
+
+<script src="https://gist.github.com/1883460.js?file=generated_animation.css"></script>
+
+
+<p>The Animator.animate() method will apply the browser prefixed properties for the animationName, animationDuration, animationDelay etc.. All of the prefix handling here is done via <a href="http://www.modernizr.com/docs/#prefixed">Modernizr.prefixed()</a>. If you're interested in trying it out <a href="https://github.com/jimjeffers/Animator.js">I've posted the source to github with a quick html file to demo</a>.</p>
+
+<p>The important thing to gain from this is that CSS Animations are  pretty well supported but difficult to maintain. Like all proprietary properties, managing all of these prefixed rules is a pain point for developers and CSS animations are probably one of the best examples of how much this can get out of hand.</p>
+
+<p>**One more thing: if you're fascinated by generating CSS animations with Javascript, checkout my other Coffeescript project, <a href="https://github.com/jimjeffers/Sauce">Sauce.js</a> which generates complex tween transitions (elastic, back, bounce) through CSS animations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Drunk and Pushing State]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state/"/>
+    <updated>2012-02-27T21:58:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/02/27/day-4-drunk-and-pushing-state</id>
+    <content type="html"><![CDATA[<h3>Day 4 of the 30 Day Challenge</h3>
+
+<p>In the immortal words <del>or</del> <em>of</em> Colonel Sanders, I'm too drunk to write this blog post. But eff it (note: I don't know if Colonel Sanders said that part). Don't take this as a knock that I don't care about this blog post because I do. The HTML5 history API is one of my favorite things ever (and Tony Camp is one of my personal heroes). If the HTML5 history API (or Tony Camp) came up to me and said, "Hey baby, I work to spec in all the latest browsers and degrade gracefully in the others. What are you doing later?" I would say, "Writing some code. See you later." I love it so much, I gave a talk about it at a previous <a href="http://tagsoup.github.com/blog/2011/10/28/html5-history-api-with-luke-karrys/">Tag Soup meetup</a>. But here I am going to tell you how to convert your current Octopress blog into an Octopress blog that uses HTML5 pushState (and how to report bugs to me where I messed up, because I definitely did).</p>
+
+<!--more-->
+
+
+<p>But seriously I think the 4 turkey burgers (trying to watch my figure) I ate tonight match up well with the 5 vodka sodas (again, with the figure) I drank tonight, so we should be good to go to learn about some sweet, sweet HTML5 history.</p>
+
+<h2>Can I use this?</h2>
+
+<p>Short answer: yes. Long answer: maybe, but it's complicated. The history API is great. Remember hashbangs (#!)? Of course you do, they are still in use at some big-time websites (including Twitter). <a href="http://storify.com/timhaines/hashbang-conversation">That was a mistake</a>. But there is a much better way. The history API enables you to change the entire URL (as long as it is the same domain) when you AJAX in some sweet new content. The part that is complicated goes by the ugly name of "partial browser support".</p>
+
+<p>I'm sure you all love feature detection. And I'm also sure that you love not being lied to. Now imagine if your feature detects lied to you. You would probably be upset. We all would. No one likes being lied to. So when Safari 5.1 is like "Oh what's up Modernizr. The history API? I support that. No problem. Throw it at me." You are gonna feel all warm and fuzzy inside until another supported browswer says "Oh yeah, I support that as well. But I do it differently than Safari. That browser is dumb. Seriously, that browser is so dumb it got hit by a parked car." And you're going to say, "Come on browsers. Can't we all just get along. Don't let native apps win!"</p>
+
+<p>But there is a solution. Benjamin Lupton wrote <a href="https://github.com/balupton/History.js/">History.js</a>. It has <a href="https://github.com/balupton/History.js/issues?sort=comments&amp;direction=desc&amp;state=open">bugs</a> (including a bug where its pushState method won't accept a URL with a hash which I have hit multiple times), but it also solves a lot of browser inconsistencies and it has tests. So I use it. This is a case where I don't want to reinvent the wheel, so I'm going to use a well tested library that someone else has written. Yes, some of the bugs are a pain, but I'd rather start a project with it than without it.</p>
+
+<h2>Show me some code!</h2>
+
+<p>Oh yeah, sorry about that. I ramble when I'm drunk. So Octopress, you use it, you love it. It is static and fast. But you want to bypass the full page reloads. I have a solution for you (and I could use your help on improving it, see the last paragraph). Here is the basic flow that we want to follow in order to get some sweet JS that does what we need it to do:</p>
+
+<ol>
+<li>Capture internal link clicks</li>
+<li>Prevent the default action</li>
+<li>Use HTML pushState to register the interaction</li>
+<li>Capture that interaction by listening to an event</li>
+<li>Change our content</li>
+<li>Execute any other miscellaneous JavaScript to change the state of our page</li>
+</ol>
+
+
+<p>Sound easy enough? It is!</p>
+
+<p><em>Note: This code requires jQuery, History.js and the History.js jQuery adapter.</em></p>
+
+<h2>I just said show me some code and you rambled again. Seriously, show me some code.</h2>
+
+<p>Yes. I promise I will show you some code. Let's start with step 1. This is some code I yanked from <a href="https://gist.github.com/854622">Benjamin Lupton</a> and tweaked a little to work a bit better with Octopress. This code is a jQuery helper to grab any internal links. The idea is that we are only going to want to attach our click handlers to internal links. The meat of this code is where we assign a boolean value to <code>isInternalLink</code>. We are checking whether the href of the link is equal to the root url or if it doesn't contain a colon. We also want to make sure that the href doesn't start with a hash (therefore it being a named anchor) and also isn't a link to the RSS feed.</p>
+
+<p>{% codeblock internal-link-helper.js %}
+$.expr[':'].internal = function(obj, index, meta, stack) {
+  var $link = $(obj),</p>
+
+<pre><code>  url = $link.attr('href') || '',
+  isInternalLink;
+</code></pre>
+
+<p>  // Check link
+  isInternalLink = ((url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) &amp;&amp; url.charAt(0) !== "#" &amp;&amp; url.indexOf('atom.xml') === -1);</p>
+
+<p>  return isInternalLink;
+};
+{% endcodeblock %}</p>
+
+<h2>Ajaxify?!</h2>
+
+<p>Next, we want to to use another method I yanked from Benjamin. This is enables us to run the <code>ajaxify()</code> function against jQuery objects. The only trick here, is the bug I talked about earlier. We have to separate the hash from the clicked url and pass it to the pushState event listener through the first parameter, which is a data object that can contain any arbitrary data.</p>
+
+<p>Another note worth mentioning is the second parameter of the pushState method. That accepts a title for the new page, but as far as I know, no browsers support it. Also when using the <code>ajaxify</code> function in this way, we don't know the full title of the next page at this junction. This could be rearranged, but since the browsers don't support it, I don't see much reason for doing so <del>know</del> <em>now</em> (especially since we will update the title manually later).</p>
+
+<p>{% codeblock ajaxify.js %}
+$.fn.ajaxify = function() {
+  var $this = $(this);</p>
+
+<p>  $this.find('a:internal').click(function(event) {</p>
+
+<pre><code>var $link = $(this),
+    url = $link.attr('href'),
+    hash = url.split('#')[1],
+    data = {};
+
+// Continue as normal for cmd clicks etc
+if (event.which == 2 || event.metaKey) {
+  return true;
+}
+
+if (hash) {
+  url = url.replace('#'+hash, '');
+  data.hash = hash;
+}
+
+// Ajaxify this link
+History.pushState(data, null, url);
+event.preventDefault();
+return false;
+</code></pre>
+
+<p>  });</p>
+
+<p>  // Chain
+  return $this;
+};
+{% endcodeblock %}</p>
+
+<h2>Shhhhhhh! Listen.</h2>
+
+<p>The history.js plugin exposes a <code>statechange</code> event to the <code>window</code>. If we listen for that event, we can capture any state changes and bend them to our will. Here is the code I am using on my blog.</p>
+
+<p>{% codeblock statechange.js %}
+$(window).bind('statechange', function() {</p>
+
+<p>  var State = History.getState(),</p>
+
+<pre><code>  url = State.url,
+  stateData = State.data,
+  hash = stateData.hash,
+  relativeUrl = url.replace(rootUrl, ''),
+  isHome = (relativeUrl === '/' || relativeUrl === '/index.html' || relativeUrl === "") ? true : false,
+  classMethod = (isHome) ? 'addClass' : 'removeClass',
+  dsScript = (isHome || relativeUrl.indexOf("blog/archives") &gt; -1) ? 'count.js' : 'embed.js',
+  homeClass = 'blog-index';
+</code></pre>
+
+<p>  $.ajax({</p>
+
+<pre><code>url: url,
+dataType: 'html',
+success: function(data) {
+  var $data = $(data),
+      $content = $data.find('#content &gt; div'),
+      title = $data.filter('title').text(),
+      $gists = $content.find('.gist-holder'),
+      gistEmbeds = [];
+
+  $gists.each(function() {
+    var $gistHolder = $(this),
+        url = $gistHolder.data('gist-url'),
+        id = url.replace(/.*\.com\/([0-9]+)\.js.*/, '$1'),
+        file = url.split('?file=')[1];
+
+    gistEmbeds.push($.get('/embed-gist.php?id=' + id + ((file) ? '&amp;file=' + file : ''), function(data) {
+      $gistHolder.html(data);
+    }));
+  });
+
+  $.when.apply($, gistEmbeds).done(function() {
+    $contentArea.html($content.html())[classMethod](homeClass).ajaxify();
+    addCodeLineNumbers();
+    disqus_identifier = url;
+    disqus_url = url;
+    disqus_function(dsScript);
+    twitter_sharing();
+    $('title').text(title);
+    _gaq.push(['_trackPageview', ((relativeUrl.charAt(0) === '/')?'':'/')+relativeUrl]);
+
+    var currentPos = $body.scrollTop(),
+        $nav = $('nav[role="navigation"]'),
+        $scrollTo = (hash) ? $('#' + hash) : $nav,
+        scrollTo = $scrollTo.offset().top,
+        distance = (currentPos &gt; $nav.position().top || hash) ? Math.abs(currentPos - scrollTo) : 0;
+
+    if (distance &gt; 0) {
+      $('html, body').animate({
+        scrollTop: scrollTo
+      }, distance, function() {
+        if (hash) window.location.hash = hash;
+      });
+    }
+
+  });
+
+}
+</code></pre>
+
+<p>  });</p>
+
+<p>  return false;
+});
+{% endcodeblock %}</p>
+
+<p><code>History.getState()</code> provides us with an object that contains the URL, title and data object from the link that was just clicked. Here is where it can get a bit hairy. HTML is HTML right? We should just be able to AJAX in the URL we want, parse out the specific content areas that interest us, and replace the old content areas with the new ones. Well, almost.</p>
+
+<p>We are responsible for making the page exactly as it would appear if it came from the server. This includes adding/removing any body or content area classes, changing the title and running any JS that would happen on document ready.</p>
+
+<p>The only dynamic third-party JavaScript that inserts content on my blog are my gists. If you have other similar JavaScript on your blog, you may have to write some new code that does something similar.</p>
+
+<p>For gists, the rub lies in where for each gist we include a script tag which write our code from GitHub to our page. This doesn't that well dynamically since it uses <code>document.write</code>. When <code>document.write</code> is used after the page is already loaded, is empties the content of the page, and inserts its new content. Pretty selfish, right? Well <code>document.write</code> may be an asshole, but that's not the end of the world. I came up with a <a href="https://github.com/lukekarrys/lukecod.es/blob/master/source/embed-gist.php">server-side solution</a> for my blog, which will take some URL parameters and fetch the gist HTML for you. Ben Nadel also came with a solution earlier this year that uses an <a href="http://www.bennadel.com/blog/2316-Using-An-IFrame-To-Override-document-write-Inside-A-DOM-Document-Object-Model-Sandbox.htm">iFrame to override the <code>document.write</code> method</a>. I love his way of doing it, because it all stays client-side, but I think the server-side method is a bit safer (since you aren't overriding a <code>document.write</code>).</p>
+
+<p>In my method, I am locating any gists in the incoming HTML. If there are any, I ask my server-side script to supply me with the HTML for that gist. I am also pushing that result of that request (a JQuery Deferred object) to an array. Later I am asking that array to let me know when all of its gists have been loaded.</p>
+
+<p>Once all gists have been loaded (or immediately if there were no gists), I take the new content, assign it an appropriate class and ajaxify its internal links (<code>$contentArea.html($content.html())[classMethod](homeClass).ajaxify();</code>). After that I run a whole bunch of JavaScript functions to make sure we handle all the interactions that will need to happen for each page.</p>
+
+<h2>Any other interactions? Bueller? Bueller?</h2>
+
+<p>There actually is! In our mobile media query, we use a select to change pages. This won't work for us, since our code only captures the interaction of internal links <code>a</code> elements. We need to change the <code>getNav</code> function so the select will call pushState for us. My code is below.</p>
+
+<p>{% codeblock octopress.js %}
+function getNav() {
+  var mobileNav = $('nav[role=navigation] fieldset[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
+  mobileNav.children('select').append('<option value="">Navigate&hellip;</option>');
+  $('ul[role=main-navigation]').addClass('main-navigation');
+  $('ul.main-navigation a').each(function(link) {</p>
+
+<pre><code>mobileNav.children('select').append('&lt;option value="'+link.href+'"&gt;&amp;raquo; '+link.text+'&lt;/option&gt;');
+</code></pre>
+
+<p>  });
+  $('ul.subscription a').each(function(link) {</p>
+
+<pre><code>mobileNav.children('select').append('&lt;option value="'+link.href+'"&gt;&amp;raquo; '+link.text+'&lt;/option&gt;');
+</code></pre>
+
+<p>  });
+  mobileNav.children('select').bind('change', function(event) {</p>
+
+<pre><code>if (event.target.value) { 
+  if (!!(window.history &amp;&amp; history.pushState)) {
+    History.pushState(null, null, event.target.value);
+  } else {
+    window.location.href = event.target.value;
+  }
+}
+</code></pre>
+
+<p>  });
+}
+{% endcodeblock %}</p>
+
+<p>THe new part is where we are binding the change of the select. If we have the history API at our disposal then we will call pushState, leaving <code>window.location.href</code> as a fallback.</p>
+
+<h2>Woooo! Almost done.</h2>
+
+<p>So far we have done almost everything we need to do. Except the last part about executing any miscellaneous JavaScript to keep our pages in working condition. You know what they say: 90% of the vodka takes 10% of the time to drink. Something like that. Anyway, here we go. In the code snippet above, you may notice functions called such as:</p>
+
+<ol>
+<li><code>addCodeLineNumbers()</code></li>
+<li><code>disqus_function(dsScript)</code> including the prior setting of <code>disqus_identifier</code> and <code>disqus_url</code>.</li>
+<li><code>twitter_sharing()</code></li>
+<li><code>$('title').text(title)</code></li>
+<li><code>_gaq.push(['_trackPageview', ((relativeUrl.charAt(0) === '/')?'':'/')+relativeUrl])</code></li>
+</ol>
+
+
+<p>The first three items are functions I created in the JavaScript code so that the code line numbers, Disqus and Twitter embeds would all work properly. Below I'm going to share those three snippets to ensure that you can get that code working for your site.</p>
+
+<p>The first function (<code>addCodeLineNumbers</code>) already exists as a global function in <code>octopress.js</code>. This is good (although polluting the global namespace is normally frowned upon) because we can just call the function to add line numbers to any gist we have available in our new content.</p>
+
+<p>The second function pertains to the Disqus comments.</p>
+
+<p>{% codeblock disqus.html %}
+{% comment %} Load script if disquss comments are enabled and <code>page.comments</code> is either empty (index) or set to true {% endcomment %}
+{% if site.disqus_short_name and page.comments != false %}</p>
+
+<script type="text/javascript">
+      var disqus_shortname = '{{ site.disqus_short_name }}';
+      var disqus_identifier = '{{ site.url }}{{ page.url }}';
+      var disqus_url = '{{ site.url }}{{ page.url }}';
+      {% if page.comments == true %}
+        {% comment %} `page.comments` can be only be set to true on pages/posts, so we embed the comments here. {% endcomment %}
+        // var disqus_developer = 1;       
+        var disqus_script = 'embed.js';
+      {% else %}
+        {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}
+        var disqus_script = 'count.js';
+      {% endif %}
+    var disqus_function = function (_disqus_script) {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + _disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    };
+    
+    disqus_function(disqus_script);
+</script>
+
+
+<p>{% endif %}
+{% endcodeblock %}</p>
+
+<p>Here, the main point I changed, was to assign the IIFE that ran the Disqus code to a function expression so I could call it with the appropriate script when it needed to be. I call it with <code>count.js</code> if we are on the homepage and <code>embed.js</code> if we are on a post page (and therefore embedding comment thread).</p>
+
+<p>I also do the same thing with the tweet button.</p>
+
+<p>{% codeblock twitter_sharing.html %}
+{% if site.twitter_follow_button or site.twitter_tweet_button %}
+  <script type="text/javascript"></p>
+
+<pre><code>var twitter_sharing = function(){
+  var twitterWidgets = document.createElement('script');
+  twitterWidgets.type = 'text/javascript';
+  twitterWidgets.async = true;
+  twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+  document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+};
+twitter_sharing();
+</code></pre>
+
+<p>  </script>
+{% endif %}
+{% endcodeblock %}</p>
+
+<p>I assign the code to a function expression, which I can then run at my convenience. Normally this type of code is meant to only be called on the initial loading of a page, but since we are accepting the role of Dr. Frankenstein and taking code and making it into our own monster, we have to make it callable from other places.</p>
+
+<p>The last two things I am doing don't require code changes from anywhere else, but are important nonetheless. The first is to change the page title. This isn't the most important thing, but you know that feeling when you have tons of tabs open and you can't tell what is what based on the titles. Don't be hostile towards your users! Show them an accurate page title and they will be happy and come back to your blog to read about how awesome your cats are!</p>
+
+<p>Lastly, I am telling Google Analytics to track the pageview. You know how important this is. The only trick I am pulling here, is to make sure that the URL I am sending to Google starts with a <code>/</code> since I believe that is required (not 100% sure about that).</p>
+
+<h2>Wake up! I'm about to do a recap.</h2>
+
+<p>{% codeblock history-app-final.js %}
+(function($) {</p>
+
+<p>  var hasHistory = function() {</p>
+
+<pre><code>return !!(window.history &amp;&amp; history.pushState);
+</code></pre>
+
+<p>  };</p>
+
+<p>  if (!hasHistory()) {</p>
+
+<pre><code>return;
+</code></pre>
+
+<p>  }</p>
+
+<p>  $(function() {</p>
+
+<pre><code>var $contentArea = $('#content &gt; div'),
+  rootUrl = History.getRootUrl(),
+  $body = $('body');
+
+$.expr[':'].internal = function(obj, index, meta, stack) {
+  // Prepare
+  var $link = $(obj),
+      url = $link.attr('href') || '',
+      isInternalLink;
+
+  // Check link
+  isInternalLink = ((url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) &amp;&amp; url.charAt(0) !== "#" &amp;&amp; url.indexOf('atom.xml') === -1);
+
+  // Ignore or Keep
+  return isInternalLink;
+};
+
+// Ajaxify Helper
+$.fn.ajaxify = function() {
+  // Prepare
+  var $this = $(this);
+
+  // Ajaxify
+  $this.find('a:internal').click(function(event) {
+    // Prepare
+    var $link = $(this),
+        url = $link.attr('href'),
+        hash = url.split('#')[1],
+        data = {};
+
+    // Continue as normal for cmd clicks etc
+    if (event.which == 2 || event.metaKey) {
+      return true;
+    }
+
+    if (hash) {
+      url = url.replace('#'+hash, '');
+      data.hash = hash;
+    }
+
+    // Ajaxify this link
+    History.pushState(data, null, url);
+    event.preventDefault();
+    return false;
+  });
+
+  // Chain
+  return $this;
+};
+
+$body.ajaxify();
+
+$(window).bind('statechange', function() {
+
+  var State = History.getState(),
+      url = State.url,
+      stateData = State.data,
+      hash = stateData.hash,
+      relativeUrl = url.replace(rootUrl, ''),
+      isHome = (relativeUrl === '/' || relativeUrl === '/index.html' || relativeUrl === "") ? true : false,
+      classMethod = (isHome) ? 'addClass' : 'removeClass',
+      dsScript = (isHome || relativeUrl.indexOf("blog/archives") &gt; -1) ? 'count.js' : 'embed.js',
+      homeClass = 'blog-index';
+
+  $.ajax({
+    url: url,
+    dataType: 'html',
+    success: function(data) {
+      var $data = $(data),
+          $content = $data.find('#content &gt; div'),
+          title = $data.filter('title').text(),
+          $gists = $content.find('.gist-holder'),
+          gistEmbeds = [];
+
+      $gists.each(function() {
+        var $gistHolder = $(this),
+            url = $gistHolder.data('gist-url'),
+            id = url.replace(/.*\.com\/([0-9]+)\.js.*/, '$1'),
+            file = url.split('?file=')[1];
+
+        gistEmbeds.push($.get('/embed-gist.php?id=' + id + ((file) ? '&amp;file=' + file : ''), function(data) {
+          $gistHolder.html(data);
+        }));
+      });
+
+      $.when.apply($, gistEmbeds).done(function() {
+        $contentArea.html($content.html())[classMethod](homeClass).ajaxify();
+        addCodeLineNumbers();
+        disqus_identifier = url;
+        disqus_url = url;
+        disqus_function(dsScript);
+        twitter_sharing();
+        $('title').text(title);
+        _gaq.push(['_trackPageview', ((relativeUrl.charAt(0) === '/')?'':'/')+relativeUrl]);
+
+        var currentPos = $body.scrollTop(),
+            $nav = $('nav[role="navigation"]'),
+            $scrollTo = (hash) ? $('#' + hash) : $nav,
+            scrollTo = $scrollTo.offset().top,
+            distance = (currentPos &gt; $nav.position().top || hash) ? Math.abs(currentPos - scrollTo) : 0;
+
+        if (distance &gt; 0) {
+          $('html, body').animate({
+            scrollTop: scrollTo
+          }, distance, function() {
+            if (hash) window.location.hash = hash;
+          });
+        }
+
+      });
+
+    }
+  });
+
+  return false;
+});
+</code></pre>
+
+<p>  });
+})(jQuery);
+{% endcodeblock %}</p>
+
+<p>The only new stuff here is at the very top, where I am exiting the function and not running any of the goodness described above in the browser doesn't support the HTML5 history API. The test is <code>!!(window.history &amp;&amp; history.pushState)</code>. Once support is confirmed I am then calling everything inside a DOM ready callback.</p>
+
+<p>If you include the codeblock directly above on your pages and replace the other codeblocks (disqus.html, twitter_sharing.html and octopress.js) you should be good to go. Also don't forget, this code requires <a href="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">jQuery</a>, <a href="https://github.com/balupton/History.js/">History.js and the History.js jQuery Adapter</a>.</p>
+
+<p><em>But wait there's more!</em></p>
+
+<p>Your mileage may vary (YMMV). I know that sucks to hear but there is good news. I definitely did not cover the edge cases on this one. My blog doesn't have any videos or some of the other Octorpress or Jekyll plugins. I would love to hear if you implement this code and find some JS that doesn't work. Seriously, tell me where I am wrong or where my code falls short!</p>
+
+<p>Peace out, and if you don't chew Big Red, well it's spicy and you'll love it.</p>
+]]></content>
+  </entry>
+  
+</feed>

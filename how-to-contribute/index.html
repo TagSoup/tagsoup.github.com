@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Contribute - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="How to Contribute Dec 4th, 2011 This page is currently being re-written. The blog has been updated to support ruby 1.9.3 so this page is now out of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/how-to-contribute/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">How to Contribute</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-04T22:35:00-07:00" pubdate data-updated="true">Dec 4<span>th</span>, 2011</time></p>
+  </header>
+  
+  <p><img class="center" src="/images/its-dangerous-to-go-alone-take-this.jpeg" width="400" height="250" title="It IS Dangerous" alt="Take This"></p>
+
+<h4>This page is currently being re-written. The blog has been updated to support ruby 1.9.3 so this page is now out of date. Stay tuned.</h4>
+
+<p>So you want to contribute. We&#8217;re using Octopress to power our page. Pretty neat right, well there are some drawbacks. The main one being set up. If you&#8217;re not famailiar with Ruby, Terminal or GitHub you might be intimidated. Don&#8217;t be scared, we&#8217;re here to help you, help us. So here&#8217;s a small walk through that will get you a local version of the TagSoup octopress on your system.</p>
+
+<p>Let&#8217;s get the important links listed first. These will help you out tremendously. These links are where I found the info to get everything up and running smoothly.</p>
+
+<ul>
+    <li><a href="http://octopress.org/docs/setup/" target="_new">OctoPress Offical Setup</a></li>
+    <li><a href="http://beginrescueend.com/" target="_new">RVM (Ruby Version Manager)</a></li>
+    <li><a href="http://progit.org/book/">Pro Git</a></li>
+    <li><a href="http://think-like-a-git.net/">Think Like a Git</a></li>
+</ul>
+
+
+<p>If you&#8217;re a mac user, you want to make sure you have xcode installed. You can grab xcode from the app store. Once that&#8217;s done, the next prerequisite is GIT. Make sure you have GIT installed, and some basic familiarity with it (read Pro Git and Think Like a Git). Once you have these installed and ready to go, follow the OctoPress Set Up instructions. When you get to the &#8220;Setup Octopress&#8221; subsection you&#8217;re going to want to change the url for the repository to clone. <del>You are going to want to run</del></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git@github.com:TagSoup/tagsoup.github.com.git
+</span><span class='line'>cd tagsoup.github.com
+</span><span class='line'>ruby --version</span></code></pre></td></tr></table></div></figure>
+
+
+<p><del>Just like the install site says, you will want to see Ruby 1.9.2.</del></p>
+
+<p><del>Now, before you run the gem install bundler, you want to make sure you&#8217;re on the &#8216;source&#8217; branch. You might have to create the branch first. You can run</del></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout source</span></code></pre></td></tr></table></div></figure>
+
+
+<p><del>This will create the branch and auto change to it. After this, you can continue with the install process by running:</del></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>bundle install
+</span><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<p><del>That&#8217;s it! The install is done.</del></p>
+
+<p>Now you can create a post and contribute to the blog. I&#8217;m sure some documentation on HOW to create a new octopress post might be useful. Head to <a href="http://octopress.org/docs/blogging/" traget="_new">http://octopress.org/docs/blogging/</a> for a quick guide. Once your post is created and you&#8217;re happy with it, <a href="http://help.github.com/send-pull-requests/" target="_new">send me a pull request</a>!</p>
+
+<p>If you need any help, or have questions, just shoot us a msg on github. Kthxbai
+<img src="/images/animated-kitty.gif" title="OMG" alt="SO THIRSTY"></p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-04T22:35:00-07:00" pubdate data-updated="true">Dec 4<span>th</span>, 2011</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/how-to-contribute/index.html" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/how-to-contribute/index.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/how-to-contribute/index.html';
+        var disqus_url = 'http://tagsoup.github.com/how-to-contribute/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

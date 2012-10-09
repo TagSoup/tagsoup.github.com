@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Wonka Vision | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/wonka-vision/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Come with me, and you'll be. In a world of Pure Imagination]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/02/28/come-with-me/"/>
+    <updated>2012-02-28T22:21:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/02/28/come-with-me</id>
+    <content type="html"><![CDATA[<h3>Day 5 of the 30 Day Challenge</h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PUv66718DII" frameborder="0" allowfullscreen></iframe>
+
+
+<p>It starts strong at 2:33 in, and then goes from there. 10:25 is like the chocolate river. 13:20 is the geese that lay the golden eggs. 13:55 is the Everlasting Gobstopper. I'm TRYING to see if Bret will do a talk for us, keeping fingers crossed.</p>
+
+<p><a href="http://worrydream.com">Bret Victor</a> invents tools that enable people to understand and create. He has designed experimental UI concepts at Apple, interactive data graphics for Al Gore, and musical instruments at Alesis.</p>
+
+<p>This talk was given at <a href="http://2012.cusec.net">CUSEC 2012</a>.</p>
+
+<div style="width: 50px; height: 55px;"><iframe width="50" height="55" src="http://www.youtube.com/embed/r2pt2-F2j2g?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: zsh | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/zsh/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I'll Show You Mine if You Show Me Yours]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours/"/>
+    <updated>2012-02-26T22:06:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/02/26/ill-show-you-mine-if-you-show-me-yours</id>
+    <content type="html"><![CDATA[<h3>Day 3 of the 30 Day Challenge</h3>
+
+<p>Working in the default themed Terminal all day will make any sane (no such thing) developer cry. I'm sure we each have our own favorite customizations. Me? I'm a zsh sort of guy. Using it for a while (thanks <a href="https://twitter.com/#!/slashclee">@slashclee</a>) I find myself switching up the themes each time I configure or reconfigure a computer. First thing's first though, I'm using a mac. I'm not a "fan boy", I'm just comfortable with it at this point. So if you're wanting to get this going on your Linux system, there are links that can help you... I'm sorry, but I can't help.</p>
+
+<p>Enough words, how about some hawt pics?
+{% img left /images/zsh.png 800 %}</p>
+
+<!--more-->
+
+
+<h4>What are you staring at?</h4>
+
+<p>Well, that's my desktop, with some icons, a nice desktop pic and of course my terminal. I like the way it all looks. How come your Terminal doesn't look like that? Maybe I can help. If you're running OSX Lion and haven't already switched the default bash shell to zsh, you might want to do that now. Why switch? There are a ton of articles out on google explaning why people like it so much. For me, it comes down to a few basic benefits:</p>
+
+<ol>
+    <li>Powerful tab completetion</li>
+    <li>Styling</li>
+    <li>Plugins</li>
+    <li>Auto correct</li>
+</ol>
+
+
+<h3>Switching to zsh</h3>
+
+<p>This part is easy, just go to your System Preferences and click on Users &amp; Groups. Right click, or Control-Click on your username and open up the Advanced Options. If you're not able to Right-Click or Control-Click on your username, make sure the lock icon in the bottom left of the window is unlocked. Just click on it to toggle. Look for the dropdown for Login Shell and choose <code>/bin/zsh</code>. Fin</p>
+
+<h3>Oh My ZSH</h3>
+
+<p>The next very handy tool that goes hand in hand with zsh is <a href="https://github.com/robbyrussell/oh-my-zsh">Oh-My-Zsh</a>. Oh-My-Zsh really starts to open up the "Styling" and "Plugin" benefits I brought up earlier. Please, take the time to check out the repo and check out everything is has to offer. I'm not going to try to get into all of it on this post.</p>
+
+<h3>Customizing Terminal</h3>
+
+<p>I'm using <a href="https://github.com/tomislav/osx-lion-terminal.app-colors-solarized">Tomislav Filipčić's Solarized theme</a> for my Terminal. Grab that, unzip it and run the Solarized Dark.terminal file. This will create a new theme based on the ever popular <a href="http://ethanschoonover.com/solarized">Solarized by Ethan Schoonover</a>. Select Solarized Dark under Terminal > Preferences > Settings.</p>
+
+<p>{% img center /images/solarized.dark.png 500 'term bo' %}</p>
+
+<h3>Customizing Oh-My-Zsh</h3>
+
+<p>Most of the customizations will be set in your .zshrc file. I'm assuming your Terminal is already open and hopefully you already your shell set to zsh. Type <code>~/.</code> and press <code>Tab</code>. Autocomplete, yah, no HUGE difference yet. Press <code>Tab</code> again. Yay, our first noticeable change. You can Tab-cycle through the files/dirs. Look for <code>.zshrc</code>.  This is your zsh profile. Look for the line that starts with <code>ZSH_THEME=</code>. This is where we are going to set our theme. <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">Check out some of the zsh themes.</a> I have mine set to blinks. But it's not the default blinks. I have done some tweaking on it. Since this section is about customizing, let's get to it.
+{% gist 1921784 zsh %}</p>
+
+<p>There's a lot going on here. A lot. Without going too crazy, let's look at one small chunk to see what it's doing.
+```
+export PROMPT=$'%{\e[1;34m%}%n@\e[1;34m%M%{\e[0m%}
+%{\e[0;%(?.32.31)m%}>%{\e[0m%} '</p>
+
+<p>export RPROMPT=$'%{\e[1;31m%}$(project_pwd)%{\e[0;34m%}$(ruby_version)$(git_cwd_info)%{\e[0m%}'
+```
+So zsh let's have have a "left" (PROMPT) and "right" (RPROMPT) side of the prompt. On the left (again PROMPT), I like it nice and plain. So we're outputting the username@system-name. Then we have a line break where our prompt will be. And on the right hand side of the screen (RPROMPT), we have even more useful info. We're displaying the current directory, the version of Ruby, the current git branch and SHA. I have added some fun colors to it, cause you know, colors are good mmmkay.</p>
+
+<h3>On to plugins</h3>
+
+<p>The plugins in zsh are really useful. They will extend autocompletion for you and set up some aliases for you. Back in your <code>~/.zshrc</code> file look for the line that starts with:
+```</p>
+
+<h1>Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)</h1>
+
+<h1>Example format: plugins=(rails git textmate ruby lighthouse)</h1>
+
+<p>```</p>
+
+<p>The plugins I have installed are git, github, node, gem, rails, ant. It looks like this:
+```</p>
+
+<h1>Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)</h1>
+
+<h1>Example format: plugins=(rails git textmate ruby lighthouse)</h1>
+
+<p>plugins=(git github node npm gem rails ant)
+```
+Most of these I don't use to their fullest. But you can <a href="https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh">take a look at some of the things the git plugin is doing for us.</a> If you're using git a lot, some of the aliases will save you some time. <a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins">Check out all of the available plugins for zsh.</a></p>
+
+<p>I'm by no means a shell, or zsh expert. I'm still learning a ton as I go. The day I spent getting Solarized set up and the prompt on the right caused big head aches for me. I have a whole list of git aliases, and standard aliases to share that will tie in nicely with this post but, this post has already gotten much longer than I like. TL:DR. If you have any questions, please feel free to ask. I will do my best in answering or finding an answer. Use the comments below or msg me on github.</p>
+
+<h3>Hepful Links</h3>
+
+<p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh My ZSH github repo</a><br />
+<a href="http://www.zsh.org/">ZSH Homepage</a> - A little overwhelming<br />
+<a href="http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/">Steve's Extravagant Zsh Prompt</a><br />
+<a href="https://twitter.com/#!/ohmyzsh">Oh My ZSH Twitter</a> - Blue birds<br /></p>
+
+<div class="clearfix">
+{% img left /images/whip-it.jpg 60 %}
+{% img left /images/whip-it.jpg 60 %}
+{% img left /images/whip-it.jpg 60 %}
+{% img left /images/whip-it.jpg 60 %}
+{% img left /images/whip-it.jpg 60 %}
+{% img left /images/whip-it.jpg 60 %}
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

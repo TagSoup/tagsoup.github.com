@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Test Case | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/test-case/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MS Filters Make Me Hate Life - Memoirs of a FE-ender]]></title>
+    <link href="http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/"/>
+    <updated>2011-12-29T14:29:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender</id>
+    <content type="html"><![CDATA[<h4>Here's a screen shot of my issue. Notice the sub nav being cut off!</h4>
+
+<div class="clearfix">
+<a href="http://tagsoup.github.com/images/nav-barf.jpg" target="_new">{% img left /images/nav-barf.jpg 300 197 'Why does' 'IE Hate Developers?' %}</a>
+</div>
+
+
+<p><a href="http://jsfiddle.net/tonyjcamp/eNr2M/">TL;DR - Gimmie Solution</a></p>
+
+<p>Don't you hate it when you find yourself debugging some weird CSS issue knowing full well you've solved the same exact problem in the past? I catch myself doing this all the time. I'm being a bit hard on myself. It's not like I run into the same bug, project after project, failing to learn the solution. It's more like... "Shit I remember this bug, it happened to me 9 months ago, I can't remember how I fixed it back then. KKKKAAAAHHHHNNNNNNNN".</p>
+
+<!--more-->
+
+
+<p>This just happened to me. Instead of repeating my same old pattern of "solve and forget" (devs love patterns), I decided to take some time to write about the bug and solution. Partly for you guys, but also for myself. Now I can always reference this blog post for the solution.</p>
+
+<p>Spoiler alert, after creating the reduced use case, the issue wasn't what I originally thought it was.</p>
+
+<h3>Situation:</h3>
+
+<p>I have a simple horizontal navigation menu with drop down sub-menus. This menu also has a background gradient. Totally basic, "every website has it" kinda stuff.</p>
+
+<h3>The Issue I was having:</h3>
+
+<p>All was well in modern-browser-land, BUT, IE9 was DOM-barfing. For some reason, IE9 was giving me an effect similar to having "overflow: hidden;" on the containing nav element. Anything outside of this container (in my case, the sub-menus) were being cut off. So first thing I look for is the overflow, then the z-indexing, what the box is doing then, then, then, etc. until I start to cry QQ.</p>
+
+<h3>Solving the issue:</h3>
+
+<p>Chris Coyer has a great artice on <a href="http://css-tricks.com/reduced-test-cases/">creating a reduced test case</a>. Remembering the gist of it, I opened up js-fiddle and started hacking away. I was pretty sure the filter: property was being the hooker in my code. I knew it was depricated these days, but whatevs. It ended up coming down to 3 CSS properties living on the same element. Those being:</p>
+
+<p>{% codeblock Silly filter lang:css %}
+position: fixed;
+z-index: 9999;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+{% endcodeblock %}</p>
+
+<p>The filter BS jumped out at me right away. So I removed filter, and the content outside of the container was showing properly. The style became:</p>
+
+<p>{% codeblock Put me in my place lang:css %}
+position: fixed;
+z-index: 9999;
+{% endcodeblock %}</p>
+
+<p>For fun, I then pulled out the position: fixed. The style became:</p>
+
+<p>{% codeblock Silly filter 2 lang:css %}
+z-index: 9999;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+{% endcodeblock %}</p>
+
+<p>I had my gradient, and the z-indexing working! Nice! So I started blaming position: fixed and filter being together. I told all my friends about it and they were all "bro, so cool, let's shoot red bull into our vains and snort some vodka". Just for funsies, I removed the z-index but kept the position and filter on the element.</p>
+
+<p>{% codeblock Brotastic lang:css %}
+position: fixed;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+{% endcodeblock %}</p>
+
+<p>IT WORKED! No z-index, but WTF! I told all my BFF's about it and they cheered. More RB, vodka and badges to be had.</p>
+
+<p>So wanting the best of all 3 worlds, the simpliest solution I came up with was to wrap the nav bar in container element (don't care which you use), and put position: rel and z-index on the container. I kept the position: fixed and filter on the nav. Everything worked great. WIN!</p>
+
+<p>{% codeblock MUSCLES lang:css %}</p>
+
+<h1>brotainer {</h1>
+
+<pre><code>position: relative;
+z-index: 9999;
+</code></pre>
+
+<p>}</p>
+
+<h1>ie-hates-us {</h1>
+
+<pre><code>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+position: fixed; 
+</code></pre>
+
+<p>/* This seems to break everything if you use z-index here, so use it on a container</p>
+
+<pre><code>z-index: 9999;
+</code></pre>
+
+<p>*/
+}
+{% endcodeblock %}</p>
+
+<p>Here's the final fiddle:
+<a href="http://jsfiddle.net/tonyjcamp/eNr2M/">My final answer</a></p>
+
+<p>And dudes, I learned a ton by coming up with this silly use case and writing an even sillier blog post about it. If you ever find yourself solving and issue you want to remember later, write a post! Hell, just fork this blog and write a post. I'll add it.</p>
+
+<div class="clearfix">
+{% img left http://26.media.tumblr.com/tumblr_lvsjfjCEMw1qza249o1_400.jpg 256 381 'Smart Dudes' 'Say Smart Things' %}
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

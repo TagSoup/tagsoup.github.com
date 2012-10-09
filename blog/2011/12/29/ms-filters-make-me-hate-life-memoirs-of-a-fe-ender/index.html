@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MS Filters Make Me Hate Life - Memoirs of a FE-ender - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="Here&#8217;s a screen shot of my issue. Notice the sub nav being cut off! TL;DR - Gimmie Solution Don&#8217;t you hate it when you find yourself &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">MS Filters Make Me Hate Life - Memoirs of a FE-ender</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T14:29:00-07:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h4>Here&#8217;s a screen shot of my issue. Notice the sub nav being cut off!</h4>
+
+<div class="clearfix">
+<a href="/images/nav-barf.jpg" target="_new"><img class="left" src="/images/nav-barf.jpg" width="300" height="197" title="Why does" alt="IE Hate Developers?"></a>
+</div>
+
+
+<p><a href="http://jsfiddle.net/tonyjcamp/eNr2M/">TL;DR - Gimmie Solution</a></p>
+
+<p>Don&#8217;t you hate it when you find yourself debugging some weird CSS issue knowing full well you&#8217;ve solved the same exact problem in the past? I catch myself doing this all the time. I&#8217;m being a bit hard on myself. It&#8217;s not like I run into the same bug, project after project, failing to learn the solution. It&#8217;s more like&#8230; &#8220;Shit I remember this bug, it happened to me 9 months ago, I can&#8217;t remember how I fixed it back then. KKKKAAAAHHHHNNNNNNNN&#8221;.</p>
+
+<!--more-->
+
+
+<p>This just happened to me. Instead of repeating my same old pattern of &#8220;solve and forget&#8221; (devs love patterns), I decided to take some time to write about the bug and solution. Partly for you guys, but also for myself. Now I can always reference this blog post for the solution.</p>
+
+<p>Spoiler alert, after creating the reduced use case, the issue wasn&#8217;t what I originally thought it was.</p>
+
+<h3>Situation:</h3>
+
+<p>I have a simple horizontal navigation menu with drop down sub-menus. This menu also has a background gradient. Totally basic, &#8220;every website has it&#8221; kinda stuff.</p>
+
+<h3>The Issue I was having:</h3>
+
+<p>All was well in modern-browser-land, BUT, IE9 was DOM-barfing. For some reason, IE9 was giving me an effect similar to having &#8220;overflow: hidden;&#8221; on the containing nav element. Anything outside of this container (in my case, the sub-menus) were being cut off. So first thing I look for is the overflow, then the z-indexing, what the box is doing then, then, then, etc. until I start to cry QQ.</p>
+
+<h3>Solving the issue:</h3>
+
+<p>Chris Coyer has a great artice on <a href="http://css-tricks.com/reduced-test-cases/">creating a reduced test case</a>. Remembering the gist of it, I opened up js-fiddle and started hacking away. I was pretty sure the filter: property was being the hooker in my code. I knew it was depricated these days, but whatevs. It ended up coming down to 3 CSS properties living on the same element. Those being:</p>
+
+<figure class='code'><figcaption><span>Silly filter  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The filter BS jumped out at me right away. So I removed filter, and the content outside of the container was showing properly. The style became:</p>
+
+<figure class='code'><figcaption><span>Put me in my place  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For fun, I then pulled out the position: fixed. The style became:</p>
+
+<figure class='code'><figcaption><span>Silly filter 2  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">z-index</span><span class="o">:</span> <span class="nt">9999</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I had my gradient, and the z-indexing working! Nice! So I started blaming position: fixed and filter being together. I told all my friends about it and they were all &#8220;bro, so cool, let&#8217;s shoot red bull into our vains and snort some vodka&#8221;. Just for funsies, I removed the z-index but kept the position and filter on the element.</p>
+
+<figure class='code'><figcaption><span>Brotastic  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span><span class='line'><span class="nt">filter</span><span class="o">:</span> <span class="nt">progid</span><span class="nd">:DXImageTransform</span><span class="nc">.Microsoft.gradient</span><span class="o">(</span><span class="nt">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="nt">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>IT WORKED! No z-index, but WTF! I told all my BFF&#8217;s about it and they cheered. More RB, vodka and badges to be had.</p>
+
+<p>So wanting the best of all 3 worlds, the simpliest solution I came up with was to wrap the nav bar in container element (don&#8217;t care which you use), and put position: rel and z-index on the container. I kept the position: fixed and filter on the nav. Everything worked great. WIN!</p>
+
+<figure class='code'><figcaption><span>MUSCLES  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#brotainer</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">9999</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">#ie-hates-us</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">filter</span><span class="o">:</span> <span class="n">progid</span><span class="o">:</span><span class="n">DXImageTransform</span><span class="o">.</span><span class="n">Microsoft</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">startColorstr</span><span class="o">=</span><span class="s1">&#39;#cccccc&#39;</span><span class="o">,</span> <span class="n">endColorstr</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+</span><span class='line'><span class="c">/* This seems to break everything if you use z-index here, so use it on a container</span>
+</span><span class='line'><span class="c">    z-index: 9999;</span>
+</span><span class='line'><span class="c">*/</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&#8217;s the final fiddle:
+<a href="http://jsfiddle.net/tonyjcamp/eNr2M/">My final answer</a></p>
+
+<p>And dudes, I learned a ton by coming up with this silly use case and writing an even sillier blog post about it. If you ever find yourself solving and issue you want to remember later, write a post! Hell, just fork this blog and write a post. I&#8217;ll add it.</p>
+
+<div class="clearfix">
+<img class="left" src="http://26.media.tumblr.com/tumblr_lvsjfjCEMw1qza249o1_400.jpg" width="256" height="381" title="Smart Dudes" alt="Say Smart Things">
+</div>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tony Camp</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T14:29:00-07:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/browser-wars/'>Browser Wars</a>, <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/gradients/'>Gradients</a>, <a class='category' href='/blog/categories/ie-hates-devs/'>IE Hates Devs</a>, <a class='category' href='/blog/categories/ms-filters/'>MS Filters</a>, <a class='category' href='/blog/categories/test-case/'>Test Case</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/12/08/Sublime-2/" title="Previous Post: Editor, Y U Do That - Sublime 2, Whitespace and Git conflicts">&laquo; Editor, Y U Do That - Sublime 2, Whitespace and Git conflicts</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/18/js-conf-reminder/" title="Next Post: JS Conf Reminder">JS Conf Reminder &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/';
+        var disqus_url = 'http://tagsoup.github.com/blog/2011/12/29/ms-filters-make-me-hate-life-memoirs-of-a-fe-ender/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

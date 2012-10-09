@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sublime 2 | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/sublime-2/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Editor, Y U Do That - Sublime 2, Whitespace and Git conflicts]]></title>
+    <link href="http://tagsoup.github.com/blog/2011/12/08/Sublime-2/"/>
+    <updated>2011-12-08T23:58:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2011/12/08/Sublime-2</id>
+    <content type="html"><![CDATA[<p>I recently changed text editors. For any dev, this is a big deal. We're talking changing religions big. I had been using TextMate for about 4 years. I love TextMate. Then, I started hearing more and more about Sublime 2. So I decided to give it a whirl. And, after 10 days, I'm hooked. Thanks Ryan Mathis!</p>
+
+<p>I wanted to point out a small feature/issue I ran into today. Sublime 2 has a config that will trim white space at the end of lines. It's really useful and in most cases a great feature.</p>
+
+<p>Here's where I ran into the snag. I made a couple of VERY minor changes to a file. Saved, then ran git add, git commit etc. Another developer takes a look at what I pushed and tells me there conflicts all over the file. I only changed 2 lines of code, how can there be conflicts "all over the place".</p>
+
+<p>Here's a quick example of the feature in action. On the left, I have Sublime 2 open. On the right, I have the same file open in TextMate. When I click save in Sublime 2, you will see the white space disappear.</p>
+
+<iframe width="960" height="720" src="http://www.youtube.com/embed/tVBVkewGpU0?hd=1" frameborder="0" allowfullscreen></iframe>
+
+
+<p>This was causing the conflicts in git. It took me a while to figure this out. I knew it was the editor, but not sure where it was happening. Once I figured it out, I needed to turn it off for this specific project :(</p>
+
+<p>I found this setting:
+<code>
+"trim_trailing_white_space_on_save": true,
+</code>
+in the Base.File.sublime-settings (Default) and Base.File.sublime-settings (User). You can access these files by going to Sublime Text 2 > Preferences > File Settings Default and File Settings - User. I changed the setting to 'false' in both files and that did the trick.</p>
+
+<p>Features like Trimming Trailing White Space are really nice. And 99% of the time should be turned on. But it's important to understand all the magic your editor is doing for you. Next time you hit that edge case and have to disable a feature, you won't have to waste time troubleshooting.</p>
+]]></content>
+  </entry>
+  
+</feed>

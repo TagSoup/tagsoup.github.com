@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mobile | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/mobile/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile First Dubstyle - Luke (Dub) W.]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/01/24/mobile-first-dubstyle-luke-dub-w-dot/"/>
+    <updated>2012-01-24T08:34:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/01/24/mobile-first-dubstyle-luke-dub-w-dot</id>
+    <content type="html"><![CDATA[<p>This video is from our November 2011 meeting. Luke was nice enough to jump on a Skype call and spend an hour with us. This was one of the first meetings where I saw a very diverse crowd. Normally we're 90% developers. This time we had designers, project managers, account managers and developers hanging out talking about the "Mobile First" ideology &#x2665; &#x2665;. I have to give a hug(e) thanks to <a href="http://www.lukew.com/" target="_new">Luke W.</a> for taking the time to talk with us. Please, take the time to add @lukew to your twitter feed (he's very active there) and head to his site which is full of crazy good articles.</p>
+
+<p>Despite a few technical difficulties, this turned out all sparkles!</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/WZ3nqj87NZ8" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: HTML5 | Phx Tag Soup]]></title>
+  <link href="http://tagsoup.github.com/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://tagsoup.github.com/"/>
+  <updated>2012-10-09T16:23:52-07:00</updated>
+  <id>http://tagsoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Boilerplate History w/ Paul Irish]]></title>
+    <link href="http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish/"/>
+    <updated>2012-03-03T21:52:00-07:00</updated>
+    <id>http://tagsoup.github.com/blog/2012/03/03/html5-boilerplate-history-w-slash-paul-irish</id>
+    <content type="html"><![CDATA[<h3>Day 9 of the 30 Day Writing Challenge</h3>
+
+<p>The <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project was one of the first github projects that I REALLY started to use when it first came out. Sure, there were some libraries, plugins, or whatever that I had used before the HTML5 BP, but this is the first I used on a regular basis. After watching the repo and using the code base for a while, I would try and help out the project here and there. Most time, nothing major, but hey... better than nothing:</p>
+
+<!--more-->
+
+
+<h4>First</h4>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate/issues/136">My first attempt</a></p>
+
+<h4>Second</h4>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate/issues/276">Attempt #2, more people interested this time</a></p>
+
+<h3><a href="https://github.com/h5bp/html5-boilerplate/issues/844">Ticket 844, History of the HTML5 BP</a></h3>
+
+<p>Back in October, I went to the jQuery Conference with <a href="http://twitter.com/#!/rxgx">@rxgx</a>, <a href="https://twitter.com/#!/phil_renaud">@phil_renaud</a>, <a href="https://twitter.com/#!/lukekarrys">@lukekarrys</a>, and <a href="https://twitter.com/#!/richardiii">@richardiii</a>. There were a ton of really great talks. One of the most entertaining, was given by <a href="http://twitter.com/#!/rwaldron">@rwaldron</a> and <a href="http://twitter.com/#!/ajpiano">@ajpiano</a> about <a href="http://static.bocoup.com/code/jquery-you-and-i/">helping with the jQuery project</a>. They made a point to ask for help with writing documentation. During that talk, I told myself I would help write "some" documentation for "something" "soon". So one day, while looking at the open issues on the HTML5BP project, I came across <a href="https://github.com/h5bp/html5-boilerplate/issues/844">ticket #844</a>. I thought I would give it a shot. <a href="http://piratepad.net/qS4UQzl2zD">Here's the PiratePad where it all started</a>.</p>
+
+<p>After some discussion on pirate pad, I came up with a some questions about the project's history. Paul was nice enough to make these videos and send them to me. These vidoes are what I based the document on. Mostly put his words down in writing, and sprinkled in a little fun. I don't think anyone has ever seen these before today. Enjoy!</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/z_uiklVi7DM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/ehWDmpvB9EI?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/suYrHcmOBDo?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

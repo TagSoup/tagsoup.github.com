@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>QA - Pest control for development - Phx Tag Soup</title>
+  <meta name="author" content="Phx Tag Soup">
+
+  
+  <meta name="description" content="Day 6 of the 30 Day Writing Challenge I, unlike most of the Tag Soup group, am not a developer. I’m currently a Web Tester at melt media and have &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Phx Tag Soup" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26533764-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Phx Tag Soup</a></h1>
+  
+    <h2>The soup is warm</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:tagsoup.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">QA - Pest Control for Development</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-29T21:26:00-07:00" pubdate data-updated="true">Feb 29<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Day 6 of the 30 Day Writing Challenge</h3>
+
+<p>I, unlike most of the Tag Soup group, am not a developer.  I’m currently a Web Tester at <a href="http://meltmedia.com/">melt media</a> and have held other QA titles at other organizations. QA is here to help you make better and higher quality products.  This is usually accomplished through two methods: manual testing and automated testing.  This post will concentrate on providing an introduction to automated testing using Selenium and Ruby.  Foreword before we get to any code: I’m still new to writing Ruby code.</p>
+
+<p>First you’re going to need to have Ruby installed.  If you don’t already, follow <a href="http://www.ruby-lang.org/en/downloads/">this guide</a>.  Once that is accomplished you’ll need to install the Selenium webdriver gem.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">selenium</span><span class="o">-</span><span class="n">webdriver</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One more note before we get further into the code.  Automation is not a replacement for manual testing.  Anyone that tells you this is lying.  This post is going to cover using Selenium to automate link verification on marketing sites.  This seemingly innocuous test is very critical, and often overlooked in manual testing.
+ <!--more--></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="err">‘</span><span class="n">rubygems</span><span class="err">’</span>
+</span><span class='line'><span class="nb">require</span> <span class="err">‘</span><span class="n">selenium</span><span class="o">-</span><span class="n">webdriver</span><span class="err">’</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Driver</span> <span class="o">=</span> <span class="no">Selenium</span><span class="o">::</span><span class="no">WebDriver</span><span class="o">.</span><span class="n">for</span> <span class="ss">:firefox</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will create the object Page, which at this moment is a blank firefox window.  Loading any specific page is done by calling the Get method on that object.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">url</span> <span class="o">=</span> <span class="err">‘</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="o">.</span><span class="n">meltmedia</span><span class="o">.</span><span class="n">com</span><span class="err">’</span>
+</span><span class='line'><span class="no">Driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Your browser should now be on the meltmedia homepage.  Now let’s make objects for each link.  I’m going to be finding the elements by the link text.  You should truthfully use :id, :class, or xpath where applicable as they’re less likely to change than the copy of a page.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">workLink</span> <span class="o">=</span> <span class="no">Driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="ss">:link_text</span><span class="p">,</span> <span class="err">‘</span><span class="no">Work</span><span class="err">’</span><span class="p">)</span>
+</span><span class='line'><span class="n">workLink</span><span class="o">.</span><span class="n">click</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You should now be on Melt’s portfolio page.  Now we have to check that the proper page loaded.  You can do this a number of ways.  You can search for specific elements, check the page title, or look for specific copy.   At the same time I’ll have the test output the results to the terminal.  You can output to a text file if you’d like as well.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">if</span> <span class="no">Driver</span><span class="o">.</span><span class="n">title</span> <span class="o">!=</span> <span class="err">‘</span><span class="no">Meltmedia</span> <span class="err">–</span> <span class="no">Our</span> <span class="n">portfolio</span> <span class="n">of</span> <span class="n">client</span> <span class="n">work</span><span class="err">’</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="err">‘</span><span class="no">Work</span>  <span class="n">link</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">function</span> <span class="n">properly</span><span class="err">’</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="err">‘</span><span class="no">Work</span> <span class="n">link</span> <span class="n">functioned</span> <span class="n">properly</span><span class="err">’</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We now have a simple test that verifies a link.  We can use this test as a template for other link verification tests.  Either by making one long script that runs through ever links, or scripts for each individual links.  I prefer the later because it gives you granular results and lowers the chance of failure.  Since each test is independent of the previous, one test failing can’t cause another test to fail as well.</p>
+
+<p>If you’d like to look up additonal information on Selenium please see <a href="http://seleniumhq.org/projects/webdriver/">selenium hq</a> and the <a href="http://code.google.com/p/selenium/">googs code</a></p>
+
+<div class="clearfix">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+<img class="left" src="http://s2.hubimg.com/u/4746909_f520.jpg" width="60">
+</div>
+
+
+<!-- / -->
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Truett Kueck</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-29T21:26:00-07:00" pubdate data-updated="true">Feb 29<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/qa/'>QA</a>, <a class='category' href='/blog/categories/shut-up-truett/'>Shut Up Truett</a>, <a class='category' href='/blog/categories/writing-challenge/'>Writing Challenge</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/" data-via="phxtagsoup" data-counturl="http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/28/come-with-me/" title="Previous Post: Come with me, and you'll be. In a world of Pure Imagination">&laquo; Come with me, and you'll be. In a world of Pure Imagination</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/01/making-things-move-easier-in-a-css3-world/" title="Next Post: Day 7: Making Things Move Easier in a CSS3 World">Day 7: Making Things Move Easier in a CSS3 World &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Join Up</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.meetup.com/PHX-Tag-Soup/">Phx Tag Soup Meetups</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Find Us On:</h1>
+  <ul id="recent_posts">
+      <li class="post">
+        <a href="http://www.facebook.com/PHXTagSoup">FaceBook</a>
+      </li>
+      <li class="post">
+        <a href="https://twitter.com/#!/phxtagsoup">Twitter</a>
+      </li>
+      <li class="post">
+        <a href="https://github.com/TagSoup/tagsoup.github.com">github</a>
+      </li>
+      <li class="post">
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/phx-tag-soup">google groups</a>
+      </li>
+      <li class="post">
+        <a href="http://www.youtube.com/phxtagsoup">youTube</a>
+      </li>
+  </ul>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/looking-for-a-job/">Looking for a job?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tagsoup">@tagsoup</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tagsoup',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phxtagsoup", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phxtagsoup" class="twitter-follow-button" data-show-count="false">Follow @phxtagsoup</a>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Phx Tag Soup -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phxtagsoup';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/';
+        var disqus_url = 'http://tagsoup.github.com/blog/2012/02/29/qa-pest-control-for-development/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
