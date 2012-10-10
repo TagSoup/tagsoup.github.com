@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Announcement | Phx Tag Soup]]></title>
   <link href="http://TagSoup.github.com/blog/categories/announcement/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2012-10-09T16:30:25-07:00</updated>
+  <updated>2012-10-09T17:04:01-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Meeting Announcement]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/10/09/meeting-announcement/"/>
+    <updated>2012-10-09T16:32:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/10/09/meeting-announcement</id>
+    <content type="html"><![CDATA[<h3>TypeScript from the inside out with Chakra team members Rob and Luke</h3>
+
+<h4>Meeting time and date: 7pm (Arizona Time), Oct 18th, 2012</h4>
+
+<p><a href="http://blogs.msdn.com/b/somasegar/archive/2012/10/01/typescript-javascript-development-at-application-scale.aspx">Recently Microsoft announced their programming language</a> that solves a very specific problem – getting JavaScript development to scale.</p>
+
+<p>Meet <a href="http://www.typescriptlang.org/">TypeScript</a></p>
+
+<p>There was a lot of chatter on the social outlets. Some positive vibes, some haters and some indifferent. Let's face it though, TS is new and we all have questions. So TagSoup is lucky enough to have a couple TypeScript team members come and chat with us (it's going to be google hangout this time) about their baby. Rob Paveza (Program Manager on the Chakra Team) and Luke Hoban (Principal Program Manager on Chakra) from Microsoft are going to be spending some time with us. This isn't going to be a "Presentation" but more of a "Round Table" talk with Rob and Luke. So bring your questions, thoughts and suggestions.</p>
+
+<p>Our friends over at <a href="http://www.meltmedia.com/">Melt Media</a> have stepped up to the plate and offered their building for our meeting location. We will holding the event on Oct 18th, 7pm at Melt Media. We will also be trying our luck with a google hangout broadcast. Fun stuff. We're counting on everyone to create a great discussion and ask as many questions as you'd like.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekly Meeting]]></title>
@@ -74,46 +93,6 @@
 <p>May 31st's meeting will be a great time to meet with your teams (from April's meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
 
 <p>There will be some more announcements made later this week. Hope you all enjoy this news.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Next Meeting 4/26/12 - Codeventure Time]]></title>
-    <link href="http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time/"/>
-    <updated>2012-04-18T21:39:00-07:00</updated>
-    <id>http://TagSoup.github.com/blog/2012/04/18/next-meeting-4-slash-26-slash-12-codeventure-time</id>
-    <content type="html"><![CDATA[<p>April 26th, 2012 will be our next meeting. Who's speaking this time? GASP! No one. Then what the cabbage will be going on? That's where it gets interesting. This meeting will have a few "firsts" in it.</p>
-
-<!-- more -->
-
-
-<h3>First, first...</h3>
-
-<p>New venue. We're trying to hop around all over town and the dudes at Melt Media were swell enough to offer up their place for this weeks meeting. <a href="http://g.co/maps/r2hxg">Where's Melt Media located?</a> Right in the middle of downtown Tempe.</p>
-
-<h3>Second, first...</h3>
-
-<p>Coding fun! We wanted to try something different this time. Less words, more code. This next meeting, we will be breaking up into teams and work on a project together. What project? That's for you and your team to decide. What technology? You guys decide. There's no set rules, really. Just have fun. Team sizes wlll be between 3-5 people. We all know that you learn the most from acutally getting your hands dir-tay. Everyone can continue to collaborate until the next meeting (in a bout a month) and then show off what they've created. For this meeting, we will need all disciplines of web development involved. Designers, UX engineers, developers, unicorns etc.</p>
-
-<h3>Third, first...</h3>
-
-<p>TagSoup is going to Vegas. #VegasTech is growing huge. Since they're so close, we figured we go check out their Vegas Jelly meetup and hang with some of our friends there. Are you interested in going? Let us know. We will be renting a 12 person van and driving out. We will be discussing the trek in more detail at the meeting.</p>
-
-<p>TTFN - "Did you take a bath in rainbows and cupcakes?"</p>
-
-<div class="clearfix">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-    <img class="left" src="/images/olu-jsconf.jpg" width="50">
-</div>
-
-
-
 ]]></content>
   </entry>
   

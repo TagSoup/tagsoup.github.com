@@ -9,7 +9,7 @@
   <meta name="author" content="Phx Tag Soup">
 
   
-  <meta name="description" content="Day 11 of the 30 Day Writing Challenge: A look at why I use 35 year old software Why Emacs? Let me just start off by saying that this is by no means &hellip;">
+  <meta name="description" content="Day 12 of the 30 Day Writing Challenge: Hello, I&#8217;m Truett Kueck and you&#8217;re not. Today I am going to expand on what I wrote about last &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,60 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/06/pest-control-2-electric-boogaloo/">Pest Control 2: Electric Boogaloo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T22:36:00-07:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/06/pest-control-2-electric-boogaloo/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Day 12 of the 30 Day Writing Challenge:</h3>
+
+<p>Hello, I&#8217;m Truett Kueck and you&#8217;re not.  Today I am going to expand on what I wrote about last week.  It is amazingly common to forget to add urls to links.  This is completely understandable.  You are developing the page in sprints, and sometimes the page you need to link to does not exist yet.  Multiple sprints later when that page exists it slips your mind and then BAM! a site is live with scores of non-functioning.  It is also possible, and very common, that the actual requirements for links are unclear or completely non-existent.</p>
+
+<p>To solve this problem I have developed a simple Ruby application that parses a page for any links and then generates a Selenium script that clicks through the links on the page.  You will still need to make a few modifications, but you are 95% of the way there.  It uses the mechanize gem, another of many web automation gems, so we will need to install that first.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">mechanize</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mechanize is actually completely capable of performing the functionality of the Selenium script, but it has one major disadvantage.  The Selenium script can be run against Saucelab&#8217;s <a href="http://www.saucelabs.com">OnDemandService</a> which gives you access to most every major OS/Browser combination.  That might not matter to you as a developer, but Compatibility Testing is the bread and butter of QA.  Now onto the code:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/06/pest-control-2-electric-boogaloo/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -521,57 +575,6 @@ emacs: Save [CTRL]-x s
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/25/optimize-my-stuff-and-junk/">Optimize My Stuff and Junk</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-25T20:28:00-07:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/02/25/optimize-my-stuff-and-junk/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>Day 2 of the 30 Day Challenge</h3>
-
-<p>One of the most important things that you can do for your site is implementing  a good SEO strategy. Whether you are a designer, developer or both, you should have a good understanding of SEO and how to make it work for your site.</p>
-
-<p>With out getting into the history of SEO, I want to give you a brief overview. First off, SEO stands for Search Engine Optimization. What does this mean? In short its how you as a web professional translate the content of your site to search engines.</p>
-
-<p>How does this work? The search engine sends out something called a “spider” (aka bot or robot) who will crawl your site (if the spider knows about it) and take the information that they can read back to their search engine. At this point your web page would be considered “indexed” in the search engine. Once your site is indexed then there are many factors that will go into what position you will show up in depending on the keyword that is typed into the search engine.</p>
-
-<p>Whats a good strategy to follow? The first thing to know about SEO is that “Content is King”. Don’t try to chase algorithm changes in Google or Bing. Your time will be more productive if you concentrate on keeping good and relevant content on your site. Have good content and change it often. Good SEO will get people to your site but good content will keep them there and coming back.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/02/25/optimize-my-stuff-and-junk/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -615,6 +618,10 @@ emacs: Save [CTRL]-x s
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/09/meeting-announcement/">Meeting Announcement</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
       </li>
     
@@ -628,10 +635,6 @@ emacs: Save [CTRL]-x s
     
       <li class="post">
         <a href="/blog/2012/06/20/weekly-meeting-details/">Weekly Meeting Details</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/23/phxtagsoup-goes-weekly/">PhxTagSoup Goes Weekly</a>
       </li>
     
   </ul>
