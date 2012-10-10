@@ -89,9 +89,13 @@ Sublime: Just `cmd-left click` anywhere you want. Yum
 
 #### Switching File Types
 TextMate: `ctrl-opt-cmd-"modyifier"`<br />
-Sublime2: Can no finz<br />
+Sublime2: Thanks filosofunk! (see below)<br />
 
-TextMate: When you create a new file, by default, the new file type is a plain text document. You can use `ctrl-opt-cmd-h` to change it to html, giving  you html syntax highlighing. Or `ctrl-opt-cmd-j` which will prompt you with a choice, Java or JavaScript. That one's easy, JS! A handy short cut for sure. Wish Sublime had this.
+TextMate: When you create a new file, by default, the new file type is a plain text document. You can use `ctrl-opt-cmd-h` to change it to html, giving  you html syntax highlighing. Or `ctrl-opt-cmd-j` which will prompt you with a choice, Java or JavaScript. That one's easy, JS! A handy short cut for sure. Wish Sublime had this.<br />
+Sublime: Ctrl-Shift-P: Opens Command Palette<br />
+S: the first letter of 'Set Syntax'<br />
+Click on what you want or just keep typing until you get to the file type you want and hit enter.<br />
+
 
 #### Bundles
 TextMate: Yups<br />
