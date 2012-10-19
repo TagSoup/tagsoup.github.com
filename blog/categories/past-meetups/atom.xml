@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: past meetups | Phx Tag Soup]]></title>
+  <link href="http://TagSoup.github.com/blog/categories/past-meetups/atom.xml" rel="self"/>
+  <link href="http://TagSoup.github.com/"/>
+  <updated>2012-10-18T23:11:28-07:00</updated>
+  <id>http://TagSoup.github.com/</id>
+  <author>
+    <name><![CDATA[Phx Tag Soup]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meet Chakra and  TypeScript Team Members - Rob and Luke]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/10/18/meet-rob-and-luke-chakra-and-typescript-team-members/"/>
+    <updated>2012-10-18T22:56:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/10/18/meet-rob-and-luke-chakra-and-typescript-team-members</id>
+    <content type="html"><![CDATA[<p>A huge thanks to Rob Paveza (<a href="https://twitter.com/robpaveza">@robpaveza</a>) and Luke Hoban (<a href="https://twitter.com/lukehoban">@lukehoban</a>) for hanging out with us tonight. We saw some really nice <a href="http://www.typescriptlang.org/">TypeScript</a> magic, heard about what it's like working at Microsoft and got to pick the brains of Rob and Luke. If you weren't able to see the meetup in person (shame), or on our live broadcast (moar shame), check out the recorded version.</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/gbOehUFKtl8" frameborder="0" allowfullscreen></iframe>
+
+
+<h4>Update from Rob</h4>
+
+<p>"I'm not sure if this has built-in support for the MVC bundling or not, but <a href="http://visualstudiogallery.msdn.microsoft.com/07d54d12-7133-4e15-becb-6f451ea3bea6">this is what I was talking about tonight</a>, with improved TypeScript support within Visual Studio."</p>
+]]></content>
+  </entry>
+  
+</feed>
