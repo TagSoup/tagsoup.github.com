@@ -4,7 +4,7 @@
   <title><![CDATA[Phx Tag Soup]]></title>
   <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2012-10-18T23:11:28-07:00</updated>
+  <updated>2012-11-08T10:12:37-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor.js Meeting Details]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/11/08/meteor-dot-js-meeting-details/"/>
+    <updated>2012-11-08T09:51:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/11/08/meteor-dot-js-meeting-details</id>
+    <content type="html"><![CDATA[<h3>Meteor JS Team Member Avital Oliver!</h3>
+
+<h4>Meeting time and date: 7pm (Arizona Time), Nov 15th, 2012</h4>
+
+<p>We&#8217;re really excited about this one. I remember when I first saw Meteor.js. I think @0lu, @rxgx or @phil_renaud sent it to me. It was probably the day it launched. Srsly amazeballs. The only thing that kept me from really falling in love with it was the lack of security. That&#8217;s all changed now&#8230;</p>
+
+<p>Fast forward to Oct 17th (or maybe at this point I should say rewind). This <a href="http://meteor.com/blog/2012/10/17/meteor-050-authentication-user-accounts-new-screencast">blog post</a> is dropped. It took me a second to find the link to the <a href="http://meteor.com/authcast">screencast</a>. When I did, it was like an early Halloween treat. So much sweet, sweet sugar. After talking with everyone, we thought it would be great to try and get someone from the Meteor team to do a TagSoup.</p>
+
+<p>After a few emails, Avital Oliver, JS Engineer at Meteor, agreed. 2 Legit (hay hay)!</p>
+
+<p>With all that said, here&#8217;s the deets:<br />
+When: Nov 15th, 2012 7pm-9pm<br />
+Where: <a href="https://maps.google.com/maps?q=Meltmedia&amp;hl=en&amp;cid=13457409171062551353&amp;gl=US&amp;t=m&amp;z=16&amp;iwloc=A">Melt Media</a><br /></p>
+
+<p>Same format as the last meeting with the TypeScript team. Totally open. Ask anything, be prepared, and most important&#8230; Have Fun!</p>
+
+<div class="clearfix">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+<img class="left" src="http://TagSoup.github.com/images/legit.png" width="60">
+</div>
+
+
+<!-- /OMG WHAT IS THIS -->
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Meet Chakra and  TypeScript Team Members - Rob and Luke]]></title>
@@ -1325,45 +1364,6 @@ The assumption that adopting a predefined process will work is a common mistake.
 <p>I look forward to messing with this some more. I want to save the images users take and give them the ability to upload them to the TagSoup page. I will be working on that next. Please check out the links from Mike Taylor, Rick Waldron, Opera, and Google Devs.</p>
 
 <p>11:56&#8230; Just made it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Non Destructive Editing]]></title>
-    <link href="http://TagSoup.github.com/blog/2012/03/08/non-destructive-editing/"/>
-    <updated>2012-03-08T21:24:00-07:00</updated>
-    <id>http://TagSoup.github.com/blog/2012/03/08/non-destructive-editing</id>
-    <content type="html"><![CDATA[<h3>Day 14 of the 30 Day Writing Challenge</h3>
-
-<p>As a designer, there is nothing more frustrating then opening up another designers working files and discovering that in the process of creating an effect they destroyed the original image.  And now you, the person charged with making an edit to that image, has to recreate the entire thing from scratch.  There are a lot of different ways to do non destructive editing, so today I thought I would show example of one of the easiest and most useful ones that I have found, the clipping mask.  Clipping masks are a super easy way that you as a designer can crop photos in Photoshop without actually deleting any portion of the photo.  Here is how it works:</p>
-
-<p>Step 1:  Open Photoshop and create a new document.  For this example I&#8217;ve opened up an 1140 grid template.</p>
-
-<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-1.jpg" width="800"></p>
-
-<!--more-->
-
-
-<p>Step 2:  Select the Shape Tool, and draw the shape that you would like your image to encompass.  For this example I&#8217;m going to draw a long thin rectangle.  I use this shape quite a bit when creating image banners or carousels, which I think we all know clients love no matter what we tell them.</p>
-
-<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-2-1.jpg" width="800">
-<img class="center" src="http://TagSoup.github.com/images/nd-editing/step-2-2.jpg" width="800"></p>
-
-<p>Step 3:  Go ahead and bring in your image.  The way that I like to place an image in Photoshop is to open the file menu and then select place.  I then use the browser to find the image I want to place and then select place.  The reason I like to do it this way rather than opening the image and just dragging it over to my new Photoshop document is, when you place it not only does it automatically name the layer whatever the file name is (which is nice for organizing your document) it also brings it in as a smart object.  I&#8217;m not going to go into all of the benefits of smart objects on this post, but know that smart objects give you a lot of editing flexibility that can really make your life easier once you know how to properly use them.</p>
-
-<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-3.jpg" width="800"></p>
-
-<p>Step 4:  Okay, now that we have our custom shape drawn and our image the next thing we need to do is check our layer palette and make sure that the image is stacked above the shape layer.  This should have happened automatically if you followed the steps I outlined, but it never hurts to double check.  Once you have confirmed that the image layer is above the shape layer go ahead and right click (control-click) on your image layer in the layer palette.  This will bring up a menu of options.</p>
-
-<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-4.jpg" width="800"></p>
-
-<p>Step 5: Once the menu is up, select Create Clipping Mask from the list of options.  Here&#8217;s what your image should look like.</p>
-
-<p><img class="center" src="http://TagSoup.github.com/images/nd-editing/step-5.jpg" width="800"></p>
-
-<p>Now you are free to scale and crop the image however you see fit without having to destroy the original image layer.  If you find that the image box is not the correct size, just adjust your clipping mask layer.</p>
-
-<p>I hope this helps you out.  Feel free to share any other tips or tricks you might know in the comments section.</p>
 ]]></content>
   </entry>
   

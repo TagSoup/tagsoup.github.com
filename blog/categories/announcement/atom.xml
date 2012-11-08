@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Announcement | Phx Tag Soup]]></title>
   <link href="http://TagSoup.github.com/blog/categories/announcement/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2012-10-18T23:11:28-07:00</updated>
+  <updated>2012-11-08T10:12:37-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor.js Meeting Details]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/11/08/meteor-dot-js-meeting-details/"/>
+    <updated>2012-11-08T09:51:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/11/08/meteor-dot-js-meeting-details</id>
+    <content type="html"><![CDATA[<h3>Meteor JS Team Member Avital Oliver!</h3>
+
+<h4>Meeting time and date: 7pm (Arizona Time), Nov 15th, 2012</h4>
+
+<p>We're really excited about this one. I remember when I first saw Meteor.js. I think @0lu, @rxgx or @phil_renaud sent it to me. It was probably the day it launched. Srsly amazeballs. The only thing that kept me from really falling in love with it was the lack of security. That's all changed now...</p>
+
+<p>Fast forward to Oct 17th (or maybe at this point I should say rewind). This <a href="http://meteor.com/blog/2012/10/17/meteor-050-authentication-user-accounts-new-screencast">blog post</a> is dropped. It took me a second to find the link to the <a href="http://meteor.com/authcast">screencast</a>. When I did, it was like an early Halloween treat. So much sweet, sweet sugar. After talking with everyone, we thought it would be great to try and get someone from the Meteor team to do a TagSoup.</p>
+
+<p>After a few emails, Avital Oliver, JS Engineer at Meteor, agreed. 2 Legit (hay hay)!</p>
+
+<p>With all that said, here's the deets:<br />
+When: Nov 15th, 2012 7pm-9pm<br />
+Where: <a href="https://maps.google.com/maps?q=Meltmedia&amp;hl=en&amp;cid=13457409171062551353&amp;gl=US&amp;t=m&amp;z=16&amp;iwloc=A">Melt Media</a><br /></p>
+
+<p>Same format as the last meeting with the TypeScript team. Totally open. Ask anything, be prepared, and most important... Have Fun!</p>
+
+<div class="clearfix">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+<img class="left" src="/images/legit.png" width="60">
+</div>
+
+
+<!-- /OMG WHAT IS THIS -->
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Meeting Announcement]]></title>
@@ -98,19 +137,6 @@
 <p>See you tomorrow!</p>
 
 <p>Tony</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[PhxTagSoup Goes Weekly]]></title>
-    <link href="http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly/"/>
-    <updated>2012-05-23T12:43:00-07:00</updated>
-    <id>http://TagSoup.github.com/blog/2012/05/23/phxtagsoup-goes-weekly</id>
-    <content type="html"><![CDATA[<p>After a lot of feedback from friends, we decided to start holding a TagSoup meeting each week. So, starting May 31st, we will be meeting at <a href="http://www.cartelcoffeelab.com/cartel-ash-ave-tempe-az/">Cartel Coffee</a> each week. Every Thursday night, from 7pm - close, we will be at Cartel. If you want to continue to hang out after hours, Casey Moore's is next door. Take advantage.</p>
-
-<p>May 31st's meeting will be a great time to meet with your teams (from April's meeting) and hopefully wrap up your projects. I know I still have a lot of work to do.</p>
-
-<p>There will be some more announcements made later this week. Hope you all enjoy this news.</p>
 ]]></content>
   </entry>
   
