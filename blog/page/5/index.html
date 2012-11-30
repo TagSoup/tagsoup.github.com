@@ -9,7 +9,7 @@
   <meta name="author" content="Phx Tag Soup">
 
   
-  <meta name="description" content="Here is the video from our final, special guest, Paul Irish. Paul is an amazing developer. Some how, while releasing libraries like HTML5 BP and &hellip;">
+  <meta name="description" content="I recently changed text editors. For any dev, this is a big deal. We&#8217;re talking changing religions big. I had been using TextMate for about 4 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,65 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/08/Sublime-2/">Editor, Y U Do That - Sublime 2, Whitespace and Git Conflicts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-08T23:58:00-07:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/12/08/Sublime-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently changed text editors. For any dev, this is a big deal. We&#8217;re talking changing religions big. I had been using TextMate for about 4 years. I love TextMate. Then, I started hearing more and more about Sublime 2. So I decided to give it a whirl. And, after 10 days, I&#8217;m hooked. Thanks Ryan Mathis!</p>
+
+<p>I wanted to point out a small feature/issue I ran into today. Sublime 2 has a config that will trim white space at the end of lines. It&#8217;s really useful and in most cases a great feature.</p>
+
+<p>Here&#8217;s where I ran into the snag. I made a couple of VERY minor changes to a file. Saved, then ran git add, git commit etc. Another developer takes a look at what I pushed and tells me there conflicts all over the file. I only changed 2 lines of code, how can there be conflicts &#8220;all over the place&#8221;.</p>
+
+<p>Here&#8217;s a quick example of the feature in action. On the left, I have Sublime 2 open. On the right, I have the same file open in TextMate. When I click save in Sublime 2, you will see the white space disappear.</p>
+
+<iframe width="960" height="720" src="http://www.youtube.com/embed/tVBVkewGpU0?hd=1" frameborder="0" allowfullscreen></iframe>
+
+
+<p>This was causing the conflicts in git. It took me a while to figure this out. I knew it was the editor, but not sure where it was happening. Once I figured it out, I needed to turn it off for this specific project :(</p>
+
+<p>I found this setting:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>"trim_trailing_white_space_on_save": true,</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in the Base.File.sublime-settings (Default) and Base.File.sublime-settings (User). You can access these files by going to Sublime Text 2 > Preferences > File Settings Default and File Settings - User. I changed the setting to &#8216;false&#8217; in both files and that did the trick.</p>
+
+<p>Features like Trimming Trailing White Space are really nice. And 99% of the time should be turned on. But it&#8217;s important to understand all the magic your editor is doing for you. Next time you hit that edge case and have to disable a feature, you won&#8217;t have to waste time troubleshooting.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -365,6 +424,10 @@ Our friends in Las Vegas have been busy writing an iOS app called <a href="http:
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js/">Thanks Avital Oliver from Meteor.js</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/08/meteor-dot-js-meeting-details/">Meteor.js Meeting Details</a>
       </li>
     
@@ -378,10 +441,6 @@ Our friends in Las Vegas have been busy writing an iOS app called <a href="http:
     
       <li class="post">
         <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
       </li>
     
   </ul>

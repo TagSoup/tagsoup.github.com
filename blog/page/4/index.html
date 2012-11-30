@@ -9,7 +9,7 @@
   <meta name="author" content="Phx Tag Soup">
 
   
-  <meta name="description" content="Day 4 of the 30 Day Challenge In the immortal words or of Colonel Sanders, I&#8217;m too drunk to write this blog post. But eff it (note: I don&#8217 &hellip;">
+  <meta name="description" content="Day 5 of the 30 Day Challenge It starts strong at 2:33 in, and then goes from there. 10:25 is like the chocolate river. 13:20 is the geese that lay &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/28/come-with-me/">Come With Me, and You&#8217;ll Be. In a World of Pure Imagination</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-28T22:21:00-07:00" pubdate data-updated="true">Feb 28<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/02/28/come-with-me/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Day 5 of the 30 Day Challenge</h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PUv66718DII" frameborder="0" allowfullscreen></iframe>
+
+
+<p>It starts strong at 2:33 in, and then goes from there. 10:25 is like the chocolate river. 13:20 is the geese that lay the golden eggs. 13:55 is the Everlasting Gobstopper. I&#8217;m TRYING to see if Bret will do a talk for us, keeping fingers crossed.</p>
+
+<p><a href="http://worrydream.com">Bret Victor</a> invents tools that enable people to understand and create. He has designed experimental UI concepts at Apple, interactive data graphics for Al Gore, and musical instruments at Alesis.</p>
+
+<p>This talk was given at <a href="http://2012.cusec.net">CUSEC 2012</a>.</p>
+
+<div style="width: 50px; height: 55px;"><iframe width="50" height="55" src="http://www.youtube.com/embed/r2pt2-F2j2g?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -591,65 +643,6 @@ console.log(&quot;tailpipe listening on port %d in %s mode&quot;, app.address().
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/08/Sublime-2/">Editor, Y U Do That - Sublime 2, Whitespace and Git Conflicts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-08T23:58:00-07:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/12/08/Sublime-2/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I recently changed text editors. For any dev, this is a big deal. We&#8217;re talking changing religions big. I had been using TextMate for about 4 years. I love TextMate. Then, I started hearing more and more about Sublime 2. So I decided to give it a whirl. And, after 10 days, I&#8217;m hooked. Thanks Ryan Mathis!</p>
-
-<p>I wanted to point out a small feature/issue I ran into today. Sublime 2 has a config that will trim white space at the end of lines. It&#8217;s really useful and in most cases a great feature.</p>
-
-<p>Here&#8217;s where I ran into the snag. I made a couple of VERY minor changes to a file. Saved, then ran git add, git commit etc. Another developer takes a look at what I pushed and tells me there conflicts all over the file. I only changed 2 lines of code, how can there be conflicts &#8220;all over the place&#8221;.</p>
-
-<p>Here&#8217;s a quick example of the feature in action. On the left, I have Sublime 2 open. On the right, I have the same file open in TextMate. When I click save in Sublime 2, you will see the white space disappear.</p>
-
-<iframe width="960" height="720" src="http://www.youtube.com/embed/tVBVkewGpU0?hd=1" frameborder="0" allowfullscreen></iframe>
-
-
-<p>This was causing the conflicts in git. It took me a while to figure this out. I knew it was the editor, but not sure where it was happening. Once I figured it out, I needed to turn it off for this specific project :(</p>
-
-<p>I found this setting:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>"trim_trailing_white_space_on_save": true,</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in the Base.File.sublime-settings (Default) and Base.File.sublime-settings (User). You can access these files by going to Sublime Text 2 > Preferences > File Settings Default and File Settings - User. I changed the setting to &#8216;false&#8217; in both files and that did the trick.</p>
-
-<p>Features like Trimming Trailing White Space are really nice. And 99% of the time should be turned on. But it&#8217;s important to understand all the magic your editor is doing for you. Next time you hit that edge case and have to disable a feature, you won&#8217;t have to waste time troubleshooting.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -693,6 +686,10 @@ console.log(&quot;tailpipe listening on port %d in %s mode&quot;, app.address().
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js/">Thanks Avital Oliver from Meteor.js</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/08/meteor-dot-js-meeting-details/">Meteor.js Meeting Details</a>
       </li>
     
@@ -706,10 +703,6 @@ console.log(&quot;tailpipe listening on port %d in %s mode&quot;, app.address().
     
       <li class="post">
         <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
       </li>
     
   </ul>

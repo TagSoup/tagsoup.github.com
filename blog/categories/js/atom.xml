@@ -4,7 +4,7 @@
   <title><![CDATA[Category: js | Phx Tag Soup]]></title>
   <link href="http://TagSoup.github.com/blog/categories/js/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2012-11-08T13:37:02-07:00</updated>
+  <updated>2012-11-30T14:58:31-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thanks Avital Oliver from Meteor.js]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js/"/>
+    <updated>2012-11-30T14:55:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js</id>
+    <content type="html"><![CDATA[<p>In case you missed the meet up (a lot of you did!) here's the link to the hangout. We had some weird sound issues, a slight echo, but it still turned out great!</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/vq9tA6jdDSA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Thanks again Avi, that was great stuff.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Meet Chakra and  TypeScript Team Members - Rob and Luke]]></title>

@@ -9,7 +9,7 @@
   <meta name="author" content="Phx Tag Soup">
 
   
-  <meta name="description" content="Now you know where to eat, but now you&#8217;re thirsty. Another tweet came in asking about drinking in AZ, specifically beer. Then a couple more &hellip;">
+  <meta name="description" content="The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We&#8217;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/04/vegas-tech-road-trip/">Vegas Tech Road Trip</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-04T15:52:00-07:00" pubdate data-updated="true">Apr 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/04/04/vegas-tech-road-trip/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The idea has been tossed around for months. Holidays sort of got in the way, as well as life and various excuses. Well, no more excuses. We&#8217;re making a trek to our sister city to visit a <a href="http://twitter.com/#!/vegasjelly">Vegas Jelly</a> meetup. If you&#8217;re interested in going, let us know. Step 1 will be getting a proper date in place. We&#8217;re thinking late April or early May. Jellys are on Thursday nights, so we will be most likely leaving on a Thursday morning. A van rental is a strong candidate for transportation. A bunch developers in a van together for 5 hours&#8230; mmmmmm I can smell it already.</p>
+
+<p>Tenative dates, if you&#8217;re interested, let us know what works for you:<br />
+April 26th<br />
+May 1st<br />
+May 8th<br /></p>
+
+<p>The length of the stay depends on personal budgets and alloted time. We&#8217;re really excited about the trip. Let&#8217;s make it happen.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -527,118 +572,6 @@ Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/09/i-see-you-getusermedia/">I See You getUserMedia</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-09T22:43:00-07:00" pubdate data-updated="true">Mar 9<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/03/09/i-see-you-getusermedia/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
-
-<p>I&#8217;m busting my ass to get this post in. I hate just throwing &#8220;anything&#8221; up, so I took some time to research something I&#8217;ve never messed with: getUserMedia.</p>
-
-<p>Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a>, or <a href="http://www.opera.com/browser/next/">Opera Next</a>. If you chose to use Opera Next, you don&#8217;t have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to <a href="chrome://flags/">chrome://flags/</a> and look for &#8220;Enable MediaStream&#8221;. Make sure this is enabled. Now time for the fun.</p>
-
-<p><video id="video" width="640" height="480" autoplay></video>
-<button id="take">Take Picture</button></p>
-
-<!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT -->
-
-
-<p><canvas id="snapshot" width="640" height="480"></canvas></p>
-
-<script type="text/javascript">
-
-    var doc = document,
-        snapshot = doc.getElementById('snapshot'),
-        photo = snapshot.getContext('2d'),
-        video = doc.querySelector('video'),
-        VIDEO_WIDTH, VIDEO_HEIGHT,
-        computeSize = function(supportsObjectFit){
-        // user agents that don't support object-fit 
-        // will display the video with a different 
-        // aspect ratio. 
-            if (supportsObjectFit === true){
-                VIDEO_WIDTH = 640;
-                VIDEO_HEIGHT = 480;
-            } else {
-                VIDEO_WIDTH = video.videoWidth;
-                VIDEO_HEIGHT = video.videoHeight;
-            }
-        },
-        successCallback = function (stream) {
-            video.src = stream;
-            video.play();
-            computeSize(true);
-        },
-        errorCallback =function (error) {
-            console.error('An error occurred: [CODE ' + error.code + ']');
-        };
-
-    doc.getElementById('take').onclick = function() {
-        computeSize(true);
-        photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
-    };
-
-    window.addEventListener('DOMContentLoaded', function() {
-
-        if (navigator.getUserMedia) {
-
-            navigator.getUserMedia({'video': true}, successCallback, errorCallback);
-
-        } else if (navigator.webkitGetUserMedia) {
-            
-            navigator.webkitGetUserMedia("video", function(stream){
-                video.src = window.webkitURL.createObjectURL(stream);
-                video.play();
-                computeSize(false);
-            });
-
-        } else {
-            console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
-        }
-
-    }, false);
-</script>
-
-
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/09/i-see-you-getusermedia/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -682,6 +615,10 @@ Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js/">Thanks Avital Oliver from Meteor.js</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/08/meteor-dot-js-meeting-details/">Meteor.js Meeting Details</a>
       </li>
     
@@ -695,10 +632,6 @@ Ryan Gasparini (<a href="http://twitter.com/#!/rxgx">@rxgx</a>) and Tony Camp (<
     
       <li class="post">
         <a href="/blog/2012/07/18/weekly-meeting/">Weekly Meeting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/12/july-12th-meet-up/">July 12th Meet Up</a>
       </li>
     
   </ul>

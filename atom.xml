@@ -4,7 +4,7 @@
   <title><![CDATA[Phx Tag Soup]]></title>
   <link href="http://TagSoup.github.com/atom.xml" rel="self"/>
   <link href="http://TagSoup.github.com/"/>
-  <updated>2012-11-08T13:37:02-07:00</updated>
+  <updated>2012-11-30T14:58:31-07:00</updated>
   <id>http://TagSoup.github.com/</id>
   <author>
     <name><![CDATA[Phx Tag Soup]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thanks Avital Oliver from Meteor.js]]></title>
+    <link href="http://TagSoup.github.com/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js/"/>
+    <updated>2012-11-30T14:55:00-07:00</updated>
+    <id>http://TagSoup.github.com/blog/2012/11/30/thanks-avital-oliver-from-meteor-dot-js</id>
+    <content type="html"><![CDATA[<p>In case you missed the meet up (a lot of you did!) here&#8217;s the link to the hangout. We had some weird sound issues, a slight echo, but it still turned out great!</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/vq9tA6jdDSA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Thanks again Avi, that was great stuff.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Meteor.js Meeting Details]]></title>
@@ -1085,292 +1099,6 @@ The assumption that adopting a predefined process will work is a common mistake.
     <img class="left" src="http://TagSoup.github.com/images/itsatrap.jpg" width="50">
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I see you getUserMedia]]></title>
-    <link href="http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia/"/>
-    <updated>2012-03-09T22:43:00-07:00</updated>
-    <id>http://TagSoup.github.com/blog/2012/03/09/i-see-you-getusermedia</id>
-    <content type="html"><![CDATA[<h3>Day 15 of the 30 Day Writing Challenge. Halfway there!</h3>
-
-<p>I&#8217;m busting my ass to get this post in. I hate just throwing &#8220;anything&#8221; up, so I took some time to research something I&#8217;ve never messed with: getUserMedia.</p>
-
-<p>Let me preface this by giving you some requirements. Your computer needs a camera on it. You also need <a href="http://tools.google.com/dlpage/chromesxs">Chrome Canary</a>, or <a href="http://www.opera.com/browser/next/">Opera Next</a>. If you chose to use Opera Next, you don&#8217;t have to enable any extra settings. If you decided to get Chrome Canary, you will have to enable one option. To do so, go to <a href="chrome://flags/">chrome://flags/</a> and look for &#8220;Enable MediaStream&#8221;. Make sure this is enabled. Now time for the fun.</p>
-
-<p><video id="video" width="640" height="480" autoplay></video>
-<button id="take">Take Picture</button></p>
-
-<!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT -->
-
-
-<p><canvas id="snapshot" width="640" height="480"></canvas></p>
-
-<script type="text/javascript">
-
-    var doc = document,
-        snapshot = doc.getElementById('snapshot'),
-        photo = snapshot.getContext('2d'),
-        video = doc.querySelector('video'),
-        VIDEO_WIDTH, VIDEO_HEIGHT,
-        computeSize = function(supportsObjectFit){
-        // user agents that don't support object-fit 
-        // will display the video with a different 
-        // aspect ratio. 
-            if (supportsObjectFit === true){
-                VIDEO_WIDTH = 640;
-                VIDEO_HEIGHT = 480;
-            } else {
-                VIDEO_WIDTH = video.videoWidth;
-                VIDEO_HEIGHT = video.videoHeight;
-            }
-        },
-        successCallback = function (stream) {
-            video.src = stream;
-            video.play();
-            computeSize(true);
-        },
-        errorCallback =function (error) {
-            console.error('An error occurred: [CODE ' + error.code + ']');
-        };
-
-    doc.getElementById('take').onclick = function() {
-        computeSize(true);
-        photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
-    };
-
-    window.addEventListener('DOMContentLoaded', function() {
-
-        if (navigator.getUserMedia) {
-
-            navigator.getUserMedia({'video': true}, successCallback, errorCallback);
-
-        } else if (navigator.webkitGetUserMedia) {
-            
-            navigator.webkitGetUserMedia("video", function(stream){
-                video.src = window.webkitURL.createObjectURL(stream);
-                video.play();
-                computeSize(false);
-            });
-
-        } else {
-            console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
-        }
-
-    }, false);
-</script>
-
-
-
-
-<!-- more -->
-
-
-<p>If you have met all the requirements, you should see a live stream of your camera in the video player. Pretty fun right? And below the video stream, there&#8217;s a &#8220;Take Picture&#8221; button. Click it! Makes sexy happen! Before we dive in and see how it was done, let me say there is a ton of good info on this out there on the webs. I was inspired by Rick Waldron, Mike Taylor and others when I started messing with this. I saw some shit Rick was posting on <a href="http://bocoup.com/">Bocoup&#8217;s site</a> and it blew me away. Also, <a href="http://miketaylr.com/photobooth/">Mike Taylor&#8217;s photo booth</a> is ridic. There&#8217;s no way I could have gotten any of this done if I didn&#8217;t take a peek at what they were doing. Now, let&#8217;s check out some code.</p>
-
-<div><script src='https://gist.github.com/2010552.js?file='></script>
-<noscript><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=0.5&quot;&gt;
-    &lt;title&gt;Oh hai.&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; autoplay&gt;
-      &lt;!-- Here you can set some default video up if the camera API no worky --&gt;
-      &lt;source src=&quot;default.webm&quot; type=&quot;video/webm;&quot; codecs=&quot;vp8, vorbis&quot;&gt;
-      &lt;source src=&quot;default.mp4&quot; type=&quot;video/mp4;&quot; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&gt;
-&lt;/video&gt;
-&lt;button id=&quot;take&quot;&gt;Take Picture&lt;/button&gt;
-
-&lt;!-- NEEDS THE DAMN WIDTH AND HEIGHT SET ON THE ELEMENT IF YOU NO HAS, PICTURE LUK FUNY--&gt;
-&lt;!-- SCALES IMPROPERLY WITHOUT WIDTH AND HEIGHT ON ELEMENT. CSS NO HELPY --&gt;
-&lt;canvas id=&quot;snapshot&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/canvas&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre></noscript></div>
-
-
-<p>Simple right? We just need an html5 video element, a button, and a canvas element. You can see in my comment, that you are able to drop in a default video incase the getUserMedia isn&#8217;t available on the user&#8217;s browser. In Mike Taylor&#8217;s photobooth, if you don&#8217;t have the getMediaUser method available, you can still &#8220;photobooth&#8221; a clip from a tasty Cary Grant video.</p>
-
-<p>On to the guts, the JS, the fun part. I do have to let you in on a secet&#8230; I was rushed to get this out before midnight so it might be a tad sloppy. Deal with it!</p>
-
-<div><script src='https://gist.github.com/2010556.js?file='></script>
-<noscript><pre><code>   var doc = document,
-        snapshot = doc.getElementById('snapshot'),
-        photo = snapshot.getContext('2d'),
-        video = doc.querySelector('video'),
-        VIDEO_WIDTH, VIDEO_HEIGHT,
-        computeSize = function(supportsObjectFit){
-        // user agents that don't support object-fit 
-        // will display the video with a different 
-        // aspect ratio. 
-            if (supportsObjectFit === true){
-                VIDEO_WIDTH = 640;
-                VIDEO_HEIGHT = 480;
-            } else {
-                VIDEO_WIDTH = video.videoWidth;
-                VIDEO_HEIGHT = video.videoHeight;
-            }
-        },
-        successCallback = function (stream) {
-            video.src = stream;
-            video.play();
-            computeSize(true);
-        },
-        errorCallback =function (error) {
-            console.error('An error occurred: [CODE ' + error.code + ']');
-            computeSize(true);
-        };
-
-    doc.getElementById('take').onclick = function() {
-        computeSize(true);
-        photo.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
-    };
-
-    window.addEventListener('DOMContentLoaded', function() {
-
-        if (navigator.getUserMedia) {
-
-            navigator.getUserMedia({'video': true}, successCallback, errorCallback);
-
-        } else if (navigator.webkitGetUserMedia) {
-            
-            navigator.webkitGetUserMedia(&quot;video&quot;, function(stream){
-                video.src = window.webkitURL.createObjectURL(stream);
-                video.play();
-                computeSize(false);
-            });
-
-        } else {
-            console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
-        }
-
-    }, false);</code></pre></noscript></div>
-
-
-<p>I set up a lazy reference to document, fat finger, no make typey good. I give myself a shortcut. Next I just set up some variables. <code>snapshot</code> is my canvas element. This is where the photo we take will be placed. Now let&#8217;s give the canvas some methods to use <code>.getContext()</code>. This comes in handy when we need to use the <code>.drawImage()</code> method. Next I set up a variable for the video element. And finally some functions. I will touch briefly on these.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">computeSize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">supportsObjectFit</span><span class="p">){</span>
-</span><span class='line'>      <span class="c1">// user agents that don&#39;t support object-fit </span>
-</span><span class='line'>      <span class="c1">// will display the video with a different </span>
-</span><span class='line'>      <span class="c1">// aspect ratio. </span>
-</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">supportsObjectFit</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
-</span><span class='line'>              <span class="nx">VIDEO_WIDTH</span> <span class="o">=</span> <span class="mi">640</span><span class="p">;</span>
-</span><span class='line'>              <span class="nx">VIDEO_HEIGHT</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
-</span><span class='line'>          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>              <span class="nx">VIDEO_WIDTH</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
-</span><span class='line'>              <span class="nx">VIDEO_HEIGHT</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
-</span><span class='line'>          <span class="p">}</span>
-</span><span class='line'>      <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I know I&#8217;m calling this a bit wrong later in the code, but that&#8217;s ok. This isn&#8217;t production ready, for a client, or well groomed yet. It&#8217;s a rough demo. But, let&#8217;s break down the function. We are passing one argument, supportObjectFit. This comes from an Opera Specific CSS property called <code>object-fit</code>. It has to do with setting proper ratios of placed elements (video, canvas etc). <a href="http://dev.opera.com/articles/view/css3-object-fit-object-position/">Read more about it here</a>.</p>
-
-<p>Next we have out success and fail callbacks for later:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">successCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">video</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
-</span><span class='line'>  <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
-</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'><span class="p">},</span>
-</span><span class='line'><span class="nx">errorCallback</span> <span class="o">=</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;An error occurred: [CODE &#39;</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>These come into play a bit later when we&#8217;re doing our feature detection on the getUserMedia method. On success, we&#8217;re setting the src of our video element to be the &#8220;feed&#8221; from our device&#8217;s video camera. We&#8217;re also determining the size of the video element if the user is browsing with the Opera Next browser.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;take&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">computeSize</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">photo</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">VIDEO_WIDTH</span><span class="p">,</span> <span class="nx">VIDEO_HEIGHT</span><span class="p">);</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Easy Peasy. Set up an click event on the &#8220;Take Picture&#8221; button. It will run the conputeSize() function, and then draw our screen shot from the video (aka our camera feed) onto our canvas element.</p>
-
-<p>Now here comes the important part, everything else was basically for setting this up:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="nx">navigator</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">({</span><span class="s1">&#39;video&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">webkitGetUserMedia</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      
-</span><span class='line'>      <span class="nx">navigator</span><span class="p">.</span><span class="nx">webkitGetUserMedia</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">stream</span><span class="p">){</span>
-</span><span class='line'>          <span class="nx">video</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
-</span><span class='line'>          <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
-</span><span class='line'>          <span class="nx">computeSize</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Native web camera streaming (getUserMedia) is not supported in this browser.&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here&#8217;s where feature detection comes in to play. When the document is loaded, let&#8217;s check to see if the browser supports our getUserMedia hawtness (currently, meaning the browser is Opera). If that is truthy, let&#8217;s use it. In our example, we&#8217;re just grabbing video by passing in the <code>{'video': true}</code> arguement, but you could also pass it audio as well. We also pass in 2 callbacks as arguements. The success and error functions we covered earlier. DONE!</p>
-
-<p>Now we check to see if the user is browsing with the Chrome Canary build. The syntax changes a tiny bit but the idea is the same. Set the video element&#8217;s source to be our camer feed, start the camera and all the computeSize() function. Since we know the user isn&#8217;t in Opera Live here, we pass the argument &#8220;false&#8221;.</p>
-
-<p>If all else fails, log a msg showing this shit ain&#8217;t gonna work.</p>
-
-<p>I look forward to messing with this some more. I want to save the images users take and give them the ability to upload them to the TagSoup page. I will be working on that next. Please check out the links from Mike Taylor, Rick Waldron, Opera, and Google Devs.</p>
-
-<p>11:56&#8230; Just made it.</p>
 ]]></content>
   </entry>
   
